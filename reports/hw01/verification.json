@@ -1,0 +1,17 @@
+{
+  "assignment": "HW1",
+  "checks": {
+    "agents_demo_exists": true,
+    "docker_files_exist": true,
+    "ecr_image_pushed": true,
+    "ecs_service_running": true,
+    "part3_temperature_07_runs": 20,
+    "part3_temperature_00_runs": 20,
+    "raw_results_count": 40,
+    "model_client_exists": true,
+    "hw1_client_exists": true,
+    "agent_instructions_exist": true,
+    "five_turn_token_demo_completed": true
+  },
+  "status": "pass"
+}

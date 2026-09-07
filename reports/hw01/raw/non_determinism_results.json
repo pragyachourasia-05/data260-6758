@@ -1,0 +1,522 @@
+[
+  {
+    "run": 1,
+    "temperature": 0.7,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Luxury Housing"
+    ],
+    "summary": "Modern 2BR apartment in San Jose with updated kitchen and downtown access.",
+    "issues": [],
+    "planner_ms": 30651,
+    "reviewer_ms": 16436
+  },
+  {
+    "run": 2,
+    "temperature": 0.7,
+    "tags": [
+      "Apartment Rental",
+      "San Jose",
+      "Downtown Living"
+    ],
+    "summary": "New 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 11439,
+    "reviewer_ms": 11543
+  },
+  {
+    "run": 3,
+    "temperature": 0.7,
+    "tags": [
+      "San Jose",
+      "Apartment Rental",
+      "Downtown Living"
+    ],
+    "summary": "Modern 2-bedroom apartment near San Jose downtown.",
+    "issues": [],
+    "planner_ms": 12156,
+    "reviewer_ms": 13320
+  },
+  {
+    "run": 4,
+    "temperature": 0.7,
+    "tags": [
+      "Apartment for Rent",
+      "Near Downtown",
+      "San Jose"
+    ],
+    "summary": "Bright 2-bedroom apartment with updated kitchen and in-unit laundry in San Jose.",
+    "issues": [],
+    "planner_ms": 13039,
+    "reviewer_ms": 12478
+  },
+  {
+    "run": 5,
+    "temperature": 0.7,
+    "tags": [
+      "appliances in-unit laundry",
+      "balcony walking distance",
+      "apartment near downtown"
+    ],
+    "summary": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance.",
+    "issues": [],
+    "planner_ms": 18966,
+    "reviewer_ms": 18532
+  },
+  {
+    "run": 6,
+    "temperature": 0.7,
+    "tags": [
+      "appliances in-unit laundry",
+      "San Jose",
+      "Rental"
+    ],
+    "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 18010,
+    "reviewer_ms": 13087
+  },
+  {
+    "run": 7,
+    "temperature": 0.7,
+    "tags": [
+      "appliances in-unit laundry",
+      "balcony walking distance",
+      "apartment near downtown"
+    ],
+    "summary": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance.",
+    "issues": [],
+    "planner_ms": 12742,
+    "reviewer_ms": 12996
+  },
+  {
+    "run": 8,
+    "temperature": 0.7,
+    "tags": [
+      "appliances in-unit laundry",
+      "balcony walking distance",
+      "apartment near downtown"
+    ],
+    "summary": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance.",
+    "issues": [],
+    "planner_ms": 11771,
+    "reviewer_ms": 10792
+  },
+  {
+    "run": 9,
+    "temperature": 0.7,
+    "tags": [
+      "San Jose Rentals",
+      "Apartments for Rent",
+      "Real Estate"
+    ],
+    "summary": "2BR apartment in San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13460,
+    "reviewer_ms": 13096
+  },
+  {
+    "run": 10,
+    "temperature": 0.7,
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Apartment"
+    ],
+    "summary": "Modern 2BR apartment near San Jose Downtown.",
+    "issues": [],
+    "planner_ms": 11461,
+    "reviewer_ms": 13965
+  },
+  {
+    "run": 11,
+    "temperature": 0.7,
+    "tags": [
+      "Pet-Friendly",
+      "Downtown San Jose",
+      "Apartment for Rent"
+    ],
+    "summary": "Modern 2-bedroom apartment near downtown San Jose with pet-friendly policies.",
+    "issues": [],
+    "planner_ms": 12041,
+    "reviewer_ms": 12115
+  },
+  {
+    "run": 12,
+    "temperature": 0.7,
+    "tags": [
+      "San Jose",
+      "2BR Apartment",
+      "Rentals"
+    ],
+    "summary": "1400 sq ft 2BR apartment for rent in San Jose with updated kitchen.",
+    "issues": [],
+    "planner_ms": 12509,
+    "reviewer_ms": 12050
+  },
+  {
+    "run": 13,
+    "temperature": 0.7,
+    "tags": [
+      "Apartment for rent",
+      "San Jose",
+      "Downtown area"
+    ],
+    "summary": "2BR apartment in San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13945,
+    "reviewer_ms": 15933
+  },
+  {
+    "run": 14,
+    "temperature": 0.7,
+    "tags": [
+      "appliances in-unit laundry",
+      "San Jose",
+      "Rental"
+    ],
+    "summary": "2BR apartment in San Jose with in-unit laundry and small balcony.",
+    "issues": [],
+    "planner_ms": 12037,
+    "reviewer_ms": 12373
+  },
+  {
+    "run": 15,
+    "temperature": 0.7,
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Downtown"
+    ],
+    "summary": "1400 sq ft 2BR apartment in San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 11892,
+    "reviewer_ms": 17752
+  },
+  {
+    "run": 16,
+    "temperature": 0.7,
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 10264,
+    "reviewer_ms": 12050
+  },
+  {
+    "run": 17,
+    "temperature": 0.7,
+    "tags": [
+      "appliances in-unit laundry",
+      "balcony walking distance",
+      "apartment near downtown"
+    ],
+    "summary": "Large 2 bedroom apartment near downtown San Jose with updated kitchen.",
+    "issues": [],
+    "planner_ms": 14060,
+    "reviewer_ms": 13225
+  },
+  {
+    "run": 18,
+    "temperature": 0.7,
+    "tags": [
+      "Downtown San Jose",
+      "appliances in-unit laundry",
+      "Rent"
+    ],
+    "summary": "2BR apartment in Downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 9783,
+    "reviewer_ms": 12026
+  },
+  {
+    "run": 19,
+    "temperature": 0.7,
+    "tags": [
+      "Apartment For Rent",
+      "San Jose",
+      "Downtown Area"
+    ],
+    "summary": "Modern 2BR apartment near downtown San Jose with amenities like in-unit laundry and parking.",
+    "issues": [],
+    "planner_ms": 12064,
+    "reviewer_ms": 14644
+  },
+  {
+    "run": 20,
+    "temperature": 0.7,
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Downtown"
+    ],
+    "summary": "2BR apartment in downtown San Jose with modern amenities.",
+    "issues": [],
+    "planner_ms": 10083,
+    "reviewer_ms": 18275
+  },
+  {
+    "run": 1,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for rent",
+      "San Jose",
+      "Near downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 29736,
+    "reviewer_ms": 21855
+  },
+  {
+    "run": 2,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for rent",
+      "San Jose",
+      "Near downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 14345,
+    "reviewer_ms": 12553
+  },
+  {
+    "run": 3,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13846,
+    "reviewer_ms": 9621
+  },
+  {
+    "run": 4,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 14115,
+    "reviewer_ms": 10585
+  },
+  {
+    "run": 5,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13398,
+    "reviewer_ms": 10562
+  },
+  {
+    "run": 6,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13639,
+    "reviewer_ms": 9582
+  },
+  {
+    "run": 7,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13724,
+    "reviewer_ms": 9678
+  },
+  {
+    "run": 8,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13909,
+    "reviewer_ms": 9939
+  },
+  {
+    "run": 9,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 14267,
+    "reviewer_ms": 10486
+  },
+  {
+    "run": 10,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13364,
+    "reviewer_ms": 10589
+  },
+  {
+    "run": 11,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13531,
+    "reviewer_ms": 10079
+  },
+  {
+    "run": 12,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 12845,
+    "reviewer_ms": 9404
+  },
+  {
+    "run": 13,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13183,
+    "reviewer_ms": 9116
+  },
+  {
+    "run": 14,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 12883,
+    "reviewer_ms": 9424
+  },
+  {
+    "run": 15,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13741,
+    "reviewer_ms": 9767
+  },
+  {
+    "run": 16,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13039,
+    "reviewer_ms": 11028
+  },
+  {
+    "run": 17,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13811,
+    "reviewer_ms": 9521
+  },
+  {
+    "run": 18,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13026,
+    "reviewer_ms": 9550
+  },
+  {
+    "run": 19,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13111,
+    "reviewer_ms": 9918
+  },
+  {
+    "run": 20,
+    "temperature": 0.0,
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": [],
+    "planner_ms": 13765,
+    "reviewer_ms": 10007
+  }
+]

@@ -1,0 +1,3000 @@
+===== TEMP 0.7 RUN 1 =====
+
+--- Planner (30651 ms) ---
+{
+  "thought": "Rental listing for 1400 Sq Ft 2BR apartment near Downtown San Jose",
+  "message": "Luxury apartment for rent in San Jose with modern amenities and downtown proximity.",
+  "data": {
+    "tags": [
+      "San Jose Apartments for Rent",
+      "Downtown San Jose Rentals",
+      "California Luxury Apartments"
+    ],
+    "summary": "Modern 2BR apartment in downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+--- Reviewer (16436 ms) ---
+{
+  "thought": "Analyzing rental listing",
+  "message": "Luxury apartment for rent in San Jose with modern amenities and downtown proximity.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "Luxury apartment",
+      "Rentals"
+    ],
+    "summary": "2BR apartment with modern amenities near downtown San Jose.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Initial Review",
+  "message": "Luxury apartment for rent in San Jose with modern amenities and downtown proximity.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Luxury Housing"
+    ],
+    "summary": "Modern 2BR apartment in San Jose with updated kitchen and downtown access.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Luxury apartment for rent in San Jose with modern amenities and downtown proximity."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Luxury apartment for rent in San Jose with modern amenities and downtown proximity."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Luxury Housing"
+      ],
+      "summary": "Modern 2BR apartment in San Jose with updated kitchen and downtown access.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-04T20:31:31Z"
+}
+===== TEMP 0.7 RUN 2 =====
+
+--- Planner (11439 ms) ---
+{
+  "thought": "Tag generation for rental listing",
+  "message": "Rental listing: 1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "data": {
+    "tags": [
+      "Apartment for Rent near Downtown San Jose",
+      "San Jose CA Housing",
+      "2 Bedroom Apartments in Downtown Area"
+    ],
+    "summary": "Bright 2 bedroom apartment for rent near downtown San Jose with modern amenities.",
+    "issues": []
+  }
+}
+
+--- Reviewer (11543 ms) ---
+{
+  "thought": "Validating rental listing details",
+  "message": "Validated tags topical and not generic; summary <= 25 words; no code or markdown",
+  "data": {
+    "tags": [
+      "appliances in-unit laundry",
+      "balcony walking distance",
+      "apartment near downtown"
+    ],
+    "summary": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Automated response generated",
+  "message": "I've produced the requested JSON object based on the provided rental listing title and description.",
+  "data": {
+    "tags": [
+      "Apartment Rental",
+      "San Jose",
+      "Downtown Living"
+    ],
+    "summary": "New 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Rental listing: 1400 Sq Ft 2BR Apartment Near Downtown San Jose"
+      },
+      {
+        "role": "Reviewer",
+        "content": "Validated tags topical and not generic; summary <= 25 words; no code or markdown"
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment Rental",
+        "San Jose",
+        "Downtown Living"
+      ],
+      "summary": "New 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-04T20:32:14Z"
+}
+===== TEMP 0.7 RUN 3 =====
+
+--- Planner (12156 ms) ---
+{
+  "thought": "Rental listing for 1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "message": "Apartment for rent in San Jose near downtown, 2 bedrooms, 1 bathroom, updated kitchen and laundry",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Apartment for Rent in San Jose"
+    ],
+    "summary": "Spacious 2BR apartment in San Jose's downtown area.",
+    "issues": []
+  }
+}
+
+--- Reviewer (13320 ms) ---
+{
+  "thought": "Analyzing rental listing for San Jose apartment",
+  "message": "Apartment for rent in San Jose near downtown, 2 bedrooms, 1 bathroom, updated kitchen and laundry",
+  "data": {
+    "tags": [
+      "San Jose",
+      "Apartment for rent",
+      "Near downtown"
+    ],
+    "summary": "2BR apartment near downtown San Jose with updated kitchen and laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Generating summary for rental listing",
+  "message": "Apartment for rent near downtown San Jose with 2 bedrooms, updated kitchen, and laundry",
+  "data": {
+    "tags": [
+      "San Jose",
+      "Apartment Rental",
+      "Downtown Living"
+    ],
+    "summary": "Modern 2-bedroom apartment near San Jose downtown.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Apartment for rent in San Jose near downtown, 2 bedrooms, 1 bathroom, updated kitchen and laundry"
+      },
+      {
+        "role": "Reviewer",
+        "content": "Apartment for rent in San Jose near downtown, 2 bedrooms, 1 bathroom, updated kitchen and laundry"
+      }
+    ],
+    "final": {
+      "tags": [
+        "San Jose",
+        "Apartment Rental",
+        "Downtown Living"
+      ],
+      "summary": "Modern 2-bedroom apartment near San Jose downtown.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-04T20:32:57Z"
+}
+===== TEMP 0.7 RUN 4 =====
+
+--- Planner (13039 ms) ---
+{
+  "thought": "Rental listing analysis",
+  "message": "This 1400 sq ft apartment near downtown San Jose has a bright layout, updated kitchen, and in-unit laundry, making it a great option for renters.",
+  "data": {
+    "tags": [
+      "San Jose Rentals",
+      "Downtown San Jose Apartments",
+      "2 Bedroom Apartments"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+--- Reviewer (12478 ms) ---
+{
+  "thought": "Tagging and summarizing rental listing",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry near downtown San Jose",
+  "data": {
+    "tags": [
+      "San Jose apartments",
+      "rental properties",
+      "downtown living"
+    ],
+    "summary": "Cozy 2 bedroom apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Summary and tags should capture the essence of the apartment description",
+  "message": "This 1400 sq ft apartment near downtown San Jose has a bright layout, updated kitchen, and in-unit laundry, making it a great option for renters.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "Near Downtown",
+      "San Jose"
+    ],
+    "summary": "Bright 2-bedroom apartment with updated kitchen and in-unit laundry in San Jose.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "This 1400 sq ft apartment near downtown San Jose has a bright layout, updated kitchen, and in-unit laundry, making it a great option for renters."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry near downtown San Jose"
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "Near Downtown",
+        "San Jose"
+      ],
+      "summary": "Bright 2-bedroom apartment with updated kitchen and in-unit laundry in San Jose.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:49:38Z"
+}
+===== TEMP 0.7 RUN 5 =====
+
+--- Planner (18966 ms) ---
+{
+  "thought": "Rental listing analysis",
+  "message": "Rental listing has 1400 sq ft, 2 bedrooms, and is near downtown San Jose with a walkable distance to light rail.",
+  "data": {
+    "tags": [
+      "San Jose Rentals Near Downtown",
+      "2 Bedroom Apartments in San Jose",
+      "Light Rail Friendly Rentals"
+    ],
+    "summary": "Cozy 2 bedroom apartment near downtown San Jose with light rail access.",
+    "issues": []
+  }
+}
+
+--- Reviewer (18532 ms) ---
+{
+  "thought": "Topical tags and summary for the rental listing",
+  "message": "The rental listing is a 2-bedroom apartment in downtown San Jose with a walkable distance to light rail.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Apartment"
+    ],
+    "summary": "2-bedroom apartment in downtown San Jose with walkable distance to light rail.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Tagging relevant keywords for the rental listing",
+  "message": "Topical tags: downtown San Jose, 2-bedroom apartment, walkable distance to light rail. Summary: Modern 2-bedroom apartment in downtown San Jose with walkable distance to light rail.",
+  "data": {
+    "tags": [
+      "appliances in-unit laundry",
+      "balcony walking distance",
+      "apartment near downtown"
+    ],
+    "summary": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Rental listing has 1400 sq ft, 2 bedrooms, and is near downtown San Jose with a walkable distance to light rail."
+      },
+      {
+        "role": "Reviewer",
+        "content": "The rental listing is a 2-bedroom apartment in downtown San Jose with a walkable distance to light rail."
+      }
+    ],
+    "final": {
+      "tags": [
+        "appliances in-unit laundry",
+        "balcony walking distance",
+        "apartment near downtown"
+      ],
+      "summary": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:50:47Z"
+}
+===== TEMP 0.7 RUN 6 =====
+
+--- Planner (18010 ms) ---
+{
+  "thought": "Rental listing creation",
+  "message": "Create rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose with detailed description and tags.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Apartment",
+      "2 Bedroom Apartments Near Light Rail",
+      "Furnished Apartments Near SJSU"
+    ],
+    "summary": "Charming 2BR apartment near downtown San Jose with in-unit laundry and walking distance to light rail.",
+    "issues": []
+  }
+}
+
+--- Reviewer (13087 ms) ---
+{
+  "thought": "Rental listing details generated",
+  "message": "Rental listing created for 1400 Sq Ft 2BR apartment near downtown San Jose with detailed description and tags.",
+  "data": {
+    "tags": [
+      "Apartment",
+      "Near Downtown",
+      "San Jose"
+    ],
+    "summary": "Luxury apartment near downtown San Jose with modern amenities.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Finalizing rental listing with selected tags and summary",
+  "message": "Rental listing created with selected tags and summary",
+  "data": {
+    "tags": [
+      "appliances in-unit laundry",
+      "San Jose",
+      "Rental"
+    ],
+    "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Create rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose with detailed description and tags."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Rental listing created for 1400 Sq Ft 2BR apartment near downtown San Jose with detailed description and tags."
+      }
+    ],
+    "final": {
+      "tags": [
+        "appliances in-unit laundry",
+        "San Jose",
+        "Rental"
+      ],
+      "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:51:41Z"
+}
+===== TEMP 0.7 RUN 7 =====
+
+--- Planner (12742 ms) ---
+{
+  "thought": "Generating tags and summary for rental listing",
+  "message": "Here are three distinct topical tags and a one-line summary for the rental listing.",
+  "data": {
+    "tags": [
+      "Downtown San Jose Rentals",
+      "San Jose Apartments Near Light Rail",
+      "Pet Friendly 2BR Apartments"
+    ],
+    "summary": "Charming 2BR apartment near downtown San Jose with walking distance to light rail and pet-friendly policy.",
+    "issues": []
+  }
+}
+
+--- Reviewer (12996 ms) ---
+{
+  "thought": "Generated topical tags and summary for rental listing",
+  "message": "Tags: downtown San Jose, apartment, 2 bedroom; Summary: Modern apartment near downtown San Jose with 2 bedrooms.",
+  "data": {
+    "tags": [
+      "downtown San Jose",
+      "apartment",
+      "2 bedroom"
+    ],
+    "summary": "Modern apartment near downtown San Jose with 2 bedrooms.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Finalizing based on feedback",
+  "message": "Three topical tags and one-sentence summary for the rental listing",
+  "data": {
+    "tags": [
+      "appliances in-unit laundry",
+      "balcony walking distance",
+      "apartment near downtown"
+    ],
+    "summary": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Here are three distinct topical tags and a one-line summary for the rental listing."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Tags: downtown San Jose, apartment, 2 bedroom; Summary: Modern apartment near downtown San Jose with 2 bedrooms."
+      }
+    ],
+    "final": {
+      "tags": [
+        "appliances in-unit laundry",
+        "balcony walking distance",
+        "apartment near downtown"
+      ],
+      "summary": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:52:25Z"
+}
+===== TEMP 0.7 RUN 8 =====
+
+--- Planner (11771 ms) ---
+{
+  "thought": "Rental listing optimization",
+  "message": "Rental listing is ready for submission, please enter the email address in the subject line.",
+  "data": {
+    "tags": [
+      "San Jose Apartment Rental",
+      "Downtown San Jose Housing",
+      "Near Downtown San Jose Living"
+    ],
+    "summary": "Bright 2 bedroom apartment for rent near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+--- Reviewer (10792 ms) ---
+{
+  "thought": "Validation complete",
+  "message": "Validation successful, no issues found",
+  "data": {
+    "tags": [
+      "appliances in-unit laundry",
+      "San Jose",
+      "Rental"
+    ],
+    "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Topical tags: downtown, apartment, san jose",
+  "message": "Rental listing is complete with 3 topical tags and a summary.",
+  "data": {
+    "tags": [
+      "appliances in-unit laundry",
+      "balcony walking distance",
+      "apartment near downtown"
+    ],
+    "summary": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Rental listing is ready for submission, please enter the email address in the subject line."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Validation successful, no issues found"
+      }
+    ],
+    "final": {
+      "tags": [
+        "appliances in-unit laundry",
+        "balcony walking distance",
+        "apartment near downtown"
+      ],
+      "summary": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:53:05Z"
+}
+===== TEMP 0.7 RUN 9 =====
+
+--- Planner (13460 ms) ---
+{
+  "thought": "Topical tags and summary for rental listing",
+  "message": "Rental listing for 1400 Sq Ft 2BR apartment in San Jose",
+  "data": {
+    "tags": [
+      "Downtown San Jose Rentals",
+      "Pet Friendly Apartments",
+      "Light Rail Neighborhoods"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+--- Reviewer (13096 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Rental listing has valid topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "1400 Sq Ft 2BR apartment in downtown San Jose.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "This is a valid rental listing with a clear summary.",
+  "message": "The provided rental listing title and description are well-written and convey the essential details.",
+  "data": {
+    "tags": [
+      "San Jose Rentals",
+      "Apartments for Rent",
+      "Real Estate"
+    ],
+    "summary": "2BR apartment in San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Rental listing for 1400 Sq Ft 2BR apartment in San Jose"
+      },
+      {
+        "role": "Reviewer",
+        "content": "Rental listing has valid topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "San Jose Rentals",
+        "Apartments for Rent",
+        "Real Estate"
+      ],
+      "summary": "2BR apartment in San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:54:06Z"
+}
+===== TEMP 0.7 RUN 10 =====
+
+--- Planner (11461 ms) ---
+{
+  "thought": "Rental listing analysis",
+  "message": "Analyzing 1400 Sq Ft 2BR apartment listing for San Jose",
+  "data": {
+    "tags": [
+      "San Jose Apartments for Rent",
+      "Near Downtown San Jose",
+      "2 Bedroom Apartments in San Jose"
+    ],
+    "summary": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+--- Reviewer (13965 ms) ---
+{
+  "thought": "Cleaned and categorized tags and summary for the rental listing",
+  "message": "Topical tags: San Jose, Downtown, Apartment; Summary: Modern 2BR apartment near San Jose Downtown",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Apartment"
+    ],
+    "summary": "Modern 2BR apartment near San Jose Downtown.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Initial analysis complete",
+  "message": "Reviewing rental listing for San Jose apartment",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Apartment"
+    ],
+    "summary": "Modern 2BR apartment near San Jose Downtown.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Analyzing 1400 Sq Ft 2BR apartment listing for San Jose"
+      },
+      {
+        "role": "Reviewer",
+        "content": "Topical tags: San Jose, Downtown, Apartment; Summary: Modern 2BR apartment near San Jose Downtown"
+      }
+    ],
+    "final": {
+      "tags": [
+        "San Jose",
+        "appliances in-unit laundry",
+        "Apartment"
+      ],
+      "summary": "Modern 2BR apartment near San Jose Downtown.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:54:59Z"
+}
+===== TEMP 0.7 RUN 11 =====
+
+--- Planner (12041 ms) ---
+{
+  "thought": "Rental listing summary",
+  "message": "Bright 2 bedroom apartment near downtown San Jose with modern amenities and pet-friendly policies",
+  "data": {
+    "tags": [
+      "2 Bedroom Apartment",
+      "San Jose Rentals",
+      "Near Downtown Housing"
+    ],
+    "summary": "Modern 2 bedroom apartment in San Jose near downtown with updated kitchen and pet-friendly policies.",
+    "issues": []
+  }
+}
+
+--- Reviewer (12115 ms) ---
+{
+  "thought": "Generated summary for rental listing",
+  "message": "Bright 2-bedroom apartment near downtown San Jose with modern amenities and pet-friendly policies",
+  "data": {
+    "tags": [
+      "Pet-friendly",
+      "Modern amenities",
+      "Downtown San Jose"
+    ],
+    "summary": "Apartment near downtown San Jose with modern amenities and pet-friendly policies.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Automated review of rental listing",
+  "message": "The listing has the required information and meets the basic requirements",
+  "data": {
+    "tags": [
+      "Pet-Friendly",
+      "Downtown San Jose",
+      "Apartment for Rent"
+    ],
+    "summary": "Modern 2-bedroom apartment near downtown San Jose with pet-friendly policies.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment near downtown San Jose with modern amenities and pet-friendly policies"
+      },
+      {
+        "role": "Reviewer",
+        "content": "Bright 2-bedroom apartment near downtown San Jose with modern amenities and pet-friendly policies"
+      }
+    ],
+    "final": {
+      "tags": [
+        "Pet-Friendly",
+        "Downtown San Jose",
+        "Apartment for Rent"
+      ],
+      "summary": "Modern 2-bedroom apartment near downtown San Jose with pet-friendly policies.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:55:56Z"
+}
+===== TEMP 0.7 RUN 12 =====
+
+--- Planner (12509 ms) ---
+{
+  "thought": "Rental listing for apartment near downtown San Jose",
+  "message": "1400 Sq Ft 2BR apartment with updated kitchen and in-unit laundry available for rent in San Jose",
+  "data": {
+    "tags": [
+      "San Jose Apartments For Rent",
+      "Near Downtown San Jose Rentals",
+      "2 Bedroom Apartments Near Public Transportation"
+    ],
+    "summary": "Modern 2BR apartment near downtown San Jose with walking distance to light rail.",
+    "issues": []
+  }
+}
+
+--- Reviewer (12050 ms) ---
+{
+  "thought": "Validating rental listing details",
+  "message": "Rental listing title and description appear to be valid and meet the requirements.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "2BR Apartment",
+      "Near Downtown"
+    ],
+    "summary": "Large 2 bedroom apartment near downtown San Jose.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Generated rental listing title and description",
+  "message": "Rental listing appears to be valid and meets the requirements",
+  "data": {
+    "tags": [
+      "San Jose",
+      "2BR Apartment",
+      "Rentals"
+    ],
+    "summary": "1400 sq ft 2BR apartment for rent in San Jose with updated kitchen.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "1400 Sq Ft 2BR apartment with updated kitchen and in-unit laundry available for rent in San Jose"
+      },
+      {
+        "role": "Reviewer",
+        "content": "Rental listing title and description appear to be valid and meet the requirements."
+      }
+    ],
+    "final": {
+      "tags": [
+        "San Jose",
+        "2BR Apartment",
+        "Rentals"
+      ],
+      "summary": "1400 sq ft 2BR apartment for rent in San Jose with updated kitchen.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:56:43Z"
+}
+===== TEMP 0.7 RUN 13 =====
+
+--- Planner (13945 ms) ---
+{
+  "thought": "Rental apartment listing for a 1400 sq ft 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose",
+  "data": {
+    "tags": [
+      "Studio Apartment for Rent San Jose",
+      "Near Downtown San Jose",
+      "San Jose Apartments for Rent"
+    ],
+    "summary": "Modern 2-bedroom apartment near downtown San Jose with updated kitchen and laundry.",
+    "issues": []
+  }
+}
+
+--- Reviewer (15933 ms) ---
+{
+  "thought": "Generated summary and tags for rental listing",
+  "message": "This is a 1400 sq ft 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+  "data": {
+    "tags": [
+      "San Jose rental",
+      "2BR apartment",
+      "downtown living"
+    ],
+    "summary": "1400 sq ft 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Apartment listing review",
+  "message": "The apartment is a 2BR, 1400 sq ft unit near downtown San Jose with updated kitchen and in-unit laundry. Cats are allowed with a deposit. Reviewer feedback is used to finalize the output.",
+  "data": {
+    "tags": [
+      "Apartment for rent",
+      "San Jose",
+      "Downtown area"
+    ],
+    "summary": "2BR apartment in San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose"
+      },
+      {
+        "role": "Reviewer",
+        "content": "This is a 1400 sq ft 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for rent",
+        "San Jose",
+        "Downtown area"
+      ],
+      "summary": "2BR apartment in San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:57:48Z"
+}
+===== TEMP 0.7 RUN 14 =====
+
+--- Planner (12037 ms) ---
+{
+  "thought": "Generated tags and summary for rental listing",
+  "message": "Rental listing for 1400 Sq Ft 2BR apartment in San Jose",
+  "data": {
+    "tags": [
+      "San Jose Downtown Apartments for Rent",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Rentals in San Jose"
+    ],
+    "summary": "Modern 2BR apartment near downtown San Jose with in-unit laundry and balcony.",
+    "issues": []
+  }
+}
+
+--- Reviewer (12373 ms) ---
+{
+  "thought": "Analyzing rental listing for 1400 Sq Ft 2BR apartment in San Jose",
+  "message": "Listing has been analyzed for topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Listing has been analyzed for topical tags and summary.",
+  "message": "The rental listing is for a 1400 Sq Ft 2BR apartment in San Jose with amenities like in-unit laundry and a small balcony. It is located near downtown and has a light rail access.",
+  "data": {
+    "tags": [
+      "appliances in-unit laundry",
+      "San Jose",
+      "Rental"
+    ],
+    "summary": "2BR apartment in San Jose with in-unit laundry and small balcony.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Rental listing for 1400 Sq Ft 2BR apartment in San Jose"
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing has been analyzed for topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "appliances in-unit laundry",
+        "San Jose",
+        "Rental"
+      ],
+      "summary": "2BR apartment in San Jose with in-unit laundry and small balcony.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:58:44Z"
+}
+===== TEMP 0.7 RUN 15 =====
+
+--- Planner (11892 ms) ---
+{
+  "thought": "Rental listing summary generation",
+  "message": "I can help with generating a summary and topical tags for the rental listing.",
+  "data": {
+    "tags": [
+      "San Jose Apartments for Rent",
+      "Downtown San Jose Rentals",
+      "California Apartment Listings"
+    ],
+    "summary": "Charming 2-bedroom apartment in downtown San Jose with modern amenities.",
+    "issues": []
+  }
+}
+
+--- Reviewer (17752 ms) ---
+{
+  "thought": "Generating summary and tags for rental listing",
+  "message": "Listing title: 1400 Sq Ft 2BR Apartment Near Downtown San Jose, Description: Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "data": {
+    "tags": [
+      "appliances in-unit laundry",
+      "Rental",
+      "San Jose"
+    ],
+    "summary": "Bright 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Rental listing summary and topical tags",
+  "message": "Summary: 1400 sq ft 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry. Topical tags: San Jose, Apartment, Downtown",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Downtown"
+    ],
+    "summary": "1400 sq ft 2BR apartment in San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "I can help with generating a summary and topical tags for the rental listing."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title: 1400 Sq Ft 2BR Apartment Near Downtown San Jose, Description: Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit."
+      }
+    ],
+    "final": {
+      "tags": [
+        "San Jose",
+        "appliances in-unit laundry",
+        "Downtown"
+      ],
+      "summary": "1400 sq ft 2BR apartment in San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T00:59:53Z"
+}
+===== TEMP 0.7 RUN 16 =====
+
+--- Planner (10264 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment in San Jose",
+  "message": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry",
+  "data": {
+    "tags": [
+      "San Jose Apartments for Rent",
+      "2 Bedroom Rentals Downtown",
+      "Near Public Transportation"
+    ],
+    "summary": "Cozy 2BR apartment in San Jose with modern amenities.",
+    "issues": []
+  }
+}
+
+--- Reviewer (12050 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description validated successfully.",
+  "data": {
+    "tags": [
+      "Apartments for rent in San Jose",
+      "Downtown San Jose",
+      "2 bedroom apartments"
+    ],
+    "summary": "Bright 2-bedroom apartment near downtown San Jose with updated kitchen.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "No issues found",
+  "message": "Listing title and description validated successfully",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry"
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description validated successfully."
+      }
+    ],
+    "final": {
+      "tags": [
+        "San Jose",
+        "appliances in-unit laundry",
+        "Rental"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T01:00:41Z"
+}
+===== TEMP 0.7 RUN 17 =====
+
+--- Planner (14060 ms) ---
+{
+  "thought": "Rental listing tags and summary",
+  "message": "Rental listing details: 1400 sq ft, 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+  "data": {
+    "tags": [
+      "Downtown San Jose Rentals",
+      "San Jose 2BR Apartments",
+      "Near Light Rail Living"
+    ],
+    "summary": "Bright 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+--- Reviewer (13225 ms) ---
+{
+  "thought": "Validating rental listing details",
+  "message": "Listing title and description meet validation criteria",
+  "data": {
+    "tags": [
+      "San Jose rentals",
+      "Apartments near downtown",
+      "2 bedroom apartments"
+    ],
+    "summary": "2BR apartment in downtown San Jose with updated kitchen.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "The given rental listing details meet the validation criteria",
+  "message": "The listing title and description are valid and meet the requirements",
+  "data": {
+    "tags": [
+      "appliances in-unit laundry",
+      "balcony walking distance",
+      "apartment near downtown"
+    ],
+    "summary": "Large 2 bedroom apartment near downtown San Jose with updated kitchen.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Rental listing details: 1400 sq ft, 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description meet validation criteria"
+      }
+    ],
+    "final": {
+      "tags": [
+        "appliances in-unit laundry",
+        "balcony walking distance",
+        "apartment near downtown"
+      ],
+      "summary": "Large 2 bedroom apartment near downtown San Jose with updated kitchen.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T01:01:35Z"
+}
+===== TEMP 0.7 RUN 18 =====
+
+--- Planner (9783 ms) ---
+{
+  "thought": "Rental listing creation",
+  "message": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rent",
+      "2 Bedroom Apartments San Jose",
+      "Near Light Rail Apartments"
+    ],
+    "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+--- Reviewer (12026 ms) ---
+{
+  "thought": "Cleaning and categorizing the given text data",
+  "message": "Given rental listing title and description, producing exactly 3 topical tags and a one-sentence summary.",
+  "data": {
+    "tags": [
+      "appliances in-unit laundry",
+      "balcony walking distance",
+      "apartment near downtown"
+    ],
+    "summary": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Topical tags: Downtown San Jose, Apartment, Rent",
+  "message": "The given rental listing title and description are related to a property in Downtown San Jose.",
+  "data": {
+    "tags": [
+      "Downtown San Jose",
+      "appliances in-unit laundry",
+      "Rent"
+    ],
+    "summary": "2BR apartment in Downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "1400 Sq Ft 2BR Apartment Near Downtown San Jose"
+      },
+      {
+        "role": "Reviewer",
+        "content": "Given rental listing title and description, producing exactly 3 topical tags and a one-sentence summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Downtown San Jose",
+        "appliances in-unit laundry",
+        "Rent"
+      ],
+      "summary": "2BR apartment in Downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T01:02:31Z"
+}
+===== TEMP 0.7 RUN 19 =====
+
+--- Planner (12064 ms) ---
+{
+  "thought": "Rental listing analysis",
+  "message": "Analyzing 1400 Sq Ft 2BR Apartment Near Downtown San Jose listing for topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose Apartments for Rent",
+      "Downtown San Jose Rentals",
+      "2 Bedroom Apartments Near Light Rail"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+--- Reviewer (14644 ms) ---
+{
+  "thought": "Generating topical tags and summary for 1400 Sq Ft 2BR Apartment Near Downtown San Jose listing",
+  "message": "Generated topical tags and summary for the listing",
+  "data": {
+    "tags": [
+      "Apartment Rentals Near Downtown San Jose",
+      "2 Bedroom Apartments in San Jose",
+      "San Jose Apartments for Rent"
+    ],
+    "summary": "Spacious 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Finalizing topical tags and summary for 1400 Sq Ft 2BR Apartment Near Downtown San Jose listing",
+  "message": "Reviewer's generated tags and summary reviewed and approved",
+  "data": {
+    "tags": [
+      "Apartment For Rent",
+      "San Jose",
+      "Downtown Area"
+    ],
+    "summary": "Modern 2BR apartment near downtown San Jose with amenities like in-unit laundry and parking.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Analyzing 1400 Sq Ft 2BR Apartment Near Downtown San Jose listing for topical tags and summary."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Generated topical tags and summary for the listing"
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment For Rent",
+        "San Jose",
+        "Downtown Area"
+      ],
+      "summary": "Modern 2BR apartment near downtown San Jose with amenities like in-unit laundry and parking.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T01:03:22Z"
+}
+===== TEMP 0.7 RUN 20 =====
+
+--- Planner (10083 ms) ---
+{
+  "thought": "Rental listing generator",
+  "message": "Rental listing generated based on provided title and description",
+  "data": {
+    "tags": [
+      "Downtown San Jose Rentals",
+      "San Jose 2 Bedroom Apartments",
+      "Nearby Light Rail Homes"
+    ],
+    "summary": "2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+--- Reviewer (18275 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title: 1400 Sq Ft 2BR Apartment Near Downtown San Jose; Description: Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "Downtown San Jose",
+      "2BR Apartment"
+    ],
+    "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Based on the title and description, I would categorize this rental listing as an apartment in downtown San Jose, suitable for a couple or individual.",
+  "message": "This apartment listing appears to be a standard 2BR unit with modern amenities and proximity to public transportation.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Downtown"
+    ],
+    "summary": "2BR apartment in downtown San Jose with modern amenities.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Rental listing generated based on provided title and description"
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title: 1400 Sq Ft 2BR Apartment Near Downtown San Jose; Description: Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit."
+      }
+    ],
+    "final": {
+      "tags": [
+        "San Jose",
+        "appliances in-unit laundry",
+        "Downtown"
+      ],
+      "summary": "2BR apartment in downtown San Jose with modern amenities.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-05T01:04:37Z"
+}
+===== TEMP 0.0 RUN 1 =====
+
+--- Planner (29736 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments"
+    ],
+    "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+--- Reviewer (21855 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for rent",
+      "Near downtown San Jose",
+      "Light rail proximity"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for rent",
+      "San Jose",
+      "Near downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose"
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for rent",
+        "San Jose",
+        "Near downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:46:43Z"
+}
+===== TEMP 0.0 RUN 2 =====
+
+--- Planner (14345 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (12553 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for rent",
+      "San Jose",
+      "Near downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for rent",
+        "San Jose",
+        "Near downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:47:39Z"
+}
+===== TEMP 0.0 RUN 3 =====
+
+--- Planner (13846 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (9621 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:48:20Z"
+}
+===== TEMP 0.0 RUN 4 =====
+
+--- Planner (14115 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (10585 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:49:03Z"
+}
+===== TEMP 0.0 RUN 5 =====
+
+--- Planner (13398 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (10562 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:49:45Z"
+}
+===== TEMP 0.0 RUN 6 =====
+
+--- Planner (13639 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (9582 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:50:25Z"
+}
+===== TEMP 0.0 RUN 7 =====
+
+--- Planner (13724 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (9678 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:51:04Z"
+}
+===== TEMP 0.0 RUN 8 =====
+
+--- Planner (13909 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (9939 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:51:45Z"
+}
+===== TEMP 0.0 RUN 9 =====
+
+--- Planner (14267 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (10486 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:52:27Z"
+}
+===== TEMP 0.0 RUN 10 =====
+
+--- Planner (13364 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (10589 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:53:22Z"
+}
+===== TEMP 0.0 RUN 11 =====
+
+--- Planner (13531 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (10079 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:54:22Z"
+}
+===== TEMP 0.0 RUN 12 =====
+
+--- Planner (12845 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (9404 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:55:01Z"
+}
+===== TEMP 0.0 RUN 13 =====
+
+--- Planner (13183 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (9116 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:55:39Z"
+}
+===== TEMP 0.0 RUN 14 =====
+
+--- Planner (12883 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (9424 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:56:16Z"
+}
+===== TEMP 0.0 RUN 15 =====
+
+--- Planner (13741 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (9767 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:56:57Z"
+}
+===== TEMP 0.0 RUN 16 =====
+
+--- Planner (13039 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (11028 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:57:38Z"
+}
+===== TEMP 0.0 RUN 17 =====
+
+--- Planner (13811 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (9521 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:58:18Z"
+}
+===== TEMP 0.0 RUN 18 =====
+
+--- Planner (13026 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (9550 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:58:57Z"
+}
+===== TEMP 0.0 RUN 19 =====
+
+--- Planner (13111 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (9918 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T20:59:37Z"
+}
+===== TEMP 0.0 RUN 20 =====
+
+--- Planner (13765 ms) ---
+{
+  "thought": "Rental listing for a 2BR apartment near downtown San Jose",
+  "message": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+  "data": {
+    "tags": [
+      "San Jose Downtown Rentals",
+      "2 Bedroom Apartments Near Light Rail",
+      "Pet Friendly Apartments in San Jose"
+    ],
+    "summary": "2BR apartment with updated kitchen and in-unit laundry near downtown San Jose.",
+    "issues": []
+  }
+}
+
+--- Reviewer (10007 ms) ---
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "San Jose",
+      "appliances in-unit laundry",
+      "Rental"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Finalized Output 
+{
+  "thought": "Validating rental listing title and description for topical tags and summary",
+  "message": "Listing title and description are valid, producing topical tags and summary.",
+  "data": {
+    "tags": [
+      "Apartment for Rent",
+      "San Jose Rentals",
+      "Near Downtown"
+    ],
+    "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+    "issues": []
+  }
+}
+
+ Publish Package 
+{
+  "title": "1400 Sq Ft 2BR Apartment Near Downtown San Jose",
+  "email": "pragya.chourasia@sjsu.edu",
+  "content": "Bright 2 bedroom, 1 bath apartment on the second floor, updated kitchen with new appliances, in-unit laundry, one covered parking spot, small balcony, walking distance to light rail. No smoking. Cats allowed with deposit.",
+  "agents": {
+    "transcript": [
+      {
+        "role": "Planner",
+        "content": "Bright 2 bedroom apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose."
+      },
+      {
+        "role": "Reviewer",
+        "content": "Listing title and description are valid, producing topical tags and summary."
+      }
+    ],
+    "final": {
+      "tags": [
+        "Apartment for Rent",
+        "San Jose Rentals",
+        "Near Downtown"
+      ],
+      "summary": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+      "issues": []
+    }
+  },
+  "submissionDate": "2026-09-06T21:00:20Z"
+}

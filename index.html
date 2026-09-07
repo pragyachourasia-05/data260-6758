@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HW1-Pragya Chourasia</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+}
+
+h2 {
+    color: #555;
+    margin-top: 40px;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.checkbox-row input {
+    width: auto;
+    margin-bottom: 0;
+}
+
+.checkbox-row label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#listingList {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+#listingList li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #4CAF50;
+}
+
+#listingList button {
+    background-color: #ff4444;
+    margin: 10px 0 0 0;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+#listingList button:hover {
+    background-color: #cc0000;
+}
+</style>
+</head>
+<body>
+
+<h1>Rental Housing Listings</h1>
+
+<form id="listingForm">
+    <label for="propertyAddress">Property Address *</label>
+    <input
+        type="text"
+        id="propertyAddress"
+        placeholder="e.g. 123 Main St, San Jose, CA"
+        autofocus
+        required
+    />
+
+    <label for="monthlyRent">Monthly Rent *</label>
+    <input
+        type="text"
+        id="monthlyRent"
+        placeholder="e.g. $2,200/month"
+        required
+    />
+
+    <label for="submitterEmail">Your Email *</label>
+    <input
+        type="email"
+        id="submitterEmail"
+        placeholder="you@sjsu.edu"
+        required
+    />
+
+    <label for="listingDescription">Property Description *</label>
+    <textarea
+        id="listingDescription"
+        placeholder="Describe the property: bedrooms, bathrooms, square footage, amenities, pet policy, etc."
+        required
+    ></textarea>
+
+    <label for="propertyCategory">Category *</label>
+    <select id="propertyCategory" required>
+        <option value="" disabled selected>Choose</option>
+        <option value="Apartment">Apartment</option>
+        <option value="House">House</option>
+        <option value="Studio">Studio</option>
+        <option value="Condo">Condo</option>
+    </select>
+
+    <div class="checkbox-row">
+        <input type="checkbox" id="agreeTerms" required />
+        <label for="agreeTerms">I agree to the terms and conditions.</label>
+    </div>
+
+    <button type="submit">Submit Listing</button>
+</form>
+
+<h2>Submitted Listings:</h2>
+<ul id="listingList"></ul>
+
+<script src="script.js"></script>
+</body>
+</html>

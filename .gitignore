@@ -1,0 +1,9 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+part3_runs.txt
+part3_temp00.txt
+part3_temp07.txt
+reports/hw01/Downloads/
