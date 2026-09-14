@@ -1,0 +1,43 @@
+{
+  "homework": "HW2",
+  "sid4": "6758",
+  "domain": "Rental housing listings",
+  "model": "llama3.2:3b",
+  "temperature": 0.0,
+  "seed": 6758,
+  "verify_seed": 266758,
+  "commit_hash": "57c874de46c48f26e5af0a6b24be21c4ab4f7fc9",
+  "checks": [
+    {
+      "name": "required_hw02_files",
+      "passed": true,
+      "detail": "All required files exist."
+    },
+    {
+      "name": "schema_validation_runs",
+      "passed": true,
+      "detail": "Found 30 runs; expected 30."
+    },
+    {
+      "name": "ceiling_2_runs",
+      "passed": true,
+      "detail": "Found 20 runs; expected 20."
+    },
+    {
+      "name": "ceiling_10_runs",
+      "passed": true,
+      "detail": "Found 20 runs; expected 20."
+    },
+    {
+      "name": "adversarial_runs",
+      "passed": true,
+      "detail": "Found 5 runs; expected 5."
+    },
+    {
+      "name": "python_compile",
+      "passed": true,
+      "detail": "Graph and FastAPI files compile successfully."
+    }
+  ],
+  "passed": true
+}

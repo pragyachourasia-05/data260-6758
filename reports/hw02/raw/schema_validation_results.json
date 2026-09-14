@@ -1,0 +1,726 @@
+{
+  "experiment": "Part 4b schema-validation retries",
+  "input_file": "reports\\hw02\\cases\\schema_input.json",
+  "runs": [
+    {
+      "run": 1,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[2]='Near Downtown San Jose Apartments' must be 3-30 characters, got 33 [type=value_error, input_value=['2 Bedroom Apartments fo...wn San Jose Apartments'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 58045,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment in San Jose",
+        "message": "Bright 2 bedroom apartment near downtown San Jose with updated kitchen and in-unit laundry",
+        "data": {
+          "tags": [
+            "2 Bedroom Apartments for Rent",
+            "San Jose Downtown Rentals",
+            "Near Downtown San Jose Apartments"
+          ],
+          "summary": "2BR apartment in San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 2,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 46767,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 3,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41346,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 4,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41470,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 5,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41585,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 6,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41185,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 7,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41630,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 8,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41126,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 9,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 43192,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 10,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41169,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 11,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41591,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 12,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 42582,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 13,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41811,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 14,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41142,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 15,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41611,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 16,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41194,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 17,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41141,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 18,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41361,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 19,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41600,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 20,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 41521,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 21,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 42498,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 22,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 43381,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 23,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 47453,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 24,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 42251,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 25,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 38819,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 26,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 38438,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 27,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 38794,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 28,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 38263,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 29,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 39369,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 30,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 40 [type=value_error, input_value=['Apartment Rentals Near ...artments Near Downtown'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 39183,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near light rail and downtown San Jose.",
+        "data": {
+          "tags": [
+            "Apartment Rentals Near Downtown San Jose",
+            "San Jose CA Apartments",
+            "2 Bedroom Apartments Near Downtown"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    }
+  ]
+}

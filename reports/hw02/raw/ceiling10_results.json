@@ -1,0 +1,726 @@
+{
+  "experiment": "Part 4b schema-validation retries",
+  "input_file": "reports\\hw02\\cases\\schema_input.json",
+  "runs": [
+    {
+      "run": 1,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 73912,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 2,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 68791,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 3,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 68619,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 4,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 70848,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 5,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 70944,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 6,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 68887,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 7,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 68452,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 8,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 68923,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 9,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 71372,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 10,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 74053,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 11,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 68325,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 12,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 69578,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 13,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 68938,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 14,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 68487,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 15,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 68870,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 16,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 70494,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 17,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 69052,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 18,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 69346,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 19,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 68550,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    },
+    {
+      "run": 20,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 10,
+      "classification": "valid after two or more retries",
+      "validation_attempts": 4,
+      "validation_error": "",
+      "turn_count": 7,
+      "latency_ms": 68393,
+      "planner_proposal": {
+        "thought": "Rental listing for 1400 Sq Ft 2BR apartment near downtown San Jose",
+        "message": "Bright 2 bedroom, 1 bath apartment with updated kitchen and in-unit laundry, near downtown San Jose",
+        "data": {
+          "tags": [
+            "Apartment Rentals",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {
+        "thought": "Produce exactly 3 topical tags and a one-sentence summary for rental listing",
+        "message": "Cozy 2BR apartment near downtown San Jose with updated kitchen and in-unit laundry.",
+        "data": {
+          "tags": [
+            "Cozy Apartments",
+            "San Jose Downtown",
+            "Near Downtown Apartments"
+          ],
+          "summary": "2BR apartment near downtown San Jose with updated kitchen.",
+          "issues": []
+        }
+      }
+    }
+  ]
+}

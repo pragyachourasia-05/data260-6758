@@ -1,0 +1,126 @@
+{
+  "experiment": "Part 4b schema-validation retries",
+  "input_file": "reports\\hw02\\cases\\adversarial_input.json",
+  "runs": [
+    {
+      "run": 1,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Luxury Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 47 [type=value_error, input_value=['Luxury Apartment Rental...ony Access for Renters'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 49670,
+      "planner_proposal": {
+        "thought": "Luxury Downtown San Jose Apartment With Extremely Detailed Amenities",
+        "message": "Bright 2 bedroom apartment with updated kitchen, in-unit laundry, parking, balcony, and light rail access.",
+        "data": {
+          "tags": [
+            "Luxury Apartment Rentals Near Downtown San Jose",
+            "Updated Kitchen Appliances and In-Unit Laundry Facilities",
+            "Parking and Balcony Access for Renters"
+          ],
+          "summary": "Luxury downtown San Jose apartment with updated amenities.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 2,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Luxury Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 47 [type=value_error, input_value=['Luxury Apartment Rental...ony Access for Renters'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 39721,
+      "planner_proposal": {
+        "thought": "Luxury Downtown San Jose Apartment With Extremely Detailed Amenities",
+        "message": "Bright 2 bedroom apartment with updated kitchen, in-unit laundry, parking, balcony, and light rail access.",
+        "data": {
+          "tags": [
+            "Luxury Apartment Rentals Near Downtown San Jose",
+            "Updated Kitchen Appliances and In-Unit Laundry Facilities",
+            "Parking and Balcony Access for Renters"
+          ],
+          "summary": "Luxury downtown San Jose apartment with updated amenities.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 3,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Luxury Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 47 [type=value_error, input_value=['Luxury Apartment Rental...ony Access for Renters'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 38223,
+      "planner_proposal": {
+        "thought": "Luxury Downtown San Jose Apartment With Extremely Detailed Amenities",
+        "message": "Bright 2 bedroom apartment with updated kitchen, in-unit laundry, parking, balcony, and light rail access.",
+        "data": {
+          "tags": [
+            "Luxury Apartment Rentals Near Downtown San Jose",
+            "Updated Kitchen Appliances and In-Unit Laundry Facilities",
+            "Parking and Balcony Access for Renters"
+          ],
+          "summary": "Luxury downtown San Jose apartment with updated amenities.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 4,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Luxury Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 47 [type=value_error, input_value=['Luxury Apartment Rental...ony Access for Renters'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 38098,
+      "planner_proposal": {
+        "thought": "Luxury Downtown San Jose Apartment With Extremely Detailed Amenities",
+        "message": "Bright 2 bedroom apartment with updated kitchen, in-unit laundry, parking, balcony, and light rail access.",
+        "data": {
+          "tags": [
+            "Luxury Apartment Rentals Near Downtown San Jose",
+            "Updated Kitchen Appliances and In-Unit Laundry Facilities",
+            "Parking and Balcony Access for Renters"
+          ],
+          "summary": "Luxury downtown San Jose apartment with updated amenities.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    },
+    {
+      "run": 5,
+      "model": "llama3.2:3b",
+      "validation_ceiling": 3,
+      "classification": "abandoned at ceiling",
+      "validation_attempts": 3,
+      "validation_error": "1 validation error for PlannerOutputSchema\ntags\n  Value error, tag[0]='Luxury Apartment Rentals Near Downtown San Jose' must be 3-30 characters, got 47 [type=value_error, input_value=['Luxury Apartment Rental...ony Access for Renters'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "turn_count": 4,
+      "latency_ms": 37647,
+      "planner_proposal": {
+        "thought": "Luxury Downtown San Jose Apartment With Extremely Detailed Amenities",
+        "message": "Bright 2 bedroom apartment with updated kitchen, in-unit laundry, parking, balcony, and light rail access.",
+        "data": {
+          "tags": [
+            "Luxury Apartment Rentals Near Downtown San Jose",
+            "Updated Kitchen Appliances and In-Unit Laundry Facilities",
+            "Parking and Balcony Access for Renters"
+          ],
+          "summary": "Luxury downtown San Jose apartment with updated amenities.",
+          "issues": []
+        }
+      },
+      "reviewer_feedback": {}
+    }
+  ]
+}

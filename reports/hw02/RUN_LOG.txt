@@ -1,0 +1,61 @@
+DATA-260 Homework 2 Run Log
+SID4: 6758
+Model: llama3.2:3b
+Temperature: 0.0
+Base URL: http://localhost:11434
+
+[Part 3: Graph validation]
+Command:
+python .\graph_demo.py --model llama3.2:3b --strict
+
+Result:
+Graph completed with Supervisor, Planner, and Reviewer state updates.
+Planner validation and Reviewer routing were observed.
+
+[Part 3: Correction loop]
+Command:
+python .\graph_demo.py --model llama3.2:3b --strict --force_issue
+
+Result:
+Reviewer injected a forced issue.
+The router detected the issue and routed the graph back to Planner.
+Planner produced a corrected valid proposal.
+
+[Part 4b: Schema validation experiment]
+Command:
+python .\measure_schema_retries.py --runs 30 --model llama3.2:3b --validation_ceiling 3
+
+Result:
+30 runs completed.
+30 runs abandoned at the validation ceiling.
+Mean latency: 42050.6 ms.
+
+[Part 4c: Ceiling 2]
+Command:
+python .\measure_schema_retries.py --runs 20 --model llama3.2:3b --validation_ceiling 2
+
+Result:
+20 runs completed.
+0 completed successfully.
+Completion rate: 0.0%.
+Mean latency: 25051.9 ms.
+
+[Part 4c: Ceiling 10]
+Command:
+python .\measure_schema_retries.py --runs 20 --model llama3.2:3b --validation_ceiling 10
+
+Result:
+20 runs completed.
+20 completed successfully after two or more retries.
+Completion rate: 100.0%.
+Mean latency: 69741.7 ms.
+
+[Part 4d: Adversarial input]
+Command:
+python .\measure_schema_retries.py --runs 5 --model llama3.2:3b --validation_ceiling 3 --input reports\hw02\cases\adversarial_input.json --output reports\hw02\raw\adversarial_results.json
+
+Result:
+5 runs completed.
+5 runs abandoned at the validation ceiling.
+Abandonment rate: 100%.
+Mean latency: 40671.8 ms.
