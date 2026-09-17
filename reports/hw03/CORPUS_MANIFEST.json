@@ -1,0 +1,17 @@
+{
+  "domain": "Rental housing listings",
+  "minimum_required_bytes": 200000,
+  "total_bytes": 9066624,
+  "files": [
+    {
+      "filename": "california_tenant_guide.pdf",
+      "bytes": 3598246,
+      "sha256": "F29002289AA8B2D049067296CD5C599579311B4DBC327F9A23E1E7465B408AD4"
+    },
+    {
+      "filename": "hud_fair_housing.pdf",
+      "bytes": 5468378,
+      "sha256": "03467E13022A3A2B3A0C99B2DEF6B419949BC93CBDCA0D5F3E91077168C16FD2"
+    }
+  ]
+}
