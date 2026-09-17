@@ -1,0 +1,27 @@
+domain: rental_housing_listings
+
+questions:
+  - id: q1
+    question: "What does the Fair Housing Act protect renters from?"
+    expected_answer: "It protects renters from discrimination in housing."
+    expected_source: "hud_fair_housing.pdf"
+
+  - id: q2
+    question: "Which groups are protected by the Fair Housing Act?"
+    expected_answer: "Protected groups include race, color, national origin, religion, sex, familial status, and disability."
+    expected_source: "hud_fair_housing.pdf"
+
+  - id: q3
+    question: "Can a landlord discriminate against a renter with a disability?"
+    expected_answer: "No. Housing providers may need to provide reasonable accommodations or allow reasonable modifications."
+    expected_source: "hud_fair_housing.pdf"
+
+  - id: q4
+    question: "How long does a California landlord generally have to return a security deposit?"
+    expected_answer: "The landlord generally has 21 calendar days after the tenant moves out."
+    expected_source: "california_tenant_guide.pdf"
+
+  - id: q5
+    question: "How much notice should a California landlord generally give before entering a rental unit?"
+    expected_answer: "The landlord generally should provide at least 24 hours of written notice."
+    expected_source: "california_tenant_guide.pdf"
