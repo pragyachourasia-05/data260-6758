@@ -1,0 +1,33 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "k": 3,
+  "summaries": [
+    {
+      "technique": "token",
+      "chunks": 88,
+      "average_chunk_length": 2290.2,
+      "top1_cosine": 0.6283,
+      "mean_at_k_cosine": 0.5765,
+      "recall_at_k": 1.0,
+      "mean_retrieval_latency_ms": 132.392
+    },
+    {
+      "technique": "semantic",
+      "chunks": 51,
+      "average_chunk_length": 3454.65,
+      "top1_cosine": 0.631,
+      "mean_at_k_cosine": 0.551,
+      "recall_at_k": 0.8,
+      "mean_retrieval_latency_ms": 19.03
+    },
+    {
+      "technique": "sentence_window",
+      "chunks": 951,
+      "average_chunk_length": 185.26,
+      "top1_cosine": 0.749,
+      "mean_at_k_cosine": 0.6902,
+      "recall_at_k": 0.8,
+      "mean_retrieval_latency_ms": 50.191
+    }
+  ]
+}

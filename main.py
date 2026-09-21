@@ -1,16 +1,38 @@
+import os
+import uvicorn
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.responses import FileResponse
+from starlette.middleware.sessions import SessionMiddleware
 from pydantic import BaseModel, Field
 from typing import List, Optional
-import uvicorn
+
+from routers.auth import router as auth_router
 
 PORT_BASE = 8458  # SID4 = 6758 -> 8000 + (6758 mod 900)
 
-app = FastAPI(title="Rental Housing Listings API", version="1.0.0")
+app = FastAPI(title="Rental Housing Listings API")
 
-# Mount static files directory for serving HTML/CSS/JS
+# Session support for Part 1 auth (HW3). SECRET_KEY should come from the
+# environment in real deployment; a dev fallback is used here so the app
+# still runs without extra setup for local testing/screenshots.
+SECRET_KEY = os.getenv("SECRET_KEY", "dev-only-secret-key-change-me")
+app.add_middleware(
+    SessionMiddleware,
+    secret_key=SECRET_KEY,
+    https_only=True,   # Secure attribute on the session cookie
+    same_site="lax",   # SameSite attribute
+    max_age=3600,      # absolute cookie lifetime; idle timeout is enforced separately in routers/auth.py
+)
+# HttpOnly is on by default for Starlette's SessionMiddleware -- combined
+# with https_only and same_site above, that's all three required Set-Cookie
+# attributes (Secure, HttpOnly, SameSite).
+
+# Mount static files (the rental listings SPA from HW1/HW2)
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# Auth routes: "/", "/login", "/dashboard", "/logout"
+app.include_router(auth_router)
 
 
 # ---- Domain model, matching DOMAIN_SCHEMA.md ----
@@ -61,21 +83,10 @@ listings: List[Listing] = [
 ]
 
 
-# Serve the main HTML page
-@app.get("/")
-async def read_root():
-    return FileResponse("static/index.html")
-
-
-# ---- REST API endpoints ----
+# ---- REST API endpoints (unchanged from HW2) ----
 
 @app.get("/api/listings", response_model=List[Listing])
 async def get_listings(q: Optional[str] = Query(default=None, description="Search primary/secondary field")):
-    """
-    Returns all listings, or a filtered subset when q is provided.
-    Search matches (case-insensitively) against propertyAddress (primary field)
-    or monthlyRent (secondary field), per the assignment's search requirement.
-    """
     if not q:
         return listings
     needle = q.strip().lower()
@@ -95,7 +106,6 @@ async def get_listing(listing_id: int):
 
 @app.post("/api/listings", response_model=Listing, status_code=201)
 async def create_listing(data: ListingCreate):
-    """Add a new listing. The frontend re-fetches the list and re-renders home after this succeeds."""
     new_id = max([l.id for l in listings], default=0) + 1
     new_listing = Listing(id=new_id, **data.model_dump())
     listings.append(new_listing)
@@ -105,13 +115,7 @@ async def create_listing(data: ListingCreate):
 
 @app.delete("/api/listings/highest-id", response_model=Listing)
 async def delete_highest_id_listing():
-    """
-    Convenience endpoint matching the assignment's specific requirement:
-    delete the record with the highest ID currently in the list.
-    Defined BEFORE the generic /api/listings/{listing_id} route below,
-    since FastAPI matches path routes in registration order and an int
-    path param would otherwise swallow this literal path first.
-    """
+    """Defined BEFORE /api/listings/{listing_id} -- see HW2 note on FastAPI route-matching order."""
     global listings
     if not listings:
         raise HTTPException(status_code=404, detail="No listings to delete")
@@ -123,7 +127,6 @@ async def delete_highest_id_listing():
 
 @app.put("/api/listings/{listing_id}", response_model=Listing)
 async def update_listing(listing_id: int, data: ListingUpdate):
-    """Update an existing listing's fields (used generally, and specifically to update ID 1 per the assignment)."""
     listing = next((l for l in listings if l.id == listing_id), None)
     if not listing:
         raise HTTPException(status_code=404, detail="Listing not found")
@@ -149,8 +152,5 @@ async def delete_listing(listing_id: int):
     return None
 
 
-import webbrowser
-
 if __name__ == "__main__":
-    webbrowser.open(f"http://localhost:{PORT_BASE}")
-    uvicorn.run(app, host="0.0.0.0", port=PORT_BASE)
+    uvicorn.run("main:app", host="0.0.0.0", port=PORT_BASE, reload=True)

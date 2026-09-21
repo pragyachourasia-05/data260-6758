@@ -1,0 +1,786 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "k": 3,
+  "results": [
+    {
+      "technique": "token",
+      "question_id": "q1",
+      "question": "What does the Fair Housing Act protect renters from?",
+      "expected_source": "hud_fair_housing.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        -0.05613279715180397,
+        0.025396961718797684,
+        0.035968441516160965,
+        0.02243846468627453,
+        0.03470270335674286,
+        0.07276196777820587,
+        0.014962323941290379,
+        -0.07519298046827316
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 94.112,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.6497226045321837,
+          "cosine_similarity": 0.6520927548408508,
+          "chunk_length": 2760,
+          "preview": "FAIR HOUSING Equal Opportunity for All U.S. Department of Housing and Urban Development Office of Fair Housing and Equal Opportunity Please visit our website: w",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.600499971799957,
+          "cosine_similarity": 0.44606781005859375,
+          "chunk_length": 2273,
+          "preview": "any statement, in connection with the  provision of homeowners insurance coverage, that indicates  a preference, limitation or discrimination based on race, col",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.5943235032872336,
+          "cosine_similarity": 0.6374420523643494,
+          "chunk_length": 2205,
+          "preview": "Happens After A Complaint Investigation?.................................12 In Addition.........................................................................",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        }
+      ]
+    },
+    {
+      "technique": "token",
+      "question_id": "q2",
+      "question": "Which groups are protected by the Fair Housing Act?",
+      "expected_source": "hud_fair_housing.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        0.009971993044018745,
+        -0.02650557830929756,
+        0.032666221261024475,
+        0.023070378229022026,
+        0.06573007255792618,
+        0.05767792463302612,
+        0.020607110112905502,
+        -0.09983338415622711
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 41.595,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.6737072597624503,
+          "cosine_similarity": 0.6594065427780151,
+          "chunk_length": 2760,
+          "preview": "FAIR HOUSING Equal Opportunity for All U.S. Department of Housing and Urban Development Office of Fair Housing and Equal Opportunity Please visit our website: w",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.6309321243906894,
+          "cosine_similarity": 0.6691064834594727,
+          "chunk_length": 2205,
+          "preview": "Happens After A Complaint Investigation?.................................12 In Addition.........................................................................",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.6179842374102209,
+          "cosine_similarity": 0.5436861515045166,
+          "chunk_length": 2281,
+          "preview": "wide enough for wheelchairs \u2022\t All units must have: -\t An accessible route into and through the unit -\t Accessible light switches, electrical outlets, thermosta",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        }
+      ]
+    },
+    {
+      "technique": "token",
+      "question_id": "q3",
+      "question": "Can a landlord discriminate against a renter with a disability?",
+      "expected_source": "hud_fair_housing.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        -0.018441710621118546,
+        0.08497778326272964,
+        -0.05406013876199722,
+        0.03909369185566902,
+        -0.030797790735960007,
+        0.0481431670486927,
+        0.028272682800889015,
+        -0.05153852701187134
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 160.188,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.5912427312050823,
+          "cosine_similarity": 0.6177732348442078,
+          "chunk_length": 2273,
+          "preview": "any statement, in connection with the  provision of homeowners insurance coverage, that indicates  a preference, limitation or discrimination based on race, col",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.5520202943063943,
+          "cosine_similarity": 0.5964128375053406,
+          "chunk_length": 2433,
+          "preview": "does not accept you as a tenant, the landlord must return the entire holding  deposit.  UNLAWFUL DISCRIMINATION  What is unlawful discrimination?  A landlord ca",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": false
+        },
+        {
+          "rank": 3,
+          "store_score": 0.520357262265131,
+          "cosine_similarity": 0.49836111068725586,
+          "chunk_length": 2424,
+          "preview": "survivor of domestic violence, because this may be an  example of sex discrimination under both California and Federal law. These laws  are subject to the limit",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": false
+        }
+      ]
+    },
+    {
+      "technique": "token",
+      "question_id": "q4",
+      "question": "How long does a California landlord generally have to return a security deposit?",
+      "expected_source": "california_tenant_guide.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        0.08526249974966049,
+        0.01604536548256874,
+        -0.0038037181366235018,
+        0.06782228499650955,
+        -0.023465050384402275,
+        0.00406623724848032,
+        0.0025624465197324753,
+        -0.09909654408693314
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 273.935,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.6762569673747947,
+          "cosine_similarity": 0.5863630771636963,
+          "chunk_length": 2298,
+          "preview": "Toolkit-Jan-2016updated.pdf.  Normal security deposit law applies in cases where a survivor has to break their lease  early.141 In addition, if the tenant is a ",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.6667704119087228,
+          "cosine_similarity": 0.5841453075408936,
+          "chunk_length": 2349,
+          "preview": "purpose, as described on pages 74-76.  Almost all landlords charge tenants a security deposit. The security deposit may be  called last month\u2019s rent, security d",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.6620268202620734,
+          "cosine_similarity": 0.5370835065841675,
+          "chunk_length": 2257,
+          "preview": "(For  example, 30 days\u2019 advance written notice normally is required in a month-to-month  rental agreement.). In a fixed-term rental agreement, a change in depos",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        }
+      ]
+    },
+    {
+      "technique": "token",
+      "question_id": "q5",
+      "question": "How much notice should a California landlord generally give before entering a rental unit?",
+      "expected_source": "california_tenant_guide.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        0.1037953794002533,
+        0.02923610620200634,
+        -0.009145118296146393,
+        0.011724361218512058,
+        -0.028097180649638176,
+        -0.0011788983829319477,
+        -0.015281249769032001,
+        -0.02694302424788475
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 92.132,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.6348420163272523,
+          "cosine_similarity": 0.5127648115158081,
+          "chunk_length": 2217,
+          "preview": "prior to any proposed rent  increase. If the property is exempt from the State rent limit and no local rent stabilization  ordinances apply, the landlord must p",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.6184295476213609,
+          "cosine_similarity": 0.6159312725067139,
+          "chunk_length": 2090,
+          "preview": "mails the notice and the place of mailing is  within California. The period of notice may be longer if notice is mailed from outside of  California (10 days), o",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.618419729544904,
+          "cosine_similarity": 0.4913371205329895,
+          "chunk_length": 2231,
+          "preview": "statute, the protections  set forth in this statute are intended to prevent sellers of goods or providers of  services from charging exorbitant prices for neces",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        }
+      ]
+    },
+    {
+      "technique": "semantic",
+      "question_id": "q1",
+      "question": "What does the Fair Housing Act protect renters from?",
+      "expected_source": "hud_fair_housing.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        -0.05613279715180397,
+        0.025396961718797684,
+        0.035968441516160965,
+        0.02243846468627453,
+        0.03470270335674286,
+        0.07276196777820587,
+        0.014962323941290379,
+        -0.07519298046827316
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 19.626,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.691193267108845,
+          "cosine_similarity": 0.6466041803359985,
+          "chunk_length": 9717,
+          "preview": "20410-2000 i  FAIR HOUSING Equal Opportunity for All ii  FAIR HOUSING Equal Opportunity for All The Fair Housing Act  \t \t The Fair Housing Act prohibits discrim",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.6497226045321837,
+          "cosine_similarity": 0.6520927548408508,
+          "chunk_length": 2622,
+          "preview": "FAIR HOUSING Equal Opportunity for All U.S. Department of Housing and Urban Development Office of Fair Housing and Equal Opportunity Please visit our website: w",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.5958197978945887,
+          "cosine_similarity": 0.32960015535354614,
+          "chunk_length": 39,
+          "preview": "Department of Justice for enforcement. ",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        }
+      ]
+    },
+    {
+      "technique": "semantic",
+      "question_id": "q2",
+      "question": "Which groups are protected by the Fair Housing Act?",
+      "expected_source": "hud_fair_housing.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        0.009971993044018745,
+        -0.02650557830929756,
+        0.032666221261024475,
+        0.023070378229022026,
+        0.06573007255792618,
+        0.05767792463302612,
+        0.020607110112905502,
+        -0.09983338415622711
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 19.13,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.7269476829219434,
+          "cosine_similarity": 0.6892068982124329,
+          "chunk_length": 9717,
+          "preview": "20410-2000 i  FAIR HOUSING Equal Opportunity for All ii  FAIR HOUSING Equal Opportunity for All The Fair Housing Act  \t \t The Fair Housing Act prohibits discrim",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.6737072597624503,
+          "cosine_similarity": 0.6594065427780151,
+          "chunk_length": 2622,
+          "preview": "FAIR HOUSING Equal Opportunity for All U.S. Department of Housing and Urban Development Office of Fair Housing and Equal Opportunity Please visit our website: w",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.58935433561629,
+          "cosine_similarity": 0.35274356603622437,
+          "chunk_length": 39,
+          "preview": "Department of Justice for enforcement. ",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        }
+      ]
+    },
+    {
+      "technique": "semantic",
+      "question_id": "q3",
+      "question": "Can a landlord discriminate against a renter with a disability?",
+      "expected_source": "hud_fair_housing.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        -0.018441710621118546,
+        0.08497778326272964,
+        -0.05406013876199722,
+        0.03909369185566902,
+        -0.030797790735960007,
+        0.0481431670486927,
+        0.028272682800889015,
+        -0.05153852701187134
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 18.996,
+      "source_recall_at_k": false,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.555787507215113,
+          "cosine_similarity": 0.5705668926239014,
+          "chunk_length": 6043,
+          "preview": "Tenants are also entitled to receive one copy  of the lease from the landlord every calendar year upon request.    Alterations to Accommodate a Tenant with a Di",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": false
+        },
+        {
+          "rank": 2,
+          "store_score": 0.48479242714833193,
+          "cosine_similarity": 0.5174657106399536,
+          "chunk_length": 19481,
+          "preview": "It is illegal, however, for the  landlord to discriminate against you based on you being a member of a protected class.  (see \u201cUnlawful Discrimination,\u201d pages 1",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": false
+        },
+        {
+          "rank": 3,
+          "store_score": 0.4576388979128733,
+          "cosine_similarity": 0.43037939071655273,
+          "chunk_length": 1961,
+          "preview": "\u2022 Access to housing that you were denied.  \u2022 Damages for emotional distress.  \u2022 Civil penalties or punitive damages.  \u2022 Attorney\u2019s fees.  Sometimes, a court may",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": false
+        }
+      ]
+    },
+    {
+      "technique": "semantic",
+      "question_id": "q4",
+      "question": "How long does a California landlord generally have to return a security deposit?",
+      "expected_source": "california_tenant_guide.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        0.08526249974966049,
+        0.01604536548256874,
+        -0.0038037181366235018,
+        0.06782228499650955,
+        -0.023465050384402275,
+        0.00406623724848032,
+        0.0025624465197324753,
+        -0.09909654408693314
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 24.693,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.6737809318087519,
+          "cosine_similarity": 0.5614567995071411,
+          "chunk_length": 14428,
+          "preview": "An agreement of this kind is legally  binding.  SECURITY DEPOSIT INCREASES  Whether the landlord can increase the amount of the security deposit after you move ",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.6576337873984172,
+          "cosine_similarity": 0.5366548299789429,
+          "chunk_length": 813,
+          "preview": "............................................................. 69  Landlord\u2019s notice to end a periodic tenancy ... 70  TENANT PROTECTION ACT OF 2019 ......... 73",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.6505957615825448,
+          "cosine_similarity": 0.5573585033416748,
+          "chunk_length": 464,
+          "preview": "Security Deposits. Landlords must meet additional requirements before they can  deduct from a tenant\u2019s security deposit and are further limited in what repair a",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        }
+      ]
+    },
+    {
+      "technique": "semantic",
+      "question_id": "q5",
+      "question": "How much notice should a California landlord generally give before entering a rental unit?",
+      "expected_source": "california_tenant_guide.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        0.1037953794002533,
+        0.02923610620200634,
+        -0.009145118296146393,
+        0.011724361218512058,
+        -0.028097180649638176,
+        -0.0011788983829319477,
+        -0.015281249769032001,
+        -0.02694302424788475
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 12.707,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.646839279192379,
+          "cosine_similarity": 0.5361759662628174,
+          "chunk_length": 4756,
+          "preview": "It is best to do  this before you move in, but it can be done two or three days later, if agreed to by the  landlord. You and the landlord or agent should walk ",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.6377251409968405,
+          "cosine_similarity": 0.681760311126709,
+          "chunk_length": 2845,
+          "preview": "How many days' notice does a tenant have to give a landlord before  moving out? Can a landlord raise a tenant\u2019s rent? California Tenants \u2013 A Guide to  Residenti",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.6239299966964988,
+          "cosine_similarity": 0.5438281297683716,
+          "chunk_length": 3215,
+          "preview": "\u2022 Contact information for reporting problems or necessary maintenance or repairs,  including an emergency number.   29  \u2022 Other items, such as whether you can s",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        }
+      ]
+    },
+    {
+      "technique": "sentence_window",
+      "question_id": "q1",
+      "question": "What does the Fair Housing Act protect renters from?",
+      "expected_source": "hud_fair_housing.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        -0.05613279715180397,
+        0.025396961718797684,
+        0.035968441516160965,
+        0.02243846468627453,
+        0.03470270335674286,
+        0.07276196777820587,
+        0.014962323941290379,
+        -0.07519298046827316
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 44.907,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.6864758007081394,
+          "cosine_similarity": 0.7742443084716797,
+          "chunk_length": 42,
+          "preview": "The Fair Housing Act covers most housing. ",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.6831743716133692,
+          "cosine_similarity": 0.676441490650177,
+          "chunk_length": 200,
+          "preview": "3  FAIR HOUSING Equal Opportunity for All \t However, the Fair Housing Act does not protect a person who is a  \t direct threat to the health or safety of others ",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.6800432896342086,
+          "cosine_similarity": 0.6792775988578796,
+          "chunk_length": 333,
+          "preview": "The Department of Housing and Urban Development (HUD) enforces  the Fair Housing Act, which prohibits discrimination and the intimidation  of people in their ho",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        }
+      ]
+    },
+    {
+      "technique": "sentence_window",
+      "question_id": "q2",
+      "question": "Which groups are protected by the Fair Housing Act?",
+      "expected_source": "hud_fair_housing.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        0.009971993044018745,
+        -0.02650557830929756,
+        0.032666221261024475,
+        0.023070378229022026,
+        0.06573007255792618,
+        0.05767792463302612,
+        0.020607110112905502,
+        -0.09983338415622711
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 41.137,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.7099055382542925,
+          "cosine_similarity": 0.7228842973709106,
+          "chunk_length": 200,
+          "preview": "3  FAIR HOUSING Equal Opportunity for All \t However, the Fair Housing Act does not protect a person who is a  \t direct threat to the health or safety of others ",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.6994555863260808,
+          "cosine_similarity": 0.8027043342590332,
+          "chunk_length": 42,
+          "preview": "The Fair Housing Act covers most housing. ",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.6848143543859755,
+          "cosine_similarity": 0.6645569205284119,
+          "chunk_length": 453,
+          "preview": "20410-2000 i  FAIR HOUSING Equal Opportunity for All ii  FAIR HOUSING Equal Opportunity for All The Fair Housing Act  \t \t The Fair Housing Act prohibits discrim",
+          "source_file": "hud_fair_housing.pdf",
+          "expected_source_match": true
+        }
+      ]
+    },
+    {
+      "technique": "sentence_window",
+      "question_id": "q3",
+      "question": "Can a landlord discriminate against a renter with a disability?",
+      "expected_source": "hud_fair_housing.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        -0.018441710621118546,
+        0.08497778326272964,
+        -0.05406013876199722,
+        0.03909369185566902,
+        -0.030797790735960007,
+        0.0481431670486927,
+        0.028272682800889015,
+        -0.05153852701187134
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 61.71,
+      "source_recall_at_k": false,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.6280061041013183,
+          "cosine_similarity": 0.7351119518280029,
+          "chunk_length": 203,
+          "preview": "A landlord must also allow a tenant  with a disability to make reasonable modifications - physical changes - to the  premises to the extent necessary to allow t",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": false
+        },
+        {
+          "rank": 2,
+          "store_score": 0.6044531679227686,
+          "cosine_similarity": 0.684484601020813,
+          "chunk_length": 385,
+          "preview": "A landlord may not discriminate on the basis of the source of your income, but a  landlord is allowed to ask you about your level of income and the source of yo",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": false
+        },
+        {
+          "rank": 3,
+          "store_score": 0.5842528403694799,
+          "cosine_similarity": 0.5730627179145813,
+          "chunk_length": 145,
+          "preview": "\u2022 Whether the unit is physically accessible or can be reasonably modified to allow a  person with a disability to access and enjoy the housing.  ",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": false
+        }
+      ]
+    },
+    {
+      "technique": "sentence_window",
+      "question_id": "q4",
+      "question": "How long does a California landlord generally have to return a security deposit?",
+      "expected_source": "california_tenant_guide.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        0.08526249974966049,
+        0.01604536548256874,
+        -0.0038037181366235018,
+        0.06782228499650955,
+        -0.023465050384402275,
+        0.00406623724848032,
+        0.0025624465197324753,
+        -0.09909654408693314
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 47.696,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.8110726360416161,
+          "cosine_similarity": 0.7193965315818787,
+          "chunk_length": 173,
+          "preview": "The additional amount of the security deposit received  must be returned to the service member if after six months of being a tenant the service  member\u2019s rent ",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.732021790582991,
+          "cosine_similarity": 0.735974907875061,
+          "chunk_length": 502,
+          "preview": "The landlord can use the security deposit, for example, if you  move out owing rent, damage the rental unit beyond normal wear and tear, or leave the  rental un",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.721993137925738,
+          "cosine_similarity": 0.6554704904556274,
+          "chunk_length": 365,
+          "preview": "The lease must also include the date that the additional  amount of the security deposit will be returned if the above condition is met.138   Additionally, smal",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        }
+      ]
+    },
+    {
+      "technique": "sentence_window",
+      "question_id": "q5",
+      "question": "How much notice should a California landlord generally give before entering a rental unit?",
+      "expected_source": "california_tenant_guide.pdf",
+      "query_embedding_dimension": 384,
+      "query_embedding_first_8": [
+        0.1037953794002533,
+        0.02923610620200634,
+        -0.009145118296146393,
+        0.011724361218512058,
+        -0.028097180649638176,
+        -0.0011788983829319477,
+        -0.015281249769032001,
+        -0.02694302424788475
+      ],
+      "document_vector_shape": [
+        3,
+        384
+      ],
+      "retrieval_latency_ms": 55.507,
+      "source_recall_at_k": true,
+      "results": [
+        {
+          "rank": 1,
+          "store_score": 0.7144708669623798,
+          "cosine_similarity": 0.6904074549674988,
+          "chunk_length": 187,
+          "preview": "Therefore, if notice  is mailed from within California, the landlord would have to give you at least 35 days\u2019  notice from the date of mailing if the rent incre",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 2,
+          "store_score": 0.7102938248974289,
+          "cosine_similarity": 0.6968596577644348,
+          "chunk_length": 80,
+          "preview": "How many days' notice does a tenant have to give a landlord before  moving out? ",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        },
+        {
+          "rank": 3,
+          "store_score": 0.7026107824958183,
+          "cosine_similarity": 0.5419443845748901,
+          "chunk_length": 131,
+          "preview": "47    increase is greater than 10 percent, the landlord would have to give you at least 95 days\u2019  notice from the date of mailing. ",
+          "source_file": "california_tenant_guide.pdf",
+          "expected_source_match": true
+        }
+      ]
+    }
+  ]
+}
