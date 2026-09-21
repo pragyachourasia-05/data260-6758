@@ -2,12 +2,12 @@
   "homework": "HW3",
   "sid4": "6758",
   "domain": "Rental housing listings",
-  "commit_hash": "ee0543bb169fa0bb0437f8eb40d980c4db48d912",
+  "commit_hash": "cd3b6b1cef442bbd03b1dcae41ec73bded247df7",
   "checks": [
     {
       "name": "required_hw03_files",
-      "passed": false,
-      "detail": "Missing: ['reports\\\\hw03\\\\report.pdf']"
+      "passed": true,
+      "detail": "All required files exist."
     },
     {
       "name": "retrieval_results",
@@ -20,5 +20,5 @@
       "detail": "Found 3 techniques; expected 3."
     }
   ],
-  "passed": false
+  "passed": true
 }
