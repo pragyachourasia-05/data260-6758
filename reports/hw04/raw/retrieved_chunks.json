@@ -1,0 +1,155 @@
+{
+  "model": "llama3.2:3b",
+  "data": [
+    {
+      "question_id": "Q1",
+      "question": "What are the seven protected classes under the federal Fair Housing Act?",
+      "k": 3,
+      "chunks": [
+        {
+          "source": "01_fair_housing.md",
+          "chunk_id": "01_fair_housing-001",
+          "text": "# Federal Fair Housing Act The federal Fair Housing Act protects people from housing discrimination based on race, color, national origin, religion, sex, familial status, and disability. Housing providers may not refuse to rent or sell, refuse to negotiate, make housing unavailable, impose different rental terms, or provide different housing services because of a protected class. Familial status includes households with children under 18, pregnant people, and people securing custody of children. For disability-related needs, a housing provider may need to allow reasonable accommodations to rules or services and reasonable modifications to a dwelling when they are necessary for equal use and enjoyment of the housing.",
+          "score": 0.65167
+        },
+        {
+          "source": "04_screening_and_terms.md",
+          "chunk_id": "04_screening_and_terms-001",
+          "text": "# Rental Screening and Consistent Terms Rental screening criteria should be applied consistently to applicants. A landlord may use lawful criteria such as income, rental history, credit history, and references, but the same stated criteria should be applied without treating applicants differently because of a protected class. Rental terms, services, and availability decisions should also be consistent with fair-housing requirements. A landlord should document the criteria used, avoid questions that reveal protected information unnecessarily, and communicate application decisions consistently. Screening policies do not override federal or state fair-housing protections.",
+          "score": 0.51147
+        },
+        {
+          "source": "05_maintenance_requests.md",
+          "chunk_id": "05_maintenance_requests-001",
+          "text": "# Maintenance Requests and Records Tenants should report maintenance concerns through the communication method identified in the lease or property-management instructions. A useful request includes the unit identifier, a description of the problem, when it began, and whether there is an urgent safety concern. Tenants should keep copies of requests, photographs, and responses. Landlords should maintain a record of requests and responses, coordinate access when an inspection or repair is needed, and communicate expected timing. Maintenance records help both parties understand what was reported and what action was taken.",
+          "score": 0.13545
+        }
+      ]
+    },
+    {
+      "question_id": "Q2",
+      "question": "What notice is generally required before a California landlord enters a rental unit, and what exceptions may apply?",
+      "k": 3,
+      "chunks": [
+        {
+          "source": "02_california_entry.md",
+          "chunk_id": "02_california_entry-001",
+          "text": "# California Rental Entry Notice California landlords generally provide reasonable written notice before entering a rental unit. Twenty-four hours is commonly treated as reasonable notice for ordinary entry. Notice should identify the approximate date, time, and purpose of the entry when required by the applicable rule. Notice is not required in every situation. Important exceptions can include an emergency, a court order, abandonment or surrender of the unit, or permission given by the tenant at the time of entry. The exact application depends on the reason for entry and the governing law.",
+          "score": 0.82007
+        },
+        {
+          "source": "03_security_deposit.md",
+          "chunk_id": "03_security_deposit-001",
+          "text": "# California Security Deposits After a California tenant moves out, the landlord generally must return the remaining security deposit within 21 calendar days. If money is withheld, the landlord generally provides an itemized statement describing deductions and supporting documentation as required. Common lawful deductions can include unpaid rent, cleaning needed to restore the unit to its move-in condition, and repair of tenant-caused damage beyond ordinary wear and tear.",
+          "score": 0.52815
+        },
+        {
+          "source": "04_screening_and_terms.md",
+          "chunk_id": "04_screening_and_terms-001",
+          "text": "# Rental Screening and Consistent Terms Rental screening criteria should be applied consistently to applicants. A landlord may use lawful criteria such as income, rental history, credit history, and references, but the same stated criteria should be applied without treating applicants differently because of a protected class. Rental terms, services, and availability decisions should also be consistent with fair-housing requirements. A landlord should document the criteria used, avoid questions that reveal protected information unnecessarily, and communicate application decisions consistently. Screening policies do not override federal or state fair-housing protections.",
+          "score": 0.42353
+        }
+      ]
+    },
+    {
+      "question_id": "Q3",
+      "question": "What rules apply to a California security deposit after move-out?",
+      "k": 3,
+      "chunks": [
+        {
+          "source": "03_security_deposit.md",
+          "chunk_id": "03_security_deposit-001",
+          "text": "# California Security Deposits After a California tenant moves out, the landlord generally must return the remaining security deposit within 21 calendar days. If money is withheld, the landlord generally provides an itemized statement describing deductions and supporting documentation as required. Common lawful deductions can include unpaid rent, cleaning needed to restore the unit to its move-in condition, and repair of tenant-caused damage beyond ordinary wear and tear.",
+          "score": 0.79595
+        },
+        {
+          "source": "02_california_entry.md",
+          "chunk_id": "02_california_entry-001",
+          "text": "# California Rental Entry Notice California landlords generally provide reasonable written notice before entering a rental unit. Twenty-four hours is commonly treated as reasonable notice for ordinary entry. Notice should identify the approximate date, time, and purpose of the entry when required by the applicable rule. Notice is not required in every situation. Important exceptions can include an emergency, a court order, abandonment or surrender of the unit, or permission given by the tenant at the time of entry. The exact application depends on the reason for entry and the governing law.",
+          "score": 0.49663
+        },
+        {
+          "source": "04_screening_and_terms.md",
+          "chunk_id": "04_screening_and_terms-001",
+          "text": "# Rental Screening and Consistent Terms Rental screening criteria should be applied consistently to applicants. A landlord may use lawful criteria such as income, rental history, credit history, and references, but the same stated criteria should be applied without treating applicants differently because of a protected class. Rental terms, services, and availability decisions should also be consistent with fair-housing requirements. A landlord should document the criteria used, avoid questions that reveal protected information unnecessarily, and communicate application decisions consistently. Screening policies do not override federal or state fair-housing protections.",
+          "score": 0.34132
+        }
+      ]
+    },
+    {
+      "question_id": "Q4",
+      "question": "Can a landlord reject an applicant because the applicant has children?",
+      "k": 3,
+      "chunks": [
+        {
+          "source": "04_screening_and_terms.md",
+          "chunk_id": "04_screening_and_terms-001",
+          "text": "# Rental Screening and Consistent Terms Rental screening criteria should be applied consistently to applicants. A landlord may use lawful criteria such as income, rental history, credit history, and references, but the same stated criteria should be applied without treating applicants differently because of a protected class. Rental terms, services, and availability decisions should also be consistent with fair-housing requirements. A landlord should document the criteria used, avoid questions that reveal protected information unnecessarily, and communicate application decisions consistently. Screening policies do not override federal or state fair-housing protections.",
+          "score": 0.51394
+        },
+        {
+          "source": "01_fair_housing.md",
+          "chunk_id": "01_fair_housing-001",
+          "text": "# Federal Fair Housing Act The federal Fair Housing Act protects people from housing discrimination based on race, color, national origin, religion, sex, familial status, and disability. Housing providers may not refuse to rent or sell, refuse to negotiate, make housing unavailable, impose different rental terms, or provide different housing services because of a protected class. Familial status includes households with children under 18, pregnant people, and people securing custody of children. For disability-related needs, a housing provider may need to allow reasonable accommodations to rules or services and reasonable modifications to a dwelling when they are necessary for equal use and enjoyment of the housing.",
+          "score": 0.35309
+        },
+        {
+          "source": "02_california_entry.md",
+          "chunk_id": "02_california_entry-001",
+          "text": "# California Rental Entry Notice California landlords generally provide reasonable written notice before entering a rental unit. Twenty-four hours is commonly treated as reasonable notice for ordinary entry. Notice should identify the approximate date, time, and purpose of the entry when required by the applicable rule. Notice is not required in every situation. Important exceptions can include an emergency, a court order, abandonment or surrender of the unit, or permission given by the tenant at the time of entry. The exact application depends on the reason for entry and the governing law.",
+          "score": 0.21252
+        }
+      ]
+    },
+    {
+      "question_id": "Q5",
+      "question": "Which San Jose apartment has the lowest monthly rent in the provided documents?",
+      "k": 3,
+      "chunks": [
+        {
+          "source": "02_california_entry.md",
+          "chunk_id": "02_california_entry-001",
+          "text": "# California Rental Entry Notice California landlords generally provide reasonable written notice before entering a rental unit. Twenty-four hours is commonly treated as reasonable notice for ordinary entry. Notice should identify the approximate date, time, and purpose of the entry when required by the applicable rule. Notice is not required in every situation. Important exceptions can include an emergency, a court order, abandonment or surrender of the unit, or permission given by the tenant at the time of entry. The exact application depends on the reason for entry and the governing law.",
+          "score": 0.33888
+        },
+        {
+          "source": "03_security_deposit.md",
+          "chunk_id": "03_security_deposit-001",
+          "text": "# California Security Deposits After a California tenant moves out, the landlord generally must return the remaining security deposit within 21 calendar days. If money is withheld, the landlord generally provides an itemized statement describing deductions and supporting documentation as required. Common lawful deductions can include unpaid rent, cleaning needed to restore the unit to its move-in condition, and repair of tenant-caused damage beyond ordinary wear and tear.",
+          "score": 0.30364
+        },
+        {
+          "source": "04_screening_and_terms.md",
+          "chunk_id": "04_screening_and_terms-001",
+          "text": "# Rental Screening and Consistent Terms Rental screening criteria should be applied consistently to applicants. A landlord may use lawful criteria such as income, rental history, credit history, and references, but the same stated criteria should be applied without treating applicants differently because of a protected class. Rental terms, services, and availability decisions should also be consistent with fair-housing requirements. A landlord should document the criteria used, avoid questions that reveal protected information unnecessarily, and communicate application decisions consistently. Screening policies do not override federal or state fair-housing protections.",
+          "score": 0.27083
+        }
+      ]
+    },
+    {
+      "question_id": "Q6",
+      "question": "What was the weather in San Jose yesterday?",
+      "k": 3,
+      "chunks": [
+        {
+          "source": "02_california_entry.md",
+          "chunk_id": "02_california_entry-001",
+          "text": "# California Rental Entry Notice California landlords generally provide reasonable written notice before entering a rental unit. Twenty-four hours is commonly treated as reasonable notice for ordinary entry. Notice should identify the approximate date, time, and purpose of the entry when required by the applicable rule. Notice is not required in every situation. Important exceptions can include an emergency, a court order, abandonment or surrender of the unit, or permission given by the tenant at the time of entry. The exact application depends on the reason for entry and the governing law.",
+          "score": 0.14566
+        },
+        {
+          "source": "03_security_deposit.md",
+          "chunk_id": "03_security_deposit-001",
+          "text": "# California Security Deposits After a California tenant moves out, the landlord generally must return the remaining security deposit within 21 calendar days. If money is withheld, the landlord generally provides an itemized statement describing deductions and supporting documentation as required. Common lawful deductions can include unpaid rent, cleaning needed to restore the unit to its move-in condition, and repair of tenant-caused damage beyond ordinary wear and tear.",
+          "score": 0.1138
+        },
+        {
+          "source": "05_maintenance_requests.md",
+          "chunk_id": "05_maintenance_requests-001",
+          "text": "# Maintenance Requests and Records Tenants should report maintenance concerns through the communication method identified in the lease or property-management instructions. A useful request includes the unit identifier, a description of the problem, when it began, and whether there is an urgent safety concern. Tenants should keep copies of requests, photographs, and responses. Landlords should maintain a record of requests and responses, coordinate access when an inspection or repair is needed, and communicate expected timing. Maintenance records help both parties understand what was reported and what action was taken.",
+          "score": 0.05924
+        }
+      ]
+    }
+  ]
+}

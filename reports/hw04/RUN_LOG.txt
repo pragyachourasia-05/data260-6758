@@ -1,0 +1,36 @@
+DATA-260 HW4 RUN LOG
+Student: Pragya Chourasia
+SID4: 6758
+Domain: Rental housing listings
+Timezone: PDT (-07:00)
+
+2026-09-27 23:12:00 -07:00
+Database seed completed:
+python .\backend\seed_hw04.py
+Result: 5,000 listings and 200 related detail rows were created.
+
+2026-09-27 23:27:00 -07:00
+N+1 benchmark completed:
+python .\backend\benchmark_nplus1.py
+Result: 180 request measurements saved to reports/hw04/raw/nplus1_results.json.
+
+2026-09-27 23:32:00 -07:00
+Benchmark verification completed.
+Result:
+Total: 180
+Naive: 90
+Fixed: 90
+Naive SQL counts: 11, 51, and 201
+Fixed SQL counts: 1, 1, and 1
+
+2026-09-28 00:25:00 -07:00
+RAG experiment completed:
+python -u .\rag\rag.py --k 3
+Result: five corpus documents and six questions were processed. RAG output files were saved under reports/hw04/raw.
+
+2026-09-28 00:40:00 -07:00
+Database index comparison completed.
+Result: the before-index query used a full table scan. After adding ix_listings_submitter_email, the EXPLAIN output used the index and estimated fewer rows.
+
+2026-09-28 00:49:07 -07:00
+Screenshots were captured and the HW4 report evidence was prepared.

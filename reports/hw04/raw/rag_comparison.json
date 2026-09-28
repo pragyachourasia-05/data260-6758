@@ -1,0 +1,221 @@
+{
+  "model": "llama3.2:3b",
+  "data": [
+    {
+      "question_id": "Q1",
+      "question": "What are the seven protected classes under the federal Fair Housing Act?",
+      "configuration": "A_no_rag",
+      "k": 3,
+      "answer": "Under the federal Fair Housing Act, the seven protected classes are:\n\n1. Race\n2. Color\n3. National Origin\n4. Religion\n5. Sex\n6. Familial Status (including families with children under 18)\n7. Disability",
+      "retrieved_sources": [
+        "01_fair_housing.md",
+        "04_screening_and_terms.md",
+        "05_maintenance_requests.md"
+      ]
+    },
+    {
+      "question_id": "Q1",
+      "question": "What are the seven protected classes under the federal Fair Housing Act?",
+      "configuration": "B_basic_rag",
+      "k": 3,
+      "answer": "Unfortunately, the provided passages do not explicitly list the seven protected classes under the federal Fair Housing Act. However, it does provide a general overview of the protected classes, which include:\n\n1. Race\n2. Color\n3. National origin\n4. Religion\n5. Sex\n6. Familial status (households with children under 18, pregnant people, and people securing custody of children)\n7. Disability\n\nAdditionally, the passage mentions that housing providers may need to allow reasonable accommodations to rules or services and reasonable modifications to a dwelling when they are necessary for equal use and enjoyment of the housing for individuals with disabilities.",
+      "retrieved_sources": [
+        "01_fair_housing.md",
+        "04_screening_and_terms.md",
+        "05_maintenance_requests.md"
+      ]
+    },
+    {
+      "question_id": "Q1",
+      "question": "What are the seven protected classes under the federal Fair Housing Act?",
+      "configuration": "C_context_rag",
+      "k": 3,
+      "answer": "I cannot answer this question from the provided documents.",
+      "retrieved_sources": [
+        "01_fair_housing.md",
+        "04_screening_and_terms.md",
+        "05_maintenance_requests.md"
+      ]
+    },
+    {
+      "question_id": "Q2",
+      "question": "What notice is generally required before a California landlord enters a rental unit, and what exceptions may apply?",
+      "configuration": "A_no_rag",
+      "k": 3,
+      "answer": "In California, a landlord is generally required to provide a 24-hour notice to a tenant before entering a rental unit, except in emergencies or with the tenant's written consent. Exceptions may include:\n\n* Emergencies, such as a fire or pest infestation\n* Maintenance or repairs that cannot be scheduled at a later time\n* Inspection for compliance with health and safety codes\n* Law enforcement or court-ordered entry\n\nIt's always best to check with a local housing authority or attorney for specific guidance on California landlord-tenant law.",
+      "retrieved_sources": [
+        "02_california_entry.md",
+        "03_security_deposit.md",
+        "04_screening_and_terms.md"
+      ]
+    },
+    {
+      "question_id": "Q2",
+      "question": "What notice is generally required before a California landlord enters a rental unit, and what exceptions may apply?",
+      "configuration": "B_basic_rag",
+      "k": 3,
+      "answer": "According to the passages, a California landlord is generally required to provide reasonable written notice before entering a rental unit. The notice should identify the approximate date, time, and purpose of the entry.\n\nThere are some exceptions that may apply, including:\n\n1. Emergency situations\n2. Court orders\n3. Abandonment or surrender of the unit\n4. Permission given by the tenant at the time of entry\n\nThe exact application of these exceptions depends on the reason for entry and the governing law.",
+      "retrieved_sources": [
+        "02_california_entry.md",
+        "03_security_deposit.md",
+        "04_screening_and_terms.md"
+      ]
+    },
+    {
+      "question_id": "Q2",
+      "question": "What notice is generally required before a California landlord enters a rental unit, and what exceptions may apply?",
+      "configuration": "C_context_rag",
+      "k": 3,
+      "answer": "According to the provided context, the notice generally required before a California landlord enters a rental unit is a reasonable written notice, commonly treated as 24 hours for ordinary entry. Exceptions may apply in situations such as an emergency, a court order, abandonment or surrender of the unit, or permission given by the tenant at the time of entry.",
+      "retrieved_sources": [
+        "02_california_entry.md",
+        "03_security_deposit.md",
+        "04_screening_and_terms.md"
+      ]
+    },
+    {
+      "question_id": "Q3",
+      "question": "What rules apply to a California security deposit after move-out?",
+      "configuration": "A_no_rag",
+      "k": 3,
+      "answer": "In California, the following rules apply to a security deposit after move-out:\n\n1. A landlord must refund all or part of the security deposit within 45 days of the tenant's move-out.\n2. The landlord is allowed to keep the security deposit if there are damages or unpaid rent, but the amount of the deposit retained must not exceed the amount of damages or unpaid rent.\n3. The landlord must provide a written itemized statement explaining the amount of the deposit retained and the deductions made.\n\nThese rules are governed by California Civil Code Section 1950.5 and are intended to protect tenants from unfair security deposit practices.",
+      "retrieved_sources": [
+        "03_security_deposit.md",
+        "02_california_entry.md",
+        "04_screening_and_terms.md"
+      ]
+    },
+    {
+      "question_id": "Q3",
+      "question": "What rules apply to a California security deposit after move-out?",
+      "configuration": "B_basic_rag",
+      "k": 3,
+      "answer": "For a California security deposit after move-out, the following rules generally apply:\n\n1. The landlord must return the remaining security deposit within 21 calendar days.\n2. If money is withheld, the landlord must provide an itemized statement describing deductions and supporting documentation.\n3. Common lawful deductions include:\n   - Unpaid rent\n   - Cleaning needed to restore the unit to its move-in condition\n   - Repair of tenant-caused damage beyond ordinary wear and tear\n\nNote that these rules do not provide an exhaustive list of deductions, and the specific laws and regulations may vary depending on the circumstances.",
+      "retrieved_sources": [
+        "03_security_deposit.md",
+        "02_california_entry.md",
+        "04_screening_and_terms.md"
+      ]
+    },
+    {
+      "question_id": "Q3",
+      "question": "What rules apply to a California security deposit after move-out?",
+      "configuration": "C_context_rag",
+      "k": 3,
+      "answer": "According to [S1], after a California tenant moves out, the landlord generally must return the remaining security deposit within 21 calendar days.",
+      "retrieved_sources": [
+        "03_security_deposit.md",
+        "02_california_entry.md",
+        "04_screening_and_terms.md"
+      ]
+    },
+    {
+      "question_id": "Q4",
+      "question": "Can a landlord reject an applicant because the applicant has children?",
+      "configuration": "A_no_rag",
+      "k": 3,
+      "answer": "Generally, no. Federal law prohibits discrimination in rental housing based on family status, including having children. The Fair Housing Act requires landlords to consider all applicants equally, regardless of family size.",
+      "retrieved_sources": [
+        "04_screening_and_terms.md",
+        "01_fair_housing.md",
+        "02_california_entry.md"
+      ]
+    },
+    {
+      "question_id": "Q4",
+      "question": "Can a landlord reject an applicant because the applicant has children?",
+      "configuration": "B_basic_rag",
+      "k": 3,
+      "answer": "Based on the provided passages, a landlord cannot reject an applicant because the applicant has children. The Federal Fair Housing Act protects people from housing discrimination based on familial status, which includes households with children under 18. A landlord cannot refuse to rent or sell, or impose different rental terms because of a household with children.\n\nIn California, landlords are also required to provide reasonable written notice before entering a rental unit, and the presence of children is not a valid reason for denying an applicant. The California Rental Entry Notice does not specifically address the issue of household size or family composition, but it does emphasize the importance of providing notice before entering a rental unit.\n\nOverall, a landlord must apply rental screening criteria consistently and without discriminating against applicants based on protected classes, including familial status.",
+      "retrieved_sources": [
+        "04_screening_and_terms.md",
+        "01_fair_housing.md",
+        "02_california_entry.md"
+      ]
+    },
+    {
+      "question_id": "Q4",
+      "question": "Can a landlord reject an applicant because the applicant has children?",
+      "configuration": "C_context_rag",
+      "k": 3,
+      "answer": "Based on the provided context, a landlord cannot reject an applicant solely because the applicant has children. According to the Federal Fair Housing Act [S2], familial status includes households with children under 18, pregnant people, and people securing custody of children. This means that landlords are prohibited from discriminating against applicants based on familial status, including rejecting applicants with children.\n\nWhile rental screening criteria such as income, rental history, credit history, and references may be used, the same criteria must be applied consistently without treating applicants differently because of a protected class (S1). This implies that a landlord cannot reject an applicant based on familial status, including the presence of children.\n\nIt's worth noting that California law also requires landlords to provide reasonable written notice before entering a rental unit, but this does not directly address the issue of rejecting applicants with children (S3).",
+      "retrieved_sources": [
+        "04_screening_and_terms.md",
+        "01_fair_housing.md",
+        "02_california_entry.md"
+      ]
+    },
+    {
+      "question_id": "Q5",
+      "question": "Which San Jose apartment has the lowest monthly rent in the provided documents?",
+      "configuration": "A_no_rag",
+      "k": 3,
+      "answer": "I don't have access to the provided documents. However, I can suggest some options to find the answer:\n\n1. Check the provided documents: If you have access to the documents, you can review them to find the apartment with the lowest monthly rent.\n2. Search online: You can search online for \"San Jose apartments\" or \"San Jose rentals\" to find websites that list available apartments and their monthly rents.\n3. Contact a property management company: You can contact a property management company that specializes in San Jose rentals and ask them to provide you with information about the apartments they have available and their monthly rents.\n\nI hope this helps. Let me know if you have any other questions.",
+      "retrieved_sources": [
+        "02_california_entry.md",
+        "03_security_deposit.md",
+        "04_screening_and_terms.md"
+      ]
+    },
+    {
+      "question_id": "Q5",
+      "question": "Which San Jose apartment has the lowest monthly rent in the provided documents?",
+      "configuration": "B_basic_rag",
+      "k": 3,
+      "answer": "Unfortunately, the provided passages do not mention San Jose apartments or monthly rent. The passages seem to be related to California landlord-tenant laws and regulations, but they do not contain any information about specific apartments or rent prices.",
+      "retrieved_sources": [
+        "02_california_entry.md",
+        "03_security_deposit.md",
+        "04_screening_and_terms.md"
+      ]
+    },
+    {
+      "question_id": "Q5",
+      "question": "Which San Jose apartment has the lowest monthly rent in the provided documents?",
+      "configuration": "C_context_rag",
+      "k": 3,
+      "answer": "I cannot answer this question from the provided documents",
+      "retrieved_sources": [
+        "02_california_entry.md",
+        "03_security_deposit.md",
+        "04_screening_and_terms.md"
+      ]
+    },
+    {
+      "question_id": "Q6",
+      "question": "What was the weather in San Jose yesterday?",
+      "configuration": "A_no_rag",
+      "k": 3,
+      "answer": "I'm a large language model, I don't have have access to real-time weather data or specific information about the weather in San Jose for a particular day, including yesterday. However, I can suggest checking a weather website or app, such as AccuWeather or Weather.com, for the current and forecasted weather conditions in San Jose.",
+      "retrieved_sources": [
+        "02_california_entry.md",
+        "03_security_deposit.md",
+        "05_maintenance_requests.md"
+      ]
+    },
+    {
+      "question_id": "Q6",
+      "question": "What was the weather in San Jose yesterday?",
+      "configuration": "B_basic_rag",
+      "k": 3,
+      "answer": "Unfortunately, I don't have any information about the weather in San Jose yesterday, as the passages you provided don't mention weather or weather conditions at all. They focus on topics such as rental notices, security deposits, and maintenance requests. If you're looking for information about the weather, I'd be happy to try and help you find it elsewhere!",
+      "retrieved_sources": [
+        "02_california_entry.md",
+        "03_security_deposit.md",
+        "05_maintenance_requests.md"
+      ]
+    },
+    {
+      "question_id": "Q6",
+      "question": "What was the weather in San Jose yesterday?",
+      "configuration": "C_context_rag",
+      "k": 3,
+      "answer": "I cannot answer this question from the provided documents",
+      "retrieved_sources": [
+        "02_california_entry.md",
+        "03_security_deposit.md",
+        "05_maintenance_requests.md"
+      ]
+    }
+  ]
+}

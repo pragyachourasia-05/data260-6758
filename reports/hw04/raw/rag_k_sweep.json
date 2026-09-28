@@ -1,0 +1,47 @@
+{
+  "model": "llama3.2:3b",
+  "data": [
+    {
+      "question_id": "Q1",
+      "k": 1,
+      "sources": [
+        "01_fair_housing.md"
+      ],
+      "scores": [
+        0.65167
+      ]
+    },
+    {
+      "question_id": "Q1",
+      "k": 3,
+      "sources": [
+        "01_fair_housing.md",
+        "04_screening_and_terms.md",
+        "05_maintenance_requests.md"
+      ],
+      "scores": [
+        0.65167,
+        0.51147,
+        0.13545
+      ]
+    },
+    {
+      "question_id": "Q1",
+      "k": 5,
+      "sources": [
+        "01_fair_housing.md",
+        "04_screening_and_terms.md",
+        "05_maintenance_requests.md",
+        "02_california_entry.md",
+        "03_security_deposit.md"
+      ],
+      "scores": [
+        0.65167,
+        0.51147,
+        0.13545,
+        0.13375,
+        0.07246
+      ]
+    }
+  ]
+}

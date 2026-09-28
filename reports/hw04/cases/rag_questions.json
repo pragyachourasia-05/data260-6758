@@ -1,0 +1,11 @@
+{
+  "domain": "rental_housing_listings",
+  "questions": [
+    {"id":"Q1","question":"What are the seven protected classes under the federal Fair Housing Act?","expected":"race, color, national origin, religion, sex, familial status, and disability","expected_sources":["01_fair_housing.md"],"needs_sources":1,"must_refuse":false},
+    {"id":"Q2","question":"What notice is generally required before a California landlord enters a rental unit, and what exceptions may apply?","expected":"reasonable written notice, commonly at least 24 hours, with exceptions such as emergencies","expected_sources":["02_california_entry.md","05_maintenance_requests.md"],"needs_sources":2,"must_refuse":false},
+    {"id":"Q3","question":"What rules apply to a California security deposit after move-out?","expected":"the remaining deposit is generally returned within 21 calendar days and itemized deductions are provided","expected_sources":["03_security_deposit.md"],"needs_sources":1,"must_refuse":false},
+    {"id":"Q4","question":"Can a landlord reject an applicant because the applicant has children?","expected":"familial status is protected, so a housing provider generally may not discriminate for that reason","expected_sources":["01_fair_housing.md","04_screening_and_terms.md"],"needs_sources":2,"must_refuse":false},
+    {"id":"Q5","question":"Which San Jose apartment has the lowest monthly rent in the provided documents?","expected":"not stated in the documents","expected_sources":[],"needs_sources":0,"must_refuse":true},
+    {"id":"Q6","question":"What was the weather in San Jose yesterday?","expected":"not stated in the documents","expected_sources":[],"needs_sources":0,"must_refuse":true}
+  ]
+}

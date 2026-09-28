@@ -1,0 +1,56 @@
+{
+  "homework": "HW4",
+  "sid4": "6758",
+  "domain": "Rental housing listings",
+  "seed": 6758,
+  "verify_seed": 266758,
+  "commit_hash": "786321ac9ffd9991a511e51613f55819aa3b0a63",
+  "checks": [
+    {
+      "name": "required_files",
+      "passed": true,
+      "detail": "All required HW4 files exist."
+    },
+    {
+      "name": "corpus_documents",
+      "passed": true,
+      "detail": "Found 5 corpus documents; expected at least 5."
+    },
+    {
+      "name": "rag_questions",
+      "passed": true,
+      "detail": "Found 6 RAG questions; expected 6."
+    },
+    {
+      "name": "nplus1_measurements",
+      "passed": true,
+      "detail": "Found 180 measurements; expected 180."
+    },
+    {
+      "name": "nplus1_sql_patterns",
+      "passed": true,
+      "detail": "Observed SQL patterns: [('fixed', 10, 1), ('fixed', 50, 1), ('fixed', 200, 1), ('naive', 10, 11), ('naive', 50, 51), ('naive', 200, 201)]"
+    },
+    {
+      "name": "rag_outputs",
+      "passed": true,
+      "detail": "All required RAG output files exist."
+    },
+    {
+      "name": "backend_health",
+      "passed": true,
+      "detail": "{\"status\":\"ok\",\"database\":\"s6758_rel\"}"
+    },
+    {
+      "name": "naive_endpoint",
+      "passed": true,
+      "detail": "Naive benchmark endpoint responded."
+    },
+    {
+      "name": "fixed_endpoint",
+      "passed": true,
+      "detail": "Fixed benchmark endpoint responded."
+    }
+  ],
+  "passed": true
+}
