@@ -336,3 +336,5 @@ def get_listings_for_detail(
         detail_name,
         detail_value,
     )
+from .hw5_entities import router as hw5_router
+app.include_router(hw5_router)
