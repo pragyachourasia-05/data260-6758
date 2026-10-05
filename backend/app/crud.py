@@ -152,3 +152,69 @@ def create_listing_detail(
     db.commit()
     db.refresh(detail)
     return detail
+
+def list_listing_details(db: Session):
+    return (
+        db.query(models.ListingDetail)
+        .order_by(models.ListingDetail.id.asc())
+        .all()
+    )
+
+
+def get_listing_detail(db: Session, detail_id: int):
+    return (
+        db.query(models.ListingDetail)
+        .filter(models.ListingDetail.id == detail_id)
+        .first()
+    )
+
+
+def update_listing_detail(
+    db: Session,
+    detail_id: int,
+    payload: schema.RelatedDetailUpdate,
+):
+    detail = get_listing_detail(db, detail_id)
+
+    if not detail:
+        return None
+
+    detail.detail_name = payload.detail_name
+    detail.detail_value = payload.detail_value
+
+    db.commit()
+    db.refresh(detail)
+    return detail
+
+
+def delete_listing_detail(db: Session, detail_id: int):
+    detail = get_listing_detail(db, detail_id)
+
+    if not detail:
+        return None
+
+    db.delete(detail)
+    db.commit()
+    return detail
+
+
+def get_listings_for_detail(
+    db: Session,
+    detail_name: str,
+    detail_value: str,
+):
+    return (
+        db.query(models.Listing)
+        .join(
+            models.ListingDetail,
+            models.ListingDetail.listing_id == models.Listing.id,
+        )
+        .options(joinedload(models.Listing.details))
+        .filter(
+            models.ListingDetail.detail_name == detail_name,
+            models.ListingDetail.detail_value == detail_value,
+        )
+        .distinct()
+        .order_by(models.Listing.id.asc())
+        .all()
+    )

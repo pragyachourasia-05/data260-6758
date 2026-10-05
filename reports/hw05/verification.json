@@ -1,0 +1,29 @@
+{
+  "homework": "HW5",
+  "sid4": "6758",
+  "seed": 6758,
+  "verify_seed": 266758,
+  "checks": [
+    {
+      "name": "hw05_directories",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "name": "offline_tool_tests",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "name": "fault_records",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "name": "mcp_source_files",
+      "passed": true,
+      "detail": "ok"
+    }
+  ],
+  "passed": true
+}

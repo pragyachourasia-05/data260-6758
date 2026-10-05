@@ -248,3 +248,91 @@ def create_listing_detail(
         )
 
     return crud.create_listing_detail(db, payload)
+
+@app.get(
+    "/listing-details",
+    response_model=list[schema.ListingDetailOut],
+)
+def list_listing_details(
+    _session=Depends(require_session),
+    db: Session = Depends(get_db),
+):
+    return crud.list_listing_details(db)
+
+
+@app.get(
+    "/listing-details/{detail_id}",
+    response_model=schema.ListingDetailOut,
+)
+def get_listing_detail(
+    detail_id: int,
+    _session=Depends(require_session),
+    db: Session = Depends(get_db),
+):
+    detail = crud.get_listing_detail(db, detail_id)
+
+    if not detail:
+        raise HTTPException(
+            status_code=404,
+            detail="Listing detail not found",
+        )
+
+    return detail
+
+
+@app.put(
+    "/listing-details/{detail_id}",
+    response_model=schema.ListingDetailOut,
+)
+def update_listing_detail(
+    detail_id: int,
+    payload: schema.RelatedDetailUpdate,
+    _session=Depends(require_session),
+    db: Session = Depends(get_db),
+):
+    detail = crud.update_listing_detail(db, detail_id, payload)
+
+    if not detail:
+        raise HTTPException(
+            status_code=404,
+            detail="Listing detail not found",
+        )
+
+    return detail
+
+
+@app.delete(
+    "/listing-details/{detail_id}",
+    response_model=schema.ListingDetailOut,
+)
+def delete_listing_detail(
+    detail_id: int,
+    _session=Depends(require_session),
+    db: Session = Depends(get_db),
+):
+    detail = crud.delete_listing_detail(db, detail_id)
+
+    if not detail:
+        raise HTTPException(
+            status_code=404,
+            detail="Listing detail not found",
+        )
+
+    return detail
+
+
+@app.get(
+    "/listing-details/{detail_name}/{detail_value}/listings",
+    response_model=list[schema.ListingOut],
+)
+def get_listings_for_detail(
+    detail_name: str,
+    detail_value: str,
+    _session=Depends(require_session),
+    db: Session = Depends(get_db),
+):
+    return crud.get_listings_for_detail(
+        db,
+        detail_name,
+        detail_value,
+    )

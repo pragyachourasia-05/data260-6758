@@ -28,14 +28,11 @@ class ListingCreate(BaseModel):
     property_category: str = Field(min_length=1, max_length=100)
 
 
-class ListingUpdate(ListingCreate):
-    pass
-
-
 class ListingDetailOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     id: int
+    listing_id: int
     detail_name: str
     detail_value: str
 
@@ -54,5 +51,22 @@ class ListingOut(BaseModel):
 
 class RelatedDetailCreate(BaseModel):
     listing_id: int
+    detail_name: str = Field(min_length=1, max_length=100)
+    detail_value: str = Field(min_length=1, max_length=255)
+
+
+class RelatedDetailUpdate(BaseModel):
+    detail_name: str = Field(min_length=1, max_length=100)
+    detail_value: str = Field(min_length=1, max_length=255)
+
+class ListingUpdate(BaseModel):
+    property_address: str = Field(min_length=1, max_length=255)
+    monthly_rent: str = Field(min_length=1, max_length=100)
+    submitter_email: EmailStr
+    listing_description: str = Field(min_length=1)
+    property_category: str = Field(min_length=1, max_length=100)
+
+
+class RelatedDetailUpdate(BaseModel):
     detail_name: str = Field(min_length=1, max_length=100)
     detail_value: str = Field(min_length=1, max_length=255)
