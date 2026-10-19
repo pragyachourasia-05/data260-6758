@@ -1,0 +1,56 @@
+[2026-10-19T10:13:13-07:00] Part 1 CRUD + validation against http://127.0.0.1:8458/api/listings (database s6758_doc)
+== POST (create)
+{"id":"6ad64fa9eeddc47f6ec85aaa","title":"1BR in Japantown","description":"Quiet street, walk to light rail","status":"available","property_type":"apartment","monthly_rent":2400.0,"available_from":"2026-11-10T00:00:00Z","created_at":"2026-10-19T17:13:13.814000Z","updated_at":"2026-10-19T17:13:13.814000Z"}
+
+== GET all (count)
+
+-> HTTP 200
+6 listings: ['1BR in Japantown', 'Sunnyvale townhouse near Caltrain', 'Santa Clara condo with EV charger', '3BR house in Willow Glen', 'Downtown San Jose studio', 'Sunny 2BR near Diridon Station']
+
+== GET one
+{"id":"6ad64fa9eeddc47f6ec85aaa","title":"1BR in Japantown","description":"Quiet street, walk to light rail","status":"available","property_type":"apartment","monthly_rent":2400.0,"available_from":"2026-11-10T00:00:00Z","created_at":"2026-10-19T17:13:13.814000Z","updated_at":"2026-10-19T17:13:13.814000Z"}
+-> HTTP 200
+
+== PUT (status + rent)
+{"id":"6ad64fa9eeddc47f6ec85aaa","title":"1BR in Japantown","description":"Quiet street, walk to light rail","status":"pending","property_type":"apartment","monthly_rent":2350.0,"available_from":"2026-11-10T00:00:00Z","created_at":"2026-10-19T17:13:13.814000Z","updated_at":"2026-10-19T17:13:15.751000Z"}
+-> HTTP 200
+
+== DELETE
+
+-> HTTP 204
+
+== GET after delete
+{"detail":"Listing 6ad64fa9eeddc47f6ec85aaa not found."}
+-> HTTP 404
+
+== INVALID: missing title
+{"detail":[{"type":"missing","loc":["body","title"],"msg":"Field required","input":{"property_type":"apartment","available_from":"2026-11-01"},"url":"https://errors.pydantic.dev/2.12/v/missing"}]}
+-> HTTP 422
+
+== INVALID: bad enum
+{"detail":[{"type":"literal_error","loc":["body","property_type"],"msg":"Input should be 'apartment', 'house', 'condo', 'studio' or 'townhouse'","input":"castle","ctx":{"expected":"'apartment', 'house', 'condo', 'studio' or 'townhouse'"},"url":"https://errors.pydantic.dev/2.12/v/literal_error"}]}
+-> HTTP 422
+
+== INVALID: bad date + wrong type
+{"detail":[{"type":"float_parsing","loc":["body","monthly_rent"],"msg":"Input should be a valid number, unable to parse string as a number","input":"cheap","url":"https://errors.pydantic.dev/2.12/v/float_parsing"},{"type":"datetime_from_date_parsing","loc":["body","available_from"],"msg":"Input should be a valid datetime or date, input is too short","input":"next week","ctx":{"error":"input is too short"},"url":"https://errors.pydantic.dev/2.12/v/datetime_from_date_parsing"}]}
+-> HTTP 422
+
+== INVALID: title > 100 chars
+{"detail":[{"type":"string_too_long","loc":["body","title"],"msg":"String should have at most 100 characters","input":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","ctx":{"max_length":100},"url":"https://errors.pydantic.dev/2.12/v/string_too_long"}]}
+-> HTTP 422
+
+== INVALID: non-JSON body
+{"detail":"Content-Type must be application/json."}
+-> HTTP 415
+
+== INVALID: bad ObjectId
+{"detail":"Invalid listing id '123': expected a 24-character hex ObjectId."}
+-> HTTP 400
+
+== INVALID: unknown id
+{"detail":"Listing 65f000000000000000000000 not found."}
+-> HTTP 404
+
+== MongoDB-side validator (direct insert bypassing the API)
+Document failed validation
+[2026-10-19T10:13:23-07:00] done

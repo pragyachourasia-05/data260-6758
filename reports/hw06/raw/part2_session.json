@@ -1,0 +1,1230 @@
+[
+  {
+    "turn": 1,
+    "message": "Hi! I'm Pragya, a grad student at SJSU, and I'm looking for an apartment.",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "Hi Pragya! I'm HomeFinder, happy to help you find an apartment. As a grad student at SJSU, you're likely looking for something affordable and convenient. What's your budget looking like? Are you open to sharing an apartment or looking for a solo place?",
+    "memory_used": {
+      "short_term_count": 0,
+      "short_term": [],
+      "long_term_summary": {
+        "session": null,
+        "lifetime": null
+      },
+      "episodic_facts": [],
+      "new_episodes": [
+        {
+          "fact": "Pragya is a grad student at SJSU",
+          "importance": 1.0
+        },
+        {
+          "fact": "Pragya is looking for an apartment",
+          "importance": 1.0
+        }
+      ],
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    },
+    "usage": {
+      "ts": "2026-10-19T01:40:01.763052+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 151,
+      "completion_tokens": 59,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 0,
+        "short_term_window": 0,
+        "current_message": 19,
+        "episodic_facts": 0
+      },
+      "template_overhead_tokens": 7,
+      "memory_maintenance_tokens": {
+        "input": 138,
+        "output": 48
+      },
+      "latency_ms": 22310.1,
+      "model_latency_ms": 11992.4,
+      "extraction_ms": 10250.1,
+      "summarization_ms": 6.1,
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    }
+  },
+  {
+    "turn": 2,
+    "message": "My budget is $2,400 a month including utilities if possible.",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "With a budget of $2,400/month, you've got a good range of options. As a grad student at SJSU, you might want to consider apartments near campus or in nearby neighborhoods like Downtown San Jose or Willow Glen. Are you looking for a specific type of apartment, like a studio or 1-bedroom?",
+    "memory_used": {
+      "short_term_count": 2,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi! I'm Pragya, a grad student at SJSU, and I'm looking for an apartment."
+        },
+        {
+          "role": "assistant",
+          "content": "Hi Pragya! I'm HomeFinder, happy to help you find an apartment. As a grad student at SJSU, you're likely looking for something affordable and convenient. What's your budget looking like? Are you open to sharing an apartment or looking for a solo place?"
+        }
+      ],
+      "long_term_summary": {
+        "session": null,
+        "lifetime": null
+      },
+      "episodic_facts": [
+        {
+          "fact": "Pragya is a grad student at SJSU",
+          "importance": 1.0,
+          "score": 0.1983
+        }
+      ],
+      "new_episodes": [
+        {
+          "fact": "She has a budget of $2,400 a month including utilities if possible.",
+          "importance": 1.0
+        }
+      ],
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    },
+    "usage": {
+      "ts": "2026-10-19T01:40:19.057913+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 254,
+      "completion_tokens": 67,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 0,
+        "short_term_window": 82,
+        "current_message": 15,
+        "episodic_facts": 20
+      },
+      "template_overhead_tokens": 12,
+      "memory_maintenance_tokens": {
+        "input": 128,
+        "output": 32
+      },
+      "latency_ms": 17275.7,
+      "model_latency_ms": 10598.9,
+      "extraction_ms": 6640.5,
+      "summarization_ms": 4.6,
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    }
+  },
+  {
+    "turn": 3,
+    "message": "I have a cat named Miso, so the place has to be pet friendly.",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "Pet-friendly apartments are a must for Miso. I can start searching for options that fit your budget and allow furry friends. Would you prefer a short-term lease or are you looking for a longer-term commitment?",
+    "memory_used": {
+      "short_term_count": 4,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi! I'm Pragya, a grad student at SJSU, and I'm looking for an apartment."
+        },
+        {
+          "role": "assistant",
+          "content": "Hi Pragya! I'm HomeFinder, happy to help you find an apartment. As a grad student at SJSU, you're likely looking for something affordable and convenient. What's your budget looking like? Are you open to sharing an apartment or looking for a solo place?"
+        },
+        {
+          "role": "user",
+          "content": "My budget is $2,400 a month including utilities if possible."
+        },
+        {
+          "role": "assistant",
+          "content": "With a budget of $2,400/month, you've got a good range of options. As a grad student at SJSU, you might want to consider apartments near campus or in nearby neighborhoods like Downtown San Jose or Willow Glen. Are you looking for a specific type of apartment, like a studio or 1-bedroom?"
+        }
+      ],
+      "long_term_summary": {
+        "session": null,
+        "lifetime": null
+      },
+      "episodic_facts": [
+        {
+          "fact": "She has a budget of $2,400 a month including utilities if possible.",
+          "importance": 1.0,
+          "score": 0.048
+        },
+        {
+          "fact": "Pragya is looking for an apartment",
+          "importance": 1.0,
+          "score": 0.0404
+        },
+        {
+          "fact": "Pragya is a grad student at SJSU",
+          "importance": 1.0,
+          "score": 0.0349
+        }
+      ],
+      "new_episodes": [
+        {
+          "fact": "She has a cat named Miso.",
+          "importance": 1.0
+        }
+      ],
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    },
+    "usage": {
+      "ts": "2026-10-19T01:40:36.663452+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 374,
+      "completion_tokens": 43,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 0,
+        "short_term_window": 169,
+        "current_message": 16,
+        "episodic_facts": 47
+      },
+      "template_overhead_tokens": 17,
+      "memory_maintenance_tokens": {
+        "input": 131,
+        "output": 24
+      },
+      "latency_ms": 17596.7,
+      "model_latency_ms": 11197.8,
+      "extraction_ms": 6351.7,
+      "summarization_ms": 3.4,
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    }
+  },
+  {
+    "turn": 4,
+    "message": "I want to move in on December 1st because my current lease ends then.",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "With a lease ending on December 1st, you'll want to find a place that's ready for move-in by then. I'll make sure to prioritize apartments that are available for December 1st move-in. Since you're a grad student, I'll also focus on options near SJSU or in nearby neighborhoods. Would you like me to start searching for apartments that meet your budget and pet-friendly requirements?",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi! I'm Pragya, a grad student at SJSU, and I'm looking for an apartment."
+        },
+        {
+          "role": "assistant",
+          "content": "Hi Pragya! I'm HomeFinder, happy to help you find an apartment. As a grad student at SJSU, you're likely looking for something affordable and convenient. What's your budget looking like? Are you open to sharing an apartment or looking for a solo place?"
+        },
+        {
+          "role": "user",
+          "content": "My budget is $2,400 a month including utilities if possible."
+        },
+        {
+          "role": "assistant",
+          "content": "With a budget of $2,400/month, you've got a good range of options. As a grad student at SJSU, you might want to consider apartments near campus or in nearby neighborhoods like Downtown San Jose or Willow Glen. Are you looking for a specific type of apartment, like a studio or 1-bedroom?"
+        },
+        {
+          "role": "user",
+          "content": "I have a cat named Miso, so the place has to be pet friendly."
+        },
+        {
+          "role": "assistant",
+          "content": "Pet-friendly apartments are a must for Miso. I can start searching for options that fit your budget and allow furry friends. Would you prefer a short-term lease or are you looking for a longer-term commitment?"
+        }
+      ],
+      "long_term_summary": {
+        "session": null,
+        "lifetime": null
+      },
+      "episodic_facts": [
+        {
+          "fact": "Pragya is looking for an apartment",
+          "importance": 1.0,
+          "score": 0.1092
+        },
+        {
+          "fact": "She has a budget of $2,400 a month including utilities if possible.",
+          "importance": 1.0,
+          "score": 0.0791
+        },
+        {
+          "fact": "Pragya is a grad student at SJSU",
+          "importance": 1.0,
+          "score": 0.0682
+        }
+      ],
+      "new_episodes": [
+        {
+          "fact": "She will move in on December 1st.",
+          "importance": 1.0
+        },
+        {
+          "fact": "Her current lease ends then.",
+          "importance": 1.0
+        }
+      ],
+      "summary_triggered": true,
+      "lifetime_triggered": false
+    },
+    "usage": {
+      "ts": "2026-10-19T01:41:24.414355+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 443,
+      "completion_tokens": 85,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 0,
+        "short_term_window": 238,
+        "current_message": 18,
+        "episodic_facts": 47
+      },
+      "template_overhead_tokens": 15,
+      "memory_maintenance_tokens": {
+        "input": 579,
+        "output": 94
+      },
+      "latency_ms": 47719.7,
+      "model_latency_ms": 17300.2,
+      "extraction_ms": 10173.6,
+      "summarization_ms": 20221.5,
+      "summary_triggered": true,
+      "lifetime_triggered": false
+    }
+  },
+  {
+    "turn": 5,
+    "message": "I commute to an internship in Sunnyvale three days a week, so being near Caltrain would help.",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "Being near Caltrain will make your commute to Sunnyvale much easier. I'll prioritize apartments that are within walking distance or have a short Caltrain ride to Sunnyvale. Would you like me to focus on apartments in specific neighborhoods, such as Downtown San Jose or Willow Glen, or would you like me to explore other options?",
+    "memory_used": {
+      "short_term_count": 8,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi! I'm Pragya, a grad student at SJSU, and I'm looking for an apartment."
+        },
+        {
+          "role": "assistant",
+          "content": "Hi Pragya! I'm HomeFinder, happy to help you find an apartment. As a grad student at SJSU, you're likely looking for something affordable and convenient. What's your budget looking like? Are you open to sharing an apartment or looking for a solo place?"
+        },
+        {
+          "role": "user",
+          "content": "My budget is $2,400 a month including utilities if possible."
+        },
+        {
+          "role": "assistant",
+          "content": "With a budget of $2,400/month, you've got a good range of options. As a grad student at SJSU, you might want to consider apartments near campus or in nearby neighborhoods like Downtown San Jose or Willow Glen. Are you looking for a specific type of apartment, like a studio or 1-bedroom?"
+        },
+        {
+          "role": "user",
+          "content": "I have a cat named Miso, so the place has to be pet friendly."
+        },
+        {
+          "role": "assistant",
+          "content": "Pet-friendly apartments are a must for Miso. I can start searching for options that fit your budget and allow furry friends. Would you prefer a short-term lease or are you looking for a longer-term commitment?"
+        },
+        {
+          "role": "user",
+          "content": "I want to move in on December 1st because my current lease ends then."
+        },
+        {
+          "role": "assistant",
+          "content": "With a lease ending on December 1st, you'll want to find a place that's ready for move-in by then. I'll make sure to prioritize apartments that are available for December 1st move-in. Since you're a grad student, I'll also focus on options near SJSU or in nearby neighborhoods. Would you like me to start searching for apartments that meet your budget and pet-friendly requirements?"
+        }
+      ],
+      "long_term_summary": {
+        "session": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st",
+        "lifetime": null
+      },
+      "episodic_facts": [
+        {
+          "fact": "She has a budget of $2,400 a month including utilities if possible.",
+          "importance": 1.0,
+          "score": 0.111
+        },
+        {
+          "fact": "Her current lease ends then.",
+          "importance": 1.0,
+          "score": 0.0386
+        },
+        {
+          "fact": "She will move in on December 1st.",
+          "importance": 1.0,
+          "score": 0.0333
+        }
+      ],
+      "new_episodes": [
+        {
+          "fact": "commutes to an internship in Sunnyvale three days a week",
+          "importance": 0.5
+        },
+        {
+          "fact": "being near Caltrain would help",
+          "importance": 0.5
+        }
+      ],
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    },
+    "usage": {
+      "ts": "2026-10-19T01:41:58.666613+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 611,
+      "completion_tokens": 66,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 50,
+        "short_term_window": 352,
+        "current_message": 24,
+        "episodic_facts": 46
+      },
+      "template_overhead_tokens": 14,
+      "memory_maintenance_tokens": {
+        "input": 135,
+        "output": 51
+      },
+      "latency_ms": 34231.7,
+      "model_latency_ms": 25109.6,
+      "extraction_ms": 9095.8,
+      "summarization_ms": 3.6,
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    }
+  },
+  {
+    "turn": 6,
+    "message": "I'd prefer a 1-bedroom, but a large studio is fine too.",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "I'll keep an eye out for 1-bedroom and large studio apartments that meet your budget and pet-friendly requirements. Since you're a grad student, I'll also consider apartments with amenities like study spaces, libraries, or on-campus shuttle services. Would you like me to also consider apartments with in-unit laundry or a gym?",
+    "memory_used": {
+      "short_term_count": 10,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi! I'm Pragya, a grad student at SJSU, and I'm looking for an apartment."
+        },
+        {
+          "role": "assistant",
+          "content": "Hi Pragya! I'm HomeFinder, happy to help you find an apartment. As a grad student at SJSU, you're likely looking for something affordable and convenient. What's your budget looking like? Are you open to sharing an apartment or looking for a solo place?"
+        },
+        {
+          "role": "user",
+          "content": "My budget is $2,400 a month including utilities if possible."
+        },
+        {
+          "role": "assistant",
+          "content": "With a budget of $2,400/month, you've got a good range of options. As a grad student at SJSU, you might want to consider apartments near campus or in nearby neighborhoods like Downtown San Jose or Willow Glen. Are you looking for a specific type of apartment, like a studio or 1-bedroom?"
+        },
+        {
+          "role": "user",
+          "content": "I have a cat named Miso, so the place has to be pet friendly."
+        },
+        {
+          "role": "assistant",
+          "content": "Pet-friendly apartments are a must for Miso. I can start searching for options that fit your budget and allow furry friends. Would you prefer a short-term lease or are you looking for a longer-term commitment?"
+        },
+        {
+          "role": "user",
+          "content": "I want to move in on December 1st because my current lease ends then."
+        },
+        {
+          "role": "assistant",
+          "content": "With a lease ending on December 1st, you'll want to find a place that's ready for move-in by then. I'll make sure to prioritize apartments that are available for December 1st move-in. Since you're a grad student, I'll also focus on options near SJSU or in nearby neighborhoods. Would you like me to start searching for apartments that meet your budget and pet-friendly requirements?"
+        },
+        {
+          "role": "user",
+          "content": "I commute to an internship in Sunnyvale three days a week, so being near Caltrain would help."
+        },
+        {
+          "role": "assistant",
+          "content": "Being near Caltrain will make your commute to Sunnyvale much easier. I'll prioritize apartments that are within walking distance or have a short Caltrain ride to Sunnyvale. Would you like me to focus on apartments in specific neighborhoods, such as Downtown San Jose or Willow Glen, or would you like me to explore other options?"
+        }
+      ],
+      "long_term_summary": {
+        "session": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st",
+        "lifetime": null
+      },
+      "episodic_facts": [
+        {
+          "fact": "Pragya is a grad student at SJSU",
+          "importance": 1.0,
+          "score": 0.0636
+        },
+        {
+          "fact": "Her current lease ends then.",
+          "importance": 1.0,
+          "score": 0.0528
+        },
+        {
+          "fact": "She has a budget of $2,400 a month including utilities if possible.",
+          "importance": 1.0,
+          "score": 0.0487
+        }
+      ],
+      "new_episodes": [
+        {
+          "fact": "They prefer a 1-bedroom or a large studio.",
+          "importance": 0.5
+        }
+      ],
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    },
+    "usage": {
+      "ts": "2026-10-19T01:42:19.736174+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 704,
+      "completion_tokens": 66,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 50,
+        "short_term_window": 459,
+        "current_message": 14,
+        "episodic_facts": 45
+      },
+      "template_overhead_tokens": 11,
+      "memory_maintenance_tokens": {
+        "input": 130,
+        "output": 29
+      },
+      "latency_ms": 21061.8,
+      "model_latency_ms": 13949.6,
+      "extraction_ms": 7083.4,
+      "summarization_ms": 4.0,
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    }
+  },
+  {
+    "turn": 7,
+    "message": "What should I look for when touring a place with a cat?",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "When touring a place with Miso, you'll want to check for cat-friendly features like:\n\n* Pet deposits or fees\n* Breed restrictions (some complexes may have specific breeds or size limits)\n* Allergen-friendly policies\n* Cleanliness and maintenance of common areas\n* Availability of pet-friendly amenities like outdoor spaces or pet parks\n\nYou may also want to ask the landlord or property manager about their pet policy, including any rules or regulations regarding Miso's presence in the apartment.",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi! I'm Pragya, a grad student at SJSU, and I'm looking for an apartment."
+        },
+        {
+          "role": "assistant",
+          "content": "Hi Pragya! I'm HomeFinder, happy to help you find an apartment. As a grad student at SJSU, you're likely looking for something affordable and convenient. What's your budget looking like? Are you open to sharing an apartment or looking for a solo place?"
+        },
+        {
+          "role": "user",
+          "content": "My budget is $2,400 a month including utilities if possible."
+        },
+        {
+          "role": "assistant",
+          "content": "With a budget of $2,400/month, you've got a good range of options. As a grad student at SJSU, you might want to consider apartments near campus or in nearby neighborhoods like Downtown San Jose or Willow Glen. Are you looking for a specific type of apartment, like a studio or 1-bedroom?"
+        },
+        {
+          "role": "user",
+          "content": "I have a cat named Miso, so the place has to be pet friendly."
+        },
+        {
+          "role": "assistant",
+          "content": "Pet-friendly apartments are a must for Miso. I can start searching for options that fit your budget and allow furry friends. Would you prefer a short-term lease or are you looking for a longer-term commitment?"
+        },
+        {
+          "role": "user",
+          "content": "I want to move in on December 1st because my current lease ends then."
+        },
+        {
+          "role": "assistant",
+          "content": "With a lease ending on December 1st, you'll want to find a place that's ready for move-in by then. I'll make sure to prioritize apartments that are available for December 1st move-in. Since you're a grad student, I'll also focus on options near SJSU or in nearby neighborhoods. Would you like me to start searching for apartments that meet your budget and pet-friendly requirements?"
+        },
+        {
+          "role": "user",
+          "content": "I commute to an internship in Sunnyvale three days a week, so being near Caltrain would help."
+        },
+        {
+          "role": "assistant",
+          "content": "Being near Caltrain will make your commute to Sunnyvale much easier. I'll prioritize apartments that are within walking distance or have a short Caltrain ride to Sunnyvale. Would you like me to focus on apartments in specific neighborhoods, such as Downtown San Jose or Willow Glen, or would you like me to explore other options?"
+        },
+        {
+          "role": "user",
+          "content": "I'd prefer a 1-bedroom, but a large studio is fine too."
+        },
+        {
+          "role": "assistant",
+          "content": "I'll keep an eye out for 1-bedroom and large studio apartments that meet your budget and pet-friendly requirements. Since you're a grad student, I'll also consider apartments with amenities like study spaces, libraries, or on-campus shuttle services. Would you like me to also consider apartments with in-unit laundry or a gym?"
+        }
+      ],
+      "long_term_summary": {
+        "session": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st",
+        "lifetime": null
+      },
+      "episodic_facts": [
+        {
+          "fact": "She has a cat named Miso.",
+          "importance": 1.0,
+          "score": 0.2129
+        },
+        {
+          "fact": "Pragya is looking for an apartment",
+          "importance": 1.0,
+          "score": 0.1892
+        },
+        {
+          "fact": "She has a budget of $2,400 a month including utilities if possible.",
+          "importance": 1.0,
+          "score": 0.0793
+        }
+      ],
+      "new_episodes": [
+        {
+          "fact": "The user has a cat.",
+          "importance": 1.0
+        },
+        {
+          "fact": "The user is looking for a place to tour with a cat.",
+          "importance": 0.5
+        },
+        {
+          "fact": "The user is looking for advice on what to look for when touring a place with a cat.",
+          "importance": 0.5
+        }
+      ],
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    },
+    "usage": {
+      "ts": "2026-10-19T01:42:53.786366+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 791,
+      "completion_tokens": 99,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 50,
+        "short_term_window": 555,
+        "current_message": 14,
+        "episodic_facts": 45
+      },
+      "template_overhead_tokens": 2,
+      "memory_maintenance_tokens": {
+        "input": 127,
+        "output": 80
+      },
+      "latency_ms": 34040.5,
+      "model_latency_ms": 20696.5,
+      "extraction_ms": 13311.2,
+      "summarization_ms": 2.8,
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    }
+  },
+  {
+    "turn": 8,
+    "message": "Please no ground-floor units, I don't feel safe on the ground floor.",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "I'll make sure to exclude ground-floor units from my search. Since you're concerned about safety, I'll prioritize apartments with upper-level units or those that have secure entry systems. Would you like me to also consider apartments with on-site staff or security cameras for added peace of mind?",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "My budget is $2,400 a month including utilities if possible."
+        },
+        {
+          "role": "assistant",
+          "content": "With a budget of $2,400/month, you've got a good range of options. As a grad student at SJSU, you might want to consider apartments near campus or in nearby neighborhoods like Downtown San Jose or Willow Glen. Are you looking for a specific type of apartment, like a studio or 1-bedroom?"
+        },
+        {
+          "role": "user",
+          "content": "I have a cat named Miso, so the place has to be pet friendly."
+        },
+        {
+          "role": "assistant",
+          "content": "Pet-friendly apartments are a must for Miso. I can start searching for options that fit your budget and allow furry friends. Would you prefer a short-term lease or are you looking for a longer-term commitment?"
+        },
+        {
+          "role": "user",
+          "content": "I want to move in on December 1st because my current lease ends then."
+        },
+        {
+          "role": "assistant",
+          "content": "With a lease ending on December 1st, you'll want to find a place that's ready for move-in by then. I'll make sure to prioritize apartments that are available for December 1st move-in. Since you're a grad student, I'll also focus on options near SJSU or in nearby neighborhoods. Would you like me to start searching for apartments that meet your budget and pet-friendly requirements?"
+        },
+        {
+          "role": "user",
+          "content": "I commute to an internship in Sunnyvale three days a week, so being near Caltrain would help."
+        },
+        {
+          "role": "assistant",
+          "content": "Being near Caltrain will make your commute to Sunnyvale much easier. I'll prioritize apartments that are within walking distance or have a short Caltrain ride to Sunnyvale. Would you like me to focus on apartments in specific neighborhoods, such as Downtown San Jose or Willow Glen, or would you like me to explore other options?"
+        },
+        {
+          "role": "user",
+          "content": "I'd prefer a 1-bedroom, but a large studio is fine too."
+        },
+        {
+          "role": "assistant",
+          "content": "I'll keep an eye out for 1-bedroom and large studio apartments that meet your budget and pet-friendly requirements. Since you're a grad student, I'll also consider apartments with amenities like study spaces, libraries, or on-campus shuttle services. Would you like me to also consider apartments with in-unit laundry or a gym?"
+        },
+        {
+          "role": "user",
+          "content": "What should I look for when touring a place with a cat?"
+        },
+        {
+          "role": "assistant",
+          "content": "When touring a place with Miso, you'll want to check for cat-friendly features like:\n\n* Pet deposits or fees\n* Breed restrictions (some complexes may have specific breeds or size limits)\n* Allergen-friendly policies\n* Cleanliness and maintenance of common areas\n* Availability of pet-friendly amenities like outdoor spaces or pet parks\n\nYou may also want to ask the landlord or property manager about their pet policy, including any rules or regulations regarding Miso's presence in the apartment."
+        }
+      ],
+      "long_term_summary": {
+        "session": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st",
+        "lifetime": null
+      },
+      "episodic_facts": [
+        {
+          "fact": "Pragya is looking for an apartment",
+          "importance": 1.0,
+          "score": 0.0759
+        },
+        {
+          "fact": "commutes to an internship in Sunnyvale three days a week",
+          "importance": 0.5,
+          "score": 0.0579
+        },
+        {
+          "fact": "She has a budget of $2,400 a month including utilities if possible.",
+          "importance": 1.0,
+          "score": 0.0555
+        }
+      ],
+      "new_episodes": [
+        {
+          "fact": "She prefers not to live on the ground floor.",
+          "importance": 0.5
+        }
+      ],
+      "summary_triggered": true,
+      "lifetime_triggered": true
+    },
+    "usage": {
+      "ts": "2026-10-19T01:44:12.534285+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 828,
+      "completion_tokens": 58,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 50,
+        "short_term_window": 612,
+        "current_message": 17,
+        "episodic_facts": 53
+      },
+      "template_overhead_tokens": -29,
+      "memory_maintenance_tokens": {
+        "input": 816,
+        "output": 174
+      },
+      "latency_ms": 78727.8,
+      "model_latency_ms": 33254.2,
+      "extraction_ms": 7549.0,
+      "summarization_ms": 37901.5,
+      "summary_triggered": true,
+      "lifetime_triggered": true
+    }
+  },
+  {
+    "turn": 9,
+    "message": "Actually, I just got a raise, so my budget is now $2,700 a month.",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "Congratulations on the raise! With the increased budget, I can now explore more options. Since you still prefer a 1-bedroom or large studio, I'll continue to prioritize those. I'll also keep in mind your original budget of $2,400/month, including utilities, to ensure we stay within that range. Now, about touring a place with Miso... would you like me to remind you of the key cat-friendly features to look for?",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "I have a cat named Miso, so the place has to be pet friendly."
+        },
+        {
+          "role": "assistant",
+          "content": "Pet-friendly apartments are a must for Miso. I can start searching for options that fit your budget and allow furry friends. Would you prefer a short-term lease or are you looking for a longer-term commitment?"
+        },
+        {
+          "role": "user",
+          "content": "I want to move in on December 1st because my current lease ends then."
+        },
+        {
+          "role": "assistant",
+          "content": "With a lease ending on December 1st, you'll want to find a place that's ready for move-in by then. I'll make sure to prioritize apartments that are available for December 1st move-in. Since you're a grad student, I'll also focus on options near SJSU or in nearby neighborhoods. Would you like me to start searching for apartments that meet your budget and pet-friendly requirements?"
+        },
+        {
+          "role": "user",
+          "content": "I commute to an internship in Sunnyvale three days a week, so being near Caltrain would help."
+        },
+        {
+          "role": "assistant",
+          "content": "Being near Caltrain will make your commute to Sunnyvale much easier. I'll prioritize apartments that are within walking distance or have a short Caltrain ride to Sunnyvale. Would you like me to focus on apartments in specific neighborhoods, such as Downtown San Jose or Willow Glen, or would you like me to explore other options?"
+        },
+        {
+          "role": "user",
+          "content": "I'd prefer a 1-bedroom, but a large studio is fine too."
+        },
+        {
+          "role": "assistant",
+          "content": "I'll keep an eye out for 1-bedroom and large studio apartments that meet your budget and pet-friendly requirements. Since you're a grad student, I'll also consider apartments with amenities like study spaces, libraries, or on-campus shuttle services. Would you like me to also consider apartments with in-unit laundry or a gym?"
+        },
+        {
+          "role": "user",
+          "content": "What should I look for when touring a place with a cat?"
+        },
+        {
+          "role": "assistant",
+          "content": "When touring a place with Miso, you'll want to check for cat-friendly features like:\n\n* Pet deposits or fees\n* Breed restrictions (some complexes may have specific breeds or size limits)\n* Allergen-friendly policies\n* Cleanliness and maintenance of common areas\n* Availability of pet-friendly amenities like outdoor spaces or pet parks\n\nYou may also want to ask the landlord or property manager about their pet policy, including any rules or regulations regarding Miso's presence in the apartment."
+        },
+        {
+          "role": "user",
+          "content": "Please no ground-floor units, I don't feel safe on the ground floor."
+        },
+        {
+          "role": "assistant",
+          "content": "I'll make sure to exclude ground-floor units from my search. Since you're concerned about safety, I'll prioritize apartments with upper-level units or those that have secure entry systems. Would you like me to also consider apartments with on-site staff or security cameras for added peace of mind?"
+        }
+      ],
+      "long_term_summary": {
+        "session": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment",
+        "lifetime": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment"
+      },
+      "episodic_facts": [
+        {
+          "fact": "She has a budget of $2,400 a month including utilities if possible.",
+          "importance": 1.0,
+          "score": 0.3095
+        },
+        {
+          "fact": "They prefer a 1-bedroom or a large studio.",
+          "importance": 0.5,
+          "score": 0.1658
+        },
+        {
+          "fact": "The user is looking for advice on what to look for when touring a place with a cat.",
+          "importance": 0.5,
+          "score": 0.0872
+        }
+      ],
+      "new_episodes": [
+        {
+          "fact": "She now has a budget of $2,700 a month.",
+          "importance": 1.0
+        }
+      ],
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    },
+    "usage": {
+      "ts": "2026-10-19T01:45:00.802098+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 934,
+      "completion_tokens": 91,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 140,
+        "short_term_window": 617,
+        "current_message": 17,
+        "episodic_facts": 62
+      },
+      "template_overhead_tokens": -27,
+      "memory_maintenance_tokens": {
+        "input": 134,
+        "output": 29
+      },
+      "latency_ms": 48232.8,
+      "model_latency_ms": 40725.7,
+      "extraction_ms": 7465.5,
+      "summarization_ms": 6.4,
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    }
+  },
+  {
+    "turn": 10,
+    "message": "In-unit laundry is a must for me.",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "In-unit laundry is a must-have for you. I'll make sure to prioritize apartments with this amenity. Since you're now at a budget of $2,700/month, I can also explore more upscale options. I'll keep in mind your original budget of $2,400/month, including utilities, to ensure we stay within that range. Would you like me to start searching for apartments that meet your updated budget and requirements?",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "I want to move in on December 1st because my current lease ends then."
+        },
+        {
+          "role": "assistant",
+          "content": "With a lease ending on December 1st, you'll want to find a place that's ready for move-in by then. I'll make sure to prioritize apartments that are available for December 1st move-in. Since you're a grad student, I'll also focus on options near SJSU or in nearby neighborhoods. Would you like me to start searching for apartments that meet your budget and pet-friendly requirements?"
+        },
+        {
+          "role": "user",
+          "content": "I commute to an internship in Sunnyvale three days a week, so being near Caltrain would help."
+        },
+        {
+          "role": "assistant",
+          "content": "Being near Caltrain will make your commute to Sunnyvale much easier. I'll prioritize apartments that are within walking distance or have a short Caltrain ride to Sunnyvale. Would you like me to focus on apartments in specific neighborhoods, such as Downtown San Jose or Willow Glen, or would you like me to explore other options?"
+        },
+        {
+          "role": "user",
+          "content": "I'd prefer a 1-bedroom, but a large studio is fine too."
+        },
+        {
+          "role": "assistant",
+          "content": "I'll keep an eye out for 1-bedroom and large studio apartments that meet your budget and pet-friendly requirements. Since you're a grad student, I'll also consider apartments with amenities like study spaces, libraries, or on-campus shuttle services. Would you like me to also consider apartments with in-unit laundry or a gym?"
+        },
+        {
+          "role": "user",
+          "content": "What should I look for when touring a place with a cat?"
+        },
+        {
+          "role": "assistant",
+          "content": "When touring a place with Miso, you'll want to check for cat-friendly features like:\n\n* Pet deposits or fees\n* Breed restrictions (some complexes may have specific breeds or size limits)\n* Allergen-friendly policies\n* Cleanliness and maintenance of common areas\n* Availability of pet-friendly amenities like outdoor spaces or pet parks\n\nYou may also want to ask the landlord or property manager about their pet policy, including any rules or regulations regarding Miso's presence in the apartment."
+        },
+        {
+          "role": "user",
+          "content": "Please no ground-floor units, I don't feel safe on the ground floor."
+        },
+        {
+          "role": "assistant",
+          "content": "I'll make sure to exclude ground-floor units from my search. Since you're concerned about safety, I'll prioritize apartments with upper-level units or those that have secure entry systems. Would you like me to also consider apartments with on-site staff or security cameras for added peace of mind?"
+        },
+        {
+          "role": "user",
+          "content": "Actually, I just got a raise, so my budget is now $2,700 a month."
+        },
+        {
+          "role": "assistant",
+          "content": "Congratulations on the raise! With the increased budget, I can now explore more options. Since you still prefer a 1-bedroom or large studio, I'll continue to prioritize those. I'll also keep in mind your original budget of $2,400/month, including utilities, to ensure we stay within that range. Now, about touring a place with Miso... would you like me to remind you of the key cat-friendly features to look for?"
+        }
+      ],
+      "long_term_summary": {
+        "session": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment",
+        "lifetime": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment"
+      },
+      "episodic_facts": [
+        {
+          "fact": "She now has a budget of $2,700 a month.",
+          "importance": 1.0,
+          "score": 0.1092
+        },
+        {
+          "fact": "commutes to an internship in Sunnyvale three days a week",
+          "importance": 0.5,
+          "score": 0.066
+        },
+        {
+          "fact": "She has a budget of $2,400 a month including utilities if possible.",
+          "importance": 1.0,
+          "score": 0.0539
+        }
+      ],
+      "new_episodes": [
+        {
+          "fact": "In-unit laundry is a must for her.",
+          "importance": 1.0
+        }
+      ],
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    },
+    "usage": {
+      "ts": "2026-10-19T01:45:41.806613+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 970,
+      "completion_tokens": 88,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 140,
+        "short_term_window": 668,
+        "current_message": 9,
+        "episodic_facts": 54
+      },
+      "template_overhead_tokens": -26,
+      "memory_maintenance_tokens": {
+        "input": 123,
+        "output": 25
+      },
+      "latency_ms": 40995.0,
+      "model_latency_ms": 34572.8,
+      "extraction_ms": 6384.7,
+      "summarization_ms": 3.5,
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    }
+  },
+  {
+    "turn": 11,
+    "message": "Can you summarize what you know about my apartment search so far?",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "Here's a summary of what I know about your apartment search so far:\n\n* You're Pragya, a grad student at SJSU.\n* You're looking for a pet-friendly apartment.\n* You have a cat named Miso.\n* You're moving in on December 1st.\n* You commute to Sunnyvale 3 days a week, so being near Caltrain is a priority.\n* You prefer a 1-bedroom or large studio apartment.\n* You're currently looking at apartments with a budget of $2,400/month, including utilities.\n* You've recently received a raise, bringing your budget to $2,700/month.\n* In-unit laundry is a must-have for you.\n* You'd like to avoid ground-floor units due to safety concerns.\n\nLet me know if there's anything else you'd like to add or change!",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "I commute to an internship in Sunnyvale three days a week, so being near Caltrain would help."
+        },
+        {
+          "role": "assistant",
+          "content": "Being near Caltrain will make your commute to Sunnyvale much easier. I'll prioritize apartments that are within walking distance or have a short Caltrain ride to Sunnyvale. Would you like me to focus on apartments in specific neighborhoods, such as Downtown San Jose or Willow Glen, or would you like me to explore other options?"
+        },
+        {
+          "role": "user",
+          "content": "I'd prefer a 1-bedroom, but a large studio is fine too."
+        },
+        {
+          "role": "assistant",
+          "content": "I'll keep an eye out for 1-bedroom and large studio apartments that meet your budget and pet-friendly requirements. Since you're a grad student, I'll also consider apartments with amenities like study spaces, libraries, or on-campus shuttle services. Would you like me to also consider apartments with in-unit laundry or a gym?"
+        },
+        {
+          "role": "user",
+          "content": "What should I look for when touring a place with a cat?"
+        },
+        {
+          "role": "assistant",
+          "content": "When touring a place with Miso, you'll want to check for cat-friendly features like:\n\n* Pet deposits or fees\n* Breed restrictions (some complexes may have specific breeds or size limits)\n* Allergen-friendly policies\n* Cleanliness and maintenance of common areas\n* Availability of pet-friendly amenities like outdoor spaces or pet parks\n\nYou may also want to ask the landlord or property manager about their pet policy, including any rules or regulations regarding Miso's presence in the apartment."
+        },
+        {
+          "role": "user",
+          "content": "Please no ground-floor units, I don't feel safe on the ground floor."
+        },
+        {
+          "role": "assistant",
+          "content": "I'll make sure to exclude ground-floor units from my search. Since you're concerned about safety, I'll prioritize apartments with upper-level units or those that have secure entry systems. Would you like me to also consider apartments with on-site staff or security cameras for added peace of mind?"
+        },
+        {
+          "role": "user",
+          "content": "Actually, I just got a raise, so my budget is now $2,700 a month."
+        },
+        {
+          "role": "assistant",
+          "content": "Congratulations on the raise! With the increased budget, I can now explore more options. Since you still prefer a 1-bedroom or large studio, I'll continue to prioritize those. I'll also keep in mind your original budget of $2,400/month, including utilities, to ensure we stay within that range. Now, about touring a place with Miso... would you like me to remind you of the key cat-friendly features to look for?"
+        },
+        {
+          "role": "user",
+          "content": "In-unit laundry is a must for me."
+        },
+        {
+          "role": "assistant",
+          "content": "In-unit laundry is a must-have for you. I'll make sure to prioritize apartments with this amenity. Since you're now at a budget of $2,700/month, I can also explore more upscale options. I'll keep in mind your original budget of $2,400/month, including utilities, to ensure we stay within that range. Would you like me to start searching for apartments that meet your updated budget and requirements?"
+        }
+      ],
+      "long_term_summary": {
+        "session": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment",
+        "lifetime": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment"
+      },
+      "episodic_facts": [
+        {
+          "fact": "Pragya is looking for an apartment",
+          "importance": 1.0,
+          "score": 0.2684
+        },
+        {
+          "fact": "being near Caltrain would help",
+          "importance": 0.5,
+          "score": 0.1186
+        },
+        {
+          "fact": "She now has a budget of $2,700 a month.",
+          "importance": 1.0,
+          "score": 0.1133
+        }
+      ],
+      "new_episodes": [],
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    },
+    "usage": {
+      "ts": "2026-10-19T01:46:29.258871+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 956,
+      "completion_tokens": 173,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 140,
+        "short_term_window": 663,
+        "current_message": 17,
+        "episodic_facts": 39
+      },
+      "template_overhead_tokens": -28,
+      "memory_maintenance_tokens": {
+        "input": 127,
+        "output": 2
+      },
+      "latency_ms": 47443.3,
+      "model_latency_ms": 43307.4,
+      "extraction_ms": 4097.8,
+      "summarization_ms": 6.4,
+      "summary_triggered": false,
+      "lifetime_triggered": false
+    }
+  },
+  {
+    "turn": 12,
+    "message": "What's my cat's name and what's my current budget?",
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "reply": "Your cat's name is Miso, and your current budget is $2,700/month.",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "I'd prefer a 1-bedroom, but a large studio is fine too."
+        },
+        {
+          "role": "assistant",
+          "content": "I'll keep an eye out for 1-bedroom and large studio apartments that meet your budget and pet-friendly requirements. Since you're a grad student, I'll also consider apartments with amenities like study spaces, libraries, or on-campus shuttle services. Would you like me to also consider apartments with in-unit laundry or a gym?"
+        },
+        {
+          "role": "user",
+          "content": "What should I look for when touring a place with a cat?"
+        },
+        {
+          "role": "assistant",
+          "content": "When touring a place with Miso, you'll want to check for cat-friendly features like:\n\n* Pet deposits or fees\n* Breed restrictions (some complexes may have specific breeds or size limits)\n* Allergen-friendly policies\n* Cleanliness and maintenance of common areas\n* Availability of pet-friendly amenities like outdoor spaces or pet parks\n\nYou may also want to ask the landlord or property manager about their pet policy, including any rules or regulations regarding Miso's presence in the apartment."
+        },
+        {
+          "role": "user",
+          "content": "Please no ground-floor units, I don't feel safe on the ground floor."
+        },
+        {
+          "role": "assistant",
+          "content": "I'll make sure to exclude ground-floor units from my search. Since you're concerned about safety, I'll prioritize apartments with upper-level units or those that have secure entry systems. Would you like me to also consider apartments with on-site staff or security cameras for added peace of mind?"
+        },
+        {
+          "role": "user",
+          "content": "Actually, I just got a raise, so my budget is now $2,700 a month."
+        },
+        {
+          "role": "assistant",
+          "content": "Congratulations on the raise! With the increased budget, I can now explore more options. Since you still prefer a 1-bedroom or large studio, I'll continue to prioritize those. I'll also keep in mind your original budget of $2,400/month, including utilities, to ensure we stay within that range. Now, about touring a place with Miso... would you like me to remind you of the key cat-friendly features to look for?"
+        },
+        {
+          "role": "user",
+          "content": "In-unit laundry is a must for me."
+        },
+        {
+          "role": "assistant",
+          "content": "In-unit laundry is a must-have for you. I'll make sure to prioritize apartments with this amenity. Since you're now at a budget of $2,700/month, I can also explore more upscale options. I'll keep in mind your original budget of $2,400/month, including utilities, to ensure we stay within that range. Would you like me to start searching for apartments that meet your updated budget and requirements?"
+        },
+        {
+          "role": "user",
+          "content": "Can you summarize what you know about my apartment search so far?"
+        },
+        {
+          "role": "assistant",
+          "content": "Here's a summary of what I know about your apartment search so far:\n\n* You're Pragya, a grad student at SJSU.\n* You're looking for a pet-friendly apartment.\n* You have a cat named Miso.\n* You're moving in on December 1st.\n* You commute to Sunnyvale 3 days a week, so being near Caltrain is a priority.\n* You prefer a 1-bedroom or large studio apartment.\n* You're currently looking at apartments with a budget of $2,400/month, including utilities.\n* You've recently received a raise, bringing your budget to $2,700/month.\n* In-unit laundry is a must-have for you.\n* You'd like to avoid ground-floor units due to safety concerns.\n\nLet me know if there's anything else you'd like to add or change!"
+        }
+      ],
+      "long_term_summary": {
+        "session": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment",
+        "lifetime": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment"
+      },
+      "episodic_facts": [
+        {
+          "fact": "The user has a cat.",
+          "importance": 1.0,
+          "score": 0.293
+        },
+        {
+          "fact": "Her current lease ends then.",
+          "importance": 1.0,
+          "score": 0.1816
+        },
+        {
+          "fact": "She has a cat named Miso.",
+          "importance": 1.0,
+          "score": 0.1809
+        }
+      ],
+      "new_episodes": [
+        {
+          "fact": "She has a cat.",
+          "importance": 0.5
+        },
+        {
+          "fact": "She has a current budget.",
+          "importance": 0.5
+        }
+      ],
+      "summary_triggered": true,
+      "lifetime_triggered": false
+    },
+    "usage": {
+      "ts": "2026-10-19T01:47:40.382403+00:00",
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "short_term_n": 12,
+      "policy": "none",
+      "prompt_tokens": 1046,
+      "completion_tokens": 20,
+      "cached_prompt_tokens": 0,
+      "component_tokens_est": {
+        "system_primer": 125,
+        "long_term_summary": 140,
+        "short_term_window": 747,
+        "current_message": 13,
+        "episodic_facts": 32
+      },
+      "template_overhead_tokens": -11,
+      "memory_maintenance_tokens": {
+        "input": 746,
+        "output": 108
+      },
+      "latency_ms": 71090.0,
+      "model_latency_ms": 33931.7,
+      "extraction_ms": 7722.2,
+      "summarization_ms": 29395.9,
+      "summary_triggered": true,
+      "lifetime_triggered": false
+    }
+  }
+]

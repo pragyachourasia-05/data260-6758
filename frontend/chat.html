@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HomeFinder Memory Chat</title>
+<style>
+  :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d2433; --muted:#667085; --line:#e3e6eb; --user:#2f5bd3; --bot:#eef1f6; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.45 system-ui, Segoe UI, sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:12px 16px; background:var(--panel); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center; }
+  header h1 { font-size:17px; margin:0; }
+  header .who { color:var(--muted); font-size:13px; }
+  main { display:grid; grid-template-columns: minmax(0,1fr) 360px; gap:16px; padding:16px; max-width:1200px; margin:0 auto; }
+  @media (max-width: 860px) { main { grid-template-columns: 1fr; } }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:12px; }
+  .ids { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+  .ids label { font-size:12px; color:var(--muted); display:flex; flex-direction:column; gap:2px; }
+  input { font:inherit; padding:7px 9px; border:1px solid var(--line); border-radius:7px; }
+  #log { height:60vh; overflow-y:auto; display:flex; flex-direction:column; gap:8px; padding:4px; }
+  .msg { max-width:85%; padding:8px 11px; border-radius:12px; white-space:pre-wrap; }
+  .msg.user { align-self:flex-end; background:var(--user); color:#fff; }
+  .msg.assistant { align-self:flex-start; background:var(--bot); }
+  .msg .meta { display:block; font-size:11px; opacity:.75; margin-top:4px; }
+  form { display:flex; gap:8px; margin-top:10px; }
+  form input { flex:1; }
+  button { font:inherit; padding:7px 14px; border:0; border-radius:7px; background:var(--user); color:#fff; cursor:pointer; }
+  button:disabled { opacity:.5; cursor:wait; }
+  h2 { font-size:14px; margin:4px 0 8px; }
+  pre { font-size:12px; background:var(--bg); border-radius:7px; padding:8px; white-space:pre-wrap; word-break:break-word; max-height:28vh; overflow:auto; margin:0 0 10px; }
+  .links a { margin-right:10px; font-size:13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>HomeFinder memory chat</h1>
+  <span class="who">Pragya Chourasia · DATA-260 HW6 · SID4 6758 · port 8458 · llama3.2:3b</span>
+</header>
+<main>
+  <section class="panel">
+    <div class="ids">
+      <label>user_id <input id="user" value="pragya"></label>
+      <label>session_id <input id="session" placeholder="auto"></label>
+    </div>
+    <div id="log"></div>
+    <form id="form">
+      <input id="message" placeholder="Type a message..." autocomplete="off" required>
+      <button id="send">Send</button>
+    </form>
+  </section>
+  <aside class="panel">
+    <h2>Memory used this turn</h2>
+    <pre id="used">(send a message)</pre>
+    <h2>Episodic facts retrieved</h2>
+    <pre id="facts">-</pre>
+    <div class="links">
+      <a id="memLink" target="_blank">GET /api/memory</a>
+      <a id="aggLink" target="_blank">GET /api/aggregate</a>
+    </div>
+  </aside>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+function refreshLinks() {
+  const u = encodeURIComponent($("user").value.trim());
+  $("memLink").href = `/api/memory/${u}`;
+  $("aggLink").href = `/api/aggregate/${u}`;
+}
+function add(role, text, meta) {
+  const div = document.createElement("div");
+  div.className = `msg ${role}`;
+  div.textContent = text;
+  if (meta) { const m = document.createElement("span"); m.className = "meta"; m.textContent = meta; div.appendChild(m); }
+  $("log").appendChild(div);
+  $("log").scrollTop = $("log").scrollHeight;
+}
+$("user").addEventListener("input", refreshLinks);
+refreshLinks();
+
+// Show the stored conversation (GET /api/memory) so a reload keeps the history visible.
+async function loadHistory() {
+  const user = $("user").value.trim();
+  try {
+    const res = await fetch(`/api/memory/${encodeURIComponent(user)}`);
+    if (!res.ok) return;
+    const mem = await res.json();
+    const msgs = mem.recent_messages || [];
+    if (!msgs.length) return;
+    $("session").value = msgs[msgs.length - 1].session_id;
+    add("assistant", `Loaded the last ${msgs.length} stored messages for "${user}" from MongoDB.`);
+    for (const m of msgs) add(m.role, m.content);
+    $("used").textContent = JSON.stringify({
+      latest_session_summary: mem.latest_session_summary && mem.latest_session_summary.text,
+      latest_lifetime_summary: mem.latest_lifetime_summary && mem.latest_lifetime_summary.text,
+    }, null, 2);
+    $("facts").textContent = (mem.episodic_facts || []).slice(0, 8)
+      .map(f => `${f.importance.toFixed(1)}  ${f.fact}`).join("\n") || "(none)";
+  } catch (err) { /* history is optional */ }
+}
+loadHistory();
+$("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const message = $("message").value.trim();
+  if (!message) return;
+  add("user", message);
+  $("message").value = "";
+  $("send").disabled = true;
+  const body = { user_id: $("user").value.trim(), message };
+  if ($("session").value.trim()) body.session_id = $("session").value.trim();
+  try {
+    const res = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    const data = await res.json();
+    if (!res.ok) throw new Error(JSON.stringify(data.detail));
+    $("session").value = data.session_id;
+    const u = data.usage;
+    add("assistant", data.reply, `${u.prompt_tokens} prompt + ${u.completion_tokens} completion tokens · ${Math.round(u.latency_ms)} ms`);
+    const m = data.memory_used;
+    $("used").textContent = JSON.stringify({
+      short_term_count: m.short_term_count,
+      long_term_summary: m.long_term_summary,
+      new_episodes: m.new_episodes,
+      summary_triggered: m.summary_triggered,
+      lifetime_triggered: m.lifetime_triggered,
+    }, null, 2);
+    $("facts").textContent = m.episodic_facts.length
+      ? m.episodic_facts.map(f => `${f.score.toFixed(2)}  ${f.fact}`).join("\n") : "(none)";
+  } catch (err) {
+    add("assistant", `Error: ${err.message}`);
+  } finally {
+    $("send").disabled = false;
+    $("message").focus();
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+[2026-10-18T23:40:21] setting n4 (SHORT_TERM_N=4) user=p3_n4_run2 messages=30
+[2026-10-18T23:40:57]   n4 turn  1: prompt=  151 completion=  66 window= 0 latency=36.1s
+[2026-10-18T23:41:15]   n4 turn  2: prompt=  262 completion=  71 window= 2 latency=17.4s
+[2026-10-18T23:41:35]   n4 turn  3: prompt=  381 completion=  69 window= 4 latency=20.1s
+[2026-10-18T23:42:27]   n4 turn  4: prompt=  368 completion= 139 window= 4 latency=52.2s
+[2026-10-18T23:43:00]   n4 turn  5: prompt=  500 completion=  77 window= 4 latency=33.5s
+[2026-10-18T23:43:26]   n4 turn  6: prompt=  500 completion=  76 window= 4 latency=25.6s
+[2026-10-18T23:43:49]   n4 turn  7: prompt=  435 completion=  74 window= 4 latency=22.8s
+[2026-10-18T23:44:48]   n4 turn  8: prompt=  432 completion=  81 window= 4 latency=59.0s
+[2026-10-18T23:45:24]   n4 turn  9: prompt=  503 completion=  95 window= 4 latency=36.3s
+[2026-10-18T23:45:52]   n4 turn 10: prompt=  529 completion=  67 window= 4 latency=27.3s
+[2026-10-18T23:46:23]   n4 turn 11: prompt=  513 completion=  76 window= 4 latency=30.9s
+[2026-10-19T00:07:29]   n4 turn 12: prompt=  496 completion=  69 window= 4 latency=1277.5s
+[2026-10-19T00:08:03]   n4 turn 13: prompt=  498 completion= 156 window= 4 latency=34.0s
+[2026-10-19T00:08:25]   n4 turn 14: prompt=  564 completion=  66 window= 4 latency=22.2s
+[2026-10-19T00:09:00]   n4 turn 15: prompt=  566 completion= 139 window= 4 latency=34.9s
+[2026-10-19T00:09:57]   n4 turn 16: prompt=  548 completion=  84 window= 4 latency=56.7s
+[2026-10-19T00:10:35]   n4 turn 17: prompt=  573 completion=  92 window= 4 latency=38.1s
+[2026-10-19T00:10:59]   n4 turn 18: prompt=  521 completion= 117 window= 4 latency=24.6s
+[2026-10-19T00:11:25]   n4 turn 19: prompt=  554 completion=  87 window= 4 latency=25.2s
+[2026-10-19T00:13:00]   n4 turn 20: prompt=  561 completion=  73 window= 4 latency=95.7s
+[2026-10-19T00:13:38]   n4 turn 21: prompt=  522 completion=  93 window= 4 latency=38.0s
+[2026-10-19T00:14:13]   n4 turn 22: prompt=  535 completion=  97 window= 4 latency=34.3s
+[2026-10-19T00:14:34]   n4 turn 23: prompt=  549 completion=  56 window= 4 latency=21.1s
+[2026-10-19T00:15:24]   n4 turn 24: prompt=  506 completion= 102 window= 4 latency=50.2s
+[2026-10-19T00:15:50]   n4 turn 25: prompt=  503 completion=  89 window= 4 latency=25.8s
+[2026-10-19T00:16:12]   n4 turn 26: prompt=  541 completion=  82 window= 4 latency=21.5s
+[2026-10-19T00:16:39]   n4 turn 27: prompt=  520 completion= 103 window= 4 latency=27.2s
+[2026-10-19T00:17:29]   n4 turn 28: prompt=  532 completion=  96 window= 4 latency=50.5s
+[2026-10-19T00:18:09]   n4 turn 29: prompt=  542 completion= 167 window= 4 latency=39.8s
+[2026-10-19T00:18:36]   n4 turn 30: prompt=  603 completion= 109 window= 4 latency=26.5s
+[2026-10-19T00:18:57]   n4 P1_ev_charging: score=5  reply="You drive a Tesla Model 3. Since you mentioned you prefer not to live on the ground floor, I'll look for apart"
+[2026-10-19T00:19:51]   n4 P2_visitor: score=1  reply="I don't have any information about who visits you every month. You mentioned earlier that you're a grad studen"
+[2026-10-19T00:20:04]   n4 P3_current_budget: score=5  reply='You mentioned earlier that your budget is $2,700 a month.'
+[2026-10-19T00:20:11]   n4 P4_cat_name: score=5  reply="You mentioned earlier that your cat's name is Miso."
+[2026-10-19T00:20:22]   n4 P5_move_in: score=3  reply="You mentioned earlier that you need to move in on December 1st. I don't know why that date is significant, but"
+[2026-10-19T00:20:22] setting n4 done in 40.2 min -> reports\hw06\raw\part3\n4.json
+[2026-10-19T00:20:22] setting n12 (SHORT_TERM_N=12) user=p3_n12_run2 messages=30
+[2026-10-19T00:25:29]   n12 turn  1: prompt=  151 completion=  63 window= 0 latency=307.9s
+[2026-10-19T00:25:47]   n12 turn  2: prompt=  259 completion=  57 window= 2 latency=17.9s
+[2026-10-19T00:26:06]   n12 turn  3: prompt=  364 completion=  57 window= 4 latency=19.0s
+[2026-10-19T00:26:39]   n12 turn  4: prompt=  438 completion=  78 window= 6 latency=32.9s
+[2026-10-19T00:27:09]   n12 turn  5: prompt=  606 completion=  81 window= 8 latency=30.0s
+[2026-10-19T00:27:27]   n12 turn  6: prompt=  703 completion=  64 window=10 latency=17.9s
+[2026-10-19T00:27:44]   n12 turn  7: prompt=  783 completion=  75 window=12 latency=16.6s
+[2026-10-19T00:28:48]   n12 turn  8: prompt=  789 completion=  73 window=12 latency=64.0s
+[2026-10-19T00:29:27]   n12 turn  9: prompt=  875 completion=  75 window=12 latency=38.9s
+[2026-10-19T08:37:34]   n12 turn 10: prompt=  893 completion=  90 window=12 latency=29286.8s
+[2026-10-19T08:38:20]   n12 turn 11: prompt=  909 completion=  83 window=12 latency=45.9s
+[2026-10-19T08:39:30]   n12 turn 12: prompt=  909 completion=  84 window=12 latency=70.0s
+[2026-10-19T08:40:26]   n12 turn 13: prompt=  933 completion= 200 window=12 latency=55.7s
+[2026-10-19T08:41:08]   n12 turn 14: prompt= 1051 completion=  79 window=12 latency=41.8s
+[2026-10-19T08:41:58]   n12 turn 15: prompt= 1060 completion= 126 window=12 latency=50.7s
+[2026-10-19T08:43:32]   n12 turn 16: prompt= 1107 completion=  90 window=12 latency=93.9s
+[2026-10-19T08:44:30]   n12 turn 17: prompt= 1124 completion= 100 window=12 latency=57.3s
+[2026-10-19T08:45:23]   n12 turn 18: prompt= 1131 completion= 131 window=12 latency=53.6s
+[2026-10-19T08:46:13]   n12 turn 19: prompt= 1173 completion= 119 window=12 latency=50.2s
+[2026-10-19T08:47:30]   n12 turn 20: prompt= 1106 completion=  91 window=12 latency=77.0s
+[2026-10-19T08:48:17]   n12 turn 21: prompt= 1122 completion=  68 window=12 latency=46.7s
+[2026-10-19T08:49:13]   n12 turn 22: prompt= 1071 completion=  96 window=12 latency=55.6s
+[2026-10-19T08:50:00]   n12 turn 23: prompt= 1079 completion=  81 window=12 latency=46.7s
+[2026-10-19T08:51:27]   n12 turn 24: prompt= 1052 completion= 115 window=12 latency=87.8s
+[2026-10-19T08:52:15]   n12 turn 25: prompt= 1038 completion=  79 window=12 latency=47.8s
+[2026-10-19T08:53:07]   n12 turn 26: prompt= 1005 completion=  88 window=12 latency=52.1s
+[2026-10-19T08:54:02]   n12 turn 27: prompt=  992 completion=  90 window=12 latency=54.7s
+[2026-10-19T08:55:08]   n12 turn 28: prompt= 1011 completion=  94 window=12 latency=65.9s
+[2026-10-19T08:55:59]   n12 turn 29: prompt=  996 completion= 171 window=12 latency=51.1s
+[2026-10-19T08:56:46]   n12 turn 30: prompt= 1087 completion=  83 window=12 latency=46.6s
+[2026-10-19T08:57:28]   n12 P1_ev_charging: score=5  reply="You drive a Tesla Model 3, which requires access to EV charging stations. Since you're looking for a place in "
+[2026-10-19T08:58:46]   n12 P2_visitor: score=1  reply="I don't have any information about who visits you every month. You mentioned earlier that you're a grad studen"
+[2026-10-19T08:59:21]   n12 P3_current_budget: score=4  reply='You mentioned earlier that your budget is $2,700/month, which is higher than your initial budget of $2,400/mon'
+[2026-10-19T08:59:46]   n12 P4_cat_name: score=5  reply="You mentioned earlier that your cat's name is Miso."
+[2026-10-19T09:00:21]   n12 P5_move_in: score=3  reply="You mentioned earlier that you need to move in by December 1st. I don't have any additional information about "
+[2026-10-19T09:00:21] setting n12 done in 520.0 min -> reports\hw06\raw\part3\n12.json
+[2026-10-19T09:00:21] setting n30 (SHORT_TERM_N=30) user=p3_n30_run2 messages=30
+[2026-10-19T09:00:40]   n30 turn  1: prompt=  151 completion=  63 window= 0 latency=18.4s
+[2026-10-19T09:00:58]   n30 turn  2: prompt=  259 completion=  70 window= 2 latency=18.0s
+[2026-10-19T09:01:18]   n30 turn  3: prompt=  377 completion=  70 window= 4 latency=20.2s
+[2026-10-19T09:01:54]   n30 turn  4: prompt=  464 completion=  95 window= 6 latency=36.0s
+[2026-10-19T09:02:25]   n30 turn  5: prompt=  659 completion=  73 window= 8 latency=30.9s
+[2026-10-19T09:02:47]   n30 turn  6: prompt=  748 completion=  90 window=10 latency=22.3s
+[2026-10-19T09:03:08]   n30 turn  7: prompt=  854 completion=  92 window=12 latency=20.2s
+[2026-10-19T09:04:11]   n30 turn  8: prompt=  973 completion=  89 window=14 latency=63.1s
+[2026-10-19T09:04:59]   n30 turn  9: prompt= 1182 completion=  68 window=16 latency=47.8s
+[2026-10-19T09:05:18]   n30 turn 10: prompt= 1274 completion=  87 window=18 latency=19.9s
+[2026-10-19T09:05:44]   n30 turn 11: prompt= 1383 completion=  99 window=20 latency=25.6s
+[2026-10-19T09:06:42]   n30 turn 12: prompt= 1507 completion= 104 window=22 latency=58.1s
+[2026-10-19T09:08:07]   n30 turn 13: prompt= 1647 completion= 200 window=24 latency=84.4s
+[2026-10-19T09:08:38]   n30 turn 14: prompt= 1859 completion=  93 window=26 latency=31.7s
+[2026-10-19T09:09:19]   n30 turn 15: prompt= 1979 completion= 167 window=28 latency=40.3s
+[2026-10-19T09:10:42]   n30 turn 16: prompt= 2165 completion= 119 window=30 latency=83.4s
+[2026-10-19T09:12:25]   n30 turn 17: prompt= 2222 completion= 148 window=30 latency=102.6s
+[2026-10-19T09:14:08]   n30 turn 18: prompt= 2291 completion= 190 window=30 latency=103.3s
+[2026-10-19T09:15:43]   n30 turn 19: prompt= 2404 completion= 120 window=30 latency=94.7s
+[2026-10-19T09:17:56]   n30 turn 20: prompt= 2446 completion= 110 window=30 latency=133.0s
+[2026-10-19T09:19:50]   n30 turn 21: prompt= 2478 completion= 107 window=30 latency=113.7s
+[2026-10-19T09:21:54]   n30 turn 22: prompt= 2505 completion= 127 window=30 latency=123.9s
+[2026-10-19T09:23:27]   n30 turn 23: prompt= 2540 completion=  86 window=30 latency=93.9s
+[2026-10-19T09:25:55]   n30 turn 24: prompt= 2528 completion= 135 window=30 latency=147.2s
+[2026-10-19T09:27:27]   n30 turn 25: prompt= 2597 completion= 100 window=30 latency=92.6s
+[2026-10-19T09:28:56]   n30 turn 26: prompt= 2619 completion=  98 window=30 latency=88.5s
+[2026-10-19T09:30:33]   n30 turn 27: prompt= 2612 completion= 118 window=30 latency=96.9s
+[2026-10-19T09:32:36]   n30 turn 28: prompt= 2622 completion= 116 window=30 latency=123.3s
+[2026-10-19T09:34:19]   n30 turn 29: prompt= 2531 completion= 194 window=30 latency=102.5s
+[2026-10-19T09:35:54]   n30 turn 30: prompt= 2637 completion= 108 window=30 latency=95.2s
+[2026-10-19T09:37:23]   n30 P1_ev_charging: score=5  reply="You drive a Tesla Model 3, which requires EV charging. Since you live in the San Jose area, you'll need to fin"
+[2026-10-19T09:39:29]   n30 P2_visitor: score=5  reply="You mentioned earlier that your sister Riya visits you every month. Since you'd like to accommodate her visits"
+[2026-10-19T09:40:52]   n30 P3_current_budget: score=5  reply='Your current monthly budget is $2,700.'
+[2026-10-19T09:42:07]   n30 P4_cat_name: score=5  reply="Your cat's name is Miso."
+[2026-10-19T09:43:39]   n30 P5_move_in: score=3  reply="You need to move in on December 1st because you're a grad student at SJSU, and you work at an internship in Su"
+[2026-10-19T09:43:39] setting n30 done in 43.3 min -> reports\hw06\raw\part3\n30.json
+[2026-10-19T09:43:39] setting n30_compress (Compression policy (N=30, compress_assistant)) user=p3_n30_compress_run2 messages=30
+[2026-10-19T09:43:58]   n30_compress turn  1: prompt=  151 completion=  63 window= 0 latency=18.7s
+[2026-10-19T09:44:18]   n30_compress turn  2: prompt=  259 completion=  70 window= 2 latency=20.1s
+[2026-10-19T09:44:36]   n30_compress turn  3: prompt=  320 completion=  59 window= 4 latency=18.7s
+[2026-10-19T09:45:06]   n30_compress turn  4: prompt=  350 completion=  76 window= 6 latency=29.5s
+[2026-10-19T09:45:25]   n30_compress turn  5: prompt=  458 completion=  40 window= 8 latency=19.2s
+[2026-10-19T09:45:43]   n30_compress turn  6: prompt=  464 completion=  61 window=10 latency=17.3s
+[2026-10-19T09:45:56]   n30_compress turn  7: prompt=  526 completion=  49 window=12 latency=13.9s
+[2026-10-19T09:46:39]   n30_compress turn  8: prompt=  558 completion=  48 window=14 latency=42.7s
+[2026-10-19T09:47:05]   n30_compress turn  9: prompt=  680 completion=  32 window=16 latency=25.4s
+[2026-10-19T09:47:17]   n30_compress turn 10: prompt=  713 completion=  43 window=18 latency=12.1s
+[2026-10-19T09:47:31]   n30_compress turn 11: prompt=  778 completion=  43 window=20 latency=14.7s
+[2026-10-19T09:48:05]   n30_compress turn 12: prompt=  827 completion=  14 window=22 latency=33.6s
+[2026-10-19T09:48:19]   n30_compress turn 13: prompt=  833 completion=  58 window=24 latency=14.1s
+[2026-10-19T09:48:31]   n30_compress turn 14: prompt=  902 completion=  32 window=26 latency=11.8s
+[2026-10-19T09:48:49]   n30_compress turn 15: prompt=  937 completion=  83 window=28 latency=17.7s
+[2026-10-19T09:49:37]   n30_compress turn 16: prompt= 1039 completion=  49 window=30 latency=48.3s
+[2026-10-19T09:50:29]   n30_compress turn 17: prompt= 1024 completion=  60 window=30 latency=51.4s
+[2026-10-19T09:51:09]   n30_compress turn 18: prompt= 1031 completion=  48 window=30 latency=40.7s
+[2026-10-19T09:51:44]   n30_compress turn 19: prompt= 1024 completion=  31 window=30 latency=34.8s
+[2026-10-19T09:52:43]   n30_compress turn 20: prompt= 1032 completion=  36 window=30 latency=59.1s
+[2026-10-19T09:53:23]   n30_compress turn 21: prompt= 1038 completion=  39 window=30 latency=40.0s
+[2026-10-19T09:54:07]   n30_compress turn 22: prompt= 1053 completion=  39 window=30 latency=43.3s
+[2026-10-19T09:54:48]   n30_compress turn 23: prompt= 1060 completion=  48 window=30 latency=41.6s
+[2026-10-19T09:55:59]   n30_compress turn 24: prompt= 1067 completion=  87 window=30 latency=70.7s
+[2026-10-19T09:56:39]   n30_compress turn 25: prompt= 1087 completion=  55 window=30 latency=40.6s
+[2026-10-19T09:57:22]   n30_compress turn 26: prompt= 1077 completion=  72 window=30 latency=42.1s
+[2026-10-19T09:58:04]   n30_compress turn 27: prompt= 1106 completion=  43 window=30 latency=42.1s
+[2026-10-19T09:58:59]   n30_compress turn 28: prompt= 1072 completion=  32 window=30 latency=55.1s
+[2026-10-19T09:59:39]   n30_compress turn 29: prompt= 1041 completion=  79 window=30 latency=40.6s
+[2026-10-19T10:00:18]   n30_compress turn 30: prompt= 1093 completion=  49 window=30 latency=38.3s
+[2026-10-19T10:00:51]   n30_compress P1_ev_charging: score=5  reply='You drive a Tesla Model 3, which requires an EV charging station.'
+[2026-10-19T10:01:50]   n30_compress P2_visitor: score=5  reply="Your sister Riya visits every month, and you'd like to find an apartment that can accommodate a sofa bed, whic"
+[2026-10-19T10:02:22]   n30_compress P3_current_budget: score=5  reply='Your current monthly budget is $2,700.'
+[2026-10-19T10:02:46]   n30_compress P4_cat_name: score=5  reply="Your cat's name is Miso."
+[2026-10-19T10:03:12]   n30_compress P5_move_in: score=3  reply="You need to move in on December 1st because that's the date you've specified, and it's also a Tuesday, which i"
+[2026-10-19T10:03:12] setting n30_compress done in 19.6 min -> reports\hw06\raw\part3\n30_compress.json
+[2026-10-19T10:03:12] results table
+[2026-10-19T10:03:12]   SHORT_TERM_N=4                                   prompt/turn=  493.6  latency= 76839.3 ms  probe=3.8  [5, 1, 5, 5, 3]
+[2026-10-19T10:03:12]   SHORT_TERM_N=12                                  prompt/turn=  893.9  latency=1032774.8 ms  probe=3.6  [5, 1, 4, 5, 3]
+[2026-10-19T10:03:12]   SHORT_TERM_N=30                                  prompt/turn= 1750.4  latency= 71052.6 ms  probe=4.6  [5, 5, 5, 5, 3]
+[2026-10-19T10:03:12]   Compression policy (N=30, compress_assistant)    prompt/turn=  820.0  latency= 33276.0 ms  probe=4.6  [5, 5, 5, 5, 3]
+[2026-10-19T10:03:12]   SHORT_TERM_N=4                                   chat cost/10k=$286.48  with maintenance=$423.51
+[2026-10-19T10:03:12]   SHORT_TERM_N=12                                  chat cost/10k=$407.22  with maintenance=$550.54
+[2026-10-19T10:03:12]   SHORT_TERM_N=30                                  chat cost/10k=$691.93  with maintenance=$854.33
+[2026-10-19T10:03:12]   Compression policy (N=30, compress_assistant)    chat cost/10k=$322.90  with maintenance=$450.02

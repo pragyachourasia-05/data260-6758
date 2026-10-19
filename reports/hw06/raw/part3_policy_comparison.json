@@ -1,0 +1,72 @@
+{
+  "baseline": {
+    "setting": "n30",
+    "label": "SHORT_TERM_N=30",
+    "turns": 30,
+    "mean_prompt_tokens_per_turn": 1750.4,
+    "mean_completion_tokens_per_turn": 111.2,
+    "mean_latency_ms": 71052.6,
+    "mean_model_latency_ms": 56770.0,
+    "mean_window_tokens_est": 1523.3,
+    "mean_summary_tokens_est": 140.9,
+    "mean_episodic_tokens_est": 43.5,
+    "probe_quality": 4.6,
+    "probe_scores": [
+      5,
+      5,
+      5,
+      5,
+      3
+    ]
+  },
+  "policy": {
+    "setting": "n30_compress",
+    "label": "Compression policy (N=30, compress_assistant)",
+    "turns": 30,
+    "mean_prompt_tokens_per_turn": 820,
+    "mean_completion_tokens_per_turn": 51.3,
+    "mean_latency_ms": 33276.0,
+    "mean_model_latency_ms": 22323.2,
+    "mean_window_tokens_est": 472.0,
+    "mean_summary_tokens_est": 92.2,
+    "mean_episodic_tokens_est": 43.5,
+    "probe_quality": 4.6,
+    "probe_scores": [
+      5,
+      5,
+      5,
+      5,
+      3
+    ]
+  },
+  "prompt_token_savings_per_turn": 930.4,
+  "prompt_token_savings_pct": 53.2,
+  "probe_quality_change": 0.0,
+  "per_probe": [
+    {
+      "probe": "P1_ev_charging",
+      "baseline_score": 5,
+      "policy_score": 5
+    },
+    {
+      "probe": "P2_visitor",
+      "baseline_score": 5,
+      "policy_score": 5
+    },
+    {
+      "probe": "P3_current_budget",
+      "baseline_score": 5,
+      "policy_score": 5
+    },
+    {
+      "probe": "P4_cat_name",
+      "baseline_score": 5,
+      "policy_score": 5
+    },
+    {
+      "probe": "P5_move_in",
+      "baseline_score": 3,
+      "policy_score": 3
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+[2026-10-18T21:32:58] setting n4 (SHORT_TERM_N=4) user=p3_n4_run1 messages=30
+[2026-10-18T21:33:15]   n4 turn  1: prompt=  151 completion=  66 window= 0 latency=16.6s
+[2026-10-18T21:33:32]   n4 turn  2: prompt=  262 completion=  71 window= 2 latency=17.3s
+[2026-10-18T21:33:52]   n4 turn  3: prompt=  381 completion=  69 window= 4 latency=20.2s
+[2026-10-18T21:34:31]   n4 turn  4: prompt=  368 completion= 123 window= 4 latency=38.5s
+[2026-10-18T21:35:01]   n4 turn  5: prompt=  482 completion=  87 window= 4 latency=29.7s
+[2026-10-18T21:35:23]   n4 turn  6: prompt=  492 completion=  71 window= 4 latency=22.4s
+[2026-10-18T21:35:46]   n4 turn  7: prompt=  438 completion=  98 window= 4 latency=22.9s
+[2026-10-18T21:36:47]   n4 turn  8: prompt=  449 completion=  84 window= 4 latency=61.0s
+[2026-10-18T21:37:16]   n4 turn  9: prompt=  575 completion=  91 window= 4 latency=29.4s
+[2026-10-18T21:37:33]   n4 turn 10: prompt=  571 completion=  42 window= 4 latency=16.6s
+[2026-10-18T21:37:55]   n4 turn 11: prompt=  527 completion=  72 window= 4 latency=22.0s
+[2026-10-18T21:38:45]   n4 turn 12: prompt=  509 completion=  82 window= 4 latency=49.9s
+[2026-10-18T21:39:11]   n4 turn 13: prompt=  549 completion= 134 window= 4 latency=26.5s
+[2026-10-18T21:39:33]   n4 turn 14: prompt=  598 completion=  83 window= 4 latency=21.8s
+[2026-10-18T21:40:02]   n4 turn 15: prompt=  604 completion= 143 window= 4 latency=28.8s
+[2026-10-18T21:41:08]   n4 turn 16: prompt=  611 completion=  89 window= 4 latency=66.1s
+[2026-10-18T21:41:43]   n4 turn 17: prompt=  623 completion=  96 window= 4 latency=35.0s
+[2026-10-18T21:42:10]   n4 turn 18: prompt=  571 completion= 108 window= 4 latency=26.5s
+[2026-10-18T21:42:31]   n4 turn 19: prompt=  590 completion=  74 window= 4 latency=21.3s
+[2026-10-18T21:43:21]   n4 turn 20: prompt=  580 completion=  70 window= 4 latency=50.0s
+[2026-10-18T21:43:47]   n4 turn 21: prompt=  547 completion=  70 window= 4 latency=26.0s
+[2026-10-18T21:44:15]   n4 turn 22: prompt=  550 completion=  90 window= 4 latency=28.5s
+[2026-10-18T21:44:38]   n4 turn 23: prompt=  559 completion=  67 window= 4 latency=22.9s
+[2026-10-18T21:45:37]   n4 turn 24: prompt=  553 completion=  99 window= 4 latency=58.5s
+[2026-10-18T21:46:07]   n4 turn 25: prompt=  545 completion=  93 window= 4 latency=29.6s
+[2026-10-18T21:46:24]   n4 turn 26: prompt=  570 completion=  37 window= 4 latency=17.6s
+[2026-10-18T21:46:48]   n4 turn 27: prompt=  507 completion=  77 window= 4 latency=23.8s
+[2026-10-18T21:47:32]   n4 turn 28: prompt=  498 completion=  79 window= 4 latency=43.7s
+[2026-10-18T21:47:55]   n4 turn 29: prompt=  539 completion= 100 window= 4 latency=23.2s
+[2026-10-18T21:48:16]   n4 turn 30: prompt=  556 completion=  75 window= 4 latency=20.7s
+[2026-10-18T21:48:33]   n4 P1_ev_charging: score=1  reply="I don't have any information about the type of car you drive or its specific needs. You mentioned earlier that"
+[2026-10-18T21:49:24]   n4 P2_visitor: score=1  reply="I don't have any information about who visits you every month. You mentioned earlier that you're a grad studen"
+[2026-10-18T21:49:36]   n4 P3_current_budget: score=5  reply='You mentioned earlier that your current monthly budget is $2,700.'
+[2026-10-18T21:49:47]   n4 P4_cat_name: score=5  reply="You mentioned earlier that your cat's name is Miso."
+[2026-10-18T21:49:59]   n4 P5_move_in: score=3  reply="You need to move in on December 1st. I don't know why that date specifically, but you mentioned it earlier as "
+[2026-10-18T21:49:59] setting n4 done in 17.0 min -> reports\hw06\raw\part3\n4.json
+[2026-10-18T21:49:59] setting n12 (SHORT_TERM_N=12) user=p3_n12_run1 messages=30
+[2026-10-18T21:50:18]   n12 turn  1: prompt=  151 completion=  63 window= 0 latency=18.2s
+[2026-10-18T21:50:34]   n12 turn  2: prompt=  259 completion=  57 window= 2 latency=16.6s
+[2026-10-18T21:50:53]   n12 turn  3: prompt=  364 completion=  57 window= 4 latency=18.8s
+[2026-10-18T21:51:33]   n12 turn  4: prompt=  438 completion=  78 window= 6 latency=40.2s
+[2026-10-18T21:52:07]   n12 turn  5: prompt=  606 completion=  81 window= 8 latency=34.3s
+[2026-10-18T21:52:29]   n12 turn  6: prompt=  703 completion=  64 window=10 latency=21.6s
+[2026-10-18T21:52:52]   n12 turn  7: prompt=  783 completion=  75 window=12 latency=23.2s
+[2026-10-18T21:54:04]   n12 turn  8: prompt=  789 completion=  84 window=12 latency=72.0s
+[2026-10-18T21:54:43]   n12 turn  9: prompt=  878 completion=  72 window=12 latency=38.4s
+[2026-10-18T21:55:15]   n12 turn 10: prompt=  891 completion=  67 window=12 latency=32.0s
+[2026-10-18T21:55:51]   n12 turn 11: prompt=  884 completion=  92 window=12 latency=35.9s
+[2026-10-18T21:56:59]   n12 turn 12: prompt=  892 completion=  93 window=12 latency=68.0s
+[2026-10-18T21:58:06]   n12 turn 13: prompt=  940 completion= 200 window=12 latency=67.6s
+[2026-10-18T21:58:57]   n12 turn 14: prompt= 1059 completion=  74 window=12 latency=51.1s
+[2026-10-18T21:59:55]   n12 turn 15: prompt= 1052 completion= 142 window=12 latency=57.1s
+[2026-10-18T22:01:35]   n12 turn 16: prompt= 1117 completion=  87 window=12 latency=100.4s
+[2026-10-18T22:02:44]   n12 turn 17: prompt= 1158 completion=  88 window=12 latency=68.9s
+[2026-10-18T22:03:52]   n12 turn 18: prompt= 1144 completion= 142 window=12 latency=67.7s
+[2026-10-18T22:04:49]   n12 turn 19: prompt= 1188 completion=  86 window=12 latency=57.1s
+[2026-10-18T22:06:24]   n12 turn 20: prompt= 1088 completion=  86 window=12 latency=95.7s
+[2026-10-18T22:07:23]   n12 turn 21: prompt= 1104 completion=  80 window=12 latency=58.6s
+[2026-10-18T22:08:24]   n12 turn 22: prompt= 1049 completion= 109 window=12 latency=61.3s
+[2026-10-18T22:09:17]   n12 turn 23: prompt= 1072 completion=  71 window=12 latency=52.2s
+[2026-10-18T22:11:05]   n12 turn 24: prompt= 1050 completion= 139 window=12 latency=108.0s
+[2026-10-18T22:11:56]   n12 turn 25: prompt= 1050 completion=  95 window=12 latency=50.8s
+[2026-10-18T22:12:47]   n12 turn 26: prompt= 1060 completion=  94 window=12 latency=51.4s
+[2026-10-18T22:13:39]   n12 turn 27: prompt= 1058 completion=  75 window=12 latency=52.3s
+[2026-10-18T22:15:03]   n12 turn 28: prompt= 1059 completion= 130 window=12 latency=83.5s
+[2026-10-18T22:15:55]   n12 turn 29: prompt= 1070 completion= 126 window=12 latency=51.8s
+[2026-10-18T22:16:46]   n12 turn 30: prompt= 1123 completion=  91 window=12 latency=50.9s
+[2026-10-18T22:17:39]   n12 P1_ev_charging: score=5  reply="You drive a Tesla Model 3, and since you live in the Bay Area, you'll need to consider the following:\n\n* Tesla"
+[2026-10-18T22:19:05]   n12 P2_visitor: score=1  reply="I don't recall anyone visiting you every month. You mentioned earlier that you're a grad student at SJSU, but "
+[2026-10-18T22:19:45]   n12 P3_current_budget: score=4  reply='You mentioned earlier that your budget is $2,700/month, which is higher than your initial budget of $2,400/mon'
+[2026-10-18T22:20:14]   n12 P4_cat_name: score=5  reply="You mentioned earlier that your cat's name is Miso."
+[2026-10-18T22:20:46]   n12 P5_move_in: score=3  reply="You mentioned earlier that you need to move in on December 1st. I don't recall why that specific date is impor"
+[2026-10-18T22:20:46] setting n12 done in 30.8 min -> reports\hw06\raw\part3\n12.json
+[2026-10-18T22:20:46] setting n30 (SHORT_TERM_N=30) user=p3_n30_run1 messages=30
+[2026-10-18T22:21:04]   n30 turn  1: prompt=  151 completion=  63 window= 0 latency=18.0s
+[2026-10-18T22:21:23]   n30 turn  2: prompt=  259 completion=  70 window= 2 latency=18.9s
+[2026-10-18T22:21:44]   n30 turn  3: prompt=  377 completion=  70 window= 4 latency=21.4s
+[2026-10-18T22:54:45]   n30 turn  4: prompt=  464 completion=  95 window= 6 latency=1980.5s
+[2026-10-18T22:55:40]   n30 turn  5: prompt=  659 completion=  73 window= 8 latency=53.8s
+[2026-10-18T22:56:04]   n30 turn  6: prompt=  748 completion=  90 window=10 latency=24.7s
+[2026-10-18T22:56:26]   n30 turn  7: prompt=  854 completion=  92 window=12 latency=21.8s
+[2026-10-18T22:57:40]   n30 turn  8: prompt=  973 completion= 102 window=14 latency=73.7s
+[2026-10-18T22:58:36]   n30 turn  9: prompt= 1177 completion=  83 window=16 latency=56.0s
+[2026-10-18T22:59:00]   n30 turn 10: prompt= 1282 completion=  90 window=18 latency=24.3s
+[2026-10-18T22:59:28]   n30 turn 11: prompt= 1394 completion= 105 window=20 latency=28.3s
+[2026-10-18T23:00:23]   n30 turn 12: prompt= 1523 completion=  70 window=22 latency=55.0s
+[2026-10-18T23:01:06]   n30 turn 13: prompt= 1611 completion= 200 window=24 latency=42.3s
+[2026-10-18T23:01:38]   n30 turn 14: prompt= 1824 completion=  98 window=26 latency=32.4s
+[2026-10-18T23:02:12]   n30 turn 15: prompt= 1949 completion= 136 window=28 latency=34.1s
+[2026-10-18T23:03:29]   n30 turn 16: prompt= 2103 completion= 153 window=30 latency=76.7s
+[2026-10-18T23:05:26]   n30 turn 17: prompt= 2153 completion= 162 window=30 latency=116.4s
+[2026-10-18T23:07:17]   n30 turn 18: prompt= 2236 completion= 161 window=30 latency=111.7s
+[2026-10-18T23:09:17]   n30 turn 19: prompt= 2320 completion= 149 window=30 latency=119.1s
+[2026-10-18T23:12:06]   n30 turn 20: prompt= 2391 completion= 148 window=30 latency=168.9s
+[2026-10-18T23:14:17]   n30 turn 21: prompt= 2461 completion= 145 window=30 latency=131.0s
+[2026-10-18T23:16:36]   n30 turn 22: prompt= 2526 completion= 176 window=30 latency=139.0s
+[2026-10-18T23:18:33]   n30 turn 23: prompt= 2609 completion= 148 window=30 latency=116.9s
+[2026-10-18T23:23:27]   n30 turn 24: prompt= 2649 completion= 200 window=30 latency=294.2s
+Traceback (most recent call last):
+  File "C:\SJSU Assignments\Agentic AI\Assignment_1\backend\run_hw06_memory_cost.py", line 246, in <module>
+    main()
+  File "C:\SJSU Assignments\Agentic AI\Assignment_1\backend\run_hw06_memory_cost.py", line 198, in main
+    result = run_setting(key, conversation, probes, args.tag, args.limit)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SJSU Assignments\Agentic AI\Assignment_1\backend\run_hw06_memory_cost.py", line 122, in run_setting
+    res = post_chat({"user_id": user_id, "session_id": session_id, "message": message,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SJSU Assignments\Agentic AI\Assignment_1\backend\run_hw06_memory_cost.py", line 58, in post_chat
+    with urllib.request.urlopen(req, timeout=900) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pragy\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pragy\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pragy\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pragy\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pragy\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\pragy\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable

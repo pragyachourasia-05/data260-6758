@@ -1,0 +1,64 @@
+# HW6 Part 3 - fixed memory probes (written before any Part 3 run).
+# Asked in this order after the 30-message conversation in cases/conversation_30.yaml.
+# "planted_at" = user message number (1-30) that states the fact; the window
+# column shows which SHORT_TERM_N settings can still see that message verbatim
+# when the first probe is asked (N counts user + assistant messages, so N=4 sees
+# user messages 29-30, N=12 sees 25-30, N=30 sees 16-30).
+
+rubric:
+  5: "Every required element is present and no outdated or wrong value is stated."
+  4: "Every required element is present, but an outdated or wrong value is also stated (e.g. old and new budget without saying which is current)."
+  3: "At least half of the required elements are present."
+  2: "Fewer than half of the required elements, or only a wrong/outdated value is given."
+  1: "No required element: says it does not know, or answers something unrelated."
+
+scoring: >
+  Automatic and deterministic (backend/run_hw06_memory_cost.py:score_probe).
+  Each required element is a list of accepted spellings; an element counts as
+  present if any spelling appears in the lower-cased reply. A forbidden value is
+  an outdated or wrong answer. Scores map to the rubric above.
+
+probes:
+  - id: P1_ev_charging
+    question: "What kind of car do I drive and what does it need where I live?"
+    planted_at: [27]
+    visible_in_window: [12, 30]
+    required:
+      - ["tesla", "model 3"]
+      - ["charg", "ev"]
+    forbidden: []
+
+  - id: P2_visitor
+    question: "Who visits me every month, and what do I need in the apartment because of that?"
+    planted_at: [22]
+    visible_in_window: [30]
+    required:
+      - ["riya"]
+      - ["sister"]
+      - ["sofa bed", "sofa-bed", "guest", "second room", "extra room", "space"]
+    forbidden: []
+
+  - id: P3_current_budget
+    question: "What is my current monthly budget?"
+    planted_at: [2, 20]
+    visible_in_window: [30]
+    required:
+      - ["2,700", "2700", "2.7k"]
+    forbidden: ["2,400", "2400"]
+
+  - id: P4_cat_name
+    question: "What is my cat's name?"
+    planted_at: [3]
+    visible_in_window: []
+    required:
+      - ["miso"]
+    forbidden: []
+
+  - id: P5_move_in
+    question: "On what date do I need to move in, and why that date?"
+    planted_at: [5]
+    visible_in_window: []
+    required:
+      - ["december 1", "dec 1", "1st of december", "12/1"]
+      - ["lease"]
+    forbidden: []

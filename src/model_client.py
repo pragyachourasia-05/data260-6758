@@ -11,12 +11,18 @@ class ModelClient:
         model: str = "llama3.2:3b",
         base_url: str = "http://localhost:11434",
         temperature: float = 0.0,
+        verbose: bool = True,
+        **llm_kwargs: Any,
     ):
+        # llm_kwargs passes extra ChatOllama options through (HW6 uses
+        # num_ctx, seed and format="json") without changing older callers.
         self.llm = ChatOllama(
             model=model,
             base_url=base_url,
             temperature=temperature,
+            **llm_kwargs,
         )
+        self.verbose = verbose
         self.turn_count = 0
         self.total_input_tokens = 0
         self.total_output_tokens = 0
@@ -50,15 +56,17 @@ class ModelClient:
         self.total_input_tokens += input_tokens
         self.total_output_tokens += output_tokens
 
-        print(f"Input tokens: {input_tokens}")
-        print(f"Output tokens: {output_tokens}")
-        print(f"Total tokens: {total_tokens}")
+        if self.verbose:
+            print(f"Input tokens: {input_tokens}")
+            print(f"Output tokens: {output_tokens}")
+            print(f"Total tokens: {total_tokens}")
 
         return {
             "text": response.content,
             "input_tokens": input_tokens,
             "output_tokens": output_tokens,
             "total_tokens": total_tokens,
+            "cached_input_tokens": int(metadata.get("prompt_eval_cached_count", 0) or 0),
         }
 
     def stats(self, conversation: List[Dict[str, str]]) -> Dict[str, int]:

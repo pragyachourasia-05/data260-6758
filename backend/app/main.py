@@ -1,23 +1,48 @@
+import logging
+from pathlib import Path
+
 from fastapi import Depends, FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy.exc import IntegrityError
+from fastapi.responses import FileResponse, JSONResponse
+from sqlalchemy.exc import IntegrityError, OperationalError
 from sqlalchemy.orm import Session
 
 from . import crud, models, schema
 from .database import Base, engine, get_db
 from .session_crud import create_session, delete_session, get_session
 from .nplus1 import router as nplus1_router
+from .mongo_db import ping as mongo_ping
+from .routes_listings_doc import router as listings_doc_router
+from .routes_memory import router as memory_router
 
 
-Base.metadata.create_all(bind=engine)
+try:
+    Base.metadata.create_all(bind=engine)
+except OperationalError:
+    # HW6 MongoDB routes do not need MySQL; keep them usable if it is down.
+    logging.getLogger(__name__).warning("MySQL unavailable; relational routes will fail until it is up.")
 
-app = FastAPI(title="Rental Housing Listings HW4 API")
+app = FastAPI(title="Rental Housing Listings API (HW4-HW6)")
 app.include_router(nplus1_router)
+app.include_router(listings_doc_router)
+app.include_router(memory_router)
+
+
+@app.middleware("http")
+async def require_json_body(request: Request, call_next):
+    """HW6: request bodies sent to /api/* must be JSON (FastAPI then parses them)."""
+    if (
+        request.url.path.startswith("/api/")
+        and request.method in {"POST", "PUT", "PATCH"}
+        and "application/json" not in request.headers.get("content-type", "")
+    ):
+        return JSONResponse(status_code=415, content={"detail": "Content-Type must be application/json."})
+    return await call_next(request)
 
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["http://localhost:5173", "http://localhost:8458", "http://127.0.0.1:8458"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -52,7 +77,15 @@ def health():
     return {
         "status": "ok",
         "database": "s6758_rel",
+        "mongo_database": "s6758_doc",
+        "mongo_ok": mongo_ping(),
     }
+
+
+@app.get("/chat", include_in_schema=False)
+def chat_page():
+    """HW6 Part 2 mini chat page that calls POST /api/chat."""
+    return FileResponse(Path(__file__).resolve().parents[2] / "frontend" / "chat.html")
 
 
 @app.post("/users", response_model=schema.UserOut, status_code=201)

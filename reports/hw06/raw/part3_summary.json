@@ -1,0 +1,130 @@
+{
+  "table": [
+    {
+      "setting": "n4",
+      "label": "SHORT_TERM_N=4",
+      "turns": 30,
+      "mean_prompt_tokens_per_turn": 501.2,
+      "mean_completion_tokens_per_turn": 83.8,
+      "mean_latency_ms": 30183.1,
+      "mean_model_latency_ms": 17923.3,
+      "mean_window_tokens_est": 207.8,
+      "mean_summary_tokens_est": 108.1,
+      "mean_episodic_tokens_est": 43.5,
+      "probe_quality": 3.4,
+      "probe_scores": [
+        3,
+        1,
+        5,
+        5,
+        3
+      ]
+    },
+    {
+      "setting": "n12",
+      "label": "SHORT_TERM_N=12",
+      "turns": 30,
+      "mean_prompt_tokens_per_turn": 1001.6,
+      "mean_completion_tokens_per_turn": 116.4,
+      "mean_latency_ms": 58551.5,
+      "mean_model_latency_ms": 43496.1,
+      "mean_window_tokens_est": 768.1,
+      "mean_summary_tokens_est": 105.3,
+      "mean_episodic_tokens_est": 43.5,
+      "probe_quality": 3.8,
+      "probe_scores": [
+        5,
+        2,
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "setting": "n30",
+      "label": "SHORT_TERM_N=30",
+      "turns": 30,
+      "mean_prompt_tokens_per_turn": 1750.4,
+      "mean_completion_tokens_per_turn": 111.2,
+      "mean_latency_ms": 71052.6,
+      "mean_model_latency_ms": 56770.0,
+      "mean_window_tokens_est": 1523.3,
+      "mean_summary_tokens_est": 140.9,
+      "mean_episodic_tokens_est": 43.5,
+      "probe_quality": 4.6,
+      "probe_scores": [
+        5,
+        5,
+        5,
+        5,
+        3
+      ]
+    },
+    {
+      "setting": "n30_compress",
+      "label": "Compression policy (N=30, compress_assistant)",
+      "turns": 30,
+      "mean_prompt_tokens_per_turn": 820,
+      "mean_completion_tokens_per_turn": 51.3,
+      "mean_latency_ms": 33276.0,
+      "mean_model_latency_ms": 22323.2,
+      "mean_window_tokens_est": 472.0,
+      "mean_summary_tokens_est": 92.2,
+      "mean_episodic_tokens_est": 43.5,
+      "probe_quality": 4.6,
+      "probe_scores": [
+        5,
+        5,
+        5,
+        5,
+        3
+      ]
+    }
+  ],
+  "costs": [
+    {
+      "setting": "n4",
+      "label": "SHORT_TERM_N=4",
+      "chat_input_tokens_per_conversation": 15037,
+      "chat_output_tokens_per_conversation": 2515,
+      "maintenance_input_tokens_per_conversation": 8316,
+      "maintenance_output_tokens_per_conversation": 1211,
+      "chat_cost_per_conversation_usd": 0.027612,
+      "chat_cost_10k_usd": 276.12,
+      "total_cost_10k_usd": 419.83
+    },
+    {
+      "setting": "n12",
+      "label": "SHORT_TERM_N=12",
+      "chat_input_tokens_per_conversation": 30047,
+      "chat_output_tokens_per_conversation": 3491,
+      "maintenance_input_tokens_per_conversation": 9178,
+      "maintenance_output_tokens_per_conversation": 1197,
+      "chat_cost_per_conversation_usd": 0.047502,
+      "chat_cost_10k_usd": 475.02,
+      "total_cost_10k_usd": 626.65
+    },
+    {
+      "setting": "n30",
+      "label": "SHORT_TERM_N=30",
+      "chat_input_tokens_per_conversation": 52513,
+      "chat_output_tokens_per_conversation": 3336,
+      "maintenance_input_tokens_per_conversation": 9235,
+      "maintenance_output_tokens_per_conversation": 1401,
+      "chat_cost_per_conversation_usd": 0.069193,
+      "chat_cost_10k_usd": 691.93,
+      "total_cost_10k_usd": 854.33
+    },
+    {
+      "setting": "n30_compress",
+      "label": "Compression policy (N=30, compress_assistant)",
+      "chat_input_tokens_per_conversation": 24600,
+      "chat_output_tokens_per_conversation": 1538,
+      "maintenance_input_tokens_per_conversation": 7287,
+      "maintenance_output_tokens_per_conversation": 1085,
+      "chat_cost_per_conversation_usd": 0.03229,
+      "chat_cost_10k_usd": 322.9,
+      "total_cost_10k_usd": 450.02
+    }
+  ]
+}

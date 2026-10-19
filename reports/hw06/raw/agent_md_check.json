@@ -1,0 +1,57 @@
+{
+  "module": "src\\generated\\rent_parser.py",
+  "tests": "tests\\test_rent_parser.py",
+  "checks": [
+    {
+      "rule": "Coding conventions: snake_case function names",
+      "passed": true,
+      "detail": "parse_monthly_rent"
+    },
+    {
+      "rule": "Coding conventions: type hints on every parameter and return value",
+      "passed": true,
+      "detail": "all annotated"
+    },
+    {
+      "rule": "Coding conventions: docstring on every public function",
+      "passed": true,
+      "detail": "all documented"
+    },
+    {
+      "rule": "Coding conventions: invalid input raises ValueError",
+      "passed": true,
+      "detail": "3 raise statement(s)"
+    },
+    {
+      "rule": "Coding conventions: no print() in library code",
+      "passed": true,
+      "detail": "no print calls"
+    },
+    {
+      "rule": "Coding conventions / prohibited: no hard-coded secrets",
+      "passed": true,
+      "detail": "none found"
+    },
+    {
+      "rule": "Technology stack / testing: no network, database or model imports",
+      "passed": true,
+      "detail": "re"
+    },
+    {
+      "rule": "Testing approach: test_*.py file exists",
+      "passed": true,
+      "detail": "test_rent_parser.py"
+    },
+    {
+      "rule": "Testing approach: at least one normal case and one invalid-input case",
+      "passed": true,
+      "detail": "2 tests, pytest.raises(ValueError): True"
+    },
+    {
+      "rule": "Testing approach: tests pass offline",
+      "passed": true,
+      "detail": "9 passed in 0.04s"
+    }
+  ],
+  "passed": true
+}

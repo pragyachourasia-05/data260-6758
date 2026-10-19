@@ -1,0 +1,6 @@
+Which MongoDB database does my HW6 project use?
+That is wrong: study_planner_demo was only the class demo. My HW6 MongoDB database is s6758_doc. Also, my apartment budget went up to $2,800 a month.
+/dream
+/compact
+/memory
+/quit

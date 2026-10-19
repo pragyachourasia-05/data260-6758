@@ -1,0 +1,34 @@
+# HW6 Part 3 - the fixed 30-message conversation replayed for every setting.
+# Facts used by memory_probes.yaml are planted at messages 2, 3, 5, 20, 22 and 27;
+# the rest are realistic filler so early facts slide out of small windows.
+messages:
+  - "Hi, I'm Pragya, a grad student at SJSU, and I'm starting an apartment search."            # 1
+  - "My budget is $2,400 a month, utilities included if possible."                              # 2  budget (old)
+  - "I have a cat named Miso, so the building must allow cats."                                 # 3  cat
+  - "Which San Jose neighborhoods are good for students?"                                       # 4
+  - "I need to move in on December 1st because my current lease ends that day."                 # 5  move-in
+  - "Is Downtown San Jose noisy at night?"                                                       # 6
+  - "How far is Willow Glen from campus by bus?"                                                 # 7
+  - "I work at an internship in Sunnyvale on Tuesdays and Thursdays."                           # 8
+  - "Would living near the Diridon Caltrain station make that commute easier?"                  # 9
+  - "What is a typical security deposit in California?"                                        # 10
+  - "I'd like a 1-bedroom, but a big studio would also work."                                    # 11
+  - "Please avoid ground-floor units; I don't feel safe there."                                  # 12
+  - "What questions should I ask a landlord on a tour?"                                          # 13
+  - "Are there usually extra pet fees for cats?"                                                 # 14
+  - "How do I spot signs of pests during a viewing?"                                            # 15
+  - "Should I get renter's insurance?"                                                            # 16
+  - "Is a 12-month lease better than month-to-month for me?"                                     # 17
+  - "What documents do landlords usually ask for?"                                               # 18
+  - "How long does a rental application usually take to approve?"                               # 19
+  - "Good news: I got a raise, so my budget is now $2,700 a month."                              # 20 budget (new)
+  - "Does a higher budget open up places closer to Caltrain?"                                    # 21
+  - "My sister Riya visits every month, so I'd like room for a sofa bed."                       # 22 visitor
+  - "Is it normal for a landlord to charge for a credit check?"                                  # 23
+  - "What's the best way to compare two listings fairly?"                                        # 24
+  - "How early should I start touring for a December move?"                                      # 25
+  - "Are utilities expensive in San Jose in winter?"                                             # 26
+  - "I drive a Tesla Model 3, so I need a place with EV charging."                               # 27 EV
+  - "Can I negotiate rent in this market?"                                                        # 28
+  - "What should I check in the lease before signing?"                                           # 29
+  - "Thanks, that's really helpful so far."                                                       # 30

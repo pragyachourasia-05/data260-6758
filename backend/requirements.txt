@@ -4,5 +4,11 @@ sqlalchemy
 python-dotenv
 pymysql
 pydantic
-email-validatormcp[cli]
+email-validator
+mcp[cli]
 httpx
+pymongo
+pyyaml
+pytest
+numpy
+langchain-ollama

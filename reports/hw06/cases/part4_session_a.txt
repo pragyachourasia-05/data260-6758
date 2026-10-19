@@ -1,0 +1,5 @@
+Hi, I'm Pragya. Which port does my FastAPI backend use, and which MongoDB database does HW6 use?
+Review this code: def add(a, b): return a + b
+What is my cat's name?
+/compact
+/quit

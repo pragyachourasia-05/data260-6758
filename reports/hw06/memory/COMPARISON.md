@@ -1,0 +1,13 @@
+# MongoDB memory vs file-based memory (HW6 Part 4.6)
+
+| Criterion | MongoDB memory (Part 2) | File memory: AGENT.md + MEMORY.md (Part 4) |
+| --- | --- | --- |
+| Inspectability | Needs a tool (Compass, mongosh, or `GET /api/memory`). Episodes carry 512-float embeddings that are not human-readable; summaries are LLM-written, so you see the result but not why a fact changed. | Open the file in any editor or run `/memory`. Every fact is one dated line, and consolidation writes its decisions ("Resolved contradictions", "Needs review") into the file. `git diff` shows exactly what changed. |
+| Persistence after a restart | Survives backend and container restarts (named Docker volume `s6758_mongo_data`). Lost only if the volume is deleted. Needs the database running to read it. | Survives anything that keeps the repo; versioned in Git, so earlier states (e.g. `MEMORY_original.md`) can be restored. Readable with no services running. |
+| Scalability across many sessions | Built for it: per-user/per-session queries on indexes, 24 messages + 17 episodes per demo user is trivial, and thousands of users fit easily. Weak spot: retrieval loads every episode for a user and scores cosine in Python, which is O(episodes) per turn; a vector index (Atlas Search / pgvector) would be needed at large scale. | Poor: one shared file, loaded whole into every prompt (about 540 tokens for the 22 consolidated facts), with no per-user separation and no concurrent writers. It must be consolidated to stay under 40 lines, which is exactly what limits it. |
+| Facts that must not be forgotten | Risky. Short-term memory slides away, summaries are rewritten by the model (the Part 2 lifetime summary still said $2,400 after the user changed it to $2,700), and episodic retrieval only returns the top-k by similarity, so an important fact can be missed if the wording differs. In the Part 3 N=4 run the "Tesla Model 3" fact scored only 0.02 for "What kind of car do I drive?" because the stemmer turns "drives" into "driv" but leaves "drive" unchanged; the EV-charging fact was retrieved, yet the model still answered that it had no information. | Better. A fact in MEMORY.md is in every prompt, deletions are explicit, contradictions are kept in "Resolved contradictions", and doubtful resolutions are flagged for a human. Still fallible: recency picked the wrong `mongo_db` value until the reviewer pass flagged it. |
+
+**Use each for what it is good at:** MongoDB for high-volume, per-user conversational memory
+(messages, summaries, episodes) where losing an old detail is acceptable. AGENT.md / MEMORY.md
+for a small set of durable, reviewed instructions and facts that must always be in context and
+need a human-readable audit trail.

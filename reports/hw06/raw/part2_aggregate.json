@@ -1,0 +1,45 @@
+{
+    "user_id": "pragya",
+    "daily_message_counts": [
+        {
+            "date": "2026-10-18",
+            "total": 24,
+            "user_messages": 12,
+            "assistant_messages": 12
+        }
+    ],
+    "recent_summaries": [
+        {
+            "user_id": "pragya",
+            "session_id": "demo-20261018-183939",
+            "scope": "session",
+            "text": "- Pragya\n- Cat's name: Miso\n- Budget: $2,700/month\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment\n- Commute to Sunnyvale 3 days a week",
+            "created_at": "2026-10-19T01:47:40.372000+00:00",
+            "id": "6ad576bc7b41e6cb94dbdea2"
+        },
+        {
+            "user_id": "pragya",
+            "session_id": null,
+            "scope": "user",
+            "text": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment",
+            "created_at": "2026-10-19T01:44:12.530000+00:00",
+            "id": "6ad575ec7b41e6cb94dbde95"
+        },
+        {
+            "user_id": "pragya",
+            "session_id": "demo-20261018-183939",
+            "scope": "session",
+            "text": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment",
+            "created_at": "2026-10-19T01:44:00.055000+00:00",
+            "id": "6ad575e07b41e6cb94dbde94"
+        },
+        {
+            "user_id": "pragya",
+            "session_id": "demo-20261018-183939",
+            "scope": "session",
+            "text": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st",
+            "created_at": "2026-10-19T01:41:24.403000+00:00",
+            "id": "6ad575447b41e6cb94dbde84"
+        }
+    ]
+}

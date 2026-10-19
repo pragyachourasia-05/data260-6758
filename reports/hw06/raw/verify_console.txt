@@ -1,0 +1,67 @@
+[2026-10-19T10:55:30-07:00] python verify_hw06.py
+{
+  "homework": "HW6",
+  "sid4": "6758",
+  "commit_hash": "d79c7f3dfee0fed23718c5c5257b148aea1a31b6",
+  "model_configuration": {
+    "model": "llama3.2:3b (Ollama)",
+    "temperature": 0.0,
+    "num_ctx": 8192,
+    "SHORT_TERM_N": 12,
+    "SUMMARIZE_EVERY_USER_MSGS": 4,
+    "EPISODIC_TOP_K": 3,
+    "embedding": "local feature hashing, 512 dims",
+    "mongo_db": "s6758_doc"
+  },
+  "seed": 6758,
+  "verify_seed": 266758,
+  "checks": [
+    {
+      "name": "backend_health_port_8458",
+      "passed": true,
+      "detail": "port 8458 up, mongo_ok=True"
+    },
+    {
+      "name": "listings_crud",
+      "passed": true,
+      "detail": "201 -> 200 -> 200 -> 200 -> 204 -> 404"
+    },
+    {
+      "name": "listings_validation",
+      "passed": true,
+      "detail": "missing/enum/date/length/id -> [422, 422, 422, 422, 400]"
+    },
+    {
+      "name": "post_api_chat",
+      "passed": true,
+      "detail": "reply 263 chars, prompt_tokens=137"
+    },
+    {
+      "name": "memory_and_aggregate_endpoints",
+      "passed": true,
+      "detail": "memory messages=2, aggregate days=1"
+    },
+    {
+      "name": "part3_raw_outputs",
+      "passed": true,
+      "detail": "settings=['n12', 'n30', 'n30_compress', 'n4']"
+    },
+    {
+      "name": "file_memory_tests",
+      "passed": true,
+      "detail": "14 passed in 3.77s"
+    },
+    {
+      "name": "memory_consolidation_files",
+      "passed": true,
+      "detail": "55 -> 36 lines"
+    },
+    {
+      "name": "generated_function_follows_agent_md",
+      "passed": true,
+      "detail": "SUMMARY: 10/10 AGENT.md checks pass for src\\generated\\rent_parser.py"
+    }
+  ],
+  "passed": true
+}
+[2026-10-19T10:56:44-07:00] exit 0

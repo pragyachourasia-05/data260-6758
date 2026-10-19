@@ -1,0 +1,16 @@
+[2026-10-19T10:13:42-07:00] python -m pytest tests -q
+.......................                                                  [100%]
+23 passed in 0.49s
+
+[2026-10-19T10:14:00-07:00] python code/check_agent_md_rules.py
+PASS  Coding conventions: snake_case function names  (parse_monthly_rent)
+PASS  Coding conventions: type hints on every parameter and return value  (all annotated)
+PASS  Coding conventions: docstring on every public function  (all documented)
+PASS  Coding conventions: invalid input raises ValueError  (3 raise statement(s))
+PASS  Coding conventions: no print() in library code  (no print calls)
+PASS  Coding conventions / prohibited: no hard-coded secrets  (none found)
+PASS  Technology stack / testing: no network, database or model imports  (re)
+PASS  Testing approach: test_*.py file exists  (test_rent_parser.py)
+PASS  Testing approach: at least one normal case and one invalid-input case  (2 tests, pytest.raises(ValueError): True)
+PASS  Testing approach: tests pass offline  (9 passed in 0.36s)
+SUMMARY: 10/10 AGENT.md checks pass for src\generated\rent_parser.py

@@ -1,0 +1,328 @@
+{
+  "n4": [
+    {
+      "probe": "P1_ev_charging",
+      "question": "What kind of car do I drive and what does it need where I live?",
+      "reply": "You drive a Tesla Model 3. Given your location in the San Jose/Bay Area, your car needs to be able to handle the region's mild climate and occasional fog. Additionally, since you prefer not to live on the ground floor, I'll prioritize apartments with upper-level parking options or nearby garage parking.",
+      "episodic_facts": [
+        "She drives a Tesla Model 3.",
+        "She prefers not to live on the ground floor.",
+        "She has a cat named Miso."
+      ],
+      "score": 3,
+      "required_hits": [
+        true,
+        false
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P2_visitor",
+      "question": "Who visits me every month, and what do I need in the apartment because of that?",
+      "reply": "I don't have any information about who visits you every month. You mentioned earlier that you're a grad student at SJSU, but I don't know who your visitors are.",
+      "episodic_facts": [
+        "The user is unsure if a 12-month lease is better than month-to-month.",
+        "The user is considering a 12-month lease.",
+        "Pragya is starting an apartment search"
+      ],
+      "score": 1,
+      "required_hits": [
+        false,
+        false,
+        false
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P3_current_budget",
+      "question": "What is my current monthly budget?",
+      "reply": "You mentioned earlier that your budget is $2,700/month.",
+      "episodic_facts": [
+        "They have a higher budget.",
+        "She has a budget of $2,400 a month.",
+        "She now has a budget of $2,700 a month."
+      ],
+      "score": 5,
+      "required_hits": [
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P4_cat_name",
+      "question": "What is my cat's name?",
+      "reply": "You mentioned earlier that your cat's name is Miso.",
+      "episodic_facts": [
+        "She has a cat named Miso.",
+        "She needs a place with EV charging.",
+        "She has a sister named Riya"
+      ],
+      "score": 5,
+      "required_hits": [
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P5_move_in",
+      "question": "On what date do I need to move in, and why that date?",
+      "reply": "You need to move in on December 1st. You mentioned earlier that you have a sister named Riya, and you work in Sunnyvale on Tuesdays and Thursdays, but I don't see any connection between the date and your work schedule.",
+      "episodic_facts": [
+        "She needs to move in on December 1st.",
+        "She has a sister named Riya",
+        "She works at an internship in Sunnyvale on Tuesdays and Thursdays."
+      ],
+      "score": 3,
+      "required_hits": [
+        true,
+        false
+      ],
+      "forbidden_found": []
+    }
+  ],
+  "n12": [
+    {
+      "probe": "P1_ev_charging",
+      "question": "What kind of car do I drive and what does it need where I live?",
+      "reply": "You drive a Tesla Model 3, which requires EV charging. Since you live in San Jose, you'll need to find an apartment that offers convenient EV charging, preferably near Caltrain.",
+      "episodic_facts": [
+        "She drives a Tesla Model 3.",
+        "She prefers not to live on the ground floor.",
+        "She has a cat named Miso."
+      ],
+      "score": 5,
+      "required_hits": [
+        true,
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P2_visitor",
+      "question": "Who visits me every month, and what do I need in the apartment because of that?",
+      "reply": "You mentioned earlier that Riya visits you every month. Since you're looking for an apartment, I assume Riya's visits are related to you having a cat named Miso. You may want to consider an apartment that allows pets, as you'll need to ensure Miso is welcome.",
+      "episodic_facts": [
+        "The user is unsure if a 12-month lease is better than month-to-month.",
+        "The user is considering a 12-month lease.",
+        "Pragya is starting an apartment search"
+      ],
+      "score": 2,
+      "required_hits": [
+        true,
+        false,
+        false
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P3_current_budget",
+      "question": "What is my current monthly budget?",
+      "reply": "You mentioned earlier that your budget is $2,700/month, which is higher than the budget you initially mentioned ($2,400/month).",
+      "episodic_facts": [
+        "They have a higher budget.",
+        "She has a budget of $2,400 a month.",
+        "She now has a budget of $2,700 a month."
+      ],
+      "score": 4,
+      "required_hits": [
+        true
+      ],
+      "forbidden_found": [
+        "2,400"
+      ]
+    },
+    {
+      "probe": "P4_cat_name",
+      "question": "What is my cat's name?",
+      "reply": "You mentioned earlier that your cat's name is Miso.",
+      "episodic_facts": [
+        "She has a cat named Miso.",
+        "She needs a place with EV charging.",
+        "She has a sister named Riya"
+      ],
+      "score": 5,
+      "required_hits": [
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P5_move_in",
+      "question": "On what date do I need to move in, and why that date?",
+      "reply": "You mentioned earlier that you need to move in by December 1st. I don't know why that date is specifically important to you, but I do know that you work at an internship in Sunnyvale on Tuesdays and Thursdays, and you mentioned that Riya visits you every month.",
+      "episodic_facts": [
+        "She needs to move in on December 1st.",
+        "She has a sister named Riya",
+        "She works at an internship in Sunnyvale on Tuesdays and Thursdays."
+      ],
+      "score": 3,
+      "required_hits": [
+        true,
+        false
+      ],
+      "forbidden_found": []
+    }
+  ],
+  "n30": [
+    {
+      "probe": "P1_ev_charging",
+      "question": "What kind of car do I drive and what does it need where I live?",
+      "reply": "You drive a Tesla Model 3, which requires EV charging. Since you live in the San Jose area, you'll need to find an apartment complex that has designated EV charging stations. Additionally, as you mentioned earlier, you prefer not to live on the ground floor, which is a good consideration for your safety and comfort.",
+      "episodic_facts": [
+        "She drives a Tesla Model 3.",
+        "She prefers not to live on the ground floor.",
+        "She has a cat named Miso."
+      ],
+      "score": 5,
+      "required_hits": [
+        true,
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P2_visitor",
+      "question": "Who visits me every month, and what do I need in the apartment because of that?",
+      "reply": "You mentioned earlier that your sister Riya visits you every month. Since you'd like to accommodate her visits, you'll need a place with room for a sofa bed. This will provide a comfortable space for Riya to stay with you, and you can both relax and socialize together.",
+      "episodic_facts": [
+        "The user is unsure if a 12-month lease is better than month-to-month.",
+        "The user is considering a 12-month lease.",
+        "Pragya is starting an apartment search"
+      ],
+      "score": 5,
+      "required_hits": [
+        true,
+        true,
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P3_current_budget",
+      "question": "What is my current monthly budget?",
+      "reply": "Your current monthly budget is $2,700.",
+      "episodic_facts": [
+        "They have a higher budget.",
+        "She has a budget of $2,400 a month.",
+        "She now has a budget of $2,700 a month."
+      ],
+      "score": 5,
+      "required_hits": [
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P4_cat_name",
+      "question": "What is my cat's name?",
+      "reply": "Your cat's name is Miso.",
+      "episodic_facts": [
+        "She has a cat named Miso.",
+        "She needs a place with EV charging.",
+        "She has a sister named Riya"
+      ],
+      "score": 5,
+      "required_hits": [
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P5_move_in",
+      "question": "On what date do I need to move in, and why that date?",
+      "reply": "You need to move in on December 1st because you're a grad student at SJSU, and you work at an internship in Sunnyvale on Tuesdays and Thursdays. Since you mentioned earlier that you'd like to have room for a sofa bed to accommodate your sister Riya's visits, you'll need to find a place that can accommodate you and Riya comfortably.",
+      "episodic_facts": [
+        "She needs to move in on December 1st.",
+        "She has a sister named Riya",
+        "She works at an internship in Sunnyvale on Tuesdays and Thursdays."
+      ],
+      "score": 3,
+      "required_hits": [
+        true,
+        false
+      ],
+      "forbidden_found": []
+    }
+  ],
+  "n30_compress": [
+    {
+      "probe": "P1_ev_charging",
+      "question": "What kind of car do I drive and what does it need where I live?",
+      "reply": "You drive a Tesla Model 3, which requires an EV charging station.",
+      "episodic_facts": [
+        "She drives a Tesla Model 3.",
+        "She prefers not to live on the ground floor.",
+        "She has a cat named Miso."
+      ],
+      "score": 5,
+      "required_hits": [
+        true,
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P2_visitor",
+      "question": "Who visits me every month, and what do I need in the apartment because of that?",
+      "reply": "Your sister Riya visits every month, and you'd like to find an apartment that can accommodate a sofa bed, which would be suitable for her visits.",
+      "episodic_facts": [
+        "The user is unsure if a 12-month lease is better than month-to-month.",
+        "The user is considering a 12-month lease.",
+        "Pragya is starting an apartment search"
+      ],
+      "score": 5,
+      "required_hits": [
+        true,
+        true,
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P3_current_budget",
+      "question": "What is my current monthly budget?",
+      "reply": "Your current monthly budget is $2,700.",
+      "episodic_facts": [
+        "They have a higher budget.",
+        "She has a budget of $2,400 a month.",
+        "She now has a budget of $2,700 a month."
+      ],
+      "score": 5,
+      "required_hits": [
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P4_cat_name",
+      "question": "What is my cat's name?",
+      "reply": "Your cat's name is Miso.",
+      "episodic_facts": [
+        "She has a cat named Miso.",
+        "She needs a place with EV charging.",
+        "She has a sister named Riya"
+      ],
+      "score": 5,
+      "required_hits": [
+        true
+      ],
+      "forbidden_found": []
+    },
+    {
+      "probe": "P5_move_in",
+      "question": "On what date do I need to move in, and why that date?",
+      "reply": "You need to move in on December 1st because that's the date you've specified, and it's also a Tuesday, which is one of your workdays at the internship in Sunnyvale.",
+      "episodic_facts": [
+        "She needs to move in on December 1st.",
+        "She has a sister named Riya",
+        "She works at an internship in Sunnyvale on Tuesdays and Thursdays."
+      ],
+      "score": 3,
+      "required_hits": [
+        true,
+        false
+      ],
+      "forbidden_found": []
+    }
+  ]
+}

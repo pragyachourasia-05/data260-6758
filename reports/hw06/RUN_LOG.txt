@@ -1,0 +1,796 @@
+DATA-260 HW6 RUN_LOG - Pragya Chourasia (SID4 6758)
+assembled 2026-10-19T10:57:03 at commit d79c7f3
+machine: Intel Core i5-1335U, 16 GB RAM, Windows 11; model llama3.2:3b via Ollama; MongoDB 7.0 in Docker
+Each section below is the unedited console output of the run; timestamps are inside each section.
+
+====================================================================================================
+## Part 1 - MongoDB CRUD + validation (curl)
+## source: reports\hw06\raw\part1_crud_console.txt
+====================================================================================================
+[2026-10-19T10:13:13-07:00] Part 1 CRUD + validation against http://127.0.0.1:8458/api/listings (database s6758_doc)
+== POST (create)
+{"id":"6ad64fa9eeddc47f6ec85aaa","title":"1BR in Japantown","description":"Quiet street, walk to light rail","status":"available","property_type":"apartment","monthly_rent":2400.0,"available_from":"2026-11-10T00:00:00Z","created_at":"2026-10-19T17:13:13.814000Z","updated_at":"2026-10-19T17:13:13.814000Z"}
+
+== GET all (count)
+
+-> HTTP 200
+6 listings: ['1BR in Japantown', 'Sunnyvale townhouse near Caltrain', 'Santa Clara condo with EV charger', '3BR house in Willow Glen', 'Downtown San Jose studio', 'Sunny 2BR near Diridon Station']
+
+== GET one
+{"id":"6ad64fa9eeddc47f6ec85aaa","title":"1BR in Japantown","description":"Quiet street, walk to light rail","status":"available","property_type":"apartment","monthly_rent":2400.0,"available_from":"2026-11-10T00:00:00Z","created_at":"2026-10-19T17:13:13.814000Z","updated_at":"2026-10-19T17:13:13.814000Z"}
+-> HTTP 200
+
+== PUT (status + rent)
+{"id":"6ad64fa9eeddc47f6ec85aaa","title":"1BR in Japantown","description":"Quiet street, walk to light rail","status":"pending","property_type":"apartment","monthly_rent":2350.0,"available_from":"2026-11-10T00:00:00Z","created_at":"2026-10-19T17:13:13.814000Z","updated_at":"2026-10-19T17:13:15.751000Z"}
+-> HTTP 200
+
+== DELETE
+
+-> HTTP 204
+
+== GET after delete
+{"detail":"Listing 6ad64fa9eeddc47f6ec85aaa not found."}
+-> HTTP 404
+
+== INVALID: missing title
+{"detail":[{"type":"missing","loc":["body","title"],"msg":"Field required","input":{"property_type":"apartment","available_from":"2026-11-01"},"url":"https://errors.pydantic.dev/2.12/v/missing"}]}
+-> HTTP 422
+
+== INVALID: bad enum
+{"detail":[{"type":"literal_error","loc":["body","property_type"],"msg":"Input should be 'apartment', 'house', 'condo', 'studio' or 'townhouse'","input":"castle","ctx":{"expected":"'apartment', 'house', 'condo', 'studio' or 'townhouse'"},"url":"https://errors.pydantic.dev/2.12/v/literal_error"}]}
+-> HTTP 422
+
+== INVALID: bad date + wrong type
+{"detail":[{"type":"float_parsing","loc":["body","monthly_rent"],"msg":"Input should be a valid number, unable to parse string as a number","input":"cheap","url":"https://errors.pydantic.dev/2.12/v/float_parsing"},{"type":"datetime_from_date_parsing","loc":["body","available_from"],"msg":"Input should be a valid datetime or date, input is too short","input":"next week","ctx":{"error":"input is too short"},"url":"https://errors.pydantic.dev/2.12/v/datetime_from_date_parsing"}]}
+-> HTTP 422
+
+== INVALID: title > 100 chars
+{"detail":[{"type":"string_too_long","loc":["body","title"],"msg":"String should have at most 100 characters","input":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","ctx":{"max_length":100},"url":"https://errors.pydantic.dev/2.12/v/string_too_long"}]}
+-> HTTP 422
+
+== INVALID: non-JSON body
+{"detail":"Content-Type must be application/json."}
+-> HTTP 415
+
+== INVALID: bad ObjectId
+{"detail":"Invalid listing id '123': expected a 24-character hex ObjectId."}
+-> HTTP 400
+
+== INVALID: unknown id
+{"detail":"Listing 65f000000000000000000000 not found."}
+-> HTTP 404
+
+== MongoDB-side validator (direct insert bypassing the API)
+Document failed validation
+[2026-10-19T10:13:23-07:00] done
+
+====================================================================================================
+## Part 2 - 12-message memory session (backend/run_hw06_chat_demo.py)
+## source: reports\hw06\raw\part2_demo_console.txt
+====================================================================================================
+[2026-10-18T18:39:39] Part 2 demo  user=pragya  session=demo-20261018-183939
+
+--- turn 1 (22.4s)  prompt=151 completion=59  window=0  facts_retrieved=0  new_facts=2  summary=no  lifetime=no
+USER: Hi! I'm Pragya, a grad student at SJSU, and I'm looking for an apartment.
+ASSISTANT: Hi Pragya! I'm HomeFinder, happy to help you find an apartment. As a grad student at SJSU, you're likely looking for something affordable and convenient. What's your budget looking like? Are you open to sharing an apartment or looking for a solo place?
+
+--- turn 2 (17.3s)  prompt=254 completion=67  window=2  facts_retrieved=1  new_facts=1  summary=no  lifetime=no
+USER: My budget is $2,400 a month including utilities if possible.
+ASSISTANT: With a budget of $2,400/month, you've got a good range of options. As a grad student at SJSU, you might want to consider apartments near campus or in nearby neighborhoods like Downtown San Jose or Willow Glen. Are you looking for a specific type of apartment, like a studio or 1-bedroom?
+   retrieved 0.20  Pragya is a grad student at SJSU
+
+--- turn 3 (17.6s)  prompt=374 completion=43  window=4  facts_retrieved=3  new_facts=1  summary=no  lifetime=no
+USER: I have a cat named Miso, so the place has to be pet friendly.
+ASSISTANT: Pet-friendly apartments are a must for Miso. I can start searching for options that fit your budget and allow furry friends. Would you prefer a short-term lease or are you looking for a longer-term commitment?
+   retrieved 0.05  She has a budget of $2,400 a month including utilities if possible.
+   retrieved 0.04  Pragya is looking for an apartment
+   retrieved 0.03  Pragya is a grad student at SJSU
+
+--- turn 4 (47.8s)  prompt=443 completion=85  window=6  facts_retrieved=3  new_facts=2  summary=yes  lifetime=no
+USER: I want to move in on December 1st because my current lease ends then.
+ASSISTANT: With a lease ending on December 1st, you'll want to find a place that's ready for move-in by then. I'll make sure to prioritize apartments that are available for December 1st move-in. Since you're a grad student, I'll also focus on options near SJSU or in nearby neighborhoods. Would you like me to start searching for apartments that meet your budget and pet-friendly requirements?
+   retrieved 0.11  Pragya is looking for an apartment
+   retrieved 0.08  She has a budget of $2,400 a month including utilities if possible.
+   retrieved 0.07  Pragya is a grad student at SJSU
+
+--- turn 5 (34.3s)  prompt=611 completion=66  window=8  facts_retrieved=3  new_facts=2  summary=no  lifetime=no
+USER: I commute to an internship in Sunnyvale three days a week, so being near Caltrain would help.
+ASSISTANT: Being near Caltrain will make your commute to Sunnyvale much easier. I'll prioritize apartments that are within walking distance or have a short Caltrain ride to Sunnyvale. Would you like me to focus on apartments in specific neighborhoods, such as Downtown San Jose or Willow Glen, or would you like me to explore other options?
+   retrieved 0.11  She has a budget of $2,400 a month including utilities if possible.
+   retrieved 0.04  Her current lease ends then.
+   retrieved 0.03  She will move in on December 1st.
+
+--- turn 6 (21.1s)  prompt=704 completion=66  window=10  facts_retrieved=3  new_facts=1  summary=no  lifetime=no
+USER: I'd prefer a 1-bedroom, but a large studio is fine too.
+ASSISTANT: I'll keep an eye out for 1-bedroom and large studio apartments that meet your budget and pet-friendly requirements. Since you're a grad student, I'll also consider apartments with amenities like study spaces, libraries, or on-campus shuttle services. Would you like me to also consider apartments with in-unit laundry or a gym?
+   retrieved 0.06  Pragya is a grad student at SJSU
+   retrieved 0.05  Her current lease ends then.
+   retrieved 0.05  She has a budget of $2,400 a month including utilities if possible.
+
+--- turn 7 (34.1s)  prompt=791 completion=99  window=12  facts_retrieved=3  new_facts=3  summary=no  lifetime=no
+USER: What should I look for when touring a place with a cat?
+ASSISTANT: When touring a place with Miso, you'll want to check for cat-friendly features like:
+
+* Pet deposits or fees
+* Breed restrictions (some complexes may have specific breeds or size limits)
+* Allergen-friendly policies
+* Cleanliness and maintenance of common areas
+* Availability of pet-friendly amenities like outdoor spaces or pet parks
+
+You may also want to ask the landlord or property manager about their pet policy, including any rules or regulations regarding Miso's presence in the apartment.
+   retrieved 0.21  She has a cat named Miso.
+   retrieved 0.19  Pragya is looking for an apartment
+   retrieved 0.08  She has a budget of $2,400 a month including utilities if possible.
+
+--- turn 8 (78.7s)  prompt=828 completion=58  window=12  facts_retrieved=3  new_facts=1  summary=yes  lifetime=yes
+USER: Please no ground-floor units, I don't feel safe on the ground floor.
+ASSISTANT: I'll make sure to exclude ground-floor units from my search. Since you're concerned about safety, I'll prioritize apartments with upper-level units or those that have secure entry systems. Would you like me to also consider apartments with on-site staff or security cameras for added peace of mind?
+   retrieved 0.08  Pragya is looking for an apartment
+   retrieved 0.06  commutes to an internship in Sunnyvale three days a week
+   retrieved 0.06  She has a budget of $2,400 a month including utilities if possible.
+
+--- turn 9 (48.3s)  prompt=934 completion=91  window=12  facts_retrieved=3  new_facts=1  summary=no  lifetime=no
+USER: Actually, I just got a raise, so my budget is now $2,700 a month.
+ASSISTANT: Congratulations on the raise! With the increased budget, I can now explore more options. Since you still prefer a 1-bedroom or large studio, I'll continue to prioritize those. I'll also keep in mind your original budget of $2,400/month, including utilities, to ensure we stay within that range. Now, about touring a place with Miso... would you like me to remind you of the key cat-friendly features to look for?
+   retrieved 0.31  She has a budget of $2,400 a month including utilities if possible.
+   retrieved 0.17  They prefer a 1-bedroom or a large studio.
+   retrieved 0.09  The user is looking for advice on what to look for when touring a place with a cat.
+
+--- turn 10 (41.0s)  prompt=970 completion=88  window=12  facts_retrieved=3  new_facts=1  summary=no  lifetime=no
+USER: In-unit laundry is a must for me.
+ASSISTANT: In-unit laundry is a must-have for you. I'll make sure to prioritize apartments with this amenity. Since you're now at a budget of $2,700/month, I can also explore more upscale options. I'll keep in mind your original budget of $2,400/month, including utilities, to ensure we stay within that range. Would you like me to start searching for apartments that meet your updated budget and requirements?
+   retrieved 0.11  She now has a budget of $2,700 a month.
+   retrieved 0.07  commutes to an internship in Sunnyvale three days a week
+   retrieved 0.05  She has a budget of $2,400 a month including utilities if possible.
+
+--- turn 11 (47.5s)  prompt=956 completion=173  window=12  facts_retrieved=3  new_facts=0  summary=no  lifetime=no
+USER: Can you summarize what you know about my apartment search so far?
+ASSISTANT: Here's a summary of what I know about your apartment search so far:
+
+* You're Pragya, a grad student at SJSU.
+* You're looking for a pet-friendly apartment.
+* You have a cat named Miso.
+* You're moving in on December 1st.
+* You commute to Sunnyvale 3 days a week, so being near Caltrain is a priority.
+* You prefer a 1-bedroom or large studio apartment.
+* You're currently looking at apartments with a budget of $2,400/month, including utilities.
+* You've recently received a raise, bringing your budget to $2,700/month.
+* In-unit laundry is a must-have for you.
+* You'd like to avoid ground-floor units due to safety concerns.
+
+Let me know if there's anything else you'd like to add or change!
+   retrieved 0.27  Pragya is looking for an apartment
+   retrieved 0.12  being near Caltrain would help
+   retrieved 0.11  She now has a budget of $2,700 a month.
+
+--- turn 12 (71.1s)  prompt=1046 completion=20  window=12  facts_retrieved=3  new_facts=2  summary=yes  lifetime=no
+USER: What's my cat's name and what's my current budget?
+ASSISTANT: Your cat's name is Miso, and your current budget is $2,700/month.
+   retrieved 0.29  The user has a cat.
+   retrieved 0.18  Her current lease ends then.
+   retrieved 0.18  She has a cat named Miso.
+
+[2026-10-18T18:47:40] saved part2_session.json, part2_memory.json, part2_aggregate.json
+latest session summary:
+- Pragya
+- Cat's name: Miso
+- Budget: $2,700/month
+- Move-in date: December 1st
+- Commute to Sunnyvale 3 days a week
+- Prefer 1-bedroom or large studio apartment
+- Commute to Sunnyvale 3 days a week
+latest lifetime summary:
+- Pragya
+- Grad student at SJSU
+- Budget: $2,400/month (including utilities)
+- Looking for a pet-friendly apartment
+- Cat's name: Miso
+- Move-in date: December 1st
+- Commute to Sunnyvale 3 days a week
+- Prefer 1-bedroom or large studio apartment
+
+====================================================================================================
+## Part 3 - memory cost sweep (backend/run_hw06_memory_cost.py; run2 + run3 reruns of n4/n12)
+## source: reports\hw06\raw\part3_console.txt
+====================================================================================================
+[2026-10-18T23:40:21] setting n4 (SHORT_TERM_N=4) user=p3_n4_run2 messages=30
+[2026-10-18T23:40:57]   n4 turn  1: prompt=  151 completion=  66 window= 0 latency=36.1s
+[2026-10-18T23:41:15]   n4 turn  2: prompt=  262 completion=  71 window= 2 latency=17.4s
+[2026-10-18T23:41:35]   n4 turn  3: prompt=  381 completion=  69 window= 4 latency=20.1s
+[2026-10-18T23:42:27]   n4 turn  4: prompt=  368 completion= 139 window= 4 latency=52.2s
+[2026-10-18T23:43:00]   n4 turn  5: prompt=  500 completion=  77 window= 4 latency=33.5s
+[2026-10-18T23:43:26]   n4 turn  6: prompt=  500 completion=  76 window= 4 latency=25.6s
+[2026-10-18T23:43:49]   n4 turn  7: prompt=  435 completion=  74 window= 4 latency=22.8s
+[2026-10-18T23:44:48]   n4 turn  8: prompt=  432 completion=  81 window= 4 latency=59.0s
+[2026-10-18T23:45:24]   n4 turn  9: prompt=  503 completion=  95 window= 4 latency=36.3s
+[2026-10-18T23:45:52]   n4 turn 10: prompt=  529 completion=  67 window= 4 latency=27.3s
+[2026-10-18T23:46:23]   n4 turn 11: prompt=  513 completion=  76 window= 4 latency=30.9s
+[2026-10-19T00:07:29]   n4 turn 12: prompt=  496 completion=  69 window= 4 latency=1277.5s
+[2026-10-19T00:08:03]   n4 turn 13: prompt=  498 completion= 156 window= 4 latency=34.0s
+[2026-10-19T00:08:25]   n4 turn 14: prompt=  564 completion=  66 window= 4 latency=22.2s
+[2026-10-19T00:09:00]   n4 turn 15: prompt=  566 completion= 139 window= 4 latency=34.9s
+[2026-10-19T00:09:57]   n4 turn 16: prompt=  548 completion=  84 window= 4 latency=56.7s
+[2026-10-19T00:10:35]   n4 turn 17: prompt=  573 completion=  92 window= 4 latency=38.1s
+[2026-10-19T00:10:59]   n4 turn 18: prompt=  521 completion= 117 window= 4 latency=24.6s
+[2026-10-19T00:11:25]   n4 turn 19: prompt=  554 completion=  87 window= 4 latency=25.2s
+[2026-10-19T00:13:00]   n4 turn 20: prompt=  561 completion=  73 window= 4 latency=95.7s
+[2026-10-19T00:13:38]   n4 turn 21: prompt=  522 completion=  93 window= 4 latency=38.0s
+[2026-10-19T00:14:13]   n4 turn 22: prompt=  535 completion=  97 window= 4 latency=34.3s
+[2026-10-19T00:14:34]   n4 turn 23: prompt=  549 completion=  56 window= 4 latency=21.1s
+[2026-10-19T00:15:24]   n4 turn 24: prompt=  506 completion= 102 window= 4 latency=50.2s
+[2026-10-19T00:15:50]   n4 turn 25: prompt=  503 completion=  89 window= 4 latency=25.8s
+[2026-10-19T00:16:12]   n4 turn 26: prompt=  541 completion=  82 window= 4 latency=21.5s
+[2026-10-19T00:16:39]   n4 turn 27: prompt=  520 completion= 103 window= 4 latency=27.2s
+[2026-10-19T00:17:29]   n4 turn 28: prompt=  532 completion=  96 window= 4 latency=50.5s
+[2026-10-19T00:18:09]   n4 turn 29: prompt=  542 completion= 167 window= 4 latency=39.8s
+[2026-10-19T00:18:36]   n4 turn 30: prompt=  603 completion= 109 window= 4 latency=26.5s
+[2026-10-19T00:18:57]   n4 P1_ev_charging: score=5  reply="You drive a Tesla Model 3. Since you mentioned you prefer not to live on the ground floor, I'll look for apart"
+[2026-10-19T00:19:51]   n4 P2_visitor: score=1  reply="I don't have any information about who visits you every month. You mentioned earlier that you're a grad studen"
+[2026-10-19T00:20:04]   n4 P3_current_budget: score=5  reply='You mentioned earlier that your budget is $2,700 a month.'
+[2026-10-19T00:20:11]   n4 P4_cat_name: score=5  reply="You mentioned earlier that your cat's name is Miso."
+[2026-10-19T00:20:22]   n4 P5_move_in: score=3  reply="You mentioned earlier that you need to move in on December 1st. I don't know why that date is significant, but"
+[2026-10-19T00:20:22] setting n4 done in 40.2 min -> reports\hw06\raw\part3\n4.json
+[2026-10-19T00:20:22] setting n12 (SHORT_TERM_N=12) user=p3_n12_run2 messages=30
+[2026-10-19T00:25:29]   n12 turn  1: prompt=  151 completion=  63 window= 0 latency=307.9s
+[2026-10-19T00:25:47]   n12 turn  2: prompt=  259 completion=  57 window= 2 latency=17.9s
+[2026-10-19T00:26:06]   n12 turn  3: prompt=  364 completion=  57 window= 4 latency=19.0s
+[2026-10-19T00:26:39]   n12 turn  4: prompt=  438 completion=  78 window= 6 latency=32.9s
+[2026-10-19T00:27:09]   n12 turn  5: prompt=  606 completion=  81 window= 8 latency=30.0s
+[2026-10-19T00:27:27]   n12 turn  6: prompt=  703 completion=  64 window=10 latency=17.9s
+[2026-10-19T00:27:44]   n12 turn  7: prompt=  783 completion=  75 window=12 latency=16.6s
+[2026-10-19T00:28:48]   n12 turn  8: prompt=  789 completion=  73 window=12 latency=64.0s
+[2026-10-19T00:29:27]   n12 turn  9: prompt=  875 completion=  75 window=12 latency=38.9s
+[2026-10-19T08:37:34]   n12 turn 10: prompt=  893 completion=  90 window=12 latency=29286.8s
+[2026-10-19T08:38:20]   n12 turn 11: prompt=  909 completion=  83 window=12 latency=45.9s
+[2026-10-19T08:39:30]   n12 turn 12: prompt=  909 completion=  84 window=12 latency=70.0s
+[2026-10-19T08:40:26]   n12 turn 13: prompt=  933 completion= 200 window=12 latency=55.7s
+[2026-10-19T08:41:08]   n12 turn 14: prompt= 1051 completion=  79 window=12 latency=41.8s
+[2026-10-19T08:41:58]   n12 turn 15: prompt= 1060 completion= 126 window=12 latency=50.7s
+[2026-10-19T08:43:32]   n12 turn 16: prompt= 1107 completion=  90 window=12 latency=93.9s
+[2026-10-19T08:44:30]   n12 turn 17: prompt= 1124 completion= 100 window=12 latency=57.3s
+[2026-10-19T08:45:23]   n12 turn 18: prompt= 1131 completion= 131 window=12 latency=53.6s
+[2026-10-19T08:46:13]   n12 turn 19: prompt= 1173 completion= 119 window=12 latency=50.2s
+[2026-10-19T08:47:30]   n12 turn 20: prompt= 1106 completion=  91 window=12 latency=77.0s
+[2026-10-19T08:48:17]   n12 turn 21: prompt= 1122 completion=  68 window=12 latency=46.7s
+[2026-10-19T08:49:13]   n12 turn 22: prompt= 1071 completion=  96 window=12 latency=55.6s
+[2026-10-19T08:50:00]   n12 turn 23: prompt= 1079 completion=  81 window=12 latency=46.7s
+[2026-10-19T08:51:27]   n12 turn 24: prompt= 1052 completion= 115 window=12 latency=87.8s
+[2026-10-19T08:52:15]   n12 turn 25: prompt= 1038 completion=  79 window=12 latency=47.8s
+[2026-10-19T08:53:07]   n12 turn 26: prompt= 1005 completion=  88 window=12 latency=52.1s
+[2026-10-19T08:54:02]   n12 turn 27: prompt=  992 completion=  90 window=12 latency=54.7s
+[2026-10-19T08:55:08]   n12 turn 28: prompt= 1011 completion=  94 window=12 latency=65.9s
+[2026-10-19T08:55:59]   n12 turn 29: prompt=  996 completion= 171 window=12 latency=51.1s
+[2026-10-19T08:56:46]   n12 turn 30: prompt= 1087 completion=  83 window=12 latency=46.6s
+[2026-10-19T08:57:28]   n12 P1_ev_charging: score=5  reply="You drive a Tesla Model 3, which requires access to EV charging stations. Since you're looking for a place in "
+[2026-10-19T08:58:46]   n12 P2_visitor: score=1  reply="I don't have any information about who visits you every month. You mentioned earlier that you're a grad studen"
+[2026-10-19T08:59:21]   n12 P3_current_budget: score=4  reply='You mentioned earlier that your budget is $2,700/month, which is higher than your initial budget of $2,400/mon'
+[2026-10-19T08:59:46]   n12 P4_cat_name: score=5  reply="You mentioned earlier that your cat's name is Miso."
+[2026-10-19T09:00:21]   n12 P5_move_in: score=3  reply="You mentioned earlier that you need to move in by December 1st. I don't have any additional information about "
+[2026-10-19T09:00:21] setting n12 done in 520.0 min -> reports\hw06\raw\part3\n12.json
+[2026-10-19T09:00:21] setting n30 (SHORT_TERM_N=30) user=p3_n30_run2 messages=30
+[2026-10-19T09:00:40]   n30 turn  1: prompt=  151 completion=  63 window= 0 latency=18.4s
+[2026-10-19T09:00:58]   n30 turn  2: prompt=  259 completion=  70 window= 2 latency=18.0s
+[2026-10-19T09:01:18]   n30 turn  3: prompt=  377 completion=  70 window= 4 latency=20.2s
+[2026-10-19T09:01:54]   n30 turn  4: prompt=  464 completion=  95 window= 6 latency=36.0s
+[2026-10-19T09:02:25]   n30 turn  5: prompt=  659 completion=  73 window= 8 latency=30.9s
+[2026-10-19T09:02:47]   n30 turn  6: prompt=  748 completion=  90 window=10 latency=22.3s
+[2026-10-19T09:03:08]   n30 turn  7: prompt=  854 completion=  92 window=12 latency=20.2s
+[2026-10-19T09:04:11]   n30 turn  8: prompt=  973 completion=  89 window=14 latency=63.1s
+[2026-10-19T09:04:59]   n30 turn  9: prompt= 1182 completion=  68 window=16 latency=47.8s
+[2026-10-19T09:05:18]   n30 turn 10: prompt= 1274 completion=  87 window=18 latency=19.9s
+[2026-10-19T09:05:44]   n30 turn 11: prompt= 1383 completion=  99 window=20 latency=25.6s
+[2026-10-19T09:06:42]   n30 turn 12: prompt= 1507 completion= 104 window=22 latency=58.1s
+[2026-10-19T09:08:07]   n30 turn 13: prompt= 1647 completion= 200 window=24 latency=84.4s
+[2026-10-19T09:08:38]   n30 turn 14: prompt= 1859 completion=  93 window=26 latency=31.7s
+[2026-10-19T09:09:19]   n30 turn 15: prompt= 1979 completion= 167 window=28 latency=40.3s
+[2026-10-19T09:10:42]   n30 turn 16: prompt= 2165 completion= 119 window=30 latency=83.4s
+[2026-10-19T09:12:25]   n30 turn 17: prompt= 2222 completion= 148 window=30 latency=102.6s
+[2026-10-19T09:14:08]   n30 turn 18: prompt= 2291 completion= 190 window=30 latency=103.3s
+[2026-10-19T09:15:43]   n30 turn 19: prompt= 2404 completion= 120 window=30 latency=94.7s
+[2026-10-19T09:17:56]   n30 turn 20: prompt= 2446 completion= 110 window=30 latency=133.0s
+[2026-10-19T09:19:50]   n30 turn 21: prompt= 2478 completion= 107 window=30 latency=113.7s
+[2026-10-19T09:21:54]   n30 turn 22: prompt= 2505 completion= 127 window=30 latency=123.9s
+[2026-10-19T09:23:27]   n30 turn 23: prompt= 2540 completion=  86 window=30 latency=93.9s
+[2026-10-19T09:25:55]   n30 turn 24: prompt= 2528 completion= 135 window=30 latency=147.2s
+[2026-10-19T09:27:27]   n30 turn 25: prompt= 2597 completion= 100 window=30 latency=92.6s
+[2026-10-19T09:28:56]   n30 turn 26: prompt= 2619 completion=  98 window=30 latency=88.5s
+[2026-10-19T09:30:33]   n30 turn 27: prompt= 2612 completion= 118 window=30 latency=96.9s
+[2026-10-19T09:32:36]   n30 turn 28: prompt= 2622 completion= 116 window=30 latency=123.3s
+[2026-10-19T09:34:19]   n30 turn 29: prompt= 2531 completion= 194 window=30 latency=102.5s
+[2026-10-19T09:35:54]   n30 turn 30: prompt= 2637 completion= 108 window=30 latency=95.2s
+[2026-10-19T09:37:23]   n30 P1_ev_charging: score=5  reply="You drive a Tesla Model 3, which requires EV charging. Since you live in the San Jose area, you'll need to fin"
+[2026-10-19T09:39:29]   n30 P2_visitor: score=5  reply="You mentioned earlier that your sister Riya visits you every month. Since you'd like to accommodate her visits"
+[2026-10-19T09:40:52]   n30 P3_current_budget: score=5  reply='Your current monthly budget is $2,700.'
+[2026-10-19T09:42:07]   n30 P4_cat_name: score=5  reply="Your cat's name is Miso."
+[2026-10-19T09:43:39]   n30 P5_move_in: score=3  reply="You need to move in on December 1st because you're a grad student at SJSU, and you work at an internship in Su"
+[2026-10-19T09:43:39] setting n30 done in 43.3 min -> reports\hw06\raw\part3\n30.json
+[2026-10-19T09:43:39] setting n30_compress (Compression policy (N=30, compress_assistant)) user=p3_n30_compress_run2 messages=30
+[2026-10-19T09:43:58]   n30_compress turn  1: prompt=  151 completion=  63 window= 0 latency=18.7s
+[2026-10-19T09:44:18]   n30_compress turn  2: prompt=  259 completion=  70 window= 2 latency=20.1s
+[2026-10-19T09:44:36]   n30_compress turn  3: prompt=  320 completion=  59 window= 4 latency=18.7s
+[2026-10-19T09:45:06]   n30_compress turn  4: prompt=  350 completion=  76 window= 6 latency=29.5s
+[2026-10-19T09:45:25]   n30_compress turn  5: prompt=  458 completion=  40 window= 8 latency=19.2s
+[2026-10-19T09:45:43]   n30_compress turn  6: prompt=  464 completion=  61 window=10 latency=17.3s
+[2026-10-19T09:45:56]   n30_compress turn  7: prompt=  526 completion=  49 window=12 latency=13.9s
+[2026-10-19T09:46:39]   n30_compress turn  8: prompt=  558 completion=  48 window=14 latency=42.7s
+[2026-10-19T09:47:05]   n30_compress turn  9: prompt=  680 completion=  32 window=16 latency=25.4s
+[2026-10-19T09:47:17]   n30_compress turn 10: prompt=  713 completion=  43 window=18 latency=12.1s
+[2026-10-19T09:47:31]   n30_compress turn 11: prompt=  778 completion=  43 window=20 latency=14.7s
+[2026-10-19T09:48:05]   n30_compress turn 12: prompt=  827 completion=  14 window=22 latency=33.6s
+[2026-10-19T09:48:19]   n30_compress turn 13: prompt=  833 completion=  58 window=24 latency=14.1s
+[2026-10-19T09:48:31]   n30_compress turn 14: prompt=  902 completion=  32 window=26 latency=11.8s
+[2026-10-19T09:48:49]   n30_compress turn 15: prompt=  937 completion=  83 window=28 latency=17.7s
+[2026-10-19T09:49:37]   n30_compress turn 16: prompt= 1039 completion=  49 window=30 latency=48.3s
+[2026-10-19T09:50:29]   n30_compress turn 17: prompt= 1024 completion=  60 window=30 latency=51.4s
+[2026-10-19T09:51:09]   n30_compress turn 18: prompt= 1031 completion=  48 window=30 latency=40.7s
+[2026-10-19T09:51:44]   n30_compress turn 19: prompt= 1024 completion=  31 window=30 latency=34.8s
+[2026-10-19T09:52:43]   n30_compress turn 20: prompt= 1032 completion=  36 window=30 latency=59.1s
+[2026-10-19T09:53:23]   n30_compress turn 21: prompt= 1038 completion=  39 window=30 latency=40.0s
+[2026-10-19T09:54:07]   n30_compress turn 22: prompt= 1053 completion=  39 window=30 latency=43.3s
+[2026-10-19T09:54:48]   n30_compress turn 23: prompt= 1060 completion=  48 window=30 latency=41.6s
+[2026-10-19T09:55:59]   n30_compress turn 24: prompt= 1067 completion=  87 window=30 latency=70.7s
+[2026-10-19T09:56:39]   n30_compress turn 25: prompt= 1087 completion=  55 window=30 latency=40.6s
+[2026-10-19T09:57:22]   n30_compress turn 26: prompt= 1077 completion=  72 window=30 latency=42.1s
+[2026-10-19T09:58:04]   n30_compress turn 27: prompt= 1106 completion=  43 window=30 latency=42.1s
+[2026-10-19T09:58:59]   n30_compress turn 28: prompt= 1072 completion=  32 window=30 latency=55.1s
+[2026-10-19T09:59:39]   n30_compress turn 29: prompt= 1041 completion=  79 window=30 latency=40.6s
+[2026-10-19T10:00:18]   n30_compress turn 30: prompt= 1093 completion=  49 window=30 latency=38.3s
+[2026-10-19T10:00:51]   n30_compress P1_ev_charging: score=5  reply='You drive a Tesla Model 3, which requires an EV charging station.'
+[2026-10-19T10:01:50]   n30_compress P2_visitor: score=5  reply="Your sister Riya visits every month, and you'd like to find an apartment that can accommodate a sofa bed, whic"
+[2026-10-19T10:02:22]   n30_compress P3_current_budget: score=5  reply='Your current monthly budget is $2,700.'
+[2026-10-19T10:02:46]   n30_compress P4_cat_name: score=5  reply="Your cat's name is Miso."
+[2026-10-19T10:03:12]   n30_compress P5_move_in: score=3  reply="You need to move in on December 1st because that's the date you've specified, and it's also a Tuesday, which i"
+[2026-10-19T10:03:12] setting n30_compress done in 19.6 min -> reports\hw06\raw\part3\n30_compress.json
+[2026-10-19T10:03:12] results table
+[2026-10-19T10:03:12]   SHORT_TERM_N=4                                   prompt/turn=  493.6  latency= 76839.3 ms  probe=3.8  [5, 1, 5, 5, 3]
+[2026-10-19T10:03:12]   SHORT_TERM_N=12                                  prompt/turn=  893.9  latency=1032774.8 ms  probe=3.6  [5, 1, 4, 5, 3]
+[2026-10-19T10:03:12]   SHORT_TERM_N=30                                  prompt/turn= 1750.4  latency= 71052.6 ms  probe=4.6  [5, 5, 5, 5, 3]
+[2026-10-19T10:03:12]   Compression policy (N=30, compress_assistant)    prompt/turn=  820.0  latency= 33276.0 ms  probe=4.6  [5, 5, 5, 5, 3]
+[2026-10-19T10:03:12]   SHORT_TERM_N=4                                   chat cost/10k=$286.48  with maintenance=$423.51
+[2026-10-19T10:03:12]   SHORT_TERM_N=12                                  chat cost/10k=$407.22  with maintenance=$550.54
+[2026-10-19T10:03:12]   SHORT_TERM_N=30                                  chat cost/10k=$691.93  with maintenance=$854.33
+[2026-10-19T10:03:12]   Compression policy (N=30, compress_assistant)    chat cost/10k=$322.90  with maintenance=$450.02
+[2026-10-19T10:04:18] setting n4 (SHORT_TERM_N=4) user=p3_n4_run3 messages=30
+[2026-10-19T10:04:38]   n4 turn  1: prompt=  151 completion=  65 window= 0 latency=19.5s
+[2026-10-19T10:04:55]   n4 turn  2: prompt=  261 completion=  68 window= 2 latency=16.9s
+[2026-10-19T10:05:13]   n4 turn  3: prompt=  377 completion=  64 window= 4 latency=18.3s
+[2026-10-19T10:05:51]   n4 turn  4: prompt=  360 completion=  70 window= 4 latency=37.6s
+[2026-10-19T10:06:16]   n4 turn  5: prompt=  427 completion=  88 window= 4 latency=24.9s
+[2026-10-19T10:06:39]   n4 turn  6: prompt=  443 completion=  71 window= 4 latency=22.9s
+[2026-10-19T10:07:01]   n4 turn  7: prompt=  442 completion=  84 window= 4 latency=22.6s
+[2026-10-19T10:08:02]   n4 turn  8: prompt=  438 completion=  80 window= 4 latency=61.2s
+[2026-10-19T10:08:29]   n4 turn  9: prompt=  541 completion=  70 window= 4 latency=26.8s
+[2026-10-19T10:08:48]   n4 turn 10: prompt=  532 completion=  79 window= 4 latency=18.9s
+[2026-10-19T10:09:10]   n4 turn 11: prompt=  529 completion=  81 window= 4 latency=22.3s
+[2026-10-19T10:09:57]   n4 turn 12: prompt=  542 completion=  76 window= 4 latency=47.0s
+[2026-10-19T10:10:21]   n4 turn 13: prompt=  542 completion= 107 window= 4 latency=23.5s
+[2026-10-19T10:10:40]   n4 turn 14: prompt=  554 completion=  81 window= 4 latency=18.7s
+[2026-10-19T10:11:05]   n4 turn 15: prompt=  564 completion= 133 window= 4 latency=25.2s
+[2026-10-19T10:12:00]   n4 turn 16: prompt=  589 completion=  83 window= 4 latency=55.1s
+[2026-10-19T10:12:38]   n4 turn 17: prompt=  600 completion=  80 window= 4 latency=37.8s
+[2026-10-19T10:13:04]   n4 turn 18: prompt=  542 completion= 110 window= 4 latency=26.3s
+[2026-10-19T10:13:27]   n4 turn 19: prompt=  569 completion=  82 window= 4 latency=23.1s
+[2026-10-19T10:14:23]   n4 turn 20: prompt=  583 completion=  89 window= 4 latency=55.1s
+[2026-10-19T10:14:51]   n4 turn 21: prompt=  560 completion=  74 window= 4 latency=28.3s
+[2026-10-19T10:15:16]   n4 turn 22: prompt=  559 completion=  79 window= 4 latency=25.0s
+[2026-10-19T10:15:32]   n4 turn 23: prompt=  539 completion=  51 window= 4 latency=16.6s
+[2026-10-19T10:16:30]   n4 turn 24: prompt=  510 completion=  90 window= 4 latency=57.1s
+[2026-10-19T10:16:57]   n4 turn 25: prompt=  513 completion=  79 window= 4 latency=27.5s
+[2026-10-19T10:17:17]   n4 turn 26: prompt=  546 completion=  84 window= 4 latency=20.1s
+[2026-10-19T10:17:46]   n4 turn 27: prompt=  539 completion=  94 window= 4 latency=29.2s
+[2026-10-19T10:18:34]   n4 turn 28: prompt=  552 completion=  74 window= 4 latency=47.6s
+[2026-10-19T10:19:04]   n4 turn 29: prompt=  538 completion= 154 window= 4 latency=29.9s
+[2026-10-19T10:19:24]   n4 turn 30: prompt=  595 completion=  75 window= 4 latency=20.4s
+[2026-10-19T10:19:42]   n4 P1_ev_charging: score=3  reply='You drive a Tesla Model 3. Given your location in the San Jose/Bay Area, your car needs to be able to handle t'
+[2026-10-19T10:20:30]   n4 P2_visitor: score=1  reply="I don't have any information about who visits you every month. You mentioned earlier that you're a grad studen"
+[2026-10-19T10:20:40]   n4 P3_current_budget: score=5  reply='You mentioned earlier that your budget is $2,700/month.'
+[2026-10-19T10:20:47]   n4 P4_cat_name: score=5  reply="You mentioned earlier that your cat's name is Miso."
+[2026-10-19T10:20:59]   n4 P5_move_in: score=3  reply='You need to move in on December 1st. You mentioned earlier that you have a sister named Riya, and you work in '
+[2026-10-19T10:20:59] setting n4 done in 16.7 min -> reports\hw06\raw\part3\n4.json
+[2026-10-19T10:20:59] setting n12 (SHORT_TERM_N=12) user=p3_n12_run3 messages=30
+[2026-10-19T10:21:13]   n12 turn  1: prompt=  151 completion=  63 window= 0 latency=13.4s
+[2026-10-19T10:21:26]   n12 turn  2: prompt=  259 completion=  57 window= 2 latency=13.6s
+[2026-10-19T10:21:42]   n12 turn  3: prompt=  364 completion=  57 window= 4 latency=15.2s
+[2026-10-19T10:22:10]   n12 turn  4: prompt=  438 completion=  78 window= 6 latency=28.6s
+[2026-10-19T10:22:36]   n12 turn  5: prompt=  606 completion=  81 window= 8 latency=25.4s
+[2026-10-19T10:22:51]   n12 turn  6: prompt=  703 completion=  64 window=10 latency=15.7s
+[2026-10-19T10:23:06]   n12 turn  7: prompt=  783 completion=  75 window=12 latency=14.8s
+[2026-10-19T10:24:13]   n12 turn  8: prompt=  789 completion=  73 window=12 latency=66.6s
+[2026-10-19T10:24:51]   n12 turn  9: prompt=  874 completion=  75 window=12 latency=38.7s
+[2026-10-19T10:25:21]   n12 turn 10: prompt=  892 completion=  60 window=12 latency=29.4s
+[2026-10-19T10:25:57]   n12 turn 11: prompt=  878 completion=  88 window=12 latency=35.8s
+[2026-10-19T10:26:55]   n12 turn 12: prompt=  883 completion=  74 window=12 latency=58.2s
+[2026-10-19T10:27:47]   n12 turn 13: prompt=  897 completion= 200 window=12 latency=51.8s
+[2026-10-19T10:28:28]   n12 turn 14: prompt= 1015 completion=  81 window=12 latency=41.4s
+[2026-10-19T10:29:22]   n12 turn 15: prompt= 1026 completion= 155 window=12 latency=54.0s
+[2026-10-19T10:31:24]   n12 turn 16: prompt= 1102 completion= 159 window=12 latency=121.6s
+[2026-10-19T10:32:30]   n12 turn 17: prompt= 1211 completion= 126 window=12 latency=66.3s
+[2026-10-19T10:33:33]   n12 turn 18: prompt= 1239 completion= 150 window=12 latency=63.1s
+[2026-10-19T10:34:40]   n12 turn 19: prompt= 1310 completion=  97 window=12 latency=67.3s
+[2026-10-19T10:36:40]   n12 turn 20: prompt= 1221 completion= 126 window=12 latency=119.6s
+[2026-10-19T10:37:52]   n12 turn 21: prompt= 1270 completion= 119 window=12 latency=72.2s
+[2026-10-19T10:39:06]   n12 turn 22: prompt= 1241 completion= 159 window=12 latency=73.5s
+[2026-10-19T10:40:23]   n12 turn 23: prompt= 1243 completion= 134 window=12 latency=76.7s
+[2026-10-19T10:42:29]   n12 turn 24: prompt= 1243 completion= 200 window=12 latency=126.4s
+[2026-10-19T10:43:30]   n12 turn 25: prompt= 1324 completion= 129 window=12 latency=60.5s
+[2026-10-19T10:44:40]   n12 turn 26: prompt= 1363 completion= 151 window=12 latency=69.9s
+[2026-10-19T10:45:55]   n12 turn 27: prompt= 1378 completion= 150 window=12 latency=75.5s
+[2026-10-19T10:47:56]   n12 turn 28: prompt= 1406 completion= 200 window=12 latency=120.6s
+[2026-10-19T10:49:13]   n12 turn 29: prompt= 1435 completion= 200 window=12 latency=77.4s
+[2026-10-19T10:50:17]   n12 turn 30: prompt= 1503 completion= 110 window=12 latency=63.4s
+[2026-10-19T10:51:11]   n12 P1_ev_charging: score=5  reply="You drive a Tesla Model 3, which requires EV charging. Since you live in San Jose, you'll need to find an apar"
+[2026-10-19T10:52:50]   n12 P2_visitor: score=2  reply="You mentioned earlier that Riya visits you every month. Since you're looking for an apartment, I assume Riya's"
+[2026-10-19T10:53:35]   n12 P3_current_budget: score=4  reply='You mentioned earlier that your budget is $2,700/month, which is higher than the budget you initially mentione'
+[2026-10-19T10:54:13]   n12 P4_cat_name: score=5  reply="You mentioned earlier that your cat's name is Miso."
+[2026-10-19T10:54:44]   n12 P5_move_in: score=3  reply="You mentioned earlier that you need to move in by December 1st. I don't know why that date is specifically imp"
+[2026-10-19T10:54:44] setting n12 done in 33.7 min -> reports\hw06\raw\part3\n12.json
+[2026-10-19T10:54:44] results table
+[2026-10-19T10:54:44]   SHORT_TERM_N=4                                   prompt/turn=  501.2  latency= 30183.1 ms  probe=3.4  [3, 1, 5, 5, 3]
+[2026-10-19T10:54:44]   SHORT_TERM_N=12                                  prompt/turn= 1001.6  latency= 58551.5 ms  probe=3.8  [5, 2, 4, 5, 3]
+[2026-10-19T10:54:44]   SHORT_TERM_N=30                                  prompt/turn= 1750.4  latency= 71052.6 ms  probe=4.6  [5, 5, 5, 5, 3]
+[2026-10-19T10:54:44]   Compression policy (N=30, compress_assistant)    prompt/turn=  820.0  latency= 33276.0 ms  probe=4.6  [5, 5, 5, 5, 3]
+[2026-10-19T10:54:44]   SHORT_TERM_N=4                                   chat cost/10k=$276.12  with maintenance=$419.83
+[2026-10-19T10:54:44]   SHORT_TERM_N=12                                  chat cost/10k=$475.02  with maintenance=$626.65
+[2026-10-19T10:54:44]   SHORT_TERM_N=30                                  chat cost/10k=$691.93  with maintenance=$854.33
+[2026-10-19T10:54:44]   Compression policy (N=30, compress_assistant)    chat cost/10k=$322.90  with maintenance=$450.02
+
+====================================================================================================
+## Part 4 - /compact session (code/hw1_client.py < cases/part4_session_a.txt)
+## source: reports\hw06\raw\part4_compact_session.txt
+====================================================================================================
+HW1 client + HW6 file-based memory (AGENT.md + MEMORY.md)
+Enter a request. Type /help for commands.
+Note: MEMORY.md needs consolidation (50 non-empty, non-comment lines > 40; last consolidated 429.5 h ago (> 24 h)). Run /compact.
+
+You: Input tokens: 1454
+Output tokens: 24
+Total tokens: 1478
+
+Assistant:
+- Your FastAPI backend uses port 8458.
+- HW6 uses MongoDB database `s6758_doc`.
+
+You: Input tokens: 1501
+Output tokens: 6
+Total tokens: 1507
+
+Assistant:
+- No issues found.
+
+You: Input tokens: 1523
+Output tokens: 10
+Total tokens: 1533
+
+Assistant:
+- Your cat's name is Miso.
+
+You: Input tokens: 92
+Output tokens: 67
+Total tokens: 159
+Conversation messages: 7 -> 6
+MEMORY.md lines (non-empty, non-comment): 50 -> 34
+MEMORY.md facts: 46 -> 22
+Duplicates merged: 17
+  contradiction budget: kept "$2,700 per month" over "$2,400 per month" (newest value)
+  contradiction cat_name: kept "Miso" over "Mochi? (maybe misheard)" (newer value is hedged/uncertain, kept newest confident value)
+  contradiction backend_port: kept "8458" over "8000" (newest value)
+  contradiction mongo_db: kept "study_planner_demo" over "s6758_doc" (newest value)
+  contradiction preferred_model: kept "llama3.2:3b" over "qwen3:8b" (newest value)
+  NEEDS REVIEW mongo_db: it was stated 1x while the dropped "s6758_doc" was stated 2x
+
+You: 
+Final cumulative stats:
+{'turn_count': 4, 'cumulative_input_tokens': 4570, 'cumulative_output_tokens': 107, 'cumulative_total_tokens': 4677, 'serialized_history_length': 4994}
+
+====================================================================================================
+## Part 4 - /dream session before the key-reuse fix
+## source: reports\hw06\raw\part4_dream_session_before_fix.txt
+====================================================================================================
+HW1 client + HW6 file-based memory (AGENT.md + MEMORY.md)
+Enter a request. Type /help for commands.
+
+You: Input tokens: 1331
+Output tokens: 16
+Total tokens: 1347
+
+Assistant:
+- Your HW6 project uses the MongoDB database `s6758_doc`.
+
+You: Input tokens: 1396
+Output tokens: 29
+Total tokens: 1425
+
+Assistant:
+- Your HW6 project uses the MongoDB database `s6758_doc`.
+- Your budget has increased to $2,800 per month.
+
+You: Added 2 fact(s) to MEMORY.md:
+- [2026-10-18] budget: 2800
+- [2026-10-18] hw6_project_database: s6758_doc
+
+You: Conversation messages: 5 -> 5
+MEMORY.md lines (non-empty, non-comment): 36 -> 37
+MEMORY.md facts: 24 -> 23
+Duplicates merged: 0
+  contradiction budget: kept "2800" over "$2,700 per month" (newest value)
+  NEEDS REVIEW budget: it was stated 1x while the dropped "$2,700 per month" was stated 2x
+
+You: <!-- last_consolidated: 2026-10-19T06:33:49+00:00 -->
+# MEMORY
+<!-- Durable facts. Format: - [YYYY-MM-DD] key: value. Consolidated by src/file_memory.py -->
+## User
+- [2026-09-19] name: Pragya Chourasia (seen 2x)
+- [2026-10-18] budget: 2800
+- [2026-09-30] cat_name: Miso (seen 3x)
+- [2026-09-20] move_in_date: December 1, 2026 (seen 2x)
+- [2026-09-04] commute: Sunnyvale internship on Tuesdays and Thursdays
+- [2026-09-05] preferred_unit: 1-bedroom or large studio
+- [2026-09-18] avoid: ground floor units (seen 2x)
+- [2026-09-22] sister_visits: Riya visits monthly, wants room for a sofa bed
+- [2026-10-04] car: Tesla Model 3, needs EV charging (seen 2x)
+- [2026-10-07] laundry: In-unit laundry required (seen 2x)
+- [2026-10-18] hw6_project_database: s6758_doc
+## Project
+- [2026-08-28] repo: data260-6758
+- [2026-09-01] sid4: 6758 (seen 2x)
+- [2026-09-12] backend_port: 8458 (seen 2x)
+- [2026-09-14] frontend: React + Vite on port 5173 (seen 2x)
+- [2026-09-01] relational_db: MySQL s6758_rel on port 3307
+- [2026-09-26] domain: Rental housing listings (seen 2x)
+- [2026-10-08] collaborators: Sbnikitha, supriyaselvanganesan (seen 2x)
+- [2026-10-18] mongo_db: study_planner_demo
+## Environment
+- [2026-10-03] preferred_model: llama3.2:3b (seen 2x)
+- [2026-10-09] ollama_url: http://localhost:11434 (seen 3x)
+- [2026-09-08] os: Windows 11 with PowerShell and Git Bash (seen 2x)
+- [2026-10-04] hardware: Intel i5-1335U, 16 GB RAM, no GPU (seen 2x)
+## Resolved contradictions
+- budget: kept "$2,700 per month" (2026-10-11) over "$2,400 per month" (2026-09-02) - newest value
+- cat_name: kept "Miso" (2026-09-30) over "Mochi? (maybe misheard)" (2026-10-12) - newer value is hedged/uncertain, kept newest confident value
+- backend_port: kept "8458" (2026-09-12) over "8000" (2026-08-28) - newest value
+- mongo_db: kept "study_planner_demo" (2026-10-18) over "s6758_doc" (2026-10-17) - newest value
+- preferred_model: kept "llama3.2:3b" (2026-10-03) over "qwen3:8b" (2026-09-05) - newest value
+- budget: kept "2800" (2026-10-18) over "$2,700 per month" (2026-10-11) - newest value
+## Needs review
+- mongo_db: kept "study_planner_demo" by recency, but it was stated 1x while the dropped "s6758_doc" was stated 2x - likely resolved incorrectly, confirm with the user
+- budget: kept "2800" by recency, but it was stated 1x while the dropped "$2,700 per month" was stated 2x - likely resolved incorrectly, confirm with the user
+
+[37 non-empty, non-comment lines; last consolidated: 2026-10-19 06:33:49+00:00]
+[consolidation required: no]
+
+You: 
+Final cumulative stats:
+{'turn_count': 2, 'cumulative_input_tokens': 2727, 'cumulative_output_tokens': 45, 'cumulative_total_tokens': 2772, 'serialized_history_length': 5183}
+
+====================================================================================================
+## Part 4 - /dream + /compact session after the fix
+## source: reports\hw06\raw\part4_dream_session.txt
+====================================================================================================
+HW1 client + HW6 file-based memory (AGENT.md + MEMORY.md)
+Enter a request. Type /help for commands.
+
+You: Input tokens: 1331
+Output tokens: 16
+Total tokens: 1347
+
+Assistant:
+- Your HW6 project uses the MongoDB database `s6758_doc`.
+
+You: Input tokens: 1396
+Output tokens: 31
+Total tokens: 1427
+
+Assistant:
+- Your HW6 project uses the MongoDB database `s6758_doc`.
+- Your apartment budget has been updated to $2,800 per month.
+
+You: Added 1 fact(s) to MEMORY.md:
+- [2026-10-18] budget: $2,800 per month
+
+You: Conversation messages: 5 -> 5
+MEMORY.md lines (non-empty, non-comment): 35 -> 36
+MEMORY.md facts: 23 -> 22
+Duplicates merged: 0
+  contradiction budget: kept "$2,800 per month" over "$2,700 per month" (newest value)
+  NEEDS REVIEW budget: it was stated 1x while the dropped "$2,700 per month" was stated 2x
+
+You: <!-- last_consolidated: 2026-10-19T06:36:32+00:00 -->
+# MEMORY
+<!-- Durable facts. Format: - [YYYY-MM-DD] key: value. Consolidated by src/file_memory.py -->
+## User
+- [2026-09-19] name: Pragya Chourasia (seen 2x)
+- [2026-10-18] budget: $2,800 per month
+- [2026-09-30] cat_name: Miso (seen 3x)
+- [2026-09-20] move_in_date: December 1, 2026 (seen 2x)
+- [2026-09-04] commute: Sunnyvale internship on Tuesdays and Thursdays
+- [2026-09-05] preferred_unit: 1-bedroom or large studio
+- [2026-09-18] avoid: ground floor units (seen 2x)
+- [2026-09-22] sister_visits: Riya visits monthly, wants room for a sofa bed
+- [2026-10-04] car: Tesla Model 3, needs EV charging (seen 2x)
+- [2026-10-07] laundry: In-unit laundry required (seen 2x)
+## Project
+- [2026-08-28] repo: data260-6758
+- [2026-09-01] sid4: 6758 (seen 2x)
+- [2026-09-12] backend_port: 8458 (seen 2x)
+- [2026-09-14] frontend: React + Vite on port 5173 (seen 2x)
+- [2026-09-01] relational_db: MySQL s6758_rel on port 3307
+- [2026-09-26] domain: Rental housing listings (seen 2x)
+- [2026-10-08] collaborators: Sbnikitha, supriyaselvanganesan (seen 2x)
+- [2026-10-18] mongo_db: study_planner_demo
+## Environment
+- [2026-10-03] preferred_model: llama3.2:3b (seen 2x)
+- [2026-10-09] ollama_url: http://localhost:11434 (seen 3x)
+- [2026-09-08] os: Windows 11 with PowerShell and Git Bash (seen 2x)
+- [2026-10-04] hardware: Intel i5-1335U, 16 GB RAM, no GPU (seen 2x)
+## Resolved contradictions
+- budget: kept "$2,700 per month" (2026-10-11) over "$2,400 per month" (2026-09-02) - newest value
+- cat_name: kept "Miso" (2026-09-30) over "Mochi? (maybe misheard)" (2026-10-12) - newer value is hedged/uncertain, kept newest confident value
+- backend_port: kept "8458" (2026-09-12) over "8000" (2026-08-28) - newest value
+- mongo_db: kept "study_planner_demo" (2026-10-18) over "s6758_doc" (2026-10-17) - newest value
+- preferred_model: kept "llama3.2:3b" (2026-10-03) over "qwen3:8b" (2026-09-05) - newest value
+- budget: kept "$2,800 per month" (2026-10-18) over "$2,700 per month" (2026-10-11) - newest value
+## Needs review
+- mongo_db: kept "study_planner_demo" by recency, but it was stated 1x while the dropped "s6758_doc" was stated 2x - likely resolved incorrectly, confirm with the user
+- budget: kept "$2,800 per month" by recency, but it was stated 1x while the dropped "$2,700 per month" was stated 2x - likely resolved incorrectly, confirm with the user
+
+[36 non-empty, non-comment lines; last consolidated: 2026-10-19 06:36:32+00:00]
+[consolidation required: no]
+
+You: 
+Final cumulative stats:
+{'turn_count': 2, 'cumulative_input_tokens': 2727, 'cumulative_output_tokens': 47, 'cumulative_total_tokens': 2774, 'serialized_history_length': 5184}
+
+====================================================================================================
+## Part 4 - AGENT.md check of the generated function (before correction)
+## source: reports\hw06\raw\agent_md_generated_v1\agent_md_check.json
+====================================================================================================
+{
+  "module": "src\\generated\\rent_parser.py",
+  "tests": "tests\\test_rent_parser.py",
+  "checks": [
+    {
+      "rule": "Coding conventions: snake_case function names",
+      "passed": true,
+      "detail": "parse_monthly_rent"
+    },
+    {
+      "rule": "Coding conventions: type hints on every parameter and return value",
+      "passed": true,
+      "detail": "all annotated"
+    },
+    {
+      "rule": "Coding conventions: docstring on every public function",
+      "passed": true,
+      "detail": "all documented"
+    },
+    {
+      "rule": "Coding conventions: invalid input raises ValueError",
+      "passed": true,
+      "detail": "3 raise statement(s)"
+    },
+    {
+      "rule": "Coding conventions: no print() in library code",
+      "passed": true,
+      "detail": "no print calls"
+    },
+    {
+      "rule": "Coding conventions / prohibited: no hard-coded secrets",
+      "passed": true,
+      "detail": "none found"
+    },
+    {
+      "rule": "Technology stack / testing: no network, database or model imports",
+      "passed": true,
+      "detail": "no imports"
+    },
+    {
+      "rule": "Testing approach: test_*.py file exists",
+      "passed": true,
+      "detail": "test_rent_parser.py"
+    },
+    {
+      "rule": "Testing approach: at least one normal case and one invalid-input case",
+      "passed": true,
+      "detail": "5 tests, pytest.raises(ValueError): True"
+    },
+    {
+      "rule": "Testing approach: tests pass offline",
+      "passed": false,
+      "detail": "1 failed, 4 passed in 0.56s"
+    }
+  ],
+  "passed": false
+}
+
+====================================================================================================
+## Part 4 - offline tests + AGENT.md check (after correction)
+## source: reports\hw06\raw\part4_tests_console.txt
+====================================================================================================
+[2026-10-19T10:13:42-07:00] python -m pytest tests -q
+.......................                                                  [100%]
+23 passed in 0.49s
+
+[2026-10-19T10:14:00-07:00] python code/check_agent_md_rules.py
+PASS  Coding conventions: snake_case function names  (parse_monthly_rent)
+PASS  Coding conventions: type hints on every parameter and return value  (all annotated)
+PASS  Coding conventions: docstring on every public function  (all documented)
+PASS  Coding conventions: invalid input raises ValueError  (3 raise statement(s))
+PASS  Coding conventions: no print() in library code  (no print calls)
+PASS  Coding conventions / prohibited: no hard-coded secrets  (none found)
+PASS  Technology stack / testing: no network, database or model imports  (re)
+PASS  Testing approach: test_*.py file exists  (test_rent_parser.py)
+PASS  Testing approach: at least one normal case and one invalid-input case  (2 tests, pytest.raises(ValueError): True)
+PASS  Testing approach: tests pass offline  (9 passed in 0.36s)
+SUMMARY: 10/10 AGENT.md checks pass for src\generated\rent_parser.py
+
+====================================================================================================
+## Verification (verify_hw06.py)
+## source: reports\hw06\raw\verify_console.txt
+====================================================================================================
+[2026-10-19T10:55:30-07:00] python verify_hw06.py
+{
+  "homework": "HW6",
+  "sid4": "6758",
+  "commit_hash": "d79c7f3dfee0fed23718c5c5257b148aea1a31b6",
+  "model_configuration": {
+    "model": "llama3.2:3b (Ollama)",
+    "temperature": 0.0,
+    "num_ctx": 8192,
+    "SHORT_TERM_N": 12,
+    "SUMMARIZE_EVERY_USER_MSGS": 4,
+    "EPISODIC_TOP_K": 3,
+    "embedding": "local feature hashing, 512 dims",
+    "mongo_db": "s6758_doc"
+  },
+  "seed": 6758,
+  "verify_seed": 266758,
+  "checks": [
+    {
+      "name": "backend_health_port_8458",
+      "passed": true,
+      "detail": "port 8458 up, mongo_ok=True"
+    },
+    {
+      "name": "listings_crud",
+      "passed": true,
+      "detail": "201 -> 200 -> 200 -> 200 -> 204 -> 404"
+    },
+    {
+      "name": "listings_validation",
+      "passed": true,
+      "detail": "missing/enum/date/length/id -> [422, 422, 422, 422, 400]"
+    },
+    {
+      "name": "post_api_chat",
+      "passed": true,
+      "detail": "reply 263 chars, prompt_tokens=137"
+    },
+    {
+      "name": "memory_and_aggregate_endpoints",
+      "passed": true,
+      "detail": "memory messages=2, aggregate days=1"
+    },
+    {
+      "name": "part3_raw_outputs",
+      "passed": true,
+      "detail": "settings=['n12', 'n30', 'n30_compress', 'n4']"
+    },
+    {
+      "name": "file_memory_tests",
+      "passed": true,
+      "detail": "14 passed in 3.77s"
+    },
+    {
+      "name": "memory_consolidation_files",
+      "passed": true,
+      "detail": "55 -> 36 lines"
+    },
+    {
+      "name": "generated_function_follows_agent_md",
+      "passed": true,
+      "detail": "SUMMARY: 10/10 AGENT.md checks pass for src\\generated\\rent_parser.py"
+    }
+  ],
+  "passed": true
+}
+[2026-10-19T10:56:44-07:00] exit 0

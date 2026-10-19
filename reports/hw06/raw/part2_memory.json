@@ -1,0 +1,287 @@
+{
+  "user_id": "pragya",
+  "recent_messages": [
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "user",
+      "content": "I commute to an internship in Sunnyvale three days a week, so being near Caltrain would help.",
+      "created_at": "2026-10-19T01:41:24.433000+00:00",
+      "id": "6ad575447b41e6cb94dbde85"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "assistant",
+      "content": "Being near Caltrain will make your commute to Sunnyvale much easier. I'll prioritize apartments that are within walking distance or have a short Caltrain ride to Sunnyvale. Would you like me to focus on apartments in specific neighborhoods, such as Downtown San Jose or Willow Glen, or would you like me to explore other options?",
+      "created_at": "2026-10-19T01:41:49.563000+00:00",
+      "id": "6ad5755d7b41e6cb94dbde86"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "user",
+      "content": "I'd prefer a 1-bedroom, but a large studio is fine too.",
+      "created_at": "2026-10-19T01:41:58.674000+00:00",
+      "id": "6ad575667b41e6cb94dbde89"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "assistant",
+      "content": "I'll keep an eye out for 1-bedroom and large studio apartments that meet your budget and pet-friendly requirements. Since you're a grad student, I'll also consider apartments with amenities like study spaces, libraries, or on-campus shuttle services. Would you like me to also consider apartments with in-unit laundry or a gym?",
+      "created_at": "2026-10-19T01:42:12.645000+00:00",
+      "id": "6ad575747b41e6cb94dbde8a"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "user",
+      "content": "What should I look for when touring a place with a cat?",
+      "created_at": "2026-10-19T01:42:19.746000+00:00",
+      "id": "6ad5757b7b41e6cb94dbde8c"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "assistant",
+      "content": "When touring a place with Miso, you'll want to check for cat-friendly features like:\n\n* Pet deposits or fees\n* Breed restrictions (some complexes may have specific breeds or size limits)\n* Allergen-friendly policies\n* Cleanliness and maintenance of common areas\n* Availability of pet-friendly amenities like outdoor spaces or pet parks\n\nYou may also want to ask the landlord or property manager about their pet policy, including any rules or regulations regarding Miso's presence in the apartment.",
+      "created_at": "2026-10-19T01:42:40.467000+00:00",
+      "id": "6ad575907b41e6cb94dbde8d"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "user",
+      "content": "Please no ground-floor units, I don't feel safe on the ground floor.",
+      "created_at": "2026-10-19T01:42:53.804000+00:00",
+      "id": "6ad5759d7b41e6cb94dbde91"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "assistant",
+      "content": "I'll make sure to exclude ground-floor units from my search. Since you're concerned about safety, I'll prioritize apartments with upper-level units or those that have secure entry systems. Would you like me to also consider apartments with on-site staff or security cameras for added peace of mind?",
+      "created_at": "2026-10-19T01:43:27.079000+00:00",
+      "id": "6ad575bf7b41e6cb94dbde92"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "user",
+      "content": "Actually, I just got a raise, so my budget is now $2,700 a month.",
+      "created_at": "2026-10-19T01:44:12.569000+00:00",
+      "id": "6ad575ec7b41e6cb94dbde96"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "assistant",
+      "content": "Congratulations on the raise! With the increased budget, I can now explore more options. Since you still prefer a 1-bedroom or large studio, I'll continue to prioritize those. I'll also keep in mind your original budget of $2,400/month, including utilities, to ensure we stay within that range. Now, about touring a place with Miso... would you like me to remind you of the key cat-friendly features to look for?",
+      "created_at": "2026-10-19T01:44:53.325000+00:00",
+      "id": "6ad576157b41e6cb94dbde97"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "user",
+      "content": "In-unit laundry is a must for me.",
+      "created_at": "2026-10-19T01:45:00.811000+00:00",
+      "id": "6ad5761c7b41e6cb94dbde99"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "assistant",
+      "content": "In-unit laundry is a must-have for you. I'll make sure to prioritize apartments with this amenity. Since you're now at a budget of $2,700/month, I can also explore more upscale options. I'll keep in mind your original budget of $2,400/month, including utilities, to ensure we stay within that range. Would you like me to start searching for apartments that meet your updated budget and requirements?",
+      "created_at": "2026-10-19T01:45:35.414000+00:00",
+      "id": "6ad5763f7b41e6cb94dbde9a"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "user",
+      "content": "Can you summarize what you know about my apartment search so far?",
+      "created_at": "2026-10-19T01:45:41.815000+00:00",
+      "id": "6ad576457b41e6cb94dbde9c"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "assistant",
+      "content": "Here's a summary of what I know about your apartment search so far:\n\n* You're Pragya, a grad student at SJSU.\n* You're looking for a pet-friendly apartment.\n* You have a cat named Miso.\n* You're moving in on December 1st.\n* You commute to Sunnyvale 3 days a week, so being near Caltrain is a priority.\n* You prefer a 1-bedroom or large studio apartment.\n* You're currently looking at apartments with a budget of $2,400/month, including utilities.\n* You've recently received a raise, bringing your budget to $2,700/month.\n* In-unit laundry is a must-have for you.\n* You'd like to avoid ground-floor units due to safety concerns.\n\nLet me know if there's anything else you'd like to add or change!",
+      "created_at": "2026-10-19T01:46:25.150000+00:00",
+      "id": "6ad576717b41e6cb94dbde9d"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "user",
+      "content": "What's my cat's name and what's my current budget?",
+      "created_at": "2026-10-19T01:46:29.291000+00:00",
+      "id": "6ad576757b41e6cb94dbde9e"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "role": "assistant",
+      "content": "Your cat's name is Miso, and your current budget is $2,700/month.",
+      "created_at": "2026-10-19T01:47:03.260000+00:00",
+      "id": "6ad576977b41e6cb94dbde9f"
+    }
+  ],
+  "latest_session_summary": {
+    "user_id": "pragya",
+    "session_id": "demo-20261018-183939",
+    "scope": "session",
+    "text": "- Pragya\n- Cat's name: Miso\n- Budget: $2,700/month\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment\n- Commute to Sunnyvale 3 days a week",
+    "created_at": "2026-10-19T01:47:40.372000+00:00",
+    "id": "6ad576bc7b41e6cb94dbdea2"
+  },
+  "latest_lifetime_summary": {
+    "user_id": "pragya",
+    "session_id": null,
+    "scope": "user",
+    "text": "- Pragya\n- Grad student at SJSU\n- Budget: $2,400/month (including utilities)\n- Looking for a pet-friendly apartment\n- Cat's name: Miso\n- Move-in date: December 1st\n- Commute to Sunnyvale 3 days a week\n- Prefer 1-bedroom or large studio apartment",
+    "created_at": "2026-10-19T01:44:12.530000+00:00",
+    "id": "6ad575ec7b41e6cb94dbde95"
+  },
+  "episodic_facts": [
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "She has a current budget.",
+      "importance": 0.5,
+      "created_at": "2026-10-19T01:47:10.983000+00:00",
+      "id": "6ad5769e7b41e6cb94dbdea1"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "She has a cat.",
+      "importance": 0.5,
+      "created_at": "2026-10-19T01:47:10.978000+00:00",
+      "id": "6ad5769e7b41e6cb94dbdea0"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "In-unit laundry is a must for her.",
+      "importance": 1.0,
+      "created_at": "2026-10-19T01:45:41.799000+00:00",
+      "id": "6ad576457b41e6cb94dbde9b"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "She now has a budget of $2,700 a month.",
+      "importance": 1.0,
+      "created_at": "2026-10-19T01:45:00.789000+00:00",
+      "id": "6ad5761c7b41e6cb94dbde98"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "She prefers not to live on the ground floor.",
+      "importance": 0.5,
+      "created_at": "2026-10-19T01:43:34.628000+00:00",
+      "id": "6ad575c67b41e6cb94dbde93"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "The user is looking for advice on what to look for when touring a place with a cat.",
+      "importance": 0.5,
+      "created_at": "2026-10-19T01:42:53.780000+00:00",
+      "id": "6ad5759d7b41e6cb94dbde90"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "The user is looking for a place to tour with a cat.",
+      "importance": 0.5,
+      "created_at": "2026-10-19T01:42:53.776000+00:00",
+      "id": "6ad5759d7b41e6cb94dbde8f"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "The user has a cat.",
+      "importance": 1.0,
+      "created_at": "2026-10-19T01:42:53.770000+00:00",
+      "id": "6ad5759d7b41e6cb94dbde8e"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "They prefer a 1-bedroom or a large studio.",
+      "importance": 0.5,
+      "created_at": "2026-10-19T01:42:19.728000+00:00",
+      "id": "6ad5757b7b41e6cb94dbde8b"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "being near Caltrain would help",
+      "importance": 0.5,
+      "created_at": "2026-10-19T01:41:58.659000+00:00",
+      "id": "6ad575667b41e6cb94dbde88"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "commutes to an internship in Sunnyvale three days a week",
+      "importance": 0.5,
+      "created_at": "2026-10-19T01:41:58.654000+00:00",
+      "id": "6ad575667b41e6cb94dbde87"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "Her current lease ends then.",
+      "importance": 1.0,
+      "created_at": "2026-10-19T01:41:04.179000+00:00",
+      "id": "6ad575307b41e6cb94dbde83"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "She will move in on December 1st.",
+      "importance": 1.0,
+      "created_at": "2026-10-19T01:41:04.153000+00:00",
+      "id": "6ad575307b41e6cb94dbde82"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "She has a cat named Miso.",
+      "importance": 1.0,
+      "created_at": "2026-10-19T01:40:36.654000+00:00",
+      "id": "6ad575147b41e6cb94dbde7f"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "She has a budget of $2,400 a month including utilities if possible.",
+      "importance": 1.0,
+      "created_at": "2026-10-19T01:40:19.047000+00:00",
+      "id": "6ad575037b41e6cb94dbde7c"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "Pragya is looking for an apartment",
+      "importance": 1.0,
+      "created_at": "2026-10-19T01:40:01.752000+00:00",
+      "id": "6ad574f17b41e6cb94dbde79"
+    },
+    {
+      "user_id": "pragya",
+      "session_id": "demo-20261018-183939",
+      "fact": "Pragya is a grad student at SJSU",
+      "importance": 1.0,
+      "created_at": "2026-10-19T01:40:01.744000+00:00",
+      "id": "6ad574f17b41e6cb94dbde78"
+    }
+  ]
+}
