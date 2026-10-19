@@ -50,7 +50,7 @@
     {
       "rule": "Testing approach: tests pass offline",
       "passed": true,
-      "detail": "9 passed in 0.04s"
+      "detail": "9 passed in 0.19s"
     }
   ],
   "passed": true

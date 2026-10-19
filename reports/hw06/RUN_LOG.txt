@@ -1,5 +1,5 @@
 DATA-260 HW6 RUN_LOG - Pragya Chourasia (SID4 6758)
-assembled 2026-10-19T10:57:03 at commit d79c7f3
+assembled 2026-10-19T12:59:59 at commit e174eac
 machine: Intel Core i5-1335U, 16 GB RAM, Windows 11; model llama3.2:3b via Ollama; MongoDB 7.0 in Docker
 Each section below is the unedited console output of the run; timestamps are inside each section.
 
@@ -727,11 +727,11 @@ SUMMARY: 10/10 AGENT.md checks pass for src\generated\rent_parser.py
 ## Verification (verify_hw06.py)
 ## source: reports\hw06\raw\verify_console.txt
 ====================================================================================================
-[2026-10-19T10:55:30-07:00] python verify_hw06.py
+[2026-10-19T12:59:02-07:00] python verify_hw06.py   (commit e174eac)
 {
   "homework": "HW6",
   "sid4": "6758",
-  "commit_hash": "d79c7f3dfee0fed23718c5c5257b148aea1a31b6",
+  "commit_hash": "e174eacc91aaf86b1fe01ca16bee65648e7b1a6e",
   "model_configuration": {
     "model": "llama3.2:3b (Ollama)",
     "temperature": 0.0,
@@ -763,12 +763,12 @@ SUMMARY: 10/10 AGENT.md checks pass for src\generated\rent_parser.py
     {
       "name": "post_api_chat",
       "passed": true,
-      "detail": "reply 263 chars, prompt_tokens=137"
+      "detail": "reply 361 chars, prompt_tokens=159"
     },
     {
       "name": "memory_and_aggregate_endpoints",
       "passed": true,
-      "detail": "memory messages=2, aggregate days=1"
+      "detail": "memory messages=4, aggregate days=1"
     },
     {
       "name": "part3_raw_outputs",
@@ -778,7 +778,7 @@ SUMMARY: 10/10 AGENT.md checks pass for src\generated\rent_parser.py
     {
       "name": "file_memory_tests",
       "passed": true,
-      "detail": "14 passed in 3.77s"
+      "detail": "14 passed in 0.44s"
     },
     {
       "name": "memory_consolidation_files",
@@ -793,4 +793,4 @@ SUMMARY: 10/10 AGENT.md checks pass for src\generated\rent_parser.py
   ],
   "passed": true
 }
-[2026-10-19T10:56:44-07:00] exit 0
+[2026-10-19T12:59:45-07:00] exit 0
