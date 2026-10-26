@@ -1,0 +1,205 @@
+{
+  "scenario": "membership",
+  "built_at": "2026-10-26T01:13:07+00:00",
+  "source_bucket": "https://s3.amazonaws.com/baywheels-data",
+  "seed": 6758,
+  "rule": {
+    "first": "202501",
+    "last": "202608",
+    "per_month": 32,
+    "min": 20,
+    "max": 60
+  },
+  "rows": 512,
+  "months": 16,
+  "first_trip": "2025-01-01 15:20:05.661000",
+  "last_trip": "2026-08-30 11:07:43.660000",
+  "minutes": {
+    "mean": 29.65,
+    "median": 26.91,
+    "min": 20.02,
+    "max": 59.64
+  },
+  "rides_over_45_min": 39,
+  "csv_sha256": "2b7e62e745b61aa4d58d405c2003aa7818bcb9ea5e9a485da90c6470053d5de9",
+  "per_month": {
+    "2025-01": {
+      "rides": 32,
+      "avg_min": 29.78
+    },
+    "2025-02": {
+      "rides": 32,
+      "avg_min": 30.12
+    },
+    "2025-04": {
+      "rides": 32,
+      "avg_min": 29.14
+    },
+    "2025-05": {
+      "rides": 32,
+      "avg_min": 32.32
+    },
+    "2025-06": {
+      "rides": 32,
+      "avg_min": 28.26
+    },
+    "2025-07": {
+      "rides": 32,
+      "avg_min": 29.59
+    },
+    "2025-08": {
+      "rides": 32,
+      "avg_min": 30.61
+    },
+    "2025-09": {
+      "rides": 32,
+      "avg_min": 31.83
+    },
+    "2025-11": {
+      "rides": 32,
+      "avg_min": 30.63
+    },
+    "2025-12": {
+      "rides": 32,
+      "avg_min": 27.93
+    },
+    "2026-02": {
+      "rides": 32,
+      "avg_min": 28.96
+    },
+    "2026-03": {
+      "rides": 32,
+      "avg_min": 30.5
+    },
+    "2026-05": {
+      "rides": 32,
+      "avg_min": 29.33
+    },
+    "2026-06": {
+      "rides": 32,
+      "avg_min": 28.62
+    },
+    "2026-07": {
+      "rides": 32,
+      "avg_min": 29.42
+    },
+    "2026-08": {
+      "rides": 32,
+      "avg_min": 27.37
+    }
+  },
+  "source_files": [
+    {
+      "month": "202501",
+      "scenario": "membership",
+      "file": "202501-baywheels-tripdata.csv.zip",
+      "pool": 8047,
+      "sampled": 32
+    },
+    {
+      "month": "202502",
+      "scenario": "membership",
+      "file": "202502-baywheels-tripdata.csv.zip",
+      "pool": 6847,
+      "sampled": 32
+    },
+    {
+      "month": "202504",
+      "scenario": "membership",
+      "file": "202504-baywheels-tripdata.csv.zip",
+      "pool": 10404,
+      "sampled": 32
+    },
+    {
+      "month": "202505",
+      "scenario": "membership",
+      "file": "202505-baywheels-tripdata.csv.zip",
+      "pool": 12591,
+      "sampled": 32
+    },
+    {
+      "month": "202506",
+      "scenario": "membership",
+      "file": "202506-baywheels-tripdata.csv.zip",
+      "pool": 12352,
+      "sampled": 32
+    },
+    {
+      "month": "202507",
+      "scenario": "membership",
+      "file": "202507-baywheels-tripdata.csv.zip",
+      "pool": 12615,
+      "sampled": 32
+    },
+    {
+      "month": "202508",
+      "scenario": "membership",
+      "file": "202508-baywheels-tripdata.csv.zip",
+      "pool": 14807,
+      "sampled": 32
+    },
+    {
+      "month": "202509",
+      "scenario": "membership",
+      "file": "202509-baywheels-tripdata.csv.zip",
+      "pool": 14014,
+      "sampled": 32
+    },
+    {
+      "month": "202511",
+      "scenario": "membership",
+      "file": "202511-baywheels-tripdata.csv.zip",
+      "pool": 10603,
+      "sampled": 32
+    },
+    {
+      "month": "202512",
+      "scenario": "membership",
+      "file": "202512-baywheels-tripdata.csv.zip",
+      "pool": 6543,
+      "sampled": 32
+    },
+    {
+      "month": "202602",
+      "scenario": "membership",
+      "file": "202602-baywheels-tripdata.csv.zip",
+      "pool": 9867,
+      "sampled": 32
+    },
+    {
+      "month": "202603",
+      "scenario": "membership",
+      "file": "202603-baywheels-tripdata.csv.zip",
+      "pool": 15650,
+      "sampled": 32
+    },
+    {
+      "month": "202605",
+      "scenario": "membership",
+      "file": "202605-baywheels-tripdata.csv.zip",
+      "pool": 12827,
+      "sampled": 32
+    },
+    {
+      "month": "202606",
+      "scenario": "membership",
+      "file": "202606-baywheels-tripdata.csv.zip",
+      "pool": 13532,
+      "sampled": 32
+    },
+    {
+      "month": "202607",
+      "scenario": "membership",
+      "file": "202607-baywheels-tripdata.csv.zip",
+      "pool": 14720,
+      "sampled": 32
+    },
+    {
+      "month": "202608",
+      "scenario": "membership",
+      "file": "202608-baywheels-tripdata.csv.zip",
+      "pool": 15053,
+      "sampled": 32
+    }
+  ]
+}

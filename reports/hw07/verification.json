@@ -1,0 +1,55 @@
+{
+  "homework": "HW7",
+  "sid4": "6758",
+  "commit_hash": "f0776829f399339cd2f8ccbfa08284f867b9baf4",
+  "model_configuration": {
+    "agent_loop": "llama3.2:3b via src/model_client.ModelClient, temperature 0.7",
+    "bikeshare_agent": "qwen3:8b via LangChain create_agent, temperature 0, seed 6758",
+    "jwt": "HS256, 30-minute access tokens"
+  },
+  "seed": 6758,
+  "verify_seed": 266758,
+  "checks": [
+    {
+      "name": "backend_health_port_8458",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "name": "auth_login_token_and_401",
+      "passed": true,
+      "detail": "valid -> token (3 JWT parts), invalid -> 401"
+    },
+    {
+      "name": "auth_me_401_and_200",
+      "passed": true,
+      "detail": "no token 401, invalid token 401, valid 200 role=writer"
+    },
+    {
+      "name": "rbac_200_201_403",
+      "passed": true,
+      "detail": "list reader 200, create reader 403 / writer 201, delete writer 403 / moderator 200"
+    },
+    {
+      "name": "agent_loop_completes_task_A",
+      "passed": true,
+      "detail": "task A completed with 2 tool calls, 1 repairs"
+    },
+    {
+      "name": "safety_gate_and_file_tools",
+      "passed": true,
+      "detail": "5 allowed, 7 blocked, file tools work in a temp sandbox"
+    },
+    {
+      "name": "mrkl_tools_contracts",
+      "passed": true,
+      "detail": "csv_sql read-only contract, calculator whitelist, policy_retriever passages"
+    },
+    {
+      "name": "raw_artifacts_present",
+      "passed": true,
+      "detail": "reliability 21 attempts, 2 scenario snapshots, 9 attack runs, gate 10/10"
+    }
+  ],
+  "passed": true
+}

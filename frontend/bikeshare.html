@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bike-share Plan Advisor</title>
+<style>
+  :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d2433; --muted:#667085; --line:#e3e6eb; --accent:#2f5bd3; --ok:#067647; --warn:#b54708; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.45 system-ui, Segoe UI, sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:12px 16px; background:var(--panel); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:6px 16px; align-items:baseline; }
+  header h1 { font-size:17px; margin:0; } header .who { color:var(--muted); font-size:13px; }
+  main { max-width:1280px; margin:0 auto; padding:16px; display:grid; gap:16px; grid-template-columns:minmax(0,5fr) minmax(0,7fr); }
+  @media (max-width:900px) { main { grid-template-columns:1fr; } }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px; }
+  form.panel { grid-column:1 / -1; display:flex; flex-wrap:wrap; gap:10px; align-items:end; }
+  label { display:flex; flex-direction:column; gap:4px; font-size:12px; color:var(--muted); }
+  input[type=url] { width:min(520px, 90vw); } input { font:inherit; padding:7px 9px; border:1px solid var(--line); border-radius:7px; }
+  button { font:inherit; padding:8px 18px; border:0; border-radius:7px; background:var(--accent); color:#fff; cursor:pointer; }
+  button:disabled { opacity:.55; cursor:wait; }
+  h2 { font-size:14px; margin:0 0 10px; }
+  .metrics { grid-column:1 / -1; display:flex; flex-wrap:wrap; gap:10px; }
+  .metric { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 14px; min-width:140px; }
+  .metric b { display:block; font-size:18px; } .metric span { font-size:12px; color:var(--muted); }
+  ol.timeline { list-style:none; margin:0; padding:0; max-height:70vh; overflow:auto; display:flex; flex-direction:column; gap:8px; }
+  ol.timeline li { border-left:3px solid var(--accent); padding:4px 10px; font-size:13px; }
+  ol.timeline li.obs { border-left-color:#98a2b3; background:#fafbfc; }
+  ol.timeline code { white-space:pre-wrap; word-break:break-word; font-size:12px; }
+  .decision { font-size:20px; font-weight:700; margin:4px 0 8px; }
+  table { border-collapse:collapse; width:100%; font-size:13px; margin:6px 0 12px; }
+  th, td { border-bottom:1px solid var(--line); padding:5px 6px; text-align:right; } th:first-child, td:first-child { text-align:left; }
+  .muted { color:var(--muted); font-size:12px; } .ok { color:var(--ok); } .warn { color:var(--warn); }
+  ul { margin:4px 0 10px 18px; padding:0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Bike-share Plan Advisor (ReAct / MRKL)</h1>
+  <span class="who">Pragya Chourasia · DATA-260 HW7 · SID4 6758 · port 8458 · LangChain create_agent + qwen3:8b</span>
+</header>
+<main>
+  <form class="panel" id="form">
+    <label>Trip CSV <input type="file" id="csv" accept=".csv" required></label>
+    <label>Pricing page URL <input type="url" id="url" value="https://www.lyft.com/bikes/bay-wheels/pricing" required></label>
+    <button id="run">Run</button>
+    <span class="muted" id="status"></span>
+  </form>
+  <div class="metrics">
+    <div class="metric"><b id="m-steps">-</b><span>tool steps</span></div>
+    <div class="metric"><b id="m-time">-</b><span>total time</span></div>
+    <div class="metric"><b id="m-stop">-</b><span>stop reason</span></div>
+    <div class="metric"><b id="m-rows">-</b><span>trip rows / months</span></div>
+  </div>
+  <section class="panel">
+    <h2>Timeline: tool calls and observations</h2>
+    <ol class="timeline" id="timeline"><li class="muted">Upload a CSV and press Run.</li></ol>
+  </section>
+  <section class="panel" id="results">
+    <h2>Result</h2>
+    <p class="muted">No run yet.</p>
+  </section>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const money = (v) => v == null || isNaN(v) ? "-" : "$" + Number(v).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+const esc = (s) => String(s ?? "").replace(/[&<>]/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;"}[c]));
+
+function renderTimeline(items) {
+  let n = 0;
+  $("timeline").innerHTML = items.map((e) => e.type === "tool_call"
+    ? `<li><b>step ${++n}: call ${esc(e.tool)}</b> <span class="muted">${(e.t_ms / 1000).toFixed(1)} s</span><br><code>${esc(JSON.stringify(e.input))}</code></li>`
+    : `<li class="obs"><b>observation · ${esc(e.tool)}</b><br><code>${esc(e.output.slice(0, 600))}${e.output.length > 600 ? " …" : ""}</code></li>`
+  ).join("") || '<li class="muted">No tool calls.</li>';
+}
+
+function renderResults(r) {
+  const f = r.final || {}, a = r.audit || {};
+  const agree = (k) => a[k] == null || f[k] == null ? "" : Math.abs(Number(f[k]) - Number(a[k])) <= 0.05 * Math.max(1, Math.abs(a[k])) ? '<span class="ok">✓</span>' : '<span class="warn">≠</span>';
+  const rows = [["Pay per ride/minute (total)", "pay_per_use_total"], ["Month pass fees", "pass_fees"], ["Month pass overage (rides > free minutes)", "pass_overage"], ["Membership total (fees + overage)", "membership_total"]];
+  const weekly = (a.weekly || []).map((w) => `<tr><td>${esc(w.week)}</td><td>${w.rides}</td><td>${w.avg_min}</td><td>${money(w.pay_per_use_spend)}</td></tr>`).join("");
+  const cites = (f.citations || []).map((c) => `<li>[${c.n}] “${esc(c.quote)}”</li>`).join("");
+  $("results").innerHTML = `
+    <h2>Result</h2>
+    <div class="decision">${esc(f.decision || a.decision || "No decision")}</div>
+    <p>${esc(f.justification || r.final_text)}</p>
+    <table><tr><th>Cost comparison</th><th>Agent</th><th>Check</th><th></th></tr>
+      ${rows.map(([t, k]) => `<tr><td>${t}</td><td>${money(f[k])}</td><td>${money(a[k])}</td><td>${agree(k)}</td></tr>`).join("")}
+      <tr><td>Break-even rides per month</td><td>${f.break_even_rides_per_month ?? "-"}</td><td>${a.break_even_rides_per_month ?? "-"}</td><td>${agree("break_even_rides_per_month")}</td></tr>
+      <tr><td>Actual average rides per month</td><td>${f.actual_avg_rides_per_month ?? "-"}</td><td>${a.actual_avg_rides_per_month ?? "-"}</td><td>${agree("actual_avg_rides_per_month")}</td></tr>
+    </table>
+    <p class="muted">"Check" is recomputed in plain Python from the same CSV and the prices on the captured page (not by the model).</p>
+    <h2>By week (latest 8 weeks with rides)</h2>
+    <table><tr><th>Week</th><th>Rides</th><th>Avg min</th><th>Pay-per-use spend</th></tr>${weekly}</table>
+    <h2>Citations</h2>
+    <ul>${cites}</ul>
+    <p class="muted">Source: <a href="${esc(r.citation.url)}" target="_blank">${esc(r.citation.url)}</a><br>
+      Captured ${esc(r.citation.captured_at)} · SHA-256 ${esc((r.citation.sha256 || "").slice(0, 16))}…</p>
+    <h2>Assumptions and caveats</h2>
+    <ul>${(f.assumptions || []).map((s) => `<li>${esc(s)}</li>`).join("")}</ul>`;
+}
+
+function show(r) {
+  $("m-steps").textContent = r.steps;
+  $("m-time").textContent = (r.total_ms / 1000).toFixed(1) + " s";
+  $("m-stop").textContent = r.stop_reason;
+  $("m-rows").textContent = r.audit ? `${r.audit.rides} / ${r.audit.months}` : "-";
+  renderTimeline(r.timeline);
+  renderResults(r);
+  $("status").textContent = `Run ${r.run_id} · file ${r.uploaded_name || ""}`;
+}
+
+// ?run=<id> reopens a saved run (same panels as a live run)
+const saved = new URLSearchParams(location.search).get("run");
+if (saved) {
+  fetch(`/bikeshare/runs/${encodeURIComponent(saved)}`).then((r) => r.json()).then(show)
+    .catch((err) => { $("status").textContent = "Could not load run: " + err.message; });
+}
+
+$("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const fd = new FormData();
+  fd.append("file", $("csv").files[0]);
+  fd.append("pricing_url", $("url").value);
+  $("run").disabled = true;
+  $("status").textContent = "Running the agent (this takes 1-3 minutes on CPU)…";
+  $("timeline").innerHTML = '<li class="muted">Running…</li>';
+  try {
+    const res = await fetch("/bikeshare/run", { method: "POST", body: fd });
+    const r = await res.json();
+    if (!res.ok) throw new Error(r.detail || res.status);
+    show(r);
+  } catch (err) {
+    $("status").textContent = "Error: " + err.message;
+  } finally {
+    $("run").disabled = false;
+  }
+});
+</script>
+</body>
+</html>

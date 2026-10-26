@@ -1,0 +1,32 @@
+{
+  "description": "HW7 Part 2/3 fixed verification cases over the HW5 fixture store (3 listings). Each case needs at least two tool calls; `check` is the deterministic verifier used by Part 3.",
+  "cases": [
+    {
+      "id": "A",
+      "title": "search, then detail-lookup the first result",
+      "prompt": "Search for Apartment listings, then look up the full details of the first result and tell me its address, rent and owner.",
+      "required_tools": ["search_listings", "listing_detail"],
+      "check": {"detail_ids": [1], "answer_must_include": [["100 Research", "L-6758-001"], ["1800", "1,800"]]}
+    },
+    {
+      "id": "B",
+      "title": "aggregate question, then one supporting example",
+      "prompt": "What is the average monthly rent of Apartment listings? Then find one Apartment listing that supports the answer.",
+      "required_tools": ["listing_summary", "search_listings"],
+      "check": {"answer_must_include": [["1950", "1,950"], ["100 Research", "102 Research", "L-6758-001", "L-6758-003"]]}
+    },
+    {
+      "id": "C",
+      "title": "compare two entities with search plus two detail lookups",
+      "prompt": "Compare listing L-6758-001 and listing L-6758-002: search for them, look up the details of both, and say which one is cheaper.",
+      "required_tools": ["search_listings", "listing_detail"],
+      "check": {"detail_ids": [1, 2], "answer_must_include": [["1800", "1,800"], ["2400", "2,400"], ["L-6758-001", "100 Research", "listing 1", "first"]]}
+    }
+  ],
+  "error_case": {
+    "id": "E",
+    "title": "nonexistent id",
+    "prompt": "Show me the full details for listing id 9999.",
+    "required_tools": ["listing_detail"]
+  }
+}

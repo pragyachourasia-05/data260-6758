@@ -1,0 +1,25 @@
+[2026-10-26T12:44:32-07:00] python backend/run_hw07_agent.py reliability 21
+[2026-10-26T12:44:42] Part 2 reliability - 21 attempts across A/B/C - settings {'model': 'llama3.2:3b', 'temperature': 0.7, 'max_steps': 8, 'max_repairs': 2}
+[2026-10-26T12:45:38] attempt  1 case A: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:46:17] attempt  2 case B: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:46:46] attempt  3 case C: stop=repair_failed calls=1 proposed=2 ok_as_proposed=1 failures=['lost_chain', 'malformed_arguments', 'lost_chain']
+[2026-10-26T12:47:23] attempt  4 case A: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:48:05] attempt  5 case B: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:48:53] attempt  6 case C: stop=repair_failed calls=1 proposed=2 ok_as_proposed=1 failures=['lost_chain', 'malformed_arguments', 'lost_chain']
+[2026-10-26T12:49:38] attempt  7 case A: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:50:22] attempt  8 case B: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:50:58] attempt  9 case C: stop=repair_failed calls=1 proposed=2 ok_as_proposed=1 failures=['lost_chain', 'malformed_arguments', 'lost_chain']
+[2026-10-26T12:51:40] attempt 10 case A: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:52:23] attempt 11 case B: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:53:00] attempt 12 case C: stop=repair_failed calls=1 proposed=2 ok_as_proposed=1 failures=['lost_chain', 'malformed_arguments', 'lost_chain']
+[2026-10-26T12:53:47] attempt 13 case A: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:54:26] attempt 14 case B: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:55:07] attempt 15 case C: stop=repair_failed calls=1 proposed=2 ok_as_proposed=1 failures=['lost_chain', 'malformed_arguments', 'lost_chain']
+[2026-10-26T12:57:22] attempt 16 case A: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:58:22] attempt 17 case B: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T12:59:05] attempt 18 case C: stop=repair_failed calls=1 proposed=2 ok_as_proposed=1 failures=['lost_chain', 'malformed_arguments', 'lost_chain']
+[2026-10-26T12:59:51] attempt 19 case A: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T13:00:44] attempt 20 case B: stop=completed     calls=2 proposed=2 ok_as_proposed=2 failures=['lost_chain']
+[2026-10-26T13:01:19] attempt 21 case C: stop=repair_failed calls=1 proposed=2 ok_as_proposed=1 failures=['lost_chain', 'malformed_arguments', 'lost_chain']
+[2026-10-26T13:01:19] summary {"settings": {"model": "llama3.2:3b", "temperature": 0.7, "max_steps": 8, "max_repairs": 2}, "attempts": 21, "proposed_calls": 42, "per_call_well_formed_before_repair": 0.833, "per_call_well_formed_after_repair": 0.833, "attempts_no_failure_before_repair": 0.0, "attempts_completed_after_repair": 0.667, "failure_events_by_type": {"malformed_arguments": 7, "unknown_tool": 0, "text_instead_of_tool": 0, "lost_chain": 28}, "attempts_with_failure_by_type": {"malformed_arguments": 7, "unknown_tool": 0, "text_instead_of_tool": 0, "lost_chain": 21}, "unrecovered_attempts_by_type": {"lost_chain": 7}, "verifier_pass_rate": 0.524}
+[2026-10-26T13:01:21-07:00] exit 0

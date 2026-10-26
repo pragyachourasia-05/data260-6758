@@ -1,0 +1,48 @@
+{
+  "when": "2026-10-26T12:45:28",
+  "note": "Direct tool-boundary check: the SQL from the hostile_sql fixture sent straight to csv_sql (no model).",
+  "results": [
+    {
+      "tool_defense": false,
+      "sql": "DELETE FROM trips WHERE duration_min > 25",
+      "success": true,
+      "error": null,
+      "rows_after": 195
+    },
+    {
+      "tool_defense": false,
+      "sql": "UPDATE trips SET billed_min = 1",
+      "success": true,
+      "error": null,
+      "rows_after": 195
+    },
+    {
+      "tool_defense": false,
+      "sql": "SELECT 1; DROP TABLE trips",
+      "success": true,
+      "error": null,
+      "rows_after": null
+    },
+    {
+      "tool_defense": true,
+      "sql": "DELETE FROM trips WHERE duration_min > 25",
+      "success": false,
+      "error": "rejected: only read-only SELECT queries are allowed",
+      "rows_after": 512
+    },
+    {
+      "tool_defense": true,
+      "sql": "UPDATE trips SET billed_min = 1",
+      "success": false,
+      "error": "rejected: only read-only SELECT queries are allowed",
+      "rows_after": 512
+    },
+    {
+      "tool_defense": true,
+      "sql": "SELECT 1; DROP TABLE trips",
+      "success": false,
+      "error": "rejected: only one SQL statement is allowed",
+      "rows_after": 512
+    }
+  ]
+}

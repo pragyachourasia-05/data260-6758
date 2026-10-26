@@ -1,0 +1,75 @@
+[2026-10-25T18:08:40-07:00] python backend/build_hw07_scenarios.py
+202005:   44019 classic trips -> payperuse +8
+202006:   49006 classic trips -> payperuse +8
+202007:   48949 classic trips -> payperuse +8
+202008:   48276 classic trips -> payperuse +8
+202009:   43320 classic trips -> payperuse +8
+202010:   49268 classic trips -> payperuse +8
+202011:   38999 classic trips -> payperuse +8
+202012:   31712 classic trips -> payperuse +8
+202101:   32179 classic trips -> payperuse +8
+202102:   32715 classic trips -> payperuse +8
+202103:   38689 classic trips -> payperuse +8
+202104:   42064 classic trips -> payperuse +8
+202105:   49111 classic trips -> payperuse +8
+202106:   58879 classic trips -> payperuse +8
+202107:   66019 classic trips -> payperuse +8
+202108:   68425 classic trips -> payperuse +8
+202109:   69920 classic trips -> payperuse +8
+202110:   78805 classic trips -> payperuse +8
+202111:   59607 classic trips -> payperuse +8
+202112:   42544 classic trips -> payperuse +8
+202201:   51478 classic trips -> payperuse +8
+202202:   62551 classic trips -> payperuse +8
+202203:   77438 classic trips -> payperuse +8
+202204:   79967 classic trips -> payperuse +8
+202205:   85454 classic trips -> payperuse +8
+202206:   88515 classic trips -> payperuse +8
+202207:   81907 classic trips -> payperuse +8
+202208:   91332 classic trips -> payperuse +8
+202209:   94184 classic trips -> payperuse +8
+202210:   93208 classic trips -> payperuse +8
+202212:   48005 classic trips -> payperuse +8
+202301:   58470 classic trips -> payperuse +8
+202302:   58369 classic trips -> payperuse +8
+202303:   61887 classic trips -> payperuse +8
+202304:   72568 classic trips -> payperuse +8
+202305:   68939 classic trips -> payperuse +8
+202306:   68536 classic trips -> payperuse +8
+202307:   69960 classic trips -> payperuse +8
+202308:   78140 classic trips -> payperuse +8
+202309:   74289 classic trips -> payperuse +8
+202310:   77486 classic trips -> payperuse +8
+202311:   92483 classic trips -> payperuse +8
+202312:   43738 classic trips -> payperuse +8
+202401:   47422 classic trips -> payperuse +8
+202402:   50197 classic trips -> payperuse +8
+202403:   59395 classic trips -> payperuse +8
+202404:   60295 classic trips -> payperuse +8
+202405:   61019 classic trips -> payperuse +8
+202406:   64396 classic trips -> payperuse +8
+202407:   68960 classic trips -> payperuse +8
+202408:   72849 classic trips -> payperuse +8
+202409:   74553 classic trips -> payperuse +8
+202410:   82210 classic trips -> payperuse +8
+202411:   52263 classic trips -> payperuse +8
+202412:   42883 classic trips -> payperuse +8
+202501:   61676 classic trips -> payperuse +8, membership +32
+202502:   54254 classic trips -> payperuse +8, membership +32
+202504:   75702 classic trips -> payperuse +8, membership +32
+202505:   82067 classic trips -> payperuse +8, membership +32
+202506:   81860 classic trips -> payperuse +8, membership +32
+202507:   87843 classic trips -> payperuse +8, membership +32
+202508:   95445 classic trips -> payperuse +8, membership +32
+202509:   93955 classic trips -> payperuse +8, membership +32
+202511:   76231 classic trips -> payperuse +8, membership +32
+202512:   53567 classic trips -> payperuse +8, membership +32
+202602:   73983 classic trips -> payperuse +8, membership +32
+202603:  111808 classic trips -> payperuse +8, membership +32
+202605:   88348 classic trips -> payperuse +8, membership +32
+202606:   98254 classic trips -> payperuse +8, membership +32
+202607:  107057 classic trips -> payperuse +8, membership +32
+202608:  113682 classic trips -> payperuse +8, membership +32
+wrote reports\hw07\cases\bikeshare\scenario_payperuse.csv: 568 rows over 71 months
+wrote reports\hw07\cases\bikeshare\scenario_membership.csv: 512 rows over 16 months
+[2026-10-25T18:13:07-07:00] exit 0

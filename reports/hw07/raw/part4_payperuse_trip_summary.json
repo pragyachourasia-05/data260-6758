@@ -1,0 +1,810 @@
+{
+  "scenario": "payperuse",
+  "built_at": "2026-10-26T01:13:07+00:00",
+  "source_bucket": "https://s3.amazonaws.com/baywheels-data",
+  "seed": 6758,
+  "rule": {
+    "first": "202005",
+    "last": "202608",
+    "per_month": 8,
+    "min": 3,
+    "max": 12
+  },
+  "rows": 568,
+  "months": 71,
+  "first_trip": "2020-05-04 00:00:19",
+  "last_trip": "2026-08-31 08:36:54.596000",
+  "minutes": {
+    "mean": 7.15,
+    "median": 6.94,
+    "min": 3.02,
+    "max": 11.99
+  },
+  "rides_over_45_min": 0,
+  "csv_sha256": "b8cb8f90d88d283f9db6812edc175de23756e279e187114b17a9b8e5281c3bf0",
+  "per_month": {
+    "2020-05": {
+      "rides": 8,
+      "avg_min": 8.31
+    },
+    "2020-06": {
+      "rides": 8,
+      "avg_min": 7.76
+    },
+    "2020-07": {
+      "rides": 8,
+      "avg_min": 8.47
+    },
+    "2020-08": {
+      "rides": 8,
+      "avg_min": 7.53
+    },
+    "2020-09": {
+      "rides": 8,
+      "avg_min": 7.71
+    },
+    "2020-10": {
+      "rides": 8,
+      "avg_min": 8.56
+    },
+    "2020-11": {
+      "rides": 8,
+      "avg_min": 6.39
+    },
+    "2020-12": {
+      "rides": 8,
+      "avg_min": 6.74
+    },
+    "2021-01": {
+      "rides": 8,
+      "avg_min": 8.2
+    },
+    "2021-02": {
+      "rides": 8,
+      "avg_min": 7.47
+    },
+    "2021-03": {
+      "rides": 8,
+      "avg_min": 6.95
+    },
+    "2021-04": {
+      "rides": 8,
+      "avg_min": 6.05
+    },
+    "2021-05": {
+      "rides": 8,
+      "avg_min": 6.83
+    },
+    "2021-06": {
+      "rides": 8,
+      "avg_min": 5.89
+    },
+    "2021-07": {
+      "rides": 8,
+      "avg_min": 7.88
+    },
+    "2021-08": {
+      "rides": 8,
+      "avg_min": 7.26
+    },
+    "2021-09": {
+      "rides": 8,
+      "avg_min": 7.18
+    },
+    "2021-10": {
+      "rides": 8,
+      "avg_min": 8.29
+    },
+    "2021-11": {
+      "rides": 8,
+      "avg_min": 6.07
+    },
+    "2021-12": {
+      "rides": 8,
+      "avg_min": 8.06
+    },
+    "2022-01": {
+      "rides": 8,
+      "avg_min": 6.85
+    },
+    "2022-02": {
+      "rides": 8,
+      "avg_min": 9.21
+    },
+    "2022-03": {
+      "rides": 8,
+      "avg_min": 6.5
+    },
+    "2022-04": {
+      "rides": 8,
+      "avg_min": 7.2
+    },
+    "2022-05": {
+      "rides": 8,
+      "avg_min": 7.41
+    },
+    "2022-06": {
+      "rides": 8,
+      "avg_min": 7.55
+    },
+    "2022-07": {
+      "rides": 8,
+      "avg_min": 7.97
+    },
+    "2022-08": {
+      "rides": 8,
+      "avg_min": 7.44
+    },
+    "2022-09": {
+      "rides": 8,
+      "avg_min": 7.52
+    },
+    "2022-10": {
+      "rides": 8,
+      "avg_min": 7.51
+    },
+    "2022-12": {
+      "rides": 8,
+      "avg_min": 9.02
+    },
+    "2023-01": {
+      "rides": 8,
+      "avg_min": 8.8
+    },
+    "2023-02": {
+      "rides": 8,
+      "avg_min": 7.74
+    },
+    "2023-03": {
+      "rides": 8,
+      "avg_min": 6.99
+    },
+    "2023-04": {
+      "rides": 8,
+      "avg_min": 5.94
+    },
+    "2023-05": {
+      "rides": 8,
+      "avg_min": 5.91
+    },
+    "2023-06": {
+      "rides": 8,
+      "avg_min": 7.57
+    },
+    "2023-07": {
+      "rides": 8,
+      "avg_min": 4.83
+    },
+    "2023-08": {
+      "rides": 8,
+      "avg_min": 7.19
+    },
+    "2023-09": {
+      "rides": 8,
+      "avg_min": 6.73
+    },
+    "2023-10": {
+      "rides": 8,
+      "avg_min": 7.69
+    },
+    "2023-11": {
+      "rides": 8,
+      "avg_min": 7.52
+    },
+    "2023-12": {
+      "rides": 8,
+      "avg_min": 5.56
+    },
+    "2024-01": {
+      "rides": 8,
+      "avg_min": 7.61
+    },
+    "2024-02": {
+      "rides": 8,
+      "avg_min": 7.2
+    },
+    "2024-03": {
+      "rides": 8,
+      "avg_min": 5.6
+    },
+    "2024-04": {
+      "rides": 8,
+      "avg_min": 7.03
+    },
+    "2024-05": {
+      "rides": 8,
+      "avg_min": 6.09
+    },
+    "2024-06": {
+      "rides": 8,
+      "avg_min": 5.51
+    },
+    "2024-07": {
+      "rides": 8,
+      "avg_min": 7.15
+    },
+    "2024-08": {
+      "rides": 8,
+      "avg_min": 6.4
+    },
+    "2024-09": {
+      "rides": 8,
+      "avg_min": 7.16
+    },
+    "2024-10": {
+      "rides": 8,
+      "avg_min": 8.02
+    },
+    "2024-11": {
+      "rides": 8,
+      "avg_min": 6.37
+    },
+    "2024-12": {
+      "rides": 8,
+      "avg_min": 6.77
+    },
+    "2025-01": {
+      "rides": 8,
+      "avg_min": 6.23
+    },
+    "2025-02": {
+      "rides": 8,
+      "avg_min": 7.58
+    },
+    "2025-04": {
+      "rides": 8,
+      "avg_min": 6.34
+    },
+    "2025-05": {
+      "rides": 8,
+      "avg_min": 8.17
+    },
+    "2025-06": {
+      "rides": 8,
+      "avg_min": 6.44
+    },
+    "2025-07": {
+      "rides": 8,
+      "avg_min": 6.84
+    },
+    "2025-08": {
+      "rides": 8,
+      "avg_min": 7.81
+    },
+    "2025-09": {
+      "rides": 8,
+      "avg_min": 7.71
+    },
+    "2025-11": {
+      "rides": 8,
+      "avg_min": 5.77
+    },
+    "2025-12": {
+      "rides": 8,
+      "avg_min": 6.26
+    },
+    "2026-02": {
+      "rides": 8,
+      "avg_min": 8.05
+    },
+    "2026-03": {
+      "rides": 8,
+      "avg_min": 7.76
+    },
+    "2026-05": {
+      "rides": 8,
+      "avg_min": 6.66
+    },
+    "2026-06": {
+      "rides": 8,
+      "avg_min": 7.3
+    },
+    "2026-07": {
+      "rides": 8,
+      "avg_min": 6.77
+    },
+    "2026-08": {
+      "rides": 8,
+      "avg_min": 7.05
+    }
+  },
+  "source_files": [
+    {
+      "month": "202005",
+      "scenario": "payperuse",
+      "file": "202005-baywheels-tripdata.csv.zip",
+      "pool": 14064,
+      "sampled": 8
+    },
+    {
+      "month": "202006",
+      "scenario": "payperuse",
+      "file": "202006-baywheels-tripdata.csv.zip",
+      "pool": 17177,
+      "sampled": 8
+    },
+    {
+      "month": "202007",
+      "scenario": "payperuse",
+      "file": "202007-baywheels-tripdata.csv.zip",
+      "pool": 17745,
+      "sampled": 8
+    },
+    {
+      "month": "202008",
+      "scenario": "payperuse",
+      "file": "202008-baywheels-tripdata.csv.zip",
+      "pool": 18642,
+      "sampled": 8
+    },
+    {
+      "month": "202009",
+      "scenario": "payperuse",
+      "file": "202009-baywheels-tripdata.csv.zip",
+      "pool": 17529,
+      "sampled": 8
+    },
+    {
+      "month": "202010",
+      "scenario": "payperuse",
+      "file": "202010-baywheels-tripdata.csv.zip",
+      "pool": 20877,
+      "sampled": 8
+    },
+    {
+      "month": "202011",
+      "scenario": "payperuse",
+      "file": "202011-baywheels-tripdata.csv.zip",
+      "pool": 17135,
+      "sampled": 8
+    },
+    {
+      "month": "202012",
+      "scenario": "payperuse",
+      "file": "202012-baywheels-tripdata.csv.zip",
+      "pool": 13871,
+      "sampled": 8
+    },
+    {
+      "month": "202101",
+      "scenario": "payperuse",
+      "file": "202101-baywheels-tripdata.csv.zip",
+      "pool": 13351,
+      "sampled": 8
+    },
+    {
+      "month": "202102",
+      "scenario": "payperuse",
+      "file": "202102-baywheels-tripdata.csv.zip",
+      "pool": 13861,
+      "sampled": 8
+    },
+    {
+      "month": "202103",
+      "scenario": "payperuse",
+      "file": "202103-baywheels-tripdata.csv.zip",
+      "pool": 16708,
+      "sampled": 8
+    },
+    {
+      "month": "202104",
+      "scenario": "payperuse",
+      "file": "202104-baywheels-tripdata.csv.zip",
+      "pool": 18799,
+      "sampled": 8
+    },
+    {
+      "month": "202105",
+      "scenario": "payperuse",
+      "file": "202105-baywheels-tripdata.csv.zip",
+      "pool": 21350,
+      "sampled": 8
+    },
+    {
+      "month": "202106",
+      "scenario": "payperuse",
+      "file": "202106-baywheels-tripdata.csv.zip",
+      "pool": 26223,
+      "sampled": 8
+    },
+    {
+      "month": "202107",
+      "scenario": "payperuse",
+      "file": "202107-baywheels-tripdata.csv.zip",
+      "pool": 29786,
+      "sampled": 8
+    },
+    {
+      "month": "202108",
+      "scenario": "payperuse",
+      "file": "202108-baywheels-tripdata.csv.zip",
+      "pool": 32099,
+      "sampled": 8
+    },
+    {
+      "month": "202109",
+      "scenario": "payperuse",
+      "file": "202109-baywheels-tripdata.csv.zip",
+      "pool": 33598,
+      "sampled": 8
+    },
+    {
+      "month": "202110",
+      "scenario": "payperuse",
+      "file": "202110-baywheels-tripdata.csv.zip",
+      "pool": 37260,
+      "sampled": 8
+    },
+    {
+      "month": "202111",
+      "scenario": "payperuse",
+      "file": "202111-baywheels-tripdata.csv.zip",
+      "pool": 29494,
+      "sampled": 8
+    },
+    {
+      "month": "202112",
+      "scenario": "payperuse",
+      "file": "202112-baywheels-tripdata.csv.zip",
+      "pool": 21628,
+      "sampled": 8
+    },
+    {
+      "month": "202201",
+      "scenario": "payperuse",
+      "file": "202201-baywheels-tripdata.csv.zip",
+      "pool": 24422,
+      "sampled": 8
+    },
+    {
+      "month": "202202",
+      "scenario": "payperuse",
+      "file": "202202-baywheels-tripdata.csv.zip",
+      "pool": 30639,
+      "sampled": 8
+    },
+    {
+      "month": "202203",
+      "scenario": "payperuse",
+      "file": "202203-baywheels-tripdata.csv.zip",
+      "pool": 38810,
+      "sampled": 8
+    },
+    {
+      "month": "202204",
+      "scenario": "payperuse",
+      "file": "202204-baywheels-tripdata.csv.zip",
+      "pool": 39158,
+      "sampled": 8
+    },
+    {
+      "month": "202205",
+      "scenario": "payperuse",
+      "file": "202205-baywheels-tripdata.csv.zip",
+      "pool": 41130,
+      "sampled": 8
+    },
+    {
+      "month": "202206",
+      "scenario": "payperuse",
+      "file": "202206-baywheels-tripdata.csv.zip",
+      "pool": 42587,
+      "sampled": 8
+    },
+    {
+      "month": "202207",
+      "scenario": "payperuse",
+      "file": "202207-baywheels-tripdata.csv.zip",
+      "pool": 40394,
+      "sampled": 8
+    },
+    {
+      "month": "202208",
+      "scenario": "payperuse",
+      "file": "202208-baywheels-tripdata.csv.zip",
+      "pool": 45221,
+      "sampled": 8
+    },
+    {
+      "month": "202209",
+      "scenario": "payperuse",
+      "file": "202209-baywheels-tripdata.csv.zip",
+      "pool": 47215,
+      "sampled": 8
+    },
+    {
+      "month": "202210",
+      "scenario": "payperuse",
+      "file": "202210-baywheels-tripdata.csv.zip",
+      "pool": 47299,
+      "sampled": 8
+    },
+    {
+      "month": "202212",
+      "scenario": "payperuse",
+      "file": "202212-baywheels-tripdata.csv.zip",
+      "pool": 25781,
+      "sampled": 8
+    },
+    {
+      "month": "202301",
+      "scenario": "payperuse",
+      "file": "202301-baywheels-tripdata.csv.zip",
+      "pool": 30630,
+      "sampled": 8
+    },
+    {
+      "month": "202302",
+      "scenario": "payperuse",
+      "file": "202302-baywheels-tripdata.csv.zip",
+      "pool": 31218,
+      "sampled": 8
+    },
+    {
+      "month": "202303",
+      "scenario": "payperuse",
+      "file": "202303-baywheels-tripdata.csv.zip",
+      "pool": 33060,
+      "sampled": 8
+    },
+    {
+      "month": "202304",
+      "scenario": "payperuse",
+      "file": "202304-baywheels-tripdata.csv.zip",
+      "pool": 37200,
+      "sampled": 8
+    },
+    {
+      "month": "202305",
+      "scenario": "payperuse",
+      "file": "202305-baywheels-tripdata.csv.zip",
+      "pool": 35728,
+      "sampled": 8
+    },
+    {
+      "month": "202306",
+      "scenario": "payperuse",
+      "file": "202306-baywheels-tripdata.csv.zip",
+      "pool": 34681,
+      "sampled": 8
+    },
+    {
+      "month": "202307",
+      "scenario": "payperuse",
+      "file": "202307-baywheels-tripdata.csv.zip",
+      "pool": 35307,
+      "sampled": 8
+    },
+    {
+      "month": "202308",
+      "scenario": "payperuse",
+      "file": "202308-baywheels-tripdata.csv.zip",
+      "pool": 39360,
+      "sampled": 8
+    },
+    {
+      "month": "202309",
+      "scenario": "payperuse",
+      "file": "202309-baywheels-tripdata.csv.zip",
+      "pool": 37379,
+      "sampled": 8
+    },
+    {
+      "month": "202310",
+      "scenario": "payperuse",
+      "file": "202310-baywheels-tripdata.csv.zip",
+      "pool": 39986,
+      "sampled": 8
+    },
+    {
+      "month": "202311",
+      "scenario": "payperuse",
+      "file": "202311-baywheels-tripdata.csv.zip",
+      "pool": 50038,
+      "sampled": 8
+    },
+    {
+      "month": "202312",
+      "scenario": "payperuse",
+      "file": "202312-baywheels-tripdata.csv.zip",
+      "pool": 23864,
+      "sampled": 8
+    },
+    {
+      "month": "202401",
+      "scenario": "payperuse",
+      "file": "202401-baywheels-tripdata.csv.zip",
+      "pool": 25056,
+      "sampled": 8
+    },
+    {
+      "month": "202402",
+      "scenario": "payperuse",
+      "file": "202402-baywheels-tripdata.csv.zip",
+      "pool": 26985,
+      "sampled": 8
+    },
+    {
+      "month": "202403",
+      "scenario": "payperuse",
+      "file": "202403-baywheels-tripdata.csv.zip",
+      "pool": 31060,
+      "sampled": 8
+    },
+    {
+      "month": "202404",
+      "scenario": "payperuse",
+      "file": "202404-baywheels-tripdata.csv.zip",
+      "pool": 31600,
+      "sampled": 8
+    },
+    {
+      "month": "202405",
+      "scenario": "payperuse",
+      "file": "202405-baywheels-tripdata.csv.zip",
+      "pool": 31436,
+      "sampled": 8
+    },
+    {
+      "month": "202406",
+      "scenario": "payperuse",
+      "file": "202406-baywheels-tripdata.csv.zip",
+      "pool": 33597,
+      "sampled": 8
+    },
+    {
+      "month": "202407",
+      "scenario": "payperuse",
+      "file": "202407-baywheels-tripdata.csv.zip",
+      "pool": 36498,
+      "sampled": 8
+    },
+    {
+      "month": "202408",
+      "scenario": "payperuse",
+      "file": "202408-baywheels-tripdata.csv.zip",
+      "pool": 38667,
+      "sampled": 8
+    },
+    {
+      "month": "202409",
+      "scenario": "payperuse",
+      "file": "202409-baywheels-tripdata.csv.zip",
+      "pool": 40020,
+      "sampled": 8
+    },
+    {
+      "month": "202410",
+      "scenario": "payperuse",
+      "file": "202410-baywheels-tripdata.csv.zip",
+      "pool": 44783,
+      "sampled": 8
+    },
+    {
+      "month": "202411",
+      "scenario": "payperuse",
+      "file": "202411-baywheels-tripdata.csv.zip",
+      "pool": 28602,
+      "sampled": 8
+    },
+    {
+      "month": "202412",
+      "scenario": "payperuse",
+      "file": "202412-baywheels-tripdata.csv.zip",
+      "pool": 23536,
+      "sampled": 8
+    },
+    {
+      "month": "202501",
+      "scenario": "payperuse",
+      "file": "202501-baywheels-tripdata.csv.zip",
+      "pool": 33794,
+      "sampled": 8
+    },
+    {
+      "month": "202502",
+      "scenario": "payperuse",
+      "file": "202502-baywheels-tripdata.csv.zip",
+      "pool": 29897,
+      "sampled": 8
+    },
+    {
+      "month": "202504",
+      "scenario": "payperuse",
+      "file": "202504-baywheels-tripdata.csv.zip",
+      "pool": 41265,
+      "sampled": 8
+    },
+    {
+      "month": "202505",
+      "scenario": "payperuse",
+      "file": "202505-baywheels-tripdata.csv.zip",
+      "pool": 43372,
+      "sampled": 8
+    },
+    {
+      "month": "202506",
+      "scenario": "payperuse",
+      "file": "202506-baywheels-tripdata.csv.zip",
+      "pool": 43294,
+      "sampled": 8
+    },
+    {
+      "month": "202507",
+      "scenario": "payperuse",
+      "file": "202507-baywheels-tripdata.csv.zip",
+      "pool": 47479,
+      "sampled": 8
+    },
+    {
+      "month": "202508",
+      "scenario": "payperuse",
+      "file": "202508-baywheels-tripdata.csv.zip",
+      "pool": 50606,
+      "sampled": 8
+    },
+    {
+      "month": "202509",
+      "scenario": "payperuse",
+      "file": "202509-baywheels-tripdata.csv.zip",
+      "pool": 50177,
+      "sampled": 8
+    },
+    {
+      "month": "202511",
+      "scenario": "payperuse",
+      "file": "202511-baywheels-tripdata.csv.zip",
+      "pool": 41434,
+      "sampled": 8
+    },
+    {
+      "month": "202512",
+      "scenario": "payperuse",
+      "file": "202512-baywheels-tripdata.csv.zip",
+      "pool": 30485,
+      "sampled": 8
+    },
+    {
+      "month": "202602",
+      "scenario": "payperuse",
+      "file": "202602-baywheels-tripdata.csv.zip",
+      "pool": 40944,
+      "sampled": 8
+    },
+    {
+      "month": "202603",
+      "scenario": "payperuse",
+      "file": "202603-baywheels-tripdata.csv.zip",
+      "pool": 60625,
+      "sampled": 8
+    },
+    {
+      "month": "202605",
+      "scenario": "payperuse",
+      "file": "202605-baywheels-tripdata.csv.zip",
+      "pool": 47656,
+      "sampled": 8
+    },
+    {
+      "month": "202606",
+      "scenario": "payperuse",
+      "file": "202606-baywheels-tripdata.csv.zip",
+      "pool": 53489,
+      "sampled": 8
+    },
+    {
+      "month": "202607",
+      "scenario": "payperuse",
+      "file": "202607-baywheels-tripdata.csv.zip",
+      "pool": 57612,
+      "sampled": 8
+    },
+    {
+      "month": "202608",
+      "scenario": "payperuse",
+      "file": "202608-baywheels-tripdata.csv.zip",
+      "pool": 63012,
+      "sampled": 8
+    }
+  ]
+}

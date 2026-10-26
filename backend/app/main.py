@@ -19,6 +19,7 @@ from .database import Base, engine, get_db
 from .hw5_entities import router as hw5_router
 from .mongo_db import ping as mongo_ping
 from .nplus1 import router as nplus1_router
+from .routes_bikeshare import router as bikeshare_router
 from .routes_listings_doc import router as listings_doc_router
 from .routes_memory import router as memory_router
 
@@ -32,6 +33,7 @@ app = FastAPI(title="Rental Housing Listings API (HW4-HW7)")
 app.include_router(nplus1_router)
 app.include_router(listings_doc_router)
 app.include_router(memory_router)
+app.include_router(bikeshare_router)
 
 
 @app.middleware("http")

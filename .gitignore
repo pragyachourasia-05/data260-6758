@@ -12,3 +12,4 @@ force_issue_output.txt
 **/.venv/
 node_modules/
 **/node_modules/
+backend/uploads/

@@ -1,7 +1,6 @@
-import os
 from typing import Any, Dict, List, Optional
 
-from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
 from langchain_ollama import ChatOllama
 
 
@@ -42,10 +41,14 @@ class ModelClient:
                 converted.append(SystemMessage(content=content))
             elif role == "user":
                 converted.append(HumanMessage(content=content))
+            elif role == "tool":
+                # HW7: tool results go back to the model as tool-role messages.
+                converted.append(ToolMessage(content=content, tool_call_id=message.get("tool_call_id", "")))
             else:
-                converted.append(AIMessage(content=content))
+                converted.append(AIMessage(content=content, tool_calls=message.get("tool_calls") or []))
 
-        response = self.llm.invoke(converted)
+        llm = self.llm.bind_tools(tools) if tools else self.llm
+        response = llm.invoke(converted)
         metadata = response.response_metadata or {}
 
         input_tokens = int(metadata.get("prompt_eval_count", 0) or 0)
@@ -67,6 +70,15 @@ class ModelClient:
             "output_tokens": output_tokens,
             "total_tokens": total_tokens,
             "cached_input_tokens": int(metadata.get("prompt_eval_cached_count", 0) or 0),
+            # HW7: parsed tool calls [{name, args, id}] and ones whose arguments failed to parse
+            "tool_calls": [
+                {"name": c["name"], "args": c["args"], "id": c.get("id") or ""}
+                for c in (getattr(response, "tool_calls", None) or [])
+            ],
+            "invalid_tool_calls": [
+                {"name": c.get("name"), "args": c.get("args"), "error": c.get("error")}
+                for c in (getattr(response, "invalid_tool_calls", None) or [])
+            ],
         }
 
     def stats(self, conversation: List[Dict[str, str]]) -> Dict[str, int]:

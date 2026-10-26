@@ -1,0 +1,9 @@
+{
+  "scenario": "membership",
+  "run_id": "20261026-092251-19aa",
+  "source_url": "https://www.lyft.com/bikes/bay-wheels/pricing",
+  "accessed_at": "2026-10-26T16:25:34+00:00",
+  "sha256_of_snapshot_text": "9a9de917eff0429e74ad91ffd914c3230f1dfa61d7a49c7825c11000e4ca797f",
+  "sha256_of_raw_html": "0d5692754d63254dd454961d558ecb0ad8dff11cf3ff5110dd0335e4f6a1184b",
+  "snapshot_file": "part4_pricing_snapshot_membership.txt"
+}

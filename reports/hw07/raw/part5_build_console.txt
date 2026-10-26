@@ -1,0 +1,5 @@
+[2026-10-26T11:11:06-07:00] python backend/run_hw07_attacks.py build
+wrote reports\hw07\cases\bikeshare/hostile_override.html
+wrote reports\hw07\cases\bikeshare/hostile_sql.html
+wrote reports\hw07\cases\bikeshare/hostile_exfil.html
+[2026-10-26T11:11:17-07:00] exit 0

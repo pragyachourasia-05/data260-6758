@@ -1,0 +1,142 @@
+{
+  "settings": {
+    "model": "llama3.2:3b",
+    "temperature": 0.7,
+    "max_steps": 8,
+    "max_repairs": 2
+  },
+  "runs": [
+    {
+      "case": "A",
+      "prompt": "Search for Apartment listings, then look up the full details of the first result and tell me its address, rent and owner.",
+      "final": "The address of the apartment is 100 Research Avenue, San Jose, CA. The rent is $1800. The owner's name is Pragya Chourasia, and their email is owner1@example.com.",
+      "stop_reason": "completed",
+      "tool_calls": 2,
+      "repairs": 1,
+      "failures": [
+        {
+          "type": "lost_chain",
+          "problem": "answered in text but the task still needs: listing_detail",
+          "step": 2
+        }
+      ],
+      "tokens": 2162,
+      "latency_ms": 37507.6,
+      "trace": [
+        {
+          "tool": "search_listings",
+          "input": {
+            "limit": 50,
+            "query": "Apartment"
+          },
+          "result": "{\"data\": [{\"address\": \"100 Research Avenue, San Jose, CA\", \"available_units\": 1, \"category\": \"Apartment\", \"id\": 1, \"listing_code\": \"L-6758-001\", \"monthly_rent\": 1800, \"owner_id\": 1}, {\"address\": \"102 Research Avenue, San Jose, CA\", \"available_units\": 0, \"category\": \"Apartment\", \"id\": 3, \"listing_code\": \"L-6758-003\", \"monthly_rent\": 2100, \"owner_id\": 2}], \"error\": null, \"ok\": true}"
+        },
+        {
+          "tool": "listing_detail",
+          "input": {
+            "listing_id": 1
+          },
+          "result": "{\"data\": {\"address\": \"100 Research Avenue, San Jose, CA\", \"available_units\": 1, \"category\": \"Apartment\", \"id\": 1, \"listing_code\": \"L-6758-001\", \"monthly_rent\": 1800, \"owner\": {\"email\": \"owner1@example.com\", \"first_name\": \"Pragya\", \"id\": 1, \"last_name\": \"Chourasia\"}, \"owner_id\": 1}, \"error\": null, \"ok\": true}"
+        }
+      ]
+    },
+    {
+      "case": "B",
+      "prompt": "What is the average monthly rent of Apartment listings? Then find one Apartment listing that supports the answer.",
+      "final": "The search for Apartment listings returned 2 results. The average monthly rent of Apartment listings is $1950.00, as reported earlier. One Apartment listing that supports this answer is:\n\n* Listing ID: L-6758-001\n* Listing Title: not available\n* Address: 100 Research Avenue, San Jose, CA\n* Monthly Rent: $1800.00\n* Available Units: 1\n* Category: Apartment\n\nAnother Apartment listing that supports this answer is:\n\n* Listing ID: L-6758-003\n* Listing Title: not available\n* Address: 102 Research Avenue, San Jose, CA\n* Monthly Rent: $2100.00\n* Available Units: 0\n* Category: Apartment\n\nNote: The listing titles and owner IDs are not available as they are not provided by the tool.",
+      "stop_reason": "completed",
+      "tool_calls": 2,
+      "repairs": 1,
+      "failures": [
+        {
+          "type": "lost_chain",
+          "problem": "answered in text but the task still needs: search_listings",
+          "step": 2
+        }
+      ],
+      "tokens": 2100,
+      "latency_ms": 53590.7,
+      "trace": [
+        {
+          "tool": "listing_summary",
+          "input": {
+            "category": "Apartment"
+          },
+          "result": "{\"data\": {\"average_monthly_rent\": 1950.0, \"category\": \"Apartment\", \"count\": 2}, \"error\": null, \"ok\": true}"
+        },
+        {
+          "tool": "search_listings",
+          "input": {
+            "limit": 50,
+            "query": "Apartment"
+          },
+          "result": "{\"data\": [{\"address\": \"100 Research Avenue, San Jose, CA\", \"available_units\": 1, \"category\": \"Apartment\", \"id\": 1, \"listing_code\": \"L-6758-001\", \"monthly_rent\": 1800, \"owner_id\": 1}, {\"address\": \"102 Research Avenue, San Jose, CA\", \"available_units\": 0, \"category\": \"Apartment\", \"id\": 3, \"listing_code\": \"L-6758-003\", \"monthly_rent\": 2100, \"owner_id\": 2}], \"error\": null, \"ok\": true}"
+        }
+      ]
+    },
+    {
+      "case": "C",
+      "prompt": "Compare listing L-6758-001 and listing L-6758-002: search for them, look up the details of both, and say which one is cheaper.",
+      "final": "The error indicates that the listing_id 'L-6758-001' is a string, but the listing_detail tool expects an integer.\n\nI'll try searching again for the exact IDs as integers.\n\n{\"name\": \"listing_detail\", \"parameters\": {\"listing_id\": \"675801\"}}",
+      "stop_reason": "repair_failed",
+      "tool_calls": 1,
+      "repairs": 3,
+      "failures": [
+        {
+          "type": "lost_chain",
+          "problem": "answered in text but the task still needs: listing_detail",
+          "step": 2
+        },
+        {
+          "type": "malformed_arguments",
+          "problem": "listing_detail.listing_id must be of type integer, got str 'L-6758-001'",
+          "step": 3
+        },
+        {
+          "type": "lost_chain",
+          "problem": "answered in text but the task still needs: listing_detail",
+          "step": 4
+        }
+      ],
+      "tokens": 1844,
+      "latency_ms": 37876.8,
+      "trace": [
+        {
+          "tool": "search_listings",
+          "input": {
+            "limit": 50,
+            "query": "L-6758-001 L-6758-002"
+          },
+          "result": "{\"data\": [], \"error\": null, \"ok\": true}"
+        },
+        {
+          "tool": "listing_detail",
+          "input": {
+            "listing_id": "L-6758-001"
+          },
+          "result": "rejected before execution"
+        }
+      ]
+    },
+    {
+      "case": "E",
+      "prompt": "Show me the full details for listing id 9999.",
+      "final": "Since the listing with id 9999 was not found, I couldn't provide the full details for the non-existent listing.\n\nNote: I used the \"listing not found\" error response from the tool.",
+      "stop_reason": "completed",
+      "tool_calls": 1,
+      "repairs": 0,
+      "failures": [],
+      "tokens": 682,
+      "latency_ms": 11383.2,
+      "trace": [
+        {
+          "tool": "listing_detail",
+          "input": {
+            "listing_id": 9999
+          },
+          "result": "{\"data\": null, \"error\": \"listing not found\", \"ok\": false}"
+        }
+      ]
+    }
+  ]
+}
