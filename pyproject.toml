@@ -1,0 +1,16 @@
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["venv", "frontend", "reports", "AI", "code/web_application"]
+
+[tool.ruff.lint]
+# pycodestyle errors, pyflakes, import sorting, and a few bug-prone patterns
+select = ["E", "F", "I", "B"]
+ignore = ["E501"]  # long lines are left to review, not blocked
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "src"]
+
+[tool.ruff.lint.flake8-bugbear]
+# FastAPI dependency markers are meant to be called in argument defaults.
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query", "fastapi.Security", "fastapi.File", "fastapi.Form"]

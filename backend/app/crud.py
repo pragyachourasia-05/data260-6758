@@ -37,6 +37,8 @@ def verify_password(password: str, stored_hash: str) -> bool:
 
 def create_user(db: Session, payload: schema.UserCreate):
     user = models.User(
+        username=payload.username,
+        role="reader",  # self-registration never grants writer/moderator
         name=payload.name,
         email=str(payload.email),
         password_hash=hash_password(payload.password),
@@ -51,6 +53,14 @@ def get_user(db: Session, user_id: int):
     return (
         db.query(models.User)
         .filter(models.User.id == user_id)
+        .first()
+    )
+
+
+def get_user_by_username(db: Session, username: str):
+    return (
+        db.query(models.User)
+        .filter(models.User.username == username)
         .first()
     )
 

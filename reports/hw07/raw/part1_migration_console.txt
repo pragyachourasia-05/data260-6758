@@ -1,0 +1,16 @@
+[2026-10-25T11:42:22-07:00] python backend/migrate_hw07_users.py
+added column users.username
+added column users.role
+backfilled username for user id 1
+backfilled username for user id 2
+added unique index on users.username
+inserted reader1 (reader)
+inserted writer1 (writer)
+inserted moderator1 (moderator)
+
+users table now:
+  id=1   username=pragya_hw4_1           role=reader     password_hash=2519b83c59d6fe6a6e06...
+  id=2   username=pragya_hw4new_2        role=reader     password_hash=20724ae50d1d15be90fd...
+  id=4   username=reader1                role=reader     password_hash=0d94e3bfed9e452b6ca2...
+  id=5   username=writer1                role=writer     password_hash=04f2a2e2b459f4ece841...
+  id=6   username=moderator1             role=moderator  password_hash=2f2ba411a9af52feb62a...

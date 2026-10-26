@@ -12,3 +12,6 @@ pyyaml
 pytest
 numpy
 langchain-ollama
+PyJWT
+ruff
+pre-commit

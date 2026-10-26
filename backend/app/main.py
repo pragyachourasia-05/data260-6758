@@ -1,20 +1,26 @@
 import logging
 from pathlib import Path
 
-from fastapi import Depends, FastAPI, HTTPException, Request, Response
+from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from sqlalchemy.exc import IntegrityError, OperationalError
 from sqlalchemy.orm import Session
 
-from . import crud, models, schema
+from . import crud, schema
+from .auth_jwt import (
+    ACCESS_TOKEN_MINUTES,
+    MODERATOR_ONLY,
+    WRITER_OR_MODERATOR,
+    create_access_token,
+    get_current_claims,
+)
 from .database import Base, engine, get_db
-from .session_crud import create_session, delete_session, get_session
-from .nplus1 import router as nplus1_router
+from .hw5_entities import router as hw5_router
 from .mongo_db import ping as mongo_ping
+from .nplus1 import router as nplus1_router
 from .routes_listings_doc import router as listings_doc_router
 from .routes_memory import router as memory_router
-
 
 try:
     Base.metadata.create_all(bind=engine)
@@ -22,7 +28,7 @@ except OperationalError:
     # HW6 MongoDB routes do not need MySQL; keep them usable if it is down.
     logging.getLogger(__name__).warning("MySQL unavailable; relational routes will fail until it is up.")
 
-app = FastAPI(title="Rental Housing Listings API (HW4-HW6)")
+app = FastAPI(title="Rental Housing Listings API (HW4-HW7)")
 app.include_router(nplus1_router)
 app.include_router(listings_doc_router)
 app.include_router(memory_router)
@@ -49,29 +55,6 @@ app.add_middleware(
 )
 
 
-def require_session(
-    request: Request,
-    db: Session = Depends(get_db),
-):
-    token = request.cookies.get("session_id")
-
-    if not token:
-        raise HTTPException(
-            status_code=401,
-            detail="Login required",
-        )
-
-    session = get_session(db, token)
-
-    if not session:
-        raise HTTPException(
-            status_code=401,
-            detail="Session expired or invalid",
-        )
-
-    return session
-
-
 @app.get("/health")
 def health():
     return {
@@ -93,87 +76,60 @@ def register_user(
     payload: schema.UserCreate,
     db: Session = Depends(get_db),
 ):
+    """Self-registration always creates a reader; roles are assigned by the seed/migration."""
     try:
         return crud.create_user(db, payload)
     except IntegrityError:
         db.rollback()
         raise HTTPException(
             status_code=409,
-            detail="Email already exists",
-        )
+            detail="Username or email already exists",
+        ) from None
 
 
-@app.post("/auth/login")
+@app.post("/auth/login", response_model=schema.TokenOut)
 def login(
     payload: schema.LoginRequest,
-    response: Response,
     db: Session = Depends(get_db),
 ):
-    user = crud.get_user_by_email(db, str(payload.email))
+    """HW7: verify the hashed password from MySQL, then issue a JWT access token."""
+    user = crud.get_user_by_username(db, payload.username)
 
-    if not user or not crud.verify_password(
-        payload.password,
-        user.password_hash,
-    ):
+    if not user or not crud.verify_password(payload.password, user.password_hash):
         raise HTTPException(
             status_code=401,
-            detail="Invalid email or password",
+            detail="Invalid username or password",
+            headers={"WWW-Authenticate": "Bearer"},
         )
 
-    session = create_session(db, user.id)
-
-    response.set_cookie(
-        key="session_id",
-        value=session.id,
-        httponly=True,
-        samesite="lax",
-        secure=False,
-        max_age=30 * 60,
-    )
-
     return {
-        "message": "logged in",
-        "user_id": user.id,
-        "email": user.email,
+        "access_token": create_access_token(user.username, user.role),
+        "token_type": "bearer",
+        "expires_in": ACCESS_TOKEN_MINUTES * 60,
+        "role": user.role,
     }
 
 
 @app.get("/auth/me")
 def current_user(
-    session=Depends(require_session),
+    claims: dict = Depends(get_current_claims),
     db: Session = Depends(get_db),
 ):
-    user = crud.get_user(db, session.user_id)
+    user = crud.get_user_by_username(db, claims["sub"])
 
     if not user:
         raise HTTPException(
             status_code=401,
             detail="User not found",
+            headers={"WWW-Authenticate": "Bearer"},
         )
 
     return {
-        "logged_in": True,
-        "user_id": user.id,
-        "email": user.email,
+        "id": user.id,
+        "username": user.username,
+        "role": user.role,
         "name": user.name,
-    }
-
-
-@app.post("/auth/logout")
-def logout(
-    request: Request,
-    response: Response,
-    db: Session = Depends(get_db),
-):
-    token = request.cookies.get("session_id")
-
-    if token:
-        delete_session(db, token)
-
-    response.delete_cookie("session_id")
-
-    return {
-        "message": "logged out",
+        "token_expires": claims["exp"],
     }
 
 
@@ -182,7 +138,7 @@ def logout(
     response_model=list[schema.ListingOut],
 )
 def list_listings(
-    _session=Depends(require_session),
+    _claims: dict = Depends(get_current_claims),
     db: Session = Depends(get_db),
 ):
     return crud.get_listings(db)
@@ -194,7 +150,7 @@ def list_listings(
 )
 def get_listing(
     listing_id: int,
-    _session=Depends(require_session),
+    _claims: dict = Depends(get_current_claims),
     db: Session = Depends(get_db),
 ):
     listing = crud.get_listing(db, listing_id)
@@ -215,7 +171,7 @@ def get_listing(
 )
 def create_listing(
     payload: schema.ListingCreate,
-    _session=Depends(require_session),
+    _claims: dict = Depends(WRITER_OR_MODERATOR),
     db: Session = Depends(get_db),
 ):
     return crud.create_listing(db, payload)
@@ -228,7 +184,7 @@ def create_listing(
 def update_listing(
     listing_id: int,
     payload: schema.ListingUpdate,
-    _session=Depends(require_session),
+    _claims: dict = Depends(WRITER_OR_MODERATOR),
     db: Session = Depends(get_db),
 ):
     listing = crud.update_listing(db, listing_id, payload)
@@ -248,7 +204,7 @@ def update_listing(
 )
 def delete_listing(
     listing_id: int,
-    _session=Depends(require_session),
+    _claims: dict = Depends(MODERATOR_ONLY),
     db: Session = Depends(get_db),
 ):
     listing = crud.delete_listing(db, listing_id)
@@ -269,7 +225,7 @@ def delete_listing(
 )
 def create_listing_detail(
     payload: schema.RelatedDetailCreate,
-    _session=Depends(require_session),
+    _claims: dict = Depends(WRITER_OR_MODERATOR),
     db: Session = Depends(get_db),
 ):
     listing = crud.get_listing(db, payload.listing_id)
@@ -287,7 +243,7 @@ def create_listing_detail(
     response_model=list[schema.ListingDetailOut],
 )
 def list_listing_details(
-    _session=Depends(require_session),
+    _claims: dict = Depends(get_current_claims),
     db: Session = Depends(get_db),
 ):
     return crud.list_listing_details(db)
@@ -299,7 +255,7 @@ def list_listing_details(
 )
 def get_listing_detail(
     detail_id: int,
-    _session=Depends(require_session),
+    _claims: dict = Depends(get_current_claims),
     db: Session = Depends(get_db),
 ):
     detail = crud.get_listing_detail(db, detail_id)
@@ -320,7 +276,7 @@ def get_listing_detail(
 def update_listing_detail(
     detail_id: int,
     payload: schema.RelatedDetailUpdate,
-    _session=Depends(require_session),
+    _claims: dict = Depends(WRITER_OR_MODERATOR),
     db: Session = Depends(get_db),
 ):
     detail = crud.update_listing_detail(db, detail_id, payload)
@@ -340,7 +296,7 @@ def update_listing_detail(
 )
 def delete_listing_detail(
     detail_id: int,
-    _session=Depends(require_session),
+    _claims: dict = Depends(MODERATOR_ONLY),
     db: Session = Depends(get_db),
 ):
     detail = crud.delete_listing_detail(db, detail_id)
@@ -361,7 +317,7 @@ def delete_listing_detail(
 def get_listings_for_detail(
     detail_name: str,
     detail_value: str,
-    _session=Depends(require_session),
+    _claims: dict = Depends(get_current_claims),
     db: Session = Depends(get_db),
 ):
     return crud.get_listings_for_detail(
@@ -369,5 +325,5 @@ def get_listings_for_detail(
         detail_name,
         detail_value,
     )
-from .hw5_entities import router as hw5_router
+
 app.include_router(hw5_router)
