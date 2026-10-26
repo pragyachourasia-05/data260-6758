@@ -2,8 +2,8 @@
 
 ## 1. What I used AI for and what I did myself
 
-I used Claude Code as a coding assistant. I gave it the HW7 brief, the Demo 7 JWT project and my HW1-HW6 repo,
-and used it to help write the users-table migration and JWT/role code, the agent loop and repair path, the
+I used Claude and ChatGPT to debug my problems and understand the coding parts. I gave it the HW7 brief and
+used it to help write the users-table migration and JWT/role code, the agent loop and repair path, the
 Reflexion verifier and retry loop, the bike-share tools, agent and UI page, the attack tests, the file tools and
 safety gate, the verification scripts and the report layout.
 
