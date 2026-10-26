@@ -1,5 +1,5 @@
 DATA-260 HW7 RUN_LOG - Pragya Chourasia (SID4 6758)
-assembled 2026-10-26T13:17:17 at commit d87bf4a
+assembled 2026-10-26T13:17:17 at commit 89de81b
 machine: Intel Core i5-1335U, 16 GB RAM, Windows 11; llama3.2:3b and qwen3:8b via Ollama; MySQL + MongoDB in Docker
 Each section is the unedited console output of the run, with its own timestamps.
 
@@ -450,11 +450,11 @@ SUMMARY: integration PASS | safety gate 10/10 correct | false allows fixed 5/5
 ## Verification (verify_hw07.py)
 ## source: reports/hw07/raw/verify_console.txt
 ====================================================================================================
-[2026-10-26T13:16:03-07:00] python verify_hw07.py   (commit d87bf4a)
+[2026-10-26T13:16:03-07:00] python verify_hw07.py   (commit 89de81b)
 {
   "homework": "HW7",
   "sid4": "6758",
-  "commit_hash": "d87bf4ac96e8b2741900c052dee39c7459ee5433",
+  "commit_hash": "89de81be9050f868b143d3e6309defd311837c77",
   "model_configuration": {
     "agent_loop": "llama3.2:3b via src/model_client.ModelClient, temperature 0.7",
     "bikeshare_agent": "qwen3:8b via LangChain create_agent, temperature 0, seed 6758",

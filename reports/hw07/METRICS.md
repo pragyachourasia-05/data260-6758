@@ -15,7 +15,7 @@ Hardware: Intel Core i5-1335U, 16 GB RAM, Intel Iris Xe (CPU inference). Models:
 
 Lint demo: pre-commit Ruff hook blocked the commit on F811, E402, B904; after the fixes the hook passed and commit `f077682` was created (screenshots 1.6a / 1.6b).
 
-verify_hw07.py: 8/8 checks passed on commit `d87bf4a`.
+verify_hw07.py: 8/8 checks passed on commit `89de81b`.
 
 ## Part 2 - tool-call reliability
 
