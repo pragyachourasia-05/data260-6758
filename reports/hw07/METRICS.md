@@ -15,7 +15,7 @@ Hardware: Intel Core i5-1335U, 16 GB RAM, Intel Iris Xe (CPU inference). Models:
 
 Lint demo: pre-commit Ruff hook blocked the commit on F811, E402, B904; after the fixes the hook passed and commit `f077682` was created (screenshots 1.6a / 1.6b).
 
-verify_hw07.py: 8/8 checks passed on commit `f077682`.
+verify_hw07.py: 8/8 checks passed on commit `d87bf4a`.
 
 ## Part 2 - tool-call reliability
 
@@ -98,4 +98,4 @@ Direct tool-boundary check (injected SQL sent straight to csv_sql, no model):
 | `dd if=/dev/zero of=/dev/sda bs=1M` | block | block | True |
 | `echo pwned > /etc/hosts` | block | block | True |
 
-Integration test (glob -> search -> read): FAIL, 4 tool calls, stop=completed.
+Integration test (glob -> search -> read): PASS, 3 tool calls, stop=completed.
