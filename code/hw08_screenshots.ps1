@@ -1,7 +1,7 @@
 param([ValidateSet("1", "2")][string]$Part = "1")
 # HW8 screenshots: opens terminal windows titled with my name, runs the commands and saves each window.
-#     powershell -ExecutionPolicy Bypass -File code\hw08_screenshots.ps1 -Part 1
-#     powershell -ExecutionPolicy Bypass -File code\hw08_screenshots.ps1 -Part 2
+#     powershell -File code\hw08_screenshots.ps1 -Part 1
+#     powershell -File code\hw08_screenshots.ps1 -Part 2
 $ErrorActionPreference = "Continue"
 $Root = "C:\SJSU Assignments\Agentic AI\Assignment_1"
 Set-Location $Root
@@ -40,6 +40,7 @@ function Open-Window([string]$Label, [string]$Dir, [string[]]$Commands) {
         "`$Host.UI.RawUI.WindowTitle = '$Name - DATA-260 HW8 - $Label'",
         "& '$Root\venv\Scripts\Activate.ps1'",
         "Set-Location '$Dir'",
+        "Start-Sleep 2",
         "Clear-Host"
     )
     foreach ($c in $Commands) {
@@ -49,14 +50,23 @@ function Open-Window([string]$Label, [string]$Dir, [string[]]$Commands) {
         $lines += "Write-Host ''"
     }
     Set-Content -Path $file -Value $lines -Encoding UTF8
-    $script:Opened += Start-Process conhost.exe -ArgumentList "powershell.exe -NoExit -NoLogo -ExecutionPolicy Bypass -File `"$file`"" -PassThru
+    $script:Opened += Start-Process conhost.exe -ArgumentList "powershell.exe -NoExit -NoLogo -File `"$file`"" -PassThru
+    # maximize before any output, so the console shows the output from the top
+    for ($i = 0; $i -lt 20; $i++) {
+        Start-Sleep -Milliseconds 300
+        $h = [Hw8Shot]::FindByTitle("$Name - DATA-260 HW8 - $Label")
+        if ($h -ne [IntPtr]::Zero) { [void][Hw8Shot]::ShowWindow($h, 3); break }
+    }
 }
 
 function Save-Shot([string]$Label, [string]$Id) {
     $h = [IntPtr]::Zero
     for ($i = 0; $i -lt 20 -and $h -eq [IntPtr]::Zero; $i++) { Start-Sleep -Milliseconds 500; $h = [Hw8Shot]::FindByTitle("$Name - DATA-260 HW8 - $Label") }
     if ($h -eq [IntPtr]::Zero) { Write-Host "window not found: $Label"; return }
-    [void][Hw8Shot]::ShowWindow($h, 3); [void][Hw8Shot]::SetForegroundWindow($h); Start-Sleep -Milliseconds 1200
+    # minimize then restore, so the window comes to the front even when another window has focus
+    [void][Hw8Shot]::ShowWindow($h, 6); Start-Sleep -Milliseconds 400
+    [void][Hw8Shot]::ShowWindow($h, 9); [void][Hw8Shot]::ShowWindow($h, 3); [void][Hw8Shot]::SetForegroundWindow($h)
+    Start-Sleep -Milliseconds 1500
     $r = New-Object Hw8Shot+RECT; [void][Hw8Shot]::DwmGetWindowAttribute($h, 9, [ref]$r, 16)
     $bmp = New-Object System.Drawing.Bitmap ($r.Right - $r.Left), ($r.Bottom - $r.Top)
     $g = [System.Drawing.Graphics]::FromImage($bmp); $g.CopyFromScreen($r.Left, $r.Top, 0, 0, $bmp.Size)
@@ -74,20 +84,20 @@ if ($Part -eq "1") {
         'docker logs --tail 2 s6758_listing_worker',
         'docker logs s6758_listing_api 2>&1 | Select-String "started at|Uvicorn running"'
     )
-    Save-Shot "Docker" "1.1_docker_ps"; Close-Windows
+    Start-Sleep 12; Save-Shot "Docker" "1.1_docker_ps"; Close-Windows
 
     Open-Window "homework_demo" $Root @('python homework_demo.py')
-    Start-Sleep 12; Save-Shot "homework_demo" "1.2_create_get"; Close-Windows
+    Start-Sleep 14; Save-Shot "homework_demo" "1.2_create_get"; Close-Windows
 
     $demo = Get-Content "$Root\reports\hw08\raw\part1_demo.json" -Raw | ConvertFrom-Json
     $ids = "$($demo.create.correlation_id)|$($demo.get.correlation_id)"
     Open-Window "Worker log" $Root @("docker logs s6758_listing_worker 2>&1 | Select-String '$ids'")
-    Save-Shot "Worker log" "1.3a_worker_log"; Close-Windows
+    Start-Sleep 8; Save-Shot "Worker log" "1.3a_worker_log"; Close-Windows
     Open-Window "FastAPI log" $Root @("docker logs s6758_listing_api 2>&1 | Select-String '$ids'")
-    Save-Shot "FastAPI log" "1.3b_api_log"; Close-Windows
+    Start-Sleep 8; Save-Shot "FastAPI log" "1.3b_api_log"; Close-Windows
 
     Open-Window "Full sequence" $Root @('python homework_demo.py --sequence')
-    Start-Sleep 3; Save-Shot "Full sequence" "1.4_full_sequence"; Close-Windows
+    Start-Sleep 6; Save-Shot "Full sequence" "1.4_full_sequence"; Close-Windows
 }
 
 if ($Part -eq "2") {

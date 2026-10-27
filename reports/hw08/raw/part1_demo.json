@@ -1,0 +1,61 @@
+{
+  "create": {
+    "correlation_id": "fd3c3342-bdeb-4ae1-aa9f-466390dc90fe",
+    "response": {
+      "correlation_id": "fd3c3342-bdeb-4ae1-aa9f-466390dc90fe",
+      "success": true,
+      "listing_id": "5ed7e74a-c7ba-4f7e-941c-7fbdad3b3da8",
+      "message": "Listing created"
+    }
+  },
+  "get": {
+    "correlation_id": "1d5fe8a2-dea7-4545-ad0a-5bff49322bfa",
+    "response": {
+      "correlation_id": "1d5fe8a2-dea7-4545-ad0a-5bff49322bfa",
+      "success": true,
+      "listing": {
+        "listing_id": "5ed7e74a-c7ba-4f7e-941c-7fbdad3b3da8",
+        "property_address": "455 S 5th St, San Jose, CA",
+        "monthly_rent": 2350,
+        "property_category": "Apartment",
+        "listing_description": "2 bed / 1 bath near SJSU, in-unit laundry, one parking spot"
+      }
+    }
+  },
+  "errors": [
+    {
+      "operation": "GET_LISTING",
+      "sent_correlation_id": "6205204e-203d-45b9-9fd4-fc68af777c74",
+      "response": {
+        "correlation_id": "6205204e-203d-45b9-9fd4-fc68af777c74",
+        "success": false,
+        "error": "Listing not found"
+      }
+    },
+    {
+      "operation": "CREATE_LISTING",
+      "sent_correlation_id": "c6d3e3fe-0085-4e87-8173-36cec4e3c2eb",
+      "response": {
+        "correlation_id": "c6d3e3fe-0085-4e87-8173-36cec4e3c2eb",
+        "success": false,
+        "error": "monthly_rent must be a number greater than 0"
+      }
+    },
+    {
+      "operation": "DELETE_LISTING",
+      "sent_correlation_id": "af2c22c9-5576-4558-a7ac-cdd8d8da41b4",
+      "response": {
+        "correlation_id": "af2c22c9-5576-4558-a7ac-cdd8d8da41b4",
+        "success": false,
+        "error": "Unknown operation"
+      }
+    }
+  ],
+  "checks": {
+    "create_success": true,
+    "create_correlation_id_preserved": true,
+    "get_success": true,
+    "get_correlation_id_preserved": true,
+    "round_trip_matches": true
+  }
+}

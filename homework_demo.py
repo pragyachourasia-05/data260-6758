@@ -1,9 +1,10 @@
 """HW8 Part 1 demo: CREATE_LISTING -> GET_LISTING through the FastAPI wrapper and Kafka.
 
-    python homework_demo.py
+    python homework_demo.py              run the demo
+    python homework_demo.py --sequence   print the saved CREATE -> GET log sequence
 
 Needs the Kafka stack running (docker compose up -d kafka kafka-init listing-worker listing-api).
-At the end it merges the client, API and worker logs for the two correlation_ids into one ordered sequence.
+It merges the client, API and worker logs for the two correlation_ids into one ordered sequence.
 """
 import json
 import re
@@ -24,17 +25,20 @@ client_lines: list[str] = []
 
 
 def clog(event, **fields):
-    line = f"{datetime.now(timezone.utc).isoformat(timespec='microseconds').replace('+00:00', 'Z')} [CLIENT] {event} " + \
-        " ".join(f"{k}={json.dumps(v)}" for k, v in fields.items())
-    client_lines.append(line)
-    print(line, flush=True)
+    """Full client log line for the sequence file (the screen gets a shorter version)."""
+    stamp = datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z")
+    client_lines.append(f"{stamp} [CLIENT] {event} " + " ".join(f"{k}={json.dumps(v)}" for k, v in fields.items()))
 
 
 def call(correlation_id, operation, data):
     clog("sending request via FastAPI", correlation_id=correlation_id, operation=operation, data=data)
+    print(f"   sent {operation} to FastAPI   correlation_id={correlation_id}")
+    print(f"   data={json.dumps(data)}")
     response = requests.post(API, json={"correlation_id": correlation_id, "operation": operation, "data": data},
                              timeout=30).json()
     clog("response received by client", correlation_id=response.get("correlation_id"), response=response)
+    print(f"   response received        correlation_id={response.get('correlation_id')}  "
+          f"success={response.get('success')}")
     return response
 
 
@@ -48,24 +52,29 @@ def main():
     started = (datetime.now(timezone.utc) - timedelta(seconds=2)).strftime("%Y-%m-%dT%H:%M:%SZ")
     print(f"Request topic : {REQUEST_TOPIC}\nResponse topic: {RESPONSE_TOPIC}\n")
 
-    # 1-7: CREATE_LISTING
+    # Steps 1-7: CREATE_LISTING
     cid_create = str(uuid.uuid4())
-    print("== Step 1: correlation_id for CREATE_LISTING =", cid_create)
     listing = {"property_address": "455 S 5th St, San Jose, CA", "monthly_rent": 2350,
                "property_category": "Apartment",
                "listing_description": "2 bed / 1 bath near SJSU, in-unit laundry, one parking spot"}
+    print(f"Step 1   correlation_id = {cid_create}")
+    print("Step 2-6 CREATE_LISTING: client -> FastAPI -> s6758_listing_requests -> worker -> "
+          "s6758_listing_responses -> client")
     created = call(cid_create, "CREATE_LISTING", listing)
+    print(f"   {json.dumps(created)}")
     listing_id = created.get("listing_id")
-    print(f"== Step 7: generated listing_id = {listing_id}\n")
+    print(f"Step 7   generated listing_id = {listing_id}\n")
 
-    # 8-9: GET_LISTING with that id
+    # Steps 8-9: GET_LISTING with that id
     cid_get = str(uuid.uuid4())
-    print("== Step 8: correlation_id for GET_LISTING =", cid_get)
+    print(f"Step 8   correlation_id = {cid_get}")
+    print("Step 9   GET_LISTING: same path through Kafka")
     fetched = call(cid_get, "GET_LISTING", {"listing_id": listing_id})
 
-    # 10: show entity and check correlation ids
-    print("\n== Step 10: retrieved listing")
-    print(json.dumps(fetched.get("listing"), indent=2))
+    # Step 10: retrieved listing and correlation_id checks
+    print("\nStep 10  retrieved listing")
+    for key, value in (fetched.get("listing") or {}).items():
+        print(f"   {key:20s} {value}")
     checks = {
         "create_success": created.get("success") is True,
         "create_correlation_id_preserved": created.get("correlation_id") == cid_create,
@@ -74,11 +83,10 @@ def main():
         "round_trip_matches": fetched.get("listing", {}).get("listing_id") == listing_id
         and all(fetched["listing"].get(k) == v for k, v in listing.items()),
     }
-    for name, ok in checks.items():
-        print(f"  {name}: {'PASS' if ok else 'FAIL'}")
+    print("   " + "  ".join(f"{name}={'PASS' if ok else 'FAIL'}" for name, ok in checks.items()))
 
-    # Error responses also keep the correlation_id
-    print("\n== Error cases")
+    # Error responses keep the correlation_id too
+    print("\nError cases")
     errors = []
     for op, data in [("GET_LISTING", {"listing_id": str(uuid.uuid4())}),
                      ("CREATE_LISTING", {**listing, "monthly_rent": -5}),
@@ -86,20 +94,21 @@ def main():
         cid = str(uuid.uuid4())
         r = requests.post(API, json={"correlation_id": cid, "operation": op, "data": data}, timeout=30).json()
         errors.append({"operation": op, "sent_correlation_id": cid, "response": r})
-        print(f"  {op:15s} -> {json.dumps(r)}  (correlation_id preserved: {r.get('correlation_id') == cid})")
+        print(f"   {op:15s} success={r.get('success')}  error={r.get('error')!r:50s} "
+              f"correlation_id preserved={r.get('correlation_id') == cid}")
 
     # Full sequence from all three processes, ordered by timestamp
     wanted = (cid_create, cid_get)
     lines = client_lines + container_logs("s6758_listing_api", started) + container_logs("s6758_listing_worker", started)
     # stable sort on the timestamp only, so lines from one process keep their own order
     seq = sorted((ln for ln in lines if any(c in ln for c in wanted) and ln[:4].isdigit()), key=lambda ln: ln[:27])
-    print("\n== Full sequence saved to reports/hw08/raw/part1_sequence.log (show it: python homework_demo.py --sequence)")
 
     RAW.mkdir(parents=True, exist_ok=True)
     (RAW / "part1_demo.json").write_text(json.dumps({"create": {"correlation_id": cid_create, "response": created},
                                                     "get": {"correlation_id": cid_get, "response": fetched},
                                                     "errors": errors, "checks": checks}, indent=2), encoding="utf-8")
     (RAW / "part1_sequence.log").write_text("\n".join(seq) + "\n", encoding="utf-8")
+    print("\nFull sequence saved to reports/hw08/raw/part1_sequence.log (python homework_demo.py --sequence)")
     return 0 if all(checks.values()) else 1
 
 

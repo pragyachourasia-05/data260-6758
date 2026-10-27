@@ -9,7 +9,7 @@ import sys
 import uuid
 
 from aiokafka import AIOKafkaConsumer, AIOKafkaProducer, TopicPartition
-from common import BOOTSTRAP, FINAL, INBOX, encode, log, now, start
+from common import BOOTSTRAP, FINAL, INBOX, JOURNEY_LOG, encode, log, now, start
 
 QUESTION = "What should I check before signing a lease for an apartment listing near SJSU?"
 TIMEOUT_SECONDS = 900
@@ -38,6 +38,7 @@ async def main(question: str):
                     offset=msg.offset, status=result.get("status"))
                 print("\nFinal message:")
                 print(json.dumps(result, indent=2))
+                JOURNEY_LOG.with_name("part2_final.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
                 return 0
     except TimeoutError:
         log("SENDER", "no result before timeout", correlation_id=cid)

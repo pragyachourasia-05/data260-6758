@@ -1,0 +1,98 @@
+DATA-260 HW8 RUN_LOG - Pragya Chourasia - SID4 6758 - built 2026-10-27 14:30:53
+
+====================================================================================================
+Part 1 - docker ps
+====================================================================================================
+NAMES                  IMAGE                 STATUS
+s6758_listing_api      s6758-kafka-listing   Up 7 minutes
+s6758_listing_worker   s6758-kafka-listing   Up 7 minutes
+s6758_kafka            apache/kafka:3.9.2    Up About an hour (healthy)
+s6758_mongo            mongo:7.0             Up 8 days (healthy)
+s6758-mysql            mysql:8.4             Up 8 days
+
+====================================================================================================
+Part 1 - homework_demo.py results (raw/part1_demo.json)
+====================================================================================================
+{
+  "create": {
+    "correlation_id": "fd3c3342-bdeb-4ae1-aa9f-466390dc90fe",
+    "response": {
+      "correlation_id": "fd3c3342-bdeb-4ae1-aa9f-466390dc90fe",
+      "success": true,
+      "listing_id": "5ed7e74a-c7ba-4f7e-941c-7fbdad3b3da8",
+      "message": "Listing created"
+    }
+  },
+  "get": {
+    "correlation_id": "1d5fe8a2-dea7-4545-ad0a-5bff49322bfa",
+    "response": {
+      "correlation_id": "1d5fe8a2-dea7-4545-ad0a-5bff49322bfa",
+      "success": true,
+      "listing": {
+        "listing_id": "5ed7e74a-c7ba-4f7e-941c-7fbdad3b3da8",
+        "property_address": "455 S 5th St, San Jose, CA",
+        "monthly_rent": 2350,
+        "property_category": "Apartment",
+        "listing_description": "2 bed / 1 bath near SJSU, in-unit laundry, one parking spot"
+      }
+    }
+  },
+  "checks": {
+    "create_success": true,
+    "create_correlation_id_preserved": true,
+    "get_success": true,
+    "get_correlation_id_preserved": true,
+    "round_trip_matches": true
+  }
+}
+Error cases:
+  GET_LISTING     sent correlation_id=6205204e-203d-45b9-9fd4-fc68af777c74 -> {"correlation_id": "6205204e-203d-45b9-9fd4-fc68af777c74", "success": false, "error": "Listing not found"}
+  CREATE_LISTING  sent correlation_id=c6d3e3fe-0085-4e87-8173-36cec4e3c2eb -> {"correlation_id": "c6d3e3fe-0085-4e87-8173-36cec4e3c2eb", "success": false, "error": "monthly_rent must be a number greater than 0"}
+  DELETE_LISTING  sent correlation_id=af2c22c9-5576-4558-a7ac-cdd8d8da41b4 -> {"correlation_id": "af2c22c9-5576-4558-a7ac-cdd8d8da41b4", "success": false, "error": "Unknown operation"}
+
+====================================================================================================
+Part 1 - CREATE_LISTING -> GET_LISTING full sequence (raw/part1_sequence.log)
+====================================================================================================
+2026-10-27T21:23:54.531594Z [CLIENT] sending request via FastAPI correlation_id="fd3c3342-bdeb-4ae1-aa9f-466390dc90fe" operation="CREATE_LISTING" data={"property_address": "455 S 5th St, San Jose, CA", "monthly_rent": 2350, "property_category": "Apartment", "listing_description": "2 bed / 1 bath near SJSU, in-unit laundry, one parking spot"}
+2026-10-27T21:23:54.555298Z [API] received from client correlation_id="fd3c3342-bdeb-4ae1-aa9f-466390dc90fe" operation="CREATE_LISTING"
+2026-10-27T21:23:54.555418Z [API] sending request to s6758_listing_requests correlation_id="fd3c3342-bdeb-4ae1-aa9f-466390dc90fe" message={"correlation_id": "fd3c3342-bdeb-4ae1-aa9f-466390dc90fe", "reply_to": "s6758_listing_responses", "operation": "CREATE_LISTING", "data": {"property_address": "455 S 5th St, San Jose, CA", "monthly_rent": 2350, "property_category": "Apartment", "listing_description": "2 bed / 1 bath near SJSU, in-unit laundry, one parking spot"}}
+2026-10-27T21:23:54.563677Z [API] request delivered correlation_id="fd3c3342-bdeb-4ae1-aa9f-466390dc90fe" partition=0 offset=32
+2026-10-27T21:23:54.564436Z [WORKER] received from s6758_listing_requests correlation_id="fd3c3342-bdeb-4ae1-aa9f-466390dc90fe" partition=0 offset=32 message={"correlation_id": "fd3c3342-bdeb-4ae1-aa9f-466390dc90fe", "reply_to": "s6758_listing_responses", "operation": "CREATE_LISTING", "data": {"property_address": "455 S 5th St, San Jose, CA", "monthly_rent": 2350, "property_category": "Apartment", "listing_description": "2 bed / 1 bath near SJSU, in-unit laundry, one parking spot"}}
+2026-10-27T21:23:54.564582Z [WORKER] processed correlation_id="fd3c3342-bdeb-4ae1-aa9f-466390dc90fe" operation="CREATE_LISTING" success=true stored_listings=1
+2026-10-27T21:23:54.564603Z [WORKER] sending response to s6758_listing_responses correlation_id="fd3c3342-bdeb-4ae1-aa9f-466390dc90fe" message={"correlation_id": "fd3c3342-bdeb-4ae1-aa9f-466390dc90fe", "success": true, "listing_id": "5ed7e74a-c7ba-4f7e-941c-7fbdad3b3da8", "message": "Listing created"}
+2026-10-27T21:23:54.570545Z [WORKER] response delivered correlation_id="fd3c3342-bdeb-4ae1-aa9f-466390dc90fe" partition=0 offset=32
+2026-10-27T21:23:54.571002Z [API] received response from s6758_listing_responses correlation_id="fd3c3342-bdeb-4ae1-aa9f-466390dc90fe" partition=0 offset=32 matched=true
+2026-10-27T21:23:54.571143Z [API] returned response to client correlation_id="fd3c3342-bdeb-4ae1-aa9f-466390dc90fe" success=true
+2026-10-27T21:23:54.573993Z [CLIENT] response received by client correlation_id="fd3c3342-bdeb-4ae1-aa9f-466390dc90fe" response={"correlation_id": "fd3c3342-bdeb-4ae1-aa9f-466390dc90fe", "success": true, "listing_id": "5ed7e74a-c7ba-4f7e-941c-7fbdad3b3da8", "message": "Listing created"}
+2026-10-27T21:23:54.575176Z [CLIENT] sending request via FastAPI correlation_id="1d5fe8a2-dea7-4545-ad0a-5bff49322bfa" operation="GET_LISTING" data={"listing_id": "5ed7e74a-c7ba-4f7e-941c-7fbdad3b3da8"}
+2026-10-27T21:23:54.597618Z [API] received from client correlation_id="1d5fe8a2-dea7-4545-ad0a-5bff49322bfa" operation="GET_LISTING"
+2026-10-27T21:23:54.597751Z [API] sending request to s6758_listing_requests correlation_id="1d5fe8a2-dea7-4545-ad0a-5bff49322bfa" message={"correlation_id": "1d5fe8a2-dea7-4545-ad0a-5bff49322bfa", "reply_to": "s6758_listing_responses", "operation": "GET_LISTING", "data": {"listing_id": "5ed7e74a-c7ba-4f7e-941c-7fbdad3b3da8"}}
+2026-10-27T21:23:54.600323Z [API] request delivered correlation_id="1d5fe8a2-dea7-4545-ad0a-5bff49322bfa" partition=0 offset=33
+2026-10-27T21:23:54.600789Z [WORKER] received from s6758_listing_requests correlation_id="1d5fe8a2-dea7-4545-ad0a-5bff49322bfa" partition=0 offset=33 message={"correlation_id": "1d5fe8a2-dea7-4545-ad0a-5bff49322bfa", "reply_to": "s6758_listing_responses", "operation": "GET_LISTING", "data": {"listing_id": "5ed7e74a-c7ba-4f7e-941c-7fbdad3b3da8"}}
+2026-10-27T21:23:54.600932Z [WORKER] processed correlation_id="1d5fe8a2-dea7-4545-ad0a-5bff49322bfa" operation="GET_LISTING" success=true stored_listings=1
+2026-10-27T21:23:54.601025Z [WORKER] sending response to s6758_listing_responses correlation_id="1d5fe8a2-dea7-4545-ad0a-5bff49322bfa" message={"correlation_id": "1d5fe8a2-dea7-4545-ad0a-5bff49322bfa", "success": true, "listing": {"listing_id": "5ed7e74a-c7ba-4f7e-941c-7fbdad3b3da8", "property_address": "455 S 5th St, San Jose, CA", "monthly_rent": 2350, "property_category": "Apartment", "listing_description": "2 bed / 1 bath near SJSU, in-unit laundry, one parking spot"}}
+2026-10-27T21:23:54.603086Z [WORKER] response delivered correlation_id="1d5fe8a2-dea7-4545-ad0a-5bff49322bfa" partition=0 offset=33
+2026-10-27T21:23:54.603694Z [API] received response from s6758_listing_responses correlation_id="1d5fe8a2-dea7-4545-ad0a-5bff49322bfa" partition=0 offset=33 matched=true
+2026-10-27T21:23:54.603903Z [API] returned response to client correlation_id="1d5fe8a2-dea7-4545-ad0a-5bff49322bfa" success=true
+2026-10-27T21:23:54.604223Z [CLIENT] response received by client correlation_id="1d5fe8a2-dea7-4545-ad0a-5bff49322bfa" response={"correlation_id": "1d5fe8a2-dea7-4545-ad0a-5bff49322bfa", "success": true, "listing": {"listing_id": "5ed7e74a-c7ba-4f7e-941c-7fbdad3b3da8", "property_address": "455 S 5th St, San Jose, CA", "monthly_rent": 2350, "property_category": "Apartment", "listing_description": "2 bed / 1 bath near SJSU, in-unit laundry, one parking spot"}}
+
+====================================================================================================
+Part 2 - one message journey s6758_inbox -> s6758_final (raw/part2_journey.jsonl)
+====================================================================================================
+2026-10-27T21:28:40.153Z [PLANNER] listening on s6758_inbox, sending to s6758_tasks {}
+2026-10-27T21:28:41.164Z [WRITER] listening on s6758_tasks, sending to s6758_drafts {}
+2026-10-27T21:28:41.962Z [REVIEWER] listening on s6758_drafts, sending to s6758_final {}
+2026-10-27T21:28:53.024Z [SENDER] sent question to s6758_inbox {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0, "question": "What should I check before signing a lease for an apartment listing near SJSU?"}
+2026-10-27T21:28:53.024Z [SENDER] waiting for the result on s6758_final {}
+2026-10-27T21:28:53.024Z [PLANNER] received from s6758_inbox {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
+2026-10-27T21:29:12.408Z [PLANNER] plan ready {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "steps": ["Review the lease agreement thoroughly to understand the terms and conditions", "Check the apartment's safety features and emergency exit routes", "Verify the landlord's contact information and the address's proximity to SJSU"]}
+2026-10-27T21:29:12.438Z [PLANNER] sent to s6758_tasks {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
+2026-10-27T21:29:12.439Z [WRITER] received from s6758_tasks {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
+2026-10-27T21:29:43.259Z [WRITER] draft ready {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "words": 140}
+2026-10-27T21:29:43.280Z [WRITER] sent to s6758_drafts {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
+2026-10-27T21:29:43.281Z [REVIEWER] received from s6758_drafts {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
+2026-10-27T21:30:02.922Z [REVIEWER] review done {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "status": "approved", "notes": "Comprehensive and thorough advice, aligns with the plan"}
+2026-10-27T21:30:02.942Z [REVIEWER] sent to s6758_final {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
+2026-10-27T21:30:02.943Z [SENDER] received result from s6758_final {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0, "status": "approved"}
+
+final status: approved
