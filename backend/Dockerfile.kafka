@@ -1,0 +1,8 @@
+# HW8 Part 1 image for the listing worker and the FastAPI wrapper.
+FROM python:3.11-slim
+WORKDIR /srv
+RUN pip install --no-cache-dir fastapi==0.115.6 uvicorn==0.32.1 aiokafka==0.12.0
+RUN mkdir app && touch app/__init__.py
+COPY app/kafka_listings.py app/
+COPY listing_worker.py kafka_api.py ./
+ENV PYTHONUNBUFFERED=1
