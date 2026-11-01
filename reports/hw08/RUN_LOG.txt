@@ -1,10 +1,10 @@
-DATA-260 HW8 RUN_LOG - Pragya Chourasia - SID4 6758 - built 2026-11-01 09:17:03
+DATA-260 HW8 RUN_LOG - Pragya Chourasia - SID4 6758 - built 2026-11-01 09:28:06
 
 ====================================================================================================
 Part 1 - docker ps
 ====================================================================================================
 NAMES                  IMAGE                 STATUS
-p23-mongo              mongo:7               Up 4 minutes
+p23-mongo              mongo:7               Up 15 minutes
 s6758_listing_api      s6758-kafka-listing   Up 4 days
 s6758_listing_worker   s6758-kafka-listing   Up 4 days
 s6758_kafka            apache/kafka:3.9.2    Up 4 days (healthy)

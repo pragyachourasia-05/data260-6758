@@ -1,0 +1,50 @@
+{
+  "homework": "HW8",
+  "sid4": "6758",
+  "commit_hash": "f1db7e514aae26c4c43494c32d3d9877a9a80e79",
+  "model_configuration": {
+    "part2_agents": "llama3.2:3b via src/model_client.ModelClient, temperature 0, seed 6758",
+    "smoke_test_and_failure_tests": "agents in --mock mode, no LLM call",
+    "kafka": "apache/kafka:3.9.2, single node"
+  },
+  "seed": 6758,
+  "verify_seed": 266758,
+  "checks": [
+    {
+      "name": "kafka_worker_api_containers",
+      "passed": true,
+      "detail": "Kafka, worker and FastAPI containers running"
+    },
+    {
+      "name": "api_health_port_8458",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "name": "topics_and_partitions",
+      "passed": true,
+      "detail": "7 topics exist, s6758_tasks has 2 partitions"
+    },
+    {
+      "name": "create_get_round_trip",
+      "passed": true,
+      "detail": "CREATE_LISTING then GET_LISTING round trip through Kafka, correlation_id preserved"
+    },
+    {
+      "name": "clean_errors_keep_correlation_id",
+      "passed": true,
+      "detail": "not found, invalid rent, empty field and unknown operation all return clean errors"
+    },
+    {
+      "name": "agent_pipeline_and_replay",
+      "passed": true,
+      "detail": "inbox -> final journey keeps correlation_id, replay causes no second final message"
+    },
+    {
+      "name": "raw_artifacts_present",
+      "passed": true,
+      "detail": "failure-test results and both 20-message ordering runs present"
+    }
+  ],
+  "passed": true
+}
