@@ -1,4 +1,4 @@
-param([ValidateSet("1", "2")][string]$Part = "1")
+param([ValidateSet("1", "2", "3")][string]$Part = "1")
 # HW8 screenshots: opens terminal windows titled with my name, runs the commands and saves each window.
 #     powershell -File code\hw08_screenshots.ps1 -Part 1
 #     powershell -File code\hw08_screenshots.ps1 -Part 2
@@ -137,4 +137,11 @@ if ($Part -eq "2") {
     Save-Shot "Terminal 3 Reviewer" "2.4_reviewer"
     Save-Shot "Terminal 4 send_question" "2.5_final"
     Close-Windows
+}
+
+if ($Part -eq "3") {
+    foreach ($t in @(@("duplicate", "3.1_duplicate"), @("consumer_death", "3.2_consumer_death"), @("poison", "3.3_poison"), @("ordering", "3.4_ordering"))) {
+        Open-Window "Part 3 $($t[0])" $Root @("python code/hw08_show.py $($t[0])")
+        Start-Sleep 6; Save-Shot "Part 3 $($t[0])" $t[1]; Close-Windows
+    }
 }

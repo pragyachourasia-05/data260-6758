@@ -41,7 +41,7 @@ services:
       timeout: 10s
       retries: 15
 
-  # HW8 Part 1 topics (Part 2 topics are created with the CLI)
+  # HW8 Part 1 and dead-letter topics (Part 2 topics are created with the CLI)
   kafka-init:
     image: apache/kafka:3.9.2
     container_name: s6758_kafka_init
@@ -51,7 +51,7 @@ services:
     entrypoint: ["/bin/bash", "-c"]
     command:
       - |
-        for t in s6758_listing_requests s6758_listing_responses; do
+        for t in s6758_listing_requests s6758_listing_responses s6758_dead_letter; do
           /opt/kafka/bin/kafka-topics.sh --create --if-not-exists --topic $$t --partitions 1 --replication-factor 1 --bootstrap-server kafka:19092
         done
 
