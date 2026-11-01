@@ -1,14 +1,15 @@
-DATA-260 HW8 RUN_LOG - Pragya Chourasia - SID4 6758 - built 2026-10-27 14:30:53
+DATA-260 HW8 RUN_LOG - Pragya Chourasia - SID4 6758 - built 2026-11-01 09:17:03
 
 ====================================================================================================
 Part 1 - docker ps
 ====================================================================================================
 NAMES                  IMAGE                 STATUS
-s6758_listing_api      s6758-kafka-listing   Up 7 minutes
-s6758_listing_worker   s6758-kafka-listing   Up 7 minutes
-s6758_kafka            apache/kafka:3.9.2    Up About an hour (healthy)
-s6758_mongo            mongo:7.0             Up 8 days (healthy)
-s6758-mysql            mysql:8.4             Up 8 days
+p23-mongo              mongo:7               Up 4 minutes
+s6758_listing_api      s6758-kafka-listing   Up 4 days
+s6758_listing_worker   s6758-kafka-listing   Up 4 days
+s6758_kafka            apache/kafka:3.9.2    Up 4 days (healthy)
+s6758_mongo            mongo:7.0             Up 13 days (healthy)
+s6758-mysql            mysql:8.4             Up 13 days
 
 ====================================================================================================
 Part 1 - homework_demo.py results (raw/part1_demo.json)
@@ -79,20 +80,87 @@ Part 1 - CREATE_LISTING -> GET_LISTING full sequence (raw/part1_sequence.log)
 ====================================================================================================
 Part 2 - one message journey s6758_inbox -> s6758_final (raw/part2_journey.jsonl)
 ====================================================================================================
-2026-10-27T21:28:40.153Z [PLANNER] listening on s6758_inbox, sending to s6758_tasks {}
-2026-10-27T21:28:41.164Z [WRITER] listening on s6758_tasks, sending to s6758_drafts {}
-2026-10-27T21:28:41.962Z [REVIEWER] listening on s6758_drafts, sending to s6758_final {}
-2026-10-27T21:28:53.024Z [SENDER] sent question to s6758_inbox {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0, "question": "What should I check before signing a lease for an apartment listing near SJSU?"}
-2026-10-27T21:28:53.024Z [SENDER] waiting for the result on s6758_final {}
-2026-10-27T21:28:53.024Z [PLANNER] received from s6758_inbox {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
-2026-10-27T21:29:12.408Z [PLANNER] plan ready {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "steps": ["Review the lease agreement thoroughly to understand the terms and conditions", "Check the apartment's safety features and emergency exit routes", "Verify the landlord's contact information and the address's proximity to SJSU"]}
-2026-10-27T21:29:12.438Z [PLANNER] sent to s6758_tasks {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
-2026-10-27T21:29:12.439Z [WRITER] received from s6758_tasks {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
-2026-10-27T21:29:43.259Z [WRITER] draft ready {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "words": 140}
-2026-10-27T21:29:43.280Z [WRITER] sent to s6758_drafts {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
-2026-10-27T21:29:43.281Z [REVIEWER] received from s6758_drafts {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
-2026-10-27T21:30:02.922Z [REVIEWER] review done {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "status": "approved", "notes": "Comprehensive and thorough advice, aligns with the plan"}
-2026-10-27T21:30:02.942Z [REVIEWER] sent to s6758_final {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0}
-2026-10-27T21:30:02.943Z [SENDER] received result from s6758_final {"correlation_id": "4bf74e12-774a-4dcd-87cd-8f7dca9342b4", "partition": 0, "offset": 0, "status": "approved"}
+2026-11-01T17:14:42.630Z [PLANNER] listening on s6758_inbox, sending to s6758_tasks {"idempotency": true, "commit": "after processing", "dead_letter": true, "mock": false}
+2026-11-01T17:14:42.698Z [PLANNER] partitions assigned {"partitions": [0]}
+2026-11-01T17:14:43.643Z [WRITER] listening on s6758_tasks, sending to s6758_drafts {"idempotency": true, "commit": "after processing", "dead_letter": true, "mock": false}
+2026-11-01T17:14:43.665Z [WRITER] partitions assigned {"partitions": [0, 1]}
+2026-11-01T17:14:44.717Z [REVIEWER] listening on s6758_drafts, sending to s6758_final {"idempotency": true, "commit": "after processing", "dead_letter": true, "mock": false}
+2026-11-01T17:14:44.742Z [REVIEWER] partitions assigned {"partitions": [0]}
+2026-11-01T17:14:55.359Z [SENDER] sent question to s6758_inbox {"correlation_id": "15082799-765b-49e4-8833-e8231f4eaad2", "partition": 0, "offset": 0, "question": "What should I check before signing a lease for an apartment listing near SJSU?"}
+2026-11-01T17:14:55.364Z [SENDER] waiting for the result on s6758_final {}
+2026-11-01T17:14:55.369Z [PLANNER] received from s6758_inbox {"correlation_id": "15082799-765b-49e4-8833-e8231f4eaad2", "partition": 0, "offset": 0}
+2026-11-01T17:15:29.088Z [PLANNER] plan ready {"correlation_id": "15082799-765b-49e4-8833-e8231f4eaad2", "steps": ["Review the lease agreement thoroughly to understand the terms and conditions", "Check the apartment's safety features and emergency exit routes", "Verify the landlord's contact information and the property's maintenance schedule"]}
+2026-11-01T17:15:29.180Z [PLANNER] sent to s6758_tasks {"correlation_id": "15082799-765b-49e4-8833-e8231f4eaad2", "partition": 0, "offset": 0}
+2026-11-01T17:15:29.199Z [WRITER] received from s6758_tasks {"correlation_id": "15082799-765b-49e4-8833-e8231f4eaad2", "partition": 0, "offset": 0}
+2026-11-01T17:15:29.246Z [PLANNER] offset committed {"partition": 0, "committed_offset": 1}
+2026-11-01T17:16:05.512Z [WRITER] draft ready {"correlation_id": "15082799-765b-49e4-8833-e8231f4eaad2", "words": 147}
+2026-11-01T17:16:05.543Z [WRITER] sent to s6758_drafts {"correlation_id": "15082799-765b-49e4-8833-e8231f4eaad2", "partition": 0, "offset": 0}
+2026-11-01T17:16:05.551Z [REVIEWER] received from s6758_drafts {"correlation_id": "15082799-765b-49e4-8833-e8231f4eaad2", "partition": 0, "offset": 0}
+2026-11-01T17:16:05.570Z [WRITER] offset committed {"partition": 0, "committed_offset": 1}
+2026-11-01T17:16:27.817Z [REVIEWER] review done {"correlation_id": "15082799-765b-49e4-8833-e8231f4eaad2", "status": "approved", "notes": "Comprehensive and thorough review of key lease terms and safety features"}
+2026-11-01T17:16:27.843Z [REVIEWER] sent to s6758_final {"correlation_id": "15082799-765b-49e4-8833-e8231f4eaad2", "partition": 0, "offset": 0}
+2026-11-01T17:16:27.844Z [SENDER] received result from s6758_final {"correlation_id": "15082799-765b-49e4-8833-e8231f4eaad2", "partition": 0, "offset": 0, "status": "approved"}
+2026-11-01T17:16:27.871Z [REVIEWER] offset committed {"partition": 0, "committed_offset": 1}
 
 final status: approved
+
+====================================================================================================
+Part 3 - failure tests (full logs in raw/part3/)
+====================================================================================================
+--- Duplicate delivery - before fix ---
+2026-10-30T05:20:34.389Z [PLANNER] received from s6758_inbox correlation_id="dup-before-985d21d5" partition=0 offset=0
+2026-10-30T05:20:34.719Z [PLANNER] plan ready correlation_id="dup-before-985d21d5" steps=["Check the lease terms", "Check the unit", "Answer briefly"]
+2026-10-30T05:20:34.787Z [PLANNER] sent to s6758_tasks correlation_id="dup-before-985d21d5" partition=0 offset=0
+2026-10-30T05:20:36.207Z [PLANNER] received from s6758_inbox correlation_id="dup-before-985d21d5" partition=0 offset=1
+2026-10-30T05:20:36.550Z [PLANNER] plan ready correlation_id="dup-before-985d21d5" steps=["Check the lease terms", "Check the unit", "Answer briefly"]
+2026-10-30T05:20:36.568Z [PLANNER] sent to s6758_tasks correlation_id="dup-before-985d21d5" partition=0 offset=1
+
+--- Duplicate delivery - after fix ---
+2026-10-30T05:21:44.367Z [PLANNER] received from s6758_inbox correlation_id="dup-after-1361b87f" partition=0 offset=0
+2026-10-30T05:21:44.677Z [PLANNER] plan ready correlation_id="dup-after-1361b87f" steps=["Check the lease terms", "Check the unit", "Answer briefly"]
+2026-10-30T05:21:44.703Z [PLANNER] sent to s6758_tasks correlation_id="dup-after-1361b87f" partition=0 offset=0
+2026-10-30T05:21:46.121Z [PLANNER] received from s6758_inbox correlation_id="dup-after-1361b87f" partition=0 offset=1
+2026-10-30T05:21:46.130Z [PLANNER] duplicate correlation_id, already processed - skipped correlation_id="dup-after-1361b87f"
+
+--- Consumer killed - before fix ---
+2026-11-01T17:09:13.530Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="auto (background)" dead_letter=true mock=true
+2026-11-01T17:09:14.038Z [WRITER] received from s6758_tasks correlation_id="kill-before-2c4471ed" partition=0 offset=0
+2026-11-01T17:09:19.609Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="auto (background)" dead_letter=true mock=true
+
+--- Consumer killed - after fix ---
+2026-11-01T17:10:11.143Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="after processing" dead_letter=true mock=true
+2026-11-01T17:10:11.699Z [WRITER] received from s6758_tasks correlation_id="kill-after-63651677" partition=1 offset=0
+2026-11-01T17:10:17.550Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="after processing" dead_letter=true mock=true
+2026-11-01T17:10:24.503Z [WRITER] received from s6758_tasks correlation_id="kill-after-63651677" partition=1 offset=0
+2026-11-01T17:10:25.513Z [WRITER] draft ready correlation_id="kill-after-63651677" words=10
+2026-11-01T17:10:25.537Z [WRITER] sent to s6758_drafts correlation_id="kill-after-63651677" partition=0 offset=0
+2026-11-01T17:10:25.565Z [WRITER] offset committed partition=1 committed_offset=1
+
+--- Poison message - before fix ---
+2026-11-01T17:11:01.290Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="after processing" dead_letter=false mock=true
+2026-11-01T17:11:01.449Z [WRITER] received from s6758_tasks correlation_id="poison-before" partition=0 offset=0
+2026-11-01T17:11:01.451Z [WRITER] processing failed, agent stops (no retry, no dead-letter) correlation_id="poison-before" offset=0 error="ValueError: plan must be a non-empty list of steps"
+2026-11-01T17:11:03.369Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="after processing" dead_letter=false mock=true
+2026-11-01T17:11:03.497Z [WRITER] received from s6758_tasks correlation_id="poison-before" partition=0 offset=0
+2026-11-01T17:11:03.501Z [WRITER] processing failed, agent stops (no retry, no dead-letter) correlation_id="poison-before" offset=0 error="ValueError: plan must be a non-empty list of steps"
+
+--- Poison message - after fix ---
+2026-11-01T17:11:28.415Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="after processing" dead_letter=true mock=true
+2026-11-01T17:11:28.556Z [WRITER] received from s6758_tasks correlation_id="poison-after" partition=0 offset=0
+2026-11-01T17:11:28.562Z [WRITER] attempt 1/3 failed correlation_id="poison-after" offset=0 error="ValueError: plan must be a non-empty list of steps"
+2026-11-01T17:11:29.074Z [WRITER] attempt 2/3 failed correlation_id="poison-after" offset=0 error="ValueError: plan must be a non-empty list of steps"
+2026-11-01T17:11:30.083Z [WRITER] attempt 3/3 failed correlation_id="poison-after" offset=0 error="ValueError: plan must be a non-empty list of steps"
+2026-11-01T17:11:31.657Z [WRITER] moved to s6758_dead_letter after 3 attempts correlation_id="poison-after" dead_letter_offset=0
+2026-11-01T17:11:31.693Z [WRITER] offset committed partition=0 committed_offset=1
+2026-11-01T17:11:31.709Z [WRITER] received from s6758_tasks correlation_id="good-after" partition=0 offset=1
+2026-11-01T17:11:31.915Z [WRITER] draft ready correlation_id="good-after" words=7
+2026-11-01T17:11:31.928Z [WRITER] sent to s6758_drafts correlation_id="good-after" partition=0 offset=0
+2026-11-01T17:11:31.959Z [WRITER] offset committed partition=0 committed_offset=2
+
+--- Ordering - processed sequence per listing ---
+before: L-6758-001 partitions=[1] seq=[1, 2, 3, 4] in_order=True
+before: L-6758-002 partitions=[0, 1] seq=[1, 2, 3, 4, 6, 7, 5, 9, 8] in_order=False
+before: L-6758-003 partitions=[0, 1] seq=[1, 2, 3, 4, 5, 7, 6] in_order=False
+after: L-6758-001 partitions=[1] seq=[1, 2, 3, 4] in_order=True
+after: L-6758-002 partitions=[1] seq=[1, 2, 3, 4, 5, 6, 7, 8, 9] in_order=True
+after: L-6758-003 partitions=[0] seq=[1, 2, 3, 4, 5, 6, 7] in_order=True

@@ -1,0 +1,9 @@
+{"ts": "2026-11-01T17:10:11.143Z", "agent": "WRITER", "event": "listening on s6758_tasks, sending to s6758_drafts", "idempotency": true, "commit": "after processing", "dead_letter": true, "mock": true}
+{"ts": "2026-11-01T17:10:11.332Z", "agent": "WRITER", "event": "partitions assigned", "partitions": [0, 1]}
+{"ts": "2026-11-01T17:10:11.704Z", "agent": "WRITER", "event": "received from s6758_tasks", "correlation_id": "kill-after-63651677", "partition": 1, "offset": 0}
+{"ts": "2026-11-01T17:10:17.550Z", "agent": "WRITER", "event": "listening on s6758_tasks, sending to s6758_drafts", "idempotency": true, "commit": "after processing", "dead_letter": true, "mock": true}
+{"ts": "2026-11-01T17:10:24.380Z", "agent": "WRITER", "event": "partitions assigned", "partitions": [0, 1]}
+{"ts": "2026-11-01T17:10:24.504Z", "agent": "WRITER", "event": "received from s6758_tasks", "correlation_id": "kill-after-63651677", "partition": 1, "offset": 0}
+{"ts": "2026-11-01T17:10:25.514Z", "agent": "WRITER", "event": "draft ready", "correlation_id": "kill-after-63651677", "words": 10}
+{"ts": "2026-11-01T17:10:25.537Z", "agent": "WRITER", "event": "sent to s6758_drafts", "correlation_id": "kill-after-63651677", "partition": 0, "offset": 0}
+{"ts": "2026-11-01T17:10:25.567Z", "agent": "WRITER", "event": "offset committed", "partition": 1, "committed_offset": 1}

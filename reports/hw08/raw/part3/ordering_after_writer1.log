@@ -1,0 +1,30 @@
+2026-11-01T17:12:43.517Z [WRITER-1] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="after processing" dead_letter=true mock=true
+2026-11-01T17:12:43.553Z [WRITER-1] partitions assigned partitions=[0]
+2026-11-01T17:12:45.911Z [WRITER-1] received from s6758_tasks correlation_id="ord-after-02" partition=0 offset=0 entity_id="L-6758-003" seq=1
+2026-11-01T17:12:46.137Z [WRITER-1] draft ready correlation_id="ord-after-02" words=7
+2026-11-01T17:12:46.149Z [WRITER-1] sent to s6758_drafts correlation_id="ord-after-02" partition=0 offset=0 entity_id="L-6758-003" seq=1
+2026-11-01T17:12:46.161Z [WRITER-1] offset committed partition=0 committed_offset=1
+2026-11-01T17:12:46.177Z [WRITER-1] received from s6758_tasks correlation_id="ord-after-03" partition=0 offset=1 entity_id="L-6758-003" seq=2
+2026-11-01T17:12:46.399Z [WRITER-1] draft ready correlation_id="ord-after-03" words=7
+2026-11-01T17:12:46.405Z [WRITER-1] sent to s6758_drafts correlation_id="ord-after-03" partition=0 offset=2 entity_id="L-6758-003" seq=2
+2026-11-01T17:12:46.418Z [WRITER-1] offset committed partition=0 committed_offset=2
+2026-11-01T17:12:46.421Z [WRITER-1] received from s6758_tasks correlation_id="ord-after-04" partition=0 offset=2 entity_id="L-6758-003" seq=3
+2026-11-01T17:12:46.690Z [WRITER-1] draft ready correlation_id="ord-after-04" words=7
+2026-11-01T17:12:46.695Z [WRITER-1] sent to s6758_drafts correlation_id="ord-after-04" partition=0 offset=3 entity_id="L-6758-003" seq=3
+2026-11-01T17:12:46.703Z [WRITER-1] offset committed partition=0 committed_offset=3
+2026-11-01T17:12:46.707Z [WRITER-1] received from s6758_tasks correlation_id="ord-after-06" partition=0 offset=3 entity_id="L-6758-003" seq=4
+2026-11-01T17:12:46.937Z [WRITER-1] draft ready correlation_id="ord-after-06" words=7
+2026-11-01T17:12:46.938Z [WRITER-1] sent to s6758_drafts correlation_id="ord-after-06" partition=0 offset=4 entity_id="L-6758-003" seq=4
+2026-11-01T17:12:46.954Z [WRITER-1] offset committed partition=0 committed_offset=4
+2026-11-01T17:12:46.954Z [WRITER-1] received from s6758_tasks correlation_id="ord-after-13" partition=0 offset=4 entity_id="L-6758-003" seq=5
+2026-11-01T17:12:47.100Z [WRITER-1] draft ready correlation_id="ord-after-13" words=7
+2026-11-01T17:12:47.106Z [WRITER-1] sent to s6758_drafts correlation_id="ord-after-13" partition=0 offset=6 entity_id="L-6758-003" seq=5
+2026-11-01T17:12:47.123Z [WRITER-1] offset committed partition=0 committed_offset=5
+2026-11-01T17:12:47.126Z [WRITER-1] received from s6758_tasks correlation_id="ord-after-17" partition=0 offset=5 entity_id="L-6758-003" seq=6
+2026-11-01T17:12:47.644Z [WRITER-1] draft ready correlation_id="ord-after-17" words=7
+2026-11-01T17:12:47.645Z [WRITER-1] sent to s6758_drafts correlation_id="ord-after-17" partition=0 offset=8 entity_id="L-6758-003" seq=6
+2026-11-01T17:12:47.658Z [WRITER-1] offset committed partition=0 committed_offset=6
+2026-11-01T17:12:47.660Z [WRITER-1] received from s6758_tasks correlation_id="ord-after-19" partition=0 offset=6 entity_id="L-6758-003" seq=7
+2026-11-01T17:12:47.736Z [WRITER-1] draft ready correlation_id="ord-after-19" words=7
+2026-11-01T17:12:47.742Z [WRITER-1] sent to s6758_drafts correlation_id="ord-after-19" partition=0 offset=9 entity_id="L-6758-003" seq=7
+2026-11-01T17:12:47.745Z [WRITER-1] offset committed partition=0 committed_offset=7

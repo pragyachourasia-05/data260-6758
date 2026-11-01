@@ -1,0 +1,5 @@
+{"ts": "2026-11-01T17:09:13.533Z", "agent": "WRITER", "event": "listening on s6758_tasks, sending to s6758_drafts", "idempotency": true, "commit": "auto (background)", "dead_letter": true, "mock": true}
+{"ts": "2026-11-01T17:09:13.629Z", "agent": "WRITER", "event": "partitions assigned", "partitions": [0, 1]}
+{"ts": "2026-11-01T17:09:14.040Z", "agent": "WRITER", "event": "received from s6758_tasks", "correlation_id": "kill-before-2c4471ed", "partition": 0, "offset": 0}
+{"ts": "2026-11-01T17:09:19.613Z", "agent": "WRITER", "event": "listening on s6758_tasks, sending to s6758_drafts", "idempotency": true, "commit": "auto (background)", "dead_letter": true, "mock": true}
+{"ts": "2026-11-01T17:09:28.372Z", "agent": "WRITER", "event": "partitions assigned", "partitions": [0, 1]}

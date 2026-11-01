@@ -1,0 +1,6 @@
+2026-10-30T05:21:44.101Z [REVIEWER] listening on s6758_drafts, sending to s6758_final idempotency=true commit="after processing" dead_letter=true mock=true
+2026-10-30T05:21:44.113Z [REVIEWER] partitions assigned partitions=[0]
+2026-10-30T05:21:45.101Z [REVIEWER] received from s6758_drafts correlation_id="dup-after-1361b87f" partition=0 offset=0
+2026-10-30T05:21:45.413Z [REVIEWER] review done correlation_id="dup-after-1361b87f" status="approved" notes="mock review"
+2026-10-30T05:21:45.477Z [REVIEWER] sent to s6758_final correlation_id="dup-after-1361b87f" partition=0 offset=0
+2026-10-30T05:21:45.730Z [REVIEWER] offset committed partition=0 committed_offset=1

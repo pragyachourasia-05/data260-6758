@@ -1,0 +1,182 @@
+{
+  "duplicate": {
+    "before": {
+      "correlation_id": "dup-before-985d21d5",
+      "messages_in_final": 2,
+      "agent_runs": {
+        "planner": 2,
+        "writer": 2,
+        "reviewer": 2
+      },
+      "duplicates_skipped": 0
+    },
+    "after": {
+      "correlation_id": "dup-after-1361b87f",
+      "messages_in_final": 1,
+      "agent_runs": {
+        "planner": 1,
+        "writer": 1,
+        "reviewer": 1
+      },
+      "duplicates_skipped": 1
+    }
+  },
+  "consumer_death": {
+    "before": {
+      "correlation_id": "kill-before-2c4471ed",
+      "partition": 0,
+      "message_offset": 0,
+      "committed_offset_when_killed": 1,
+      "times_received": 1,
+      "redelivered_after_restart": false,
+      "draft_written": false,
+      "drafts_in_topic": 0,
+      "committed_offset_at_end": 1
+    },
+    "after": {
+      "correlation_id": "kill-after-63651677",
+      "partition": 1,
+      "message_offset": 0,
+      "committed_offset_when_killed": null,
+      "times_received": 2,
+      "redelivered_after_restart": true,
+      "draft_written": true,
+      "drafts_in_topic": 1,
+      "committed_offset_at_end": 1
+    }
+  },
+  "poison": {
+    "before": {
+      "crashes": 2,
+      "failed_attempts_logged": 2,
+      "dead_letter_messages": 0,
+      "dead_letter_sample": null,
+      "good_message_processed": false,
+      "committed_offset_partition0": null
+    },
+    "after": {
+      "crashes": 0,
+      "failed_attempts_logged": 3,
+      "dead_letter_messages": 1,
+      "dead_letter_sample": {
+        "correlation_id": "poison-after",
+        "error": "ValueError: plan must be a non-empty list of steps",
+        "attempts": 3,
+        "source_topic": "s6758_tasks",
+        "offset": 0
+      },
+      "good_message_processed": true,
+      "committed_offset_partition0": 2
+    }
+  },
+  "ordering": {
+    "before": {
+      "processed": 20,
+      "per_entity": {
+        "L-6758-001": {
+          "processed_seq": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "in_order": true,
+          "inversions": 0,
+          "partitions": [
+            1
+          ]
+        },
+        "L-6758-002": {
+          "processed_seq": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            5,
+            9,
+            8
+          ],
+          "in_order": false,
+          "inversions": 2,
+          "partitions": [
+            0,
+            1
+          ]
+        },
+        "L-6758-003": {
+          "processed_seq": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            6
+          ],
+          "in_order": false,
+          "inversions": 1,
+          "partitions": [
+            0,
+            1
+          ]
+        }
+      },
+      "entities_out_of_order": 2
+    },
+    "after": {
+      "processed": 20,
+      "per_entity": {
+        "L-6758-001": {
+          "processed_seq": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "in_order": true,
+          "inversions": 0,
+          "partitions": [
+            1
+          ]
+        },
+        "L-6758-002": {
+          "processed_seq": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "in_order": true,
+          "inversions": 0,
+          "partitions": [
+            1
+          ]
+        },
+        "L-6758-003": {
+          "processed_seq": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "in_order": true,
+          "inversions": 0,
+          "partitions": [
+            0
+          ]
+        }
+      },
+      "entities_out_of_order": 0
+    }
+  }
+}

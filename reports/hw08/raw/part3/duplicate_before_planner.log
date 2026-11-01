@@ -1,0 +1,10 @@
+2026-10-30T05:20:33.781Z [PLANNER] listening on s6758_inbox, sending to s6758_tasks idempotency=false commit="after processing" dead_letter=true mock=true
+2026-10-30T05:20:33.864Z [PLANNER] partitions assigned partitions=[0]
+2026-10-30T05:20:34.389Z [PLANNER] received from s6758_inbox correlation_id="dup-before-985d21d5" partition=0 offset=0
+2026-10-30T05:20:34.719Z [PLANNER] plan ready correlation_id="dup-before-985d21d5" steps=["Check the lease terms", "Check the unit", "Answer briefly"]
+2026-10-30T05:20:34.787Z [PLANNER] sent to s6758_tasks correlation_id="dup-before-985d21d5" partition=0 offset=0
+2026-10-30T05:20:34.839Z [PLANNER] offset committed partition=0 committed_offset=1
+2026-10-30T05:20:36.207Z [PLANNER] received from s6758_inbox correlation_id="dup-before-985d21d5" partition=0 offset=1
+2026-10-30T05:20:36.550Z [PLANNER] plan ready correlation_id="dup-before-985d21d5" steps=["Check the lease terms", "Check the unit", "Answer briefly"]
+2026-10-30T05:20:36.568Z [PLANNER] sent to s6758_tasks correlation_id="dup-before-985d21d5" partition=0 offset=1
+2026-10-30T05:20:36.572Z [PLANNER] offset committed partition=0 committed_offset=2

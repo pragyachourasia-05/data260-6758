@@ -1,0 +1,54 @@
+{"ts": "2026-11-01T17:12:43.519Z", "agent": "WRITER-2", "event": "listening on s6758_tasks, sending to s6758_drafts", "idempotency": true, "commit": "after processing", "dead_letter": true, "mock": true}
+{"ts": "2026-11-01T17:12:43.556Z", "agent": "WRITER-2", "event": "partitions assigned", "partitions": [1]}
+{"ts": "2026-11-01T17:12:45.897Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-00", "partition": 1, "offset": 0, "entity_id": "L-6758-002", "seq": 1}
+{"ts": "2026-11-01T17:12:46.355Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-00", "words": 7}
+{"ts": "2026-11-01T17:12:46.370Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-00", "partition": 0, "offset": 1, "entity_id": "L-6758-002", "seq": 1}
+{"ts": "2026-11-01T17:12:46.380Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 1}
+{"ts": "2026-11-01T17:12:46.389Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-01", "partition": 1, "offset": 1, "entity_id": "L-6758-001", "seq": 1}
+{"ts": "2026-11-01T17:12:46.989Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-01", "words": 7}
+{"ts": "2026-11-01T17:12:46.989Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-01", "partition": 0, "offset": 5, "entity_id": "L-6758-001", "seq": 1}
+{"ts": "2026-11-01T17:12:47.018Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 2}
+{"ts": "2026-11-01T17:12:47.023Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-05", "partition": 1, "offset": 2, "entity_id": "L-6758-002", "seq": 2}
+{"ts": "2026-11-01T17:12:47.537Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-05", "words": 7}
+{"ts": "2026-11-01T17:12:47.542Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-05", "partition": 0, "offset": 7, "entity_id": "L-6758-002", "seq": 2}
+{"ts": "2026-11-01T17:12:47.549Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 3}
+{"ts": "2026-11-01T17:12:47.549Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-07", "partition": 1, "offset": 3, "entity_id": "L-6758-001", "seq": 2}
+{"ts": "2026-11-01T17:12:48.001Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-07", "words": 7}
+{"ts": "2026-11-01T17:12:48.012Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-07", "partition": 0, "offset": 10, "entity_id": "L-6758-001", "seq": 2}
+{"ts": "2026-11-01T17:12:48.047Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 4}
+{"ts": "2026-11-01T17:12:48.053Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-08", "partition": 1, "offset": 4, "entity_id": "L-6758-002", "seq": 3}
+{"ts": "2026-11-01T17:12:48.657Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-08", "words": 7}
+{"ts": "2026-11-01T17:12:48.667Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-08", "partition": 0, "offset": 11, "entity_id": "L-6758-002", "seq": 3}
+{"ts": "2026-11-01T17:12:48.686Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 5}
+{"ts": "2026-11-01T17:12:48.696Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-09", "partition": 1, "offset": 5, "entity_id": "L-6758-002", "seq": 4}
+{"ts": "2026-11-01T17:12:49.049Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-09", "words": 7}
+{"ts": "2026-11-01T17:12:49.112Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-09", "partition": 0, "offset": 12, "entity_id": "L-6758-002", "seq": 4}
+{"ts": "2026-11-01T17:12:49.129Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 6}
+{"ts": "2026-11-01T17:12:49.133Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-10", "partition": 1, "offset": 6, "entity_id": "L-6758-001", "seq": 3}
+{"ts": "2026-11-01T17:12:49.342Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-10", "words": 7}
+{"ts": "2026-11-01T17:12:49.349Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-10", "partition": 0, "offset": 13, "entity_id": "L-6758-001", "seq": 3}
+{"ts": "2026-11-01T17:12:49.377Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 7}
+{"ts": "2026-11-01T17:12:49.377Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-11", "partition": 1, "offset": 7, "entity_id": "L-6758-001", "seq": 4}
+{"ts": "2026-11-01T17:12:49.681Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-11", "words": 7}
+{"ts": "2026-11-01T17:12:49.685Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-11", "partition": 0, "offset": 14, "entity_id": "L-6758-001", "seq": 4}
+{"ts": "2026-11-01T17:12:49.692Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 8}
+{"ts": "2026-11-01T17:12:49.692Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-12", "partition": 1, "offset": 8, "entity_id": "L-6758-002", "seq": 5}
+{"ts": "2026-11-01T17:12:50.059Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-12", "words": 7}
+{"ts": "2026-11-01T17:12:50.101Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-12", "partition": 0, "offset": 15, "entity_id": "L-6758-002", "seq": 5}
+{"ts": "2026-11-01T17:12:50.117Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 9}
+{"ts": "2026-11-01T17:12:50.119Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-14", "partition": 1, "offset": 9, "entity_id": "L-6758-002", "seq": 6}
+{"ts": "2026-11-01T17:12:50.282Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-14", "words": 7}
+{"ts": "2026-11-01T17:12:50.347Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-14", "partition": 0, "offset": 16, "entity_id": "L-6758-002", "seq": 6}
+{"ts": "2026-11-01T17:12:50.367Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 10}
+{"ts": "2026-11-01T17:12:50.369Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-15", "partition": 1, "offset": 10, "entity_id": "L-6758-002", "seq": 7}
+{"ts": "2026-11-01T17:12:50.717Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-15", "words": 7}
+{"ts": "2026-11-01T17:12:50.729Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-15", "partition": 0, "offset": 17, "entity_id": "L-6758-002", "seq": 7}
+{"ts": "2026-11-01T17:12:50.751Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 11}
+{"ts": "2026-11-01T17:12:50.754Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-16", "partition": 1, "offset": 11, "entity_id": "L-6758-002", "seq": 8}
+{"ts": "2026-11-01T17:12:51.247Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-16", "words": 7}
+{"ts": "2026-11-01T17:12:51.257Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-16", "partition": 0, "offset": 18, "entity_id": "L-6758-002", "seq": 8}
+{"ts": "2026-11-01T17:12:51.285Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 12}
+{"ts": "2026-11-01T17:12:51.289Z", "agent": "WRITER-2", "event": "received from s6758_tasks", "correlation_id": "ord-after-18", "partition": 1, "offset": 12, "entity_id": "L-6758-002", "seq": 9}
+{"ts": "2026-11-01T17:12:51.452Z", "agent": "WRITER-2", "event": "draft ready", "correlation_id": "ord-after-18", "words": 7}
+{"ts": "2026-11-01T17:12:51.519Z", "agent": "WRITER-2", "event": "sent to s6758_drafts", "correlation_id": "ord-after-18", "partition": 0, "offset": 19, "entity_id": "L-6758-002", "seq": 9}
+{"ts": "2026-11-01T17:12:51.544Z", "agent": "WRITER-2", "event": "offset committed", "partition": 1, "committed_offset": 13}

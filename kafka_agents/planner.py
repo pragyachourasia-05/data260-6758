@@ -5,8 +5,9 @@
 import asyncio
 import json
 import re
+import time
 
-from common import INBOX, TASKS, llm, log, run_agent
+from common import INBOX, OPTS, TASKS, llm, log, run_agent
 
 SYSTEM = (
     "You are the Planner for a rental housing listings assistant. Break the user's question into "
@@ -29,7 +30,11 @@ def make_plan(question: str) -> list[str]:
 
 def handle(message: dict) -> dict:
     question = message["question"]
-    steps = make_plan(question)
+    if OPTS.mock is not None:
+        time.sleep(OPTS.mock)
+        steps = ["Check the lease terms", "Check the unit", "Answer briefly"]
+    else:
+        steps = make_plan(question)
     log("PLANNER", "plan ready", correlation_id=message.get("correlation_id"), steps=steps)
     return {"question": question, "plan": steps}
 

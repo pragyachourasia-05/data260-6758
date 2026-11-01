@@ -1,0 +1,10 @@
+{"ts": "2026-10-30T05:20:33.718Z", "agent": "REVIEWER", "event": "listening on s6758_drafts, sending to s6758_final", "idempotency": false, "commit": "after processing", "dead_letter": true, "mock": true}
+{"ts": "2026-10-30T05:20:33.731Z", "agent": "REVIEWER", "event": "partitions assigned", "partitions": [0]}
+{"ts": "2026-10-30T05:20:35.318Z", "agent": "REVIEWER", "event": "received from s6758_drafts", "correlation_id": "dup-before-985d21d5", "partition": 0, "offset": 0}
+{"ts": "2026-10-30T05:20:35.687Z", "agent": "REVIEWER", "event": "review done", "correlation_id": "dup-before-985d21d5", "status": "approved", "notes": "mock review"}
+{"ts": "2026-10-30T05:20:35.922Z", "agent": "REVIEWER", "event": "sent to s6758_final", "correlation_id": "dup-before-985d21d5", "partition": 0, "offset": 0}
+{"ts": "2026-10-30T05:20:35.954Z", "agent": "REVIEWER", "event": "offset committed", "partition": 0, "committed_offset": 1}
+{"ts": "2026-10-30T05:20:36.920Z", "agent": "REVIEWER", "event": "received from s6758_drafts", "correlation_id": "dup-before-985d21d5", "partition": 0, "offset": 1}
+{"ts": "2026-10-30T05:20:37.263Z", "agent": "REVIEWER", "event": "review done", "correlation_id": "dup-before-985d21d5", "status": "approved", "notes": "mock review"}
+{"ts": "2026-10-30T05:20:37.298Z", "agent": "REVIEWER", "event": "sent to s6758_final", "correlation_id": "dup-before-985d21d5", "partition": 0, "offset": 1}
+{"ts": "2026-10-30T05:20:37.320Z", "agent": "REVIEWER", "event": "offset committed", "partition": 0, "committed_offset": 2}

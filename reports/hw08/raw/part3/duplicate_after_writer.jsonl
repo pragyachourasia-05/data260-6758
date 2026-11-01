@@ -1,0 +1,6 @@
+{"ts": "2026-10-30T05:21:44.050Z", "agent": "WRITER", "event": "listening on s6758_tasks, sending to s6758_drafts", "idempotency": true, "commit": "after processing", "dead_letter": true, "mock": true}
+{"ts": "2026-10-30T05:21:44.066Z", "agent": "WRITER", "event": "partitions assigned", "partitions": [0, 1]}
+{"ts": "2026-10-30T05:21:44.703Z", "agent": "WRITER", "event": "received from s6758_tasks", "correlation_id": "dup-after-1361b87f", "partition": 0, "offset": 0}
+{"ts": "2026-10-30T05:21:45.007Z", "agent": "WRITER", "event": "draft ready", "correlation_id": "dup-after-1361b87f", "words": 11}
+{"ts": "2026-10-30T05:21:45.101Z", "agent": "WRITER", "event": "sent to s6758_drafts", "correlation_id": "dup-after-1361b87f", "partition": 0, "offset": 0}
+{"ts": "2026-10-30T05:21:45.116Z", "agent": "WRITER", "event": "offset committed", "partition": 0, "committed_offset": 1}

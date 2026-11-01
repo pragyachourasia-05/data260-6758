@@ -4,8 +4,9 @@
 """
 import asyncio
 import json
+import time
 
-from common import DRAFTS, FINAL, llm, log, run_agent
+from common import DRAFTS, FINAL, OPTS, llm, log, run_agent
 
 SYSTEM = (
     "You are the Reviewer for a rental housing listings assistant. Check that the draft answers the "
@@ -24,7 +25,11 @@ def review(message: dict) -> tuple[bool, str]:
 
 
 def handle(message: dict) -> dict:
-    approved, notes = review(message)
+    if OPTS.mock is not None:
+        time.sleep(OPTS.mock)
+        approved, notes = True, "mock review"
+    else:
+        approved, notes = review(message)
     if not message.get("draft", "").strip():
         approved, notes = False, "empty draft"
     status = "approved" if approved else "rejected"

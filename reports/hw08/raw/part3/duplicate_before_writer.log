@@ -1,0 +1,10 @@
+2026-10-30T05:20:33.597Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=false commit="after processing" dead_letter=true mock=true
+2026-10-30T05:20:33.663Z [WRITER] partitions assigned partitions=[0, 1]
+2026-10-30T05:20:34.787Z [WRITER] received from s6758_tasks correlation_id="dup-before-985d21d5" partition=0 offset=0
+2026-10-30T05:20:35.153Z [WRITER] draft ready correlation_id="dup-before-985d21d5" words=11
+2026-10-30T05:20:35.294Z [WRITER] sent to s6758_drafts correlation_id="dup-before-985d21d5" partition=0 offset=0
+2026-10-30T05:20:35.381Z [WRITER] offset committed partition=0 committed_offset=1
+2026-10-30T05:20:36.568Z [WRITER] received from s6758_tasks correlation_id="dup-before-985d21d5" partition=0 offset=1
+2026-10-30T05:20:36.873Z [WRITER] draft ready correlation_id="dup-before-985d21d5" words=11
+2026-10-30T05:20:36.910Z [WRITER] sent to s6758_drafts correlation_id="dup-before-985d21d5" partition=0 offset=1
+2026-10-30T05:20:36.932Z [WRITER] offset committed partition=0 committed_offset=2

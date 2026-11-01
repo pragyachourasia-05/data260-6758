@@ -41,6 +41,10 @@ def main():
             final = e
     out.append(f"\nfinal status: {final.get('status') if final else 'missing'}\n")
 
+    excerpts = RAW / "part3_log_excerpts.txt"
+    if excerpts.exists():
+        out += [section("Part 3 - failure tests (full logs in raw/part3/)"), excerpts.read_text(encoding="utf-8")]
+
     (REPORTS / "RUN_LOG.txt").write_text("".join(out), encoding="utf-8")
     print(f"wrote {REPORTS / 'RUN_LOG.txt'}")
 

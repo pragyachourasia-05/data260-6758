@@ -1,0 +1,10 @@
+{"ts": "2026-10-30T05:20:33.598Z", "agent": "WRITER", "event": "listening on s6758_tasks, sending to s6758_drafts", "idempotency": false, "commit": "after processing", "dead_letter": true, "mock": true}
+{"ts": "2026-10-30T05:20:33.665Z", "agent": "WRITER", "event": "partitions assigned", "partitions": [0, 1]}
+{"ts": "2026-10-30T05:20:34.803Z", "agent": "WRITER", "event": "received from s6758_tasks", "correlation_id": "dup-before-985d21d5", "partition": 0, "offset": 0}
+{"ts": "2026-10-30T05:20:35.176Z", "agent": "WRITER", "event": "draft ready", "correlation_id": "dup-before-985d21d5", "words": 11}
+{"ts": "2026-10-30T05:20:35.316Z", "agent": "WRITER", "event": "sent to s6758_drafts", "correlation_id": "dup-before-985d21d5", "partition": 0, "offset": 0}
+{"ts": "2026-10-30T05:20:35.399Z", "agent": "WRITER", "event": "offset committed", "partition": 0, "committed_offset": 1}
+{"ts": "2026-10-30T05:20:36.571Z", "agent": "WRITER", "event": "received from s6758_tasks", "correlation_id": "dup-before-985d21d5", "partition": 0, "offset": 1}
+{"ts": "2026-10-30T05:20:36.895Z", "agent": "WRITER", "event": "draft ready", "correlation_id": "dup-before-985d21d5", "words": 11}
+{"ts": "2026-10-30T05:20:36.916Z", "agent": "WRITER", "event": "sent to s6758_drafts", "correlation_id": "dup-before-985d21d5", "partition": 0, "offset": 1}
+{"ts": "2026-10-30T05:20:36.945Z", "agent": "WRITER", "event": "offset committed", "partition": 0, "committed_offset": 2}

@@ -1,0 +1,9 @@
+{"ts": "2026-10-30T05:21:44.022Z", "agent": "PLANNER", "event": "listening on s6758_inbox, sending to s6758_tasks", "idempotency": true, "commit": "after processing", "dead_letter": true, "mock": true}
+{"ts": "2026-10-30T05:21:44.035Z", "agent": "PLANNER", "event": "partitions assigned", "partitions": [0]}
+{"ts": "2026-10-30T05:21:44.374Z", "agent": "PLANNER", "event": "received from s6758_inbox", "correlation_id": "dup-after-1361b87f", "partition": 0, "offset": 0}
+{"ts": "2026-10-30T05:21:44.677Z", "agent": "PLANNER", "event": "plan ready", "correlation_id": "dup-after-1361b87f", "steps": ["Check the lease terms", "Check the unit", "Answer briefly"]}
+{"ts": "2026-10-30T05:21:44.703Z", "agent": "PLANNER", "event": "sent to s6758_tasks", "correlation_id": "dup-after-1361b87f", "partition": 0, "offset": 0}
+{"ts": "2026-10-30T05:21:44.715Z", "agent": "PLANNER", "event": "offset committed", "partition": 0, "committed_offset": 1}
+{"ts": "2026-10-30T05:21:46.128Z", "agent": "PLANNER", "event": "received from s6758_inbox", "correlation_id": "dup-after-1361b87f", "partition": 0, "offset": 1}
+{"ts": "2026-10-30T05:21:46.136Z", "agent": "PLANNER", "event": "duplicate correlation_id, already processed - skipped", "correlation_id": "dup-after-1361b87f"}
+{"ts": "2026-10-30T05:21:46.143Z", "agent": "PLANNER", "event": "offset committed", "partition": 0, "committed_offset": 2}

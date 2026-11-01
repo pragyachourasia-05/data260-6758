@@ -1,0 +1,8 @@
+{"ts": "2026-11-01T17:11:01.293Z", "agent": "WRITER", "event": "listening on s6758_tasks, sending to s6758_drafts", "idempotency": true, "commit": "after processing", "dead_letter": false, "mock": true}
+{"ts": "2026-11-01T17:11:01.311Z", "agent": "WRITER", "event": "partitions assigned", "partitions": [0, 1]}
+{"ts": "2026-11-01T17:11:01.450Z", "agent": "WRITER", "event": "received from s6758_tasks", "correlation_id": "poison-before", "partition": 0, "offset": 0}
+{"ts": "2026-11-01T17:11:01.452Z", "agent": "WRITER", "event": "processing failed, agent stops (no retry, no dead-letter)", "correlation_id": "poison-before", "offset": 0, "error": "ValueError: plan must be a non-empty list of steps"}
+{"ts": "2026-11-01T17:11:03.371Z", "agent": "WRITER", "event": "listening on s6758_tasks, sending to s6758_drafts", "idempotency": true, "commit": "after processing", "dead_letter": false, "mock": true}
+{"ts": "2026-11-01T17:11:03.482Z", "agent": "WRITER", "event": "partitions assigned", "partitions": [0, 1]}
+{"ts": "2026-11-01T17:11:03.499Z", "agent": "WRITER", "event": "received from s6758_tasks", "correlation_id": "poison-before", "partition": 0, "offset": 0}
+{"ts": "2026-11-01T17:11:03.501Z", "agent": "WRITER", "event": "processing failed, agent stops (no retry, no dead-letter)", "correlation_id": "poison-before", "offset": 0, "error": "ValueError: plan must be a non-empty list of steps"}
