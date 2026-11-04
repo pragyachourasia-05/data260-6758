@@ -13,6 +13,21 @@ services:
       timeout: 5s
       retries: 5
 
+  # HW9: Redis with vector search (RediSearch) for the view counter and semantic cache.
+  redis:
+    image: redis/redis-stack-server:7.4.0-v3
+    container_name: s6758_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    environment:
+      REDIS_ARGS: "--maxmemory 256mb --maxmemory-policy noeviction"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
   # HW8: Kafka (KRaft, single node). Containers use kafka:19092, host scripts use localhost:9092.
   kafka:
     image: apache/kafka:3.9.2

@@ -1,0 +1,100 @@
+INFO:     Started server process [32576]
+INFO:     Waiting for application startup.
+2026-11-03 20:57:42,631 httpx HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+2026-11-03 20:57:42,724 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-03 20:57:42,724 huggingface_hub.utils._http Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-03 20:57:42,740 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:42,864 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:42,886 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22fd1b291129c607e5d49799f87cb219b27f98acdf%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:42,901 sentence_transformers.base.model Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-11-03 20:57:43,001 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:43,019 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22fd1b291129c607e5d49799f87cb219b27f98acdf%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:43,105 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:43,124 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2FREADME.md=&etag=%2244af2e3b0fa3a0b6239e48422972bf755f28fde0%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:43,260 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:43,265 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:43,391 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:43,409 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fsentence_bert_config.json=&etag=%2259d594003bf59880a884c574bf88ef7555bb0202%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:43,525 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:43,626 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:43,647 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1121.84it/s]
+2026-11-03 20:57:44,374 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:44,478 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:44,582 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:44,693 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:44,798 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:44,818 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%22c79f2b6a0cea6f4b564fed1938984bace9d30ff0%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:44,939 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:44,957 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:45,063 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:45,084 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:45,194 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:45,213 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%22c79f2b6a0cea6f4b564fed1938984bace9d30ff0%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:45,364 httpx HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:45,464 httpx HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-03 20:57:45,844 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:45,856 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2F1_Pooling%2Fconfig.json=&etag=%22d1514c3162bbe87b343f565fadc62e6c06f04f03%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:45,983 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:46,097 httpx HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8458 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51663 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51664 - "GET /health HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.64it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.63it/s]
+2026-11-03 20:57:53,673 semantic_cache CACHE MISS best_similarity=0.0000 query='What is the monthly rent at 100 Research Avenue?'
+2026-11-03 20:57:53,921 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6758_final'})
+2026-11-04T04:57:54.007Z [SENDER] sent question to s6758_inbox correlation_id="b9af744c-0929-4ecb-b129-9da80022640b" partition=0 offset=9 question="What is the monthly rent at 100 Research Avenue?"
+2026-11-04T04:57:54.013Z [SENDER] waiting for the result on s6758_final
+2026-11-04T04:59:05.435Z [SENDER] received result from s6758_final correlation_id="b9af744c-0929-4ecb-b129-9da80022640b" partition=0 offset=5 status="approved"
+INFO:     127.0.0.1:51667 - "POST /qa HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.86it/s]
+2026-11-03 20:59:05,518 semantic_cache CACHE HIT similarity=1.0000 latency_ms=59.8 query='What is the monthly rent at 100 Research Avenue?'
+INFO:     127.0.0.1:51743 - "POST /qa HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 52.13it/s]
+2026-11-03 20:59:05,585 semantic_cache CACHE HIT similarity=0.9600 latency_ms=33.6 query='How much is the rent per month for 100 Research Avenue?'
+INFO:     127.0.0.1:51744 - "POST /qa HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 49.90it/s]
+2026-11-03 20:59:05,639 semantic_cache CACHE MISS best_similarity=0.3580 query='What documents do landlords usually ask for on a rental application?'
+2026-11-03 20:59:05,702 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6758_final'})
+2026-11-04T04:59:05.732Z [SENDER] sent question to s6758_inbox correlation_id="902e6085-3d0c-4374-a9ab-ff0382780f24" partition=0 offset=10 question="What documents do landlords usually ask for on a rental application?"
+2026-11-04T04:59:05.735Z [SENDER] waiting for the result on s6758_final
+2026-11-04T04:59:47.157Z [SENDER] received result from s6758_final correlation_id="902e6085-3d0c-4374-a9ab-ff0382780f24" partition=0 offset=6 status="approved"
+INFO:     127.0.0.1:51745 - "POST /qa HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 15.22it/s]
+2026-11-03 20:59:47,246 semantic_cache CACHE HIT similarity=1.0000 latency_ms=72.1 query='What documents do landlords usually ask for on a rental application?'
+INFO:     127.0.0.1:55570 - "POST /qa HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 39.07it/s]
+2026-11-03 20:59:47,290 semantic_cache CACHE HIT similarity=0.9085 latency_ms=35.4 query='Which documents will a landlord usually want when I apply to rent?'
+INFO:     127.0.0.1:55571 - "POST /qa HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 47.16it/s]
+2026-11-03 20:59:47,338 semantic_cache CACHE MISS best_similarity=0.7131 query='What type of property is 101 Research Avenue?'
+2026-11-03 20:59:47,407 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6758_final'})
+2026-11-04T04:59:47.432Z [SENDER] sent question to s6758_inbox correlation_id="4c303ccb-5d95-49fa-9660-dd65b6d09bcc" partition=0 offset=11 question="What type of property is 101 Research Avenue?"
+2026-11-04T04:59:47.434Z [SENDER] waiting for the result on s6758_final
+2026-11-04T05:00:23.163Z [SENDER] received result from s6758_final correlation_id="4c303ccb-5d95-49fa-9660-dd65b6d09bcc" partition=0 offset=7 status="approved"
+INFO:     127.0.0.1:55572 - "POST /qa HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 33.40it/s]
+2026-11-03 21:00:23,230 semantic_cache CACHE HIT similarity=0.8638 latency_ms=49.2 query='Is 101 Research Avenue a house or an apartment?'
+INFO:     127.0.0.1:55603 - "POST /qa HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 32.13it/s]
+2026-11-03 21:00:23,274 semantic_cache CACHE MISS best_similarity=0.3647 query='Does renters insurance cover my belongings after a fire?'
+2026-11-03 21:00:23,317 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6758_final'})
+2026-11-04T05:00:23.366Z [SENDER] sent question to s6758_inbox correlation_id="2fe489f2-cc06-4e67-9020-1218211b3e60" partition=0 offset=12 question="Does renters insurance cover my belongings after a fire?"
+2026-11-04T05:00:23.368Z [SENDER] waiting for the result on s6758_final
+2026-11-04T05:01:05.504Z [SENDER] received result from s6758_final correlation_id="2fe489f2-cc06-4e67-9020-1218211b3e60" partition=0 offset=8 status="approved"
+INFO:     127.0.0.1:55604 - "POST /qa HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 45.45it/s]
+2026-11-03 21:01:05,569 semantic_cache CACHE HIT similarity=0.9059 latency_ms=29.3 query='Will renters insurance pay for my stuff if there is a fire?'
+INFO:     127.0.0.1:65125 - "POST /qa HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 46.87it/s]
+2026-11-03 21:01:05,614 semantic_cache CACHE MISS best_similarity=0.7258 query='How many units are available at 102 Research Avenue?'
+2026-11-03 21:01:05,661 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6758_final'})
+2026-11-04T05:01:05.682Z [SENDER] sent question to s6758_inbox correlation_id="e1a88a0d-b316-499c-80a9-9f09ed6a1ae7" partition=0 offset=13 question="How many units are available at 102 Research Avenue?"
+2026-11-04T05:01:05.684Z [SENDER] waiting for the result on s6758_final
+2026-11-04T05:01:33.660Z [SENDER] received result from s6758_final correlation_id="e1a88a0d-b316-499c-80a9-9f09ed6a1ae7" partition=0 offset=9 status="approved"
+INFO:     127.0.0.1:65126 - "POST /qa HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.38it/s]
+2026-11-03 21:01:33,740 semantic_cache CACHE HIT similarity=1.0000 latency_ms=49.6 query='What type of property is 101 Research Avenue?'
+INFO:     127.0.0.1:49888 - "POST /qa HTTP/1.1" 200 OK

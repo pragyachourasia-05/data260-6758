@@ -1,0 +1,225 @@
+2026-11-04T04:56:32.253Z [REVIEWER] listening on s6758_drafts, sending to s6758_final idempotency=true commit="after processing" dead_letter=true mock=false
+2026-11-04T04:56:32.343Z [REVIEWER] partitions assigned partitions=[0]
+2026-11-04T04:58:48.954Z [REVIEWER] received from s6758_drafts correlation_id="b9af744c-0929-4ecb-b129-9da80022640b" partition=0 offset=5
+2026-11-04T04:59:05.415Z [REVIEWER] review done correlation_id="b9af744c-0929-4ecb-b129-9da80022640b" status="approved" notes="Answer is accurate and follows plan."
+2026-11-04T04:59:05.433Z [REVIEWER] sent to s6758_final correlation_id="b9af744c-0929-4ecb-b129-9da80022640b" partition=0 offset=5
+2026-11-04T04:59:05.449Z [REVIEWER] offset committed partition=0 committed_offset=6
+2026-11-04T04:59:36.467Z [REVIEWER] received from s6758_drafts correlation_id="902e6085-3d0c-4374-a9ab-ff0382780f24" partition=0 offset=6
+2026-11-04T04:59:47.150Z [REVIEWER] review done correlation_id="902e6085-3d0c-4374-a9ab-ff0382780f24" status="approved" notes="Correct and comprehensive list of documents requested by landlords."
+2026-11-04T04:59:47.156Z [REVIEWER] sent to s6758_final correlation_id="902e6085-3d0c-4374-a9ab-ff0382780f24" partition=0 offset=6
+2026-11-04T04:59:47.170Z [REVIEWER] offset committed partition=0 committed_offset=7
+2026-11-04T05:00:11.148Z [REVIEWER] received from s6758_drafts correlation_id="4c303ccb-5d95-49fa-9660-dd65b6d09bcc" partition=0 offset=7
+2026-11-04T05:00:23.153Z [REVIEWER] review done correlation_id="4c303ccb-5d95-49fa-9660-dd65b6d09bcc" status="approved" notes="Followed plan, but could have relied on listing facts alone"
+2026-11-04T05:00:23.157Z [REVIEWER] sent to s6758_final correlation_id="4c303ccb-5d95-49fa-9660-dd65b6d09bcc" partition=0 offset=7
+2026-11-04T05:00:23.174Z [REVIEWER] offset committed partition=0 committed_offset=8
+2026-11-04T05:00:53.426Z [REVIEWER] received from s6758_drafts correlation_id="2fe489f2-cc06-4e67-9020-1218211b3e60" partition=0 offset=8
+2026-11-04T05:01:05.496Z [REVIEWER] review done correlation_id="2fe489f2-cc06-4e67-9020-1218211b3e60" status="approved" notes="Answer is clear and accurate, but could be more detailed and specific about policy exclusions and coverage types."
+2026-11-04T05:01:05.503Z [REVIEWER] sent to s6758_final correlation_id="2fe489f2-cc06-4e67-9020-1218211b3e60" partition=0 offset=8
+2026-11-04T05:01:05.516Z [REVIEWER] offset committed partition=0 committed_offset=9
+2026-11-04T05:01:23.674Z [REVIEWER] received from s6758_drafts correlation_id="e1a88a0d-b316-499c-80a9-9f09ed6a1ae7" partition=0 offset=9
+2026-11-04T05:01:33.653Z [REVIEWER] review done correlation_id="e1a88a0d-b316-499c-80a9-9f09ed6a1ae7" status="approved" notes="Answer is accurate and follows the plan."
+2026-11-04T05:01:33.660Z [REVIEWER] sent to s6758_final correlation_id="e1a88a0d-b316-499c-80a9-9f09ed6a1ae7" partition=0 offset=9
+2026-11-04T05:01:33.673Z [REVIEWER] offset committed partition=0 committed_offset=10
+2026-11-04T05:02:25.572Z [REVIEWER] received from s6758_drafts correlation_id="15304dd3-cb89-4ba3-9776-fa32e1444728" partition=0 offset=10
+2026-11-04T05:02:34.573Z [REVIEWER] review done correlation_id="15304dd3-cb89-4ba3-9776-fa32e1444728" status="approved" notes="Answer is accurate and follows plan."
+2026-11-04T05:02:34.580Z [REVIEWER] sent to s6758_final correlation_id="15304dd3-cb89-4ba3-9776-fa32e1444728" partition=0 offset=10
+2026-11-04T05:02:34.592Z [REVIEWER] offset committed partition=0 committed_offset=11
+2026-11-04T05:02:57.032Z [REVIEWER] received from s6758_drafts correlation_id="586ec231-73ab-4a3c-862a-d8807fdf6456" partition=0 offset=11
+2026-11-04T05:03:07.344Z [REVIEWER] review done correlation_id="586ec231-73ab-4a3c-862a-d8807fdf6456" status="approved" notes="Answer is accurate and follows plan."
+2026-11-04T05:03:07.350Z [REVIEWER] sent to s6758_final correlation_id="586ec231-73ab-4a3c-862a-d8807fdf6456" partition=0 offset=11
+2026-11-04T05:03:07.364Z [REVIEWER] offset committed partition=0 committed_offset=12
+2026-11-04T05:03:30.398Z [REVIEWER] received from s6758_drafts correlation_id="4f1c7fde-c115-4e44-baad-829a15ecbed5" partition=0 offset=12
+2026-11-04T05:03:41.384Z [REVIEWER] review done correlation_id="4f1c7fde-c115-4e44-baad-829a15ecbed5" status="rejected" notes="Lack of verification with landlord or property manager, and assumption of accuracy of listings."
+2026-11-04T05:03:41.390Z [REVIEWER] sent to s6758_final correlation_id="4f1c7fde-c115-4e44-baad-829a15ecbed5" partition=0 offset=12
+2026-11-04T05:03:41.401Z [REVIEWER] offset committed partition=0 committed_offset=13
+2026-11-04T05:04:08.846Z [REVIEWER] received from s6758_drafts correlation_id="a0c06c41-0358-4450-a98d-727704e40cc3" partition=0 offset=13
+2026-11-04T05:04:20.387Z [REVIEWER] review done correlation_id="a0c06c41-0358-4450-a98d-727704e40cc3" status="approved" notes="Answer is accurate and follows the plan."
+2026-11-04T05:04:20.393Z [REVIEWER] sent to s6758_final correlation_id="a0c06c41-0358-4450-a98d-727704e40cc3" partition=0 offset=13
+2026-11-04T05:04:20.407Z [REVIEWER] offset committed partition=0 committed_offset=14
+2026-11-04T05:04:51.835Z [REVIEWER] received from s6758_drafts correlation_id="e7908627-30bb-47d0-87d2-e420d34c33f8" partition=0 offset=14
+2026-11-04T05:05:03.808Z [REVIEWER] review done correlation_id="e7908627-30bb-47d0-87d2-e420d34c33f8" status="approved" notes="The plan is well-structured and the draft accurately lists the typical documents requested by landlords."
+2026-11-04T05:05:03.813Z [REVIEWER] sent to s6758_final correlation_id="e7908627-30bb-47d0-87d2-e420d34c33f8" partition=0 offset=14
+2026-11-04T05:05:03.827Z [REVIEWER] offset committed partition=0 committed_offset=15
+2026-11-04T05:05:34.046Z [REVIEWER] received from s6758_drafts correlation_id="f8ecc415-e200-4dd8-80a8-506029d40fac" partition=0 offset=15
+2026-11-04T05:05:48.185Z [REVIEWER] review done correlation_id="f8ecc415-e200-4dd8-80a8-506029d40fac" status="approved" notes="Answers the question and follows the plan, but could benefit from more specific examples and local law references."
+2026-11-04T05:05:48.193Z [REVIEWER] sent to s6758_final correlation_id="f8ecc415-e200-4dd8-80a8-506029d40fac" partition=0 offset=15
+2026-11-04T05:05:48.204Z [REVIEWER] offset committed partition=0 committed_offset=16
+2026-11-04T05:06:19.264Z [REVIEWER] received from s6758_drafts correlation_id="a93b438f-7ffb-456a-a449-c9e2bbf5ead3" partition=0 offset=16
+2026-11-04T05:06:33.780Z [REVIEWER] review done correlation_id="a93b438f-7ffb-456a-a449-c9e2bbf5ead3" status="approved" notes="Answer is accurate and follows plan, but could be more detailed with specific examples or citations to local laws and regulations."
+2026-11-04T05:06:33.786Z [REVIEWER] sent to s6758_final correlation_id="a93b438f-7ffb-456a-a449-c9e2bbf5ead3" partition=0 offset=16
+2026-11-04T05:06:33.797Z [REVIEWER] offset committed partition=0 committed_offset=17
+2026-11-04T05:07:11.300Z [REVIEWER] received from s6758_drafts correlation_id="7e7839ae-6cec-4b76-af90-4497761b4728" partition=0 offset=17
+2026-11-04T05:07:27.919Z [REVIEWER] review done correlation_id="7e7839ae-6cec-4b76-af90-4497761b4728" status="approved" notes="Provides clear and concise explanations of typical renters insurance coverage types and additional features, but could benefit from more specific examples and details."
+2026-11-04T05:07:27.926Z [REVIEWER] sent to s6758_final correlation_id="7e7839ae-6cec-4b76-af90-4497761b4728" partition=0 offset=17
+2026-11-04T05:07:27.940Z [REVIEWER] offset committed partition=0 committed_offset=18
+Failed fetch messages from 1: [Error 7] RequestTimedOutError
+Failed fetch messages from 1: [Error 7] RequestTimedOutError
+Error sending HeartbeatRequest_v1 to node 1 [[Error 7] RequestTimedOutError] -- marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat send request failed: [Error 7] RequestTimedOutError. Will retry.
+Heartbeat session expired - marking coordinator dead
+2026-11-04T05:28:19.564Z [REVIEWER] received from s6758_drafts correlation_id="8705e993-adf4-4a72-b356-f57c241d6949" partition=0 offset=18
+2026-11-04T05:28:41.213Z [REVIEWER] review done correlation_id="8705e993-adf4-4a72-b356-f57c241d6949" status="approved" notes="Missing the specific example of a 12-month lease agreement and the required notice period."
+2026-11-04T05:28:41.220Z [REVIEWER] sent to s6758_final correlation_id="8705e993-adf4-4a72-b356-f57c241d6949" partition=0 offset=18
+2026-11-04T05:28:41.233Z [REVIEWER] offset committed partition=0 committed_offset=19
+Failed fetch messages from 1: [Error 7] RequestTimedOutError
+Unable to request metadata from node with id 1: KafkaConnectionError('Connection at localhost:9092 closed')
+Unable to update metadata from [1]
+Failed fetch messages from 1: [Error 7] RequestTimedOutError
+Failed fetch messages from 1: [Error 7] RequestTimedOutError
+2026-11-04T18:21:07.124Z [REVIEWER] listening on s6758_drafts, sending to s6758_final idempotency=true commit="after processing" dead_letter=true mock=false
+2026-11-04T18:21:12.140Z [REVIEWER] partitions assigned partitions=[0]
+2026-11-04T18:21:47.456Z [REVIEWER] received from s6758_drafts correlation_id="070d2431-67f6-4e5b-b3a5-3b8274dc93d0" partition=0 offset=19
+2026-11-04T18:22:22.526Z [REVIEWER] review done correlation_id="070d2431-67f6-4e5b-b3a5-3b8274dc93d0" status="approved" notes="Lacks personal touch and direct quote from the listing provider"
+2026-11-04T18:22:22.603Z [REVIEWER] sent to s6758_final correlation_id="070d2431-67f6-4e5b-b3a5-3b8274dc93d0" partition=0 offset=19
+2026-11-04T18:22:22.649Z [REVIEWER] offset committed partition=0 committed_offset=20
+2026-11-04T18:22:22.676Z [REVIEWER] received from s6758_drafts correlation_id="600c3a9a-8920-4301-8911-13aed4d3a11d" partition=0 offset=20
+2026-11-04T18:22:41.867Z [REVIEWER] review done correlation_id="600c3a9a-8920-4301-8911-13aed4d3a11d" status="approved" notes="clearly outlines necessary steps before signing a lease"
+2026-11-04T18:22:41.875Z [REVIEWER] sent to s6758_final correlation_id="600c3a9a-8920-4301-8911-13aed4d3a11d" partition=0 offset=20
+2026-11-04T18:22:41.887Z [REVIEWER] offset committed partition=0 committed_offset=21
+2026-11-04T18:22:41.892Z [REVIEWER] received from s6758_drafts correlation_id="03eb927b-2bca-4679-badf-ec5946379ea7" partition=0 offset=21
+2026-11-04T18:22:51.782Z [REVIEWER] review done correlation_id="03eb927b-2bca-4679-badf-ec5946379ea7" status="approved" notes="Answer is accurate and follows plan"
+2026-11-04T18:22:51.789Z [REVIEWER] sent to s6758_final correlation_id="03eb927b-2bca-4679-badf-ec5946379ea7" partition=0 offset=21
+2026-11-04T18:22:51.801Z [REVIEWER] offset committed partition=0 committed_offset=22
+2026-11-04T18:23:29.825Z [REVIEWER] received from s6758_drafts correlation_id="ed8913ce-179a-468f-b2de-df18bce1e2ee" partition=0 offset=22
+2026-11-04T18:23:41.696Z [REVIEWER] review done correlation_id="ed8913ce-179a-468f-b2de-df18bce1e2ee" status="approved" notes="Answer is mostly accurate, but lacks specific guidance on what to do if the lease agreement is unclear or missing."
+2026-11-04T18:23:41.703Z [REVIEWER] sent to s6758_final correlation_id="ed8913ce-179a-468f-b2de-df18bce1e2ee" partition=0 offset=22
+2026-11-04T18:23:41.717Z [REVIEWER] offset committed partition=0 committed_offset=23
+2026-11-04T18:24:12.571Z [REVIEWER] received from s6758_drafts correlation_id="3321ec55-d14f-4cb1-85cc-5d56b2893ecd" partition=0 offset=23
+2026-11-04T18:24:21.327Z [REVIEWER] review done correlation_id="3321ec55-d14f-4cb1-85cc-5d56b2893ecd" status="approved" notes="Answer provides a clear and comprehensive checklist for renters to follow before signing a lease."
+2026-11-04T18:24:21.340Z [REVIEWER] sent to s6758_final correlation_id="3321ec55-d14f-4cb1-85cc-5d56b2893ecd" partition=0 offset=23
+2026-11-04T18:24:21.354Z [REVIEWER] offset committed partition=0 committed_offset=24
+2026-11-04T18:24:45.381Z [REVIEWER] received from s6758_drafts correlation_id="f3918020-d652-4c9d-a5f2-4cec0054afdb" partition=0 offset=24
+2026-11-04T18:24:57.648Z [REVIEWER] review done correlation_id="f3918020-d652-4c9d-a5f2-4cec0054afdb" status="approved" notes="Answer is accurate and follows plan."
+2026-11-04T18:24:57.656Z [REVIEWER] sent to s6758_final correlation_id="f3918020-d652-4c9d-a5f2-4cec0054afdb" partition=0 offset=24
+2026-11-04T18:24:57.672Z [REVIEWER] offset committed partition=0 committed_offset=25
+2026-11-04T18:25:20.386Z [REVIEWER] received from s6758_drafts correlation_id="7681014c-520c-459b-b219-1a3d96c93966" partition=0 offset=25
+2026-11-04T18:25:30.460Z [REVIEWER] review done correlation_id="7681014c-520c-459b-b219-1a3d96c93966" status="approved" notes="Answer is accurate and follows plan"
+2026-11-04T18:25:30.468Z [REVIEWER] sent to s6758_final correlation_id="7681014c-520c-459b-b219-1a3d96c93966" partition=0 offset=25
+2026-11-04T18:25:30.488Z [REVIEWER] offset committed partition=0 committed_offset=26
+2026-11-04T18:25:52.010Z [REVIEWER] received from s6758_drafts correlation_id="fa075f2b-3ad9-4c39-a9dd-cb788d3d7915" partition=0 offset=26
+2026-11-04T18:26:03.136Z [REVIEWER] review done correlation_id="fa075f2b-3ad9-4c39-a9dd-cb788d3d7915" status="approved" notes="Lacks verification of information through the rental housing listings assistant's database or website."
+2026-11-04T18:26:03.151Z [REVIEWER] sent to s6758_final correlation_id="fa075f2b-3ad9-4c39-a9dd-cb788d3d7915" partition=0 offset=26
+2026-11-04T18:26:03.184Z [REVIEWER] offset committed partition=0 committed_offset=27
+2026-11-04T18:26:25.264Z [REVIEWER] received from s6758_drafts correlation_id="4c0295e1-2737-4b29-82ba-8458375435f0" partition=0 offset=27
+2026-11-04T18:26:35.912Z [REVIEWER] review done correlation_id="4c0295e1-2737-4b29-82ba-8458375435f0" status="approved" notes="Answer is direct and accurate, but could be more thorough by referencing the plan"
+2026-11-04T18:26:35.921Z [REVIEWER] sent to s6758_final correlation_id="4c0295e1-2737-4b29-82ba-8458375435f0" partition=0 offset=27
+2026-11-04T18:26:35.934Z [REVIEWER] offset committed partition=0 committed_offset=28
+2026-11-04T18:27:07.495Z [REVIEWER] received from s6758_drafts correlation_id="c15a6265-416c-49f3-b890-3aa6f24c111b" partition=0 offset=28
+2026-11-04T18:27:19.436Z [REVIEWER] review done correlation_id="c15a6265-416c-49f3-b890-3aa6f24c111b" status="approved" notes="Accurate and comprehensive list of required documents, with clear explanations and additional context"
+2026-11-04T18:27:19.444Z [REVIEWER] sent to s6758_final correlation_id="c15a6265-416c-49f3-b890-3aa6f24c111b" partition=0 offset=28
+2026-11-04T18:27:19.457Z [REVIEWER] offset committed partition=0 committed_offset=29
+2026-11-04T18:27:54.715Z [REVIEWER] received from s6758_drafts correlation_id="fb95f769-1c77-4ee1-a7b6-379dd9ccdaee" partition=0 offset=29
+2026-11-04T18:28:08.961Z [REVIEWER] review done correlation_id="fb95f769-1c77-4ee1-a7b6-379dd9ccdaee" status="approved" notes="Provides general guidelines and examples, but lacks specific data and local context"
+2026-11-04T18:28:08.968Z [REVIEWER] sent to s6758_final correlation_id="fb95f769-1c77-4ee1-a7b6-379dd9ccdaee" partition=0 offset=29
+2026-11-04T18:28:08.980Z [REVIEWER] offset committed partition=0 committed_offset=30
+2026-11-04T18:28:49.030Z [REVIEWER] received from s6758_drafts correlation_id="024fbb77-ec23-43a9-9db4-3a6ce2330bac" partition=0 offset=30
+2026-11-04T18:29:04.433Z [REVIEWER] review done correlation_id="024fbb77-ec23-43a9-9db4-3a6ce2330bac" status="approved" notes="Answer is clear and accurate, but could be more concise"
+2026-11-04T18:29:04.439Z [REVIEWER] sent to s6758_final correlation_id="024fbb77-ec23-43a9-9db4-3a6ce2330bac" partition=0 offset=30
+2026-11-04T18:29:04.451Z [REVIEWER] offset committed partition=0 committed_offset=31
+2026-11-04T18:29:40.096Z [REVIEWER] received from s6758_drafts correlation_id="e1740443-a74e-4d4e-bf8d-c8138b1060dd" partition=0 offset=31
+2026-11-04T18:29:54.246Z [REVIEWER] review done correlation_id="e1740443-a74e-4d4e-bf8d-c8138b1060dd" status="approved" notes="clear and comprehensive explanation of renters insurance coverage"
+2026-11-04T18:29:54.253Z [REVIEWER] sent to s6758_final correlation_id="e1740443-a74e-4d4e-bf8d-c8138b1060dd" partition=0 offset=31
+2026-11-04T18:29:54.257Z [REVIEWER] offset committed partition=0 committed_offset=32
+2026-11-04T18:30:23.660Z [REVIEWER] received from s6758_drafts correlation_id="f29ded69-3e4d-4c66-a715-1f888512dfb0" partition=0 offset=32
+2026-11-04T18:30:36.284Z [REVIEWER] review done correlation_id="f29ded69-3e4d-4c66-a715-1f888512dfb0" status="approved" notes="Answer follows plan and provides accurate information"
+2026-11-04T18:30:36.293Z [REVIEWER] sent to s6758_final correlation_id="f29ded69-3e4d-4c66-a715-1f888512dfb0" partition=0 offset=32
+2026-11-04T18:30:36.308Z [REVIEWER] offset committed partition=0 committed_offset=33
+2026-11-04T18:31:06.779Z [REVIEWER] received from s6758_drafts correlation_id="222234d9-10be-4232-9bcc-3d557712f853" partition=0 offset=33
+2026-11-04T18:31:20.224Z [REVIEWER] review done correlation_id="222234d9-10be-4232-9bcc-3d557712f853" status="approved" notes="Clear and comprehensive review of the lease process"
+2026-11-04T18:31:20.234Z [REVIEWER] sent to s6758_final correlation_id="222234d9-10be-4232-9bcc-3d557712f853" partition=0 offset=33
+2026-11-04T18:31:20.247Z [REVIEWER] offset committed partition=0 committed_offset=34
+2026-11-04T18:31:55.990Z [REVIEWER] received from s6758_drafts correlation_id="49be127e-63b2-43d9-97ae-cccced1d494a" partition=0 offset=34
+2026-11-04T18:32:11.780Z [REVIEWER] review done correlation_id="49be127e-63b2-43d9-97ae-cccced1d494a" status="approved" notes="Answer confirms the rent amount and provides a clear source of verification."
+2026-11-04T18:32:11.786Z [REVIEWER] sent to s6758_final correlation_id="49be127e-63b2-43d9-97ae-cccced1d494a" partition=0 offset=34
+2026-11-04T18:32:11.800Z [REVIEWER] offset committed partition=0 committed_offset=35
+2026-11-04T18:32:48.972Z [REVIEWER] received from s6758_drafts correlation_id="bcc0c67e-707b-4b94-be95-e5febf4d7c06" partition=0 offset=35
+2026-11-04T18:33:03.441Z [REVIEWER] review done correlation_id="bcc0c67e-707b-4b94-be95-e5febf4d7c06" status="approved" notes="Answer is accurate and follows plan"
+2026-11-04T18:33:03.450Z [REVIEWER] sent to s6758_final correlation_id="bcc0c67e-707b-4b94-be95-e5febf4d7c06" partition=0 offset=35
+2026-11-04T18:33:03.463Z [REVIEWER] offset committed partition=0 committed_offset=36
+2026-11-04T18:33:34.559Z [REVIEWER] received from s6758_drafts correlation_id="5c5fd6da-2f0b-4286-9130-3c6ba42eebec" partition=0 offset=36
+2026-11-04T18:33:47.942Z [REVIEWER] review done correlation_id="5c5fd6da-2f0b-4286-9130-3c6ba42eebec" status="approved" notes="Lacks personal touch and could be more engaging"
+2026-11-04T18:33:47.950Z [REVIEWER] sent to s6758_final correlation_id="5c5fd6da-2f0b-4286-9130-3c6ba42eebec" partition=0 offset=36
+2026-11-04T18:33:47.965Z [REVIEWER] offset committed partition=0 committed_offset=37
+2026-11-04T18:34:23.286Z [REVIEWER] received from s6758_drafts correlation_id="260bd7a9-c699-451d-a11f-2e5d0f5a37d9" partition=0 offset=37
+2026-11-04T18:34:36.676Z [REVIEWER] review done correlation_id="260bd7a9-c699-451d-a11f-2e5d0f5a37d9" status="approved" notes="Answer is accurate and follows the plan."
+2026-11-04T18:34:36.683Z [REVIEWER] sent to s6758_final correlation_id="260bd7a9-c699-451d-a11f-2e5d0f5a37d9" partition=0 offset=37
+2026-11-04T18:34:36.699Z [REVIEWER] offset committed partition=0 committed_offset=38
+2026-11-04T18:35:20.733Z [REVIEWER] received from s6758_drafts correlation_id="e517fc8b-5de0-44db-8ac0-37c2ccee0696" partition=0 offset=38
+2026-11-04T18:35:39.036Z [REVIEWER] review done correlation_id="e517fc8b-5de0-44db-8ac0-37c2ccee0696" status="approved" notes="Clear and concise explanation of common documents requested by tenants"
+2026-11-04T18:35:39.049Z [REVIEWER] sent to s6758_final correlation_id="e517fc8b-5de0-44db-8ac0-37c2ccee0696" partition=0 offset=38
+2026-11-04T18:35:39.062Z [REVIEWER] offset committed partition=0 committed_offset=39
+2026-11-04T18:36:22.847Z [REVIEWER] received from s6758_drafts correlation_id="bfecde9c-63cd-4c95-9253-d83742f2ebf6" partition=0 offset=39
+2026-11-04T18:36:40.315Z [REVIEWER] review done correlation_id="bfecde9c-63cd-4c95-9253-d83742f2ebf6" status="approved" notes="Provides a clear range of pet deposit amounts and considers location and pet type, but could benefit from more specific data and examples."
+2026-11-04T18:36:40.322Z [REVIEWER] sent to s6758_final correlation_id="bfecde9c-63cd-4c95-9253-d83742f2ebf6" partition=0 offset=39
+2026-11-04T18:36:40.334Z [REVIEWER] offset committed partition=0 committed_offset=40
+2026-11-04T18:37:20.804Z [REVIEWER] received from s6758_drafts correlation_id="b9eeb4f0-d85b-4417-bc7b-f31580a90e3a" partition=0 offset=40
+2026-11-04T18:37:39.465Z [REVIEWER] review done correlation_id="b9eeb4f0-d85b-4417-bc7b-f31580a90e3a" status="approved" notes="Answer is accurate and follows plan, but could benefit from more specific examples and citations to local laws and regulations."
+2026-11-04T18:37:39.471Z [REVIEWER] sent to s6758_final correlation_id="b9eeb4f0-d85b-4417-bc7b-f31580a90e3a" partition=0 offset=40
+2026-11-04T18:37:39.483Z [REVIEWER] offset committed partition=0 committed_offset=41
+2026-11-04T18:38:16.600Z [REVIEWER] received from s6758_drafts correlation_id="e07c6f39-b963-47c6-ad8e-6c0885ee8c27" partition=0 offset=41
+2026-11-04T18:38:31.989Z [REVIEWER] review done correlation_id="e07c6f39-b963-47c6-ad8e-6c0885ee8c27" status="approved" notes="Answer is clear and comprehensive, but could be rephrased for better readability"
+2026-11-04T18:38:31.996Z [REVIEWER] sent to s6758_final correlation_id="e07c6f39-b963-47c6-ad8e-6c0885ee8c27" partition=0 offset=41
+2026-11-04T18:38:32.008Z [REVIEWER] offset committed partition=0 committed_offset=42
+2026-11-04T18:39:07.544Z [REVIEWER] received from s6758_drafts correlation_id="5733b5c2-01c3-4bf3-bac4-84ff22ac4532" partition=0 offset=42
+2026-11-04T18:39:22.568Z [REVIEWER] review done correlation_id="5733b5c2-01c3-4bf3-bac4-84ff22ac4532" status="approved" notes="Notice periods vary by location and situation, but generally follow local laws and regulations."
+2026-11-04T18:39:22.574Z [REVIEWER] sent to s6758_final correlation_id="5733b5c2-01c3-4bf3-bac4-84ff22ac4532" partition=0 offset=42
+2026-11-04T18:39:22.587Z [REVIEWER] offset committed partition=0 committed_offset=43
+2026-11-04T18:39:55.253Z [REVIEWER] received from s6758_drafts correlation_id="2725b101-8514-40d0-b5c7-b1322e4d6987" partition=0 offset=43
+2026-11-04T18:40:09.691Z [REVIEWER] review done correlation_id="2725b101-8514-40d0-b5c7-b1322e4d6987" status="approved" notes="Clear and comprehensive guidance on lease termination steps"
+2026-11-04T18:40:09.697Z [REVIEWER] sent to s6758_final correlation_id="2725b101-8514-40d0-b5c7-b1322e4d6987" partition=0 offset=43
+2026-11-04T18:40:09.708Z [REVIEWER] offset committed partition=0 committed_offset=44
+2026-11-04T18:40:37.337Z [REVIEWER] received from s6758_drafts correlation_id="d7ba307e-dd34-474c-ae50-d5059fe32856" partition=0 offset=44
+2026-11-04T18:40:48.877Z [REVIEWER] review done correlation_id="d7ba307e-dd34-474c-ae50-d5059fe32856" status="approved" notes="Answer is accurate and follows plan"
+2026-11-04T18:40:48.883Z [REVIEWER] sent to s6758_final correlation_id="d7ba307e-dd34-474c-ae50-d5059fe32856" partition=0 offset=44
+2026-11-04T18:40:48.899Z [REVIEWER] offset committed partition=0 committed_offset=45
+2026-11-04T18:41:16.996Z [REVIEWER] received from s6758_drafts correlation_id="d508ed3b-d539-48d6-80bf-21746a39c008" partition=0 offset=45
+2026-11-04T18:41:36.750Z [REVIEWER] review done correlation_id="d508ed3b-d539-48d6-80bf-21746a39c008" status="approved" notes="Answer is concise and accurate, but lacks context about potential variations in boiling point."
+2026-11-04T18:41:36.756Z [REVIEWER] sent to s6758_final correlation_id="d508ed3b-d539-48d6-80bf-21746a39c008" partition=0 offset=45
+2026-11-04T18:41:36.767Z [REVIEWER] offset committed partition=0 committed_offset=46
+2026-11-04T18:43:06.165Z [REVIEWER] received from s6758_drafts correlation_id="d522204e-daee-4a50-ad7b-68802b333c6e" partition=0 offset=46
+2026-11-04T18:43:38.541Z [REVIEWER] review done correlation_id="d522204e-daee-4a50-ad7b-68802b333c6e" status="approved" notes="clear and concise instructions, but consider adding temperature ranges for the warm place and oven"
+2026-11-04T18:43:38.548Z [REVIEWER] sent to s6758_final correlation_id="d522204e-daee-4a50-ad7b-68802b333c6e" partition=0 offset=46
+2026-11-04T18:43:38.562Z [REVIEWER] offset committed partition=0 committed_offset=47
+2026-11-04T18:44:12.237Z [REVIEWER] received from s6758_drafts correlation_id="35a3cfaf-49b5-4a0b-a06a-429c798cacc1" partition=0 offset=47
+2026-11-04T18:44:26.893Z [REVIEWER] review done correlation_id="35a3cfaf-49b5-4a0b-a06a-429c798cacc1" status="approved" notes="Answer is accurate and provides additional context"
+2026-11-04T18:44:26.899Z [REVIEWER] sent to s6758_final correlation_id="35a3cfaf-49b5-4a0b-a06a-429c798cacc1" partition=0 offset=47
+2026-11-04T18:44:26.912Z [REVIEWER] offset committed partition=0 committed_offset=48
+2026-11-04T18:45:11.851Z [REVIEWER] received from s6758_drafts correlation_id="9c3a3cea-14fc-4faa-9ead-f4d18fe2e9ef" partition=0 offset=48
+2026-11-04T18:45:33.052Z [REVIEWER] review done correlation_id="9c3a3cea-14fc-4faa-9ead-f4d18fe2e9ef" status="approved" notes="Correct steps, but note the importance of proper hand tightening to avoid over-tightening the nuts."
+2026-11-04T18:45:33.063Z [REVIEWER] sent to s6758_final correlation_id="9c3a3cea-14fc-4faa-9ead-f4d18fe2e9ef" partition=0 offset=48
+2026-11-04T18:45:33.084Z [REVIEWER] offset committed partition=0 committed_offset=49
+2026-11-04T18:46:29.566Z [REVIEWER] received from s6758_drafts correlation_id="3895b1fd-e4f1-430e-aa73-69ccbcfd98fe" partition=0 offset=49
+2026-11-04T18:46:53.359Z [REVIEWER] review done correlation_id="3895b1fd-e4f1-430e-aa73-69ccbcfd98fe" status="approved" notes="The plan is well followed and the answer is clear and concise."
+2026-11-04T18:46:53.370Z [REVIEWER] sent to s6758_final correlation_id="3895b1fd-e4f1-430e-aa73-69ccbcfd98fe" partition=0 offset=49
+2026-11-04T18:46:53.388Z [REVIEWER] offset committed partition=0 committed_offset=50
+2026-11-04T18:47:24.809Z [REVIEWER] received from s6758_drafts correlation_id="62dd2a26-29e4-49a7-a9a5-a5214f32d83e" partition=0 offset=50
+2026-11-04T18:47:39.838Z [REVIEWER] review done correlation_id="62dd2a26-29e4-49a7-a9a5-a5214f32d83e" status="approved" notes="Answer is accurate and provides additional context"
+2026-11-04T18:47:39.846Z [REVIEWER] sent to s6758_final correlation_id="62dd2a26-29e4-49a7-a9a5-a5214f32d83e" partition=0 offset=50
+2026-11-04T18:47:39.859Z [REVIEWER] offset committed partition=0 committed_offset=51
+2026-11-04T18:48:31.814Z [REVIEWER] received from s6758_drafts correlation_id="6e59653e-e6aa-43f8-b026-3c4f57e49eec" partition=0 offset=51
+2026-11-04T18:48:51.843Z [REVIEWER] review done correlation_id="6e59653e-e6aa-43f8-b026-3c4f57e49eec" status="approved" notes="clear and concise instructions with proper explanations of dynamic and static stretches"
+2026-11-04T18:48:51.850Z [REVIEWER] sent to s6758_final correlation_id="6e59653e-e6aa-43f8-b026-3c4f57e49eec" partition=0 offset=51
+2026-11-04T18:48:51.860Z [REVIEWER] offset committed partition=0 committed_offset=52
+2026-11-04T18:49:38.282Z [REVIEWER] received from s6758_drafts correlation_id="23adaa55-5a19-4af4-8869-0b8b12474956" partition=0 offset=52
+2026-11-04T18:49:56.244Z [REVIEWER] review done correlation_id="23adaa55-5a19-4af4-8869-0b8b12474956" status="approved" notes="Clear and concise explanation of vaccine types and development process"
+2026-11-04T18:49:56.251Z [REVIEWER] sent to s6758_final correlation_id="23adaa55-5a19-4af4-8869-0b8b12474956" partition=0 offset=52
+2026-11-04T18:49:56.263Z [REVIEWER] offset committed partition=0 committed_offset=53
+2026-11-04T18:50:24.039Z [REVIEWER] received from s6758_drafts correlation_id="d7c8bccf-e7f9-4848-b283-2ff0667077ab" partition=0 offset=53
+2026-11-04T18:50:37.050Z [REVIEWER] review done correlation_id="d7c8bccf-e7f9-4848-b283-2ff0667077ab" status="rejected" notes="missing context and explanation"
+2026-11-04T18:50:37.057Z [REVIEWER] sent to s6758_final correlation_id="d7c8bccf-e7f9-4848-b283-2ff0667077ab" partition=0 offset=53
+2026-11-04T18:50:37.073Z [REVIEWER] offset committed partition=0 committed_offset=54
+2026-11-04T18:55:01.300Z [REVIEWER] received from s6758_drafts correlation_id="11795f6e-4037-47a6-a690-d993a9d4ae46" partition=0 offset=54
+2026-11-04T18:55:12.860Z [REVIEWER] review done correlation_id="11795f6e-4037-47a6-a690-d993a9d4ae46" status="approved" notes="Answer is accurate and follows plan."
+2026-11-04T18:55:12.865Z [REVIEWER] sent to s6758_final correlation_id="11795f6e-4037-47a6-a690-d993a9d4ae46" partition=0 offset=54
+2026-11-04T18:55:12.884Z [REVIEWER] offset committed partition=0 committed_offset=55
+2026-11-04T18:55:41.219Z [REVIEWER] received from s6758_drafts correlation_id="cb69fcef-66f9-404e-aa4e-723fc55da292" partition=0 offset=55
+2026-11-04T18:55:51.080Z [REVIEWER] review done correlation_id="cb69fcef-66f9-404e-aa4e-723fc55da292" status="approved" notes="Answer is accurate and follows plan."
+2026-11-04T18:55:51.085Z [REVIEWER] sent to s6758_final correlation_id="cb69fcef-66f9-404e-aa4e-723fc55da292" partition=0 offset=55
+2026-11-04T18:55:51.098Z [REVIEWER] offset committed partition=0 committed_offset=56
+Failed fetch messages from 1: [Error 7] RequestTimedOutError
+Error sending HeartbeatRequest_v1 to node 1 [[Error 7] RequestTimedOutError] -- marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat send request failed: [Error 7] RequestTimedOutError. Will retry.
+Heartbeat session expired - marking coordinator dead
+Failed fetch messages from 1: [Error 7] RequestTimedOutError

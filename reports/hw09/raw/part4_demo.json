@@ -1,0 +1,102 @@
+{
+  "revision": {
+    "id": "tra_03",
+    "question": "Give both the monthly rent and the property type for 102 Research Avenue.",
+    "lessons_loaded": [],
+    "attempts": 2,
+    "final_answer": "The monthly rent for 102 Research Avenue is $1950, and the property type is an Apartment.",
+    "final_result": "PASS",
+    "trail": [
+      {
+        "attempt": 1,
+        "answer": "The rent there is fairly reasonable for the area.",
+        "result": "REVISE",
+        "explanation": "Missing or wrong: monthly rent $1950; property type Apartment.",
+        "feedback": "Correct the answer using these reference facts: monthly rent $1950; property type Apartment.",
+        "pattern": "missing_fact"
+      },
+      {
+        "attempt": 2,
+        "answer": "The monthly rent for 102 Research Avenue is $1950, and the property type is an Apartment.",
+        "result": "PASS",
+        "explanation": "The answer matches the reference data and adds nothing unsupported.",
+        "feedback": "",
+        "pattern": null
+      }
+    ],
+    "latency_ms": 4747.8
+  },
+  "failed": {
+    "id": "tra_01",
+    "question": "What is the monthly rent at 100 Research Avenue?",
+    "lessons_loaded": [],
+    "attempts": 1,
+    "final_answer": "The monthly rent at 100 Research Avenue is $1800. This is a studio apartment, and there is only one available unit.",
+    "final_result": "REVISE",
+    "trail": [
+      {
+        "attempt": 1,
+        "answer": "The monthly rent at 100 Research Avenue is $1800. This is a studio apartment, and there is only one available unit.",
+        "result": "REVISE",
+        "explanation": "The answer says 'studio', which is not in the listing record.",
+        "feedback": "Remove 'studio'. State only the values in the listing record.",
+        "pattern": "added_detail"
+      }
+    ],
+    "latency_ms": 2628.4
+  },
+  "lesson": {
+    "lesson_id": "lesson_001",
+    "failure_pattern": "The answer adds property details that the listing record does not list.",
+    "correction": "Answer the question in a full sentence using the values in the record. Do not add property descriptions the record does not list, such as studio, single-family, bedrooms or spacious.",
+    "created_at": "2026-11-04",
+    "use_count": 1,
+    "pattern_key": "added_detail",
+    "keywords": [
+      "rent",
+      "type",
+      "kind",
+      "house",
+      "apartment",
+      "units",
+      "property"
+    ],
+    "avoid": [
+      "cheaper",
+      "cheapest",
+      "lower",
+      "less",
+      "more",
+      "total",
+      "combined",
+      "split",
+      "months",
+      "allowed",
+      "included",
+      "include",
+      "have"
+    ]
+  },
+  "later": {
+    "id": "tra_02",
+    "question": "What type of property is 101 Research Avenue?",
+    "lessons_loaded": [
+      "lesson_001"
+    ],
+    "attempts": 1,
+    "final_answer": "The property at 101 Research Avenue is a house.",
+    "final_result": "PASS",
+    "trail": [
+      {
+        "attempt": 1,
+        "answer": "The property at 101 Research Avenue is a house.",
+        "result": "PASS",
+        "explanation": "The answer matches the reference data and adds nothing unsupported.",
+        "feedback": "",
+        "pattern": null
+      }
+    ],
+    "latency_ms": 2226.0
+  },
+  "use_count": 1
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "val_01",
+    "question": "What is the monthly rent at 110 Research Avenue?"
+  },
+  {
+    "id": "val_02",
+    "question": "What type of property is 111 Research Avenue?"
+  },
+  {
+    "id": "val_03",
+    "question": "List the rent and the property type of 112 Research Avenue."
+  },
+  {
+    "id": "val_04",
+    "question": "How much is the total rent for 12 months at 113 Research Avenue?"
+  },
+  {
+    "id": "val_05",
+    "question": "What would 3 months of rent cost in total at 114 Research Avenue?"
+  },
+  {
+    "id": "val_06",
+    "question": "Which costs less per month, 115 Research Avenue or 116 Research Avenue, and what is the difference?"
+  },
+  {
+    "id": "val_07",
+    "question": "Is laundry included at 117 Research Avenue?"
+  },
+  {
+    "id": "val_08",
+    "question": "Are utilities included in the rent at 118 Research Avenue?"
+  },
+  {
+    "id": "val_09",
+    "question": "Does 119 Research Avenue allow smoking?"
+  },
+  {
+    "id": "val_10",
+    "question": "Who wrote Pride and Prejudice?"
+  },
+  {
+    "id": "val_11",
+    "question": "Over 6 months, how much more would 116 Research Avenue cost than 115 Research Avenue?"
+  },
+  {
+    "id": "val_12",
+    "question": "What is the combined monthly rent of 110 Research Avenue and 111 Research Avenue?"
+  },
+  {
+    "id": "val_13",
+    "question": "If 2 roommates split the rent at 112 Research Avenue equally, how much does each pay per month?"
+  },
+  {
+    "id": "val_14",
+    "question": "Which is the cheapest of 114 Research Avenue, 112 Research Avenue and 113 Research Avenue?"
+  },
+  {
+    "id": "val_15",
+    "question": "What is the rent at 111 Research Avenue, and is parking included?"
+  },
+  {
+    "id": "val_16",
+    "question": "What type of property is 113 Research Avenue, and does it have a dishwasher?"
+  }
+]

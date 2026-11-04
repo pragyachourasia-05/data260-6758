@@ -1,0 +1,1098 @@
+DATA-260 HW9 RUN_LOG - Pragya Chourasia - SID4 6758 - built 2026-11-04 12:54:04
+
+====================================================================================================
+docker ps
+====================================================================================================
+NAMES         IMAGE                               STATUS
+s6758_redis   redis/redis-stack-server:7.4.0-v3   Up 16 hours (healthy)
+s6758-mysql   mysql:8.4                           Up 16 hours
+
+====================================================================================================
+Part 1 - counter
+====================================================================================================
+{
+  "listing_id": 4,
+  "redis_key": "s6758:views:listing:4",
+  "redis_count": 25,
+  "database_view_count": 20
+}
+
+====================================================================================================
+Part 2 - cache log with timestamps (raw/part2_qa_api.log)
+====================================================================================================
+INFO:     Started server process [32576]
+INFO:     Waiting for application startup.
+2026-11-03 20:57:42,631 httpx HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+2026-11-03 20:57:42,724 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-03 20:57:42,724 huggingface_hub.utils._http Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-03 20:57:42,740 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:42,864 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:42,886 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22fd1b291129c607e5d49799f87cb219b27f98acdf%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:42,901 sentence_transformers.base.model Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-11-03 20:57:43,001 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:43,019 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22fd1b291129c607e5d49799f87cb219b27f98acdf%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:43,105 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:43,124 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2FREADME.md=&etag=%2244af2e3b0fa3a0b6239e48422972bf755f28fde0%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:43,260 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:43,265 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:43,391 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:43,409 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fsentence_bert_config.json=&etag=%2259d594003bf59880a884c574bf88ef7555bb0202%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:43,525 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:43,626 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:43,647 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1121.84it/s]
+2026-11-03 20:57:44,374 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:44,478 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:44,582 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:44,693 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:44,798 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:44,818 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%22c79f2b6a0cea6f4b564fed1938984bace9d30ff0%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:44,939 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:44,957 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:45,063 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:45,084 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:45,194 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:45,213 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%22c79f2b6a0cea6f4b564fed1938984bace9d30ff0%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:45,364 httpx HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:45,464 httpx HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-03 20:57:45,844 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-03 20:57:45,856 httpx HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2F1_Pooling%2Fconfig.json=&etag=%22d1514c3162bbe87b343f565fadc62e6c06f04f03%22 "HTTP/1.1 200 OK"
+2026-11-03 20:57:45,983 httpx HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-11-03 20:57:46,097 httpx HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8458 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51663 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51664 - "GET /health HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00,  4.64it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00,  4.63it/s]
+2026-11-03 20:57:53,673 semantic_cache CACHE MISS best_similarity=0.0000 query='What is the monthly rent at 100 Research Avenue?'
+2026-11-03 20:57:53,921 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6758_final'})
+2026-11-04T04:57:54.007Z [SENDER] sent question to s6758_inbox correlation_id="b9af744c-0929-4ecb-b129-9da80022640b" partition=0 offset=9 question="What is the monthly rent at 100 Research Avenue?"
+2026-11-04T04:57:54.013Z [SENDER] waiting for the result on s6758_final
+2026-11-04T04:59:05.435Z [SENDER] received result from s6758_final correlation_id="b9af744c-0929-4ecb-b129-9da80022640b" partition=0 offset=5 status="approved"
+INFO:     127.0.0.1:51667 - "POST /qa HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 26.86it/s]
+2026-11-03 20:59:05,518 semantic_cache CACHE HIT similarity=1.0000 latency_ms=59.8 query='What is the monthly rent at 100 Research Avenue?'
+INFO:     127.0.0.1:51743 - "POST /qa HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 52.13it/s]
+2026-11-03 20:59:05,585 semantic_cache CACHE HIT similarity=0.9600 latency_ms=33.6 query='How much is the rent per month for 100 Research Avenue?'
+INFO:     127.0.0.1:51744 - "POST /qa HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 49.90it/s]
+2026-11-03 20:59:05,639 semantic_cache CACHE MISS best_similarity=0.3580 query='What documents do landlords usually ask for on a rental application?'
+2026-11-03 20:59:05,702 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6758_final'})
+2026-11-04T04:59:05.732Z [SENDER] sent question to s6758_inbox correlation_id="902e6085-3d0c-4374-a9ab-ff0382780f24" partition=0 offset=10 question="What documents do landlords usually ask for on a rental application?"
+2026-11-04T04:59:05.735Z [SENDER] waiting for the result on s6758_final
+2026-11-04T04:59:47.157Z [SENDER] received result from s6758_final correlation_id="902e6085-3d0c-4374-a9ab-ff0382780f24" partition=0 offset=6 status="approved"
+INFO:     127.0.0.1:51745 - "POST /qa HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 15.22it/s]
+2026-11-03 20:59:47,246 semantic_cache CACHE HIT similarity=1.0000 latency_ms=72.1 query='What documents do landlords usually ask for on a rental application?'
+INFO:     127.0.0.1:55570 - "POST /qa HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 39.07it/s]
+2026-11-03 20:59:47,290 semantic_cache CACHE HIT similarity=0.9085 latency_ms=35.4 query='Which documents will a landlord usually want when I apply to rent?'
+INFO:     127.0.0.1:55571 - "POST /qa HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 47.16it/s]
+2026-11-03 20:59:47,338 semantic_cache CACHE MISS best_similarity=0.7131 query='What type of property is 101 Research Avenue?'
+2026-11-03 20:59:47,407 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6758_final'})
+2026-11-04T04:59:47.432Z [SENDER] sent question to s6758_inbox correlation_id="4c303ccb-5d95-49fa-9660-dd65b6d09bcc" partition=0 offset=11 question="What type of property is 101 Research Avenue?"
+2026-11-04T04:59:47.434Z [SENDER] waiting for the result on s6758_final
+2026-11-04T05:00:23.163Z [SENDER] received result from s6758_final correlation_id="4c303ccb-5d95-49fa-9660-dd65b6d09bcc" partition=0 offset=7 status="approved"
+INFO:     127.0.0.1:55572 - "POST /qa HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 33.40it/s]
+2026-11-03 21:00:23,230 semantic_cache CACHE HIT similarity=0.8638 latency_ms=49.2 query='Is 101 Research Avenue a house or an apartment?'
+INFO:     127.0.0.1:55603 - "POST /qa HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 32.13it/s]
+2026-11-03 21:00:23,274 semantic_cache CACHE MISS best_similarity=0.3647 query='Does renters insurance cover my belongings after a fire?'
+2026-11-03 21:00:23,317 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6758_final'})
+2026-11-04T05:00:23.366Z [SENDER] sent question to s6758_inbox correlation_id="2fe489f2-cc06-4e67-9020-1218211b3e60" partition=0 offset=12 question="Does renters insurance cover my belongings after a fire?"
+2026-11-04T05:00:23.368Z [SENDER] waiting for the result on s6758_final
+2026-11-04T05:01:05.504Z [SENDER] received result from s6758_final correlation_id="2fe489f2-cc06-4e67-9020-1218211b3e60" partition=0 offset=8 status="approved"
+INFO:     127.0.0.1:55604 - "POST /qa HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 45.45it/s]
+2026-11-03 21:01:05,569 semantic_cache CACHE HIT similarity=0.9059 latency_ms=29.3 query='Will renters insurance pay for my stuff if there is a fire?'
+INFO:     127.0.0.1:65125 - "POST /qa HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 46.87it/s]
+2026-11-03 21:01:05,614 semantic_cache CACHE MISS best_similarity=0.7258 query='How many units are available at 102 Research Avenue?'
+2026-11-03 21:01:05,661 aiokafka.consumer.subscription_state Updating subscribed topics to: frozenset({'s6758_final'})
+2026-11-04T05:01:05.682Z [SENDER] sent question to s6758_inbox correlation_id="e1a88a0d-b316-499c-80a9-9f09ed6a1ae7" partition=0 offset=13 question="How many units are available at 102 Research Avenue?"
+2026-11-04T05:01:05.684Z [SENDER] waiting for the result on s6758_final
+2026-11-04T05:01:33.660Z [SENDER] received result from s6758_final correlation_id="e1a88a0d-b316-499c-80a9-9f09ed6a1ae7" partition=0 offset=9 status="approved"
+INFO:     127.0.0.1:65126 - "POST /qa HTTP/1.1" 200 OK
+
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.38it/s]
+2026-11-03 21:01:33,740 semantic_cache CACHE HIT similarity=1.0000 latency_ms=49.6 query='What type of property is 101 Research Avenue?'
+INFO:     127.0.0.1:49888 - "POST /qa HTTP/1.1" 200 OK
+
+====================================================================================================
+Part 3 - sweep, one line per case
+====================================================================================================
+
+threshold 0.75: {"threshold": 0.75, "queries": 40, "hits": 30, "misses": 10, "false_hits": 14, "hit_rate": 0.75, "false_hit_rate": 0.35, "mean_latency_ms": 15785.495, "missed_should_hit": 0}
+  e01 HIT  sim=1.0     false_hit=False What is the monthly rent at 100 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  e02 HIT  sim=1.0     false_hit=False What type of property is 101 Research Avenue? <- What type of property is 101 Research Avenue?
+  e03 HIT  sim=0.8735  false_hit=True  How much does it cost per month to rent 103 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  e04 HIT  sim=0.7646  false_hit=True  Is 104 Research Avenue an apartment or a house? <- What type of property is 101 Research Avenue?
+  e05 HIT  sim=1.0     false_hit=False What documents do landlords usually ask for on a rental application? <- What documents do landlords usually ask for on a rental application?
+  e06 HIT  sim=1.0     false_hit=False How much security deposit do landlords usually charge? <- How much security deposit do landlords usually charge?
+  e07 HIT  sim=1.0     false_hit=False Can a landlord raise the rent during a fixed-term lease? <- Can a landlord raise the rent during a fixed-term lease?
+  e08 HIT  sim=1.0     false_hit=False What does renters insurance cover? <- What does renters insurance cover?
+  e09 HIT  sim=1.0     false_hit=False How much notice should a tenant give before moving out? <- How much notice should a tenant give before moving out?
+  e10 HIT  sim=1.0     false_hit=False What should I check before signing a lease? <- What should I check before signing a lease?
+  p01 HIT  sim=0.96    false_hit=False How much is the rent per month for 100 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  p02 HIT  sim=0.9748  false_hit=False What kind of property is listed at 101 Research Avenue? <- What type of property is 101 Research Avenue?
+  p03 HIT  sim=0.8914  false_hit=True  What's the monthly price for renting 103 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  p04 HIT  sim=0.81    false_hit=True  Is the property at 104 Research Avenue a house or an apartment? <- What type of property is 101 Research Avenue?
+  p05 HIT  sim=0.9568  false_hit=False Which documents do landlords normally require on a rental application? <- What documents do landlords usually ask for on a rental application?
+  p06 HIT  sim=0.947   false_hit=False What is the typical security deposit a landlord charges? <- How much security deposit do landlords usually charge?
+  p07 HIT  sim=0.9104  false_hit=False Is a landlord allowed to increase rent in the middle of a fixed-term lease? <- Can a landlord raise the rent during a fixed-term lease?
+  p08 HIT  sim=0.9142  false_hit=False What things are covered by renters insurance? <- What does renters insurance cover?
+  p09 HIT  sim=0.8638  false_hit=False How far in advance must a tenant give notice before moving out? <- How much notice should a tenant give before moving out?
+  p10 HIT  sim=0.8972  false_hit=False What should I look at before I sign a lease? <- What should I check before signing a lease?
+  m01 HIT  sim=0.968   false_hit=True  What is the monthly rent at 110 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  m02 HIT  sim=0.9659  false_hit=True  What type of property is 102 Research Avenue? <- What type of property is 101 Research Avenue?
+  m03 HIT  sim=0.8781  false_hit=True  How much does it cost per month to rent 130 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  m04 HIT  sim=0.8107  false_hit=True  Is 105 Research Avenue an apartment or a house? <- What type of property is 101 Research Avenue?
+  m05 HIT  sim=0.8973  false_hit=True  What documents do tenants usually ask landlords for before renting? <- What documents do landlords usually ask for on a rental application?
+  m06 HIT  sim=0.8293  false_hit=True  How much pet deposit do landlords usually charge? <- How much security deposit do landlords usually charge?
+  m07 HIT  sim=0.8856  false_hit=True  Can a landlord raise the rent during a month-to-month lease? <- Can a landlord raise the rent during a fixed-term lease?
+  m08 HIT  sim=0.8922  false_hit=True  What does landlord insurance cover? <- What does renters insurance cover?
+  m09 HIT  sim=0.806   false_hit=True  How much notice should a landlord give before entering a rental unit? <- How much notice should a tenant give before moving out?
+  m10 HIT  sim=0.9087  false_hit=True  What should I check before ending a lease? <- What should I check before signing a lease?
+  u01 miss sim=0.0236  false_hit=False Who won the 2018 FIFA World Cup?
+  u02 miss sim=0.1129  false_hit=False What is the boiling point of water at sea level?
+  u03 miss sim=0.137   false_hit=False How do I bake sourdough bread?
+  u04 miss sim=0.2775  false_hit=False What is the capital of Australia?
+  u05 miss sim=0.2715  false_hit=False How do I change a flat bicycle tire?
+  u06 miss sim=0.1486  false_hit=False What is the difference between a list and a tuple in Python?
+  u07 miss sim=0.2374  false_hit=False How many planets are in the solar system?
+  u08 miss sim=0.1745  false_hit=False What is a good stretching routine before running?
+  u09 miss sim=0.1793  false_hit=False How do vaccines work?
+  u10 miss sim=0.2224  false_hit=False What is the speed of light?
+
+threshold 0.8: {"threshold": 0.8, "queries": 40, "hits": 30, "misses": 10, "false_hits": 12, "hit_rate": 0.75, "false_hit_rate": 0.3, "mean_latency_ms": 15731.779999999999, "missed_should_hit": 0}
+  e01 HIT  sim=1.0     false_hit=False What is the monthly rent at 100 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  e02 HIT  sim=1.0     false_hit=False What type of property is 101 Research Avenue? <- What type of property is 101 Research Avenue?
+  e03 HIT  sim=0.8735  false_hit=True  How much does it cost per month to rent 103 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  e04 HIT  sim=1.0     false_hit=False Is 104 Research Avenue an apartment or a house? <- Is 104 Research Avenue an apartment or a house?
+  e05 HIT  sim=1.0     false_hit=False What documents do landlords usually ask for on a rental application? <- What documents do landlords usually ask for on a rental application?
+  e06 HIT  sim=1.0     false_hit=False How much security deposit do landlords usually charge? <- How much security deposit do landlords usually charge?
+  e07 HIT  sim=1.0     false_hit=False Can a landlord raise the rent during a fixed-term lease? <- Can a landlord raise the rent during a fixed-term lease?
+  e08 HIT  sim=1.0     false_hit=False What does renters insurance cover? <- What does renters insurance cover?
+  e09 HIT  sim=1.0     false_hit=False How much notice should a tenant give before moving out? <- How much notice should a tenant give before moving out?
+  e10 HIT  sim=1.0     false_hit=False What should I check before signing a lease? <- What should I check before signing a lease?
+  p01 HIT  sim=0.96    false_hit=False How much is the rent per month for 100 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  p02 HIT  sim=0.9748  false_hit=False What kind of property is listed at 101 Research Avenue? <- What type of property is 101 Research Avenue?
+  p03 HIT  sim=0.8914  false_hit=True  What's the monthly price for renting 103 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  p04 HIT  sim=0.9479  false_hit=False Is the property at 104 Research Avenue a house or an apartment? <- Is 104 Research Avenue an apartment or a house?
+  p05 HIT  sim=0.9568  false_hit=False Which documents do landlords normally require on a rental application? <- What documents do landlords usually ask for on a rental application?
+  p06 HIT  sim=0.947   false_hit=False What is the typical security deposit a landlord charges? <- How much security deposit do landlords usually charge?
+  p07 HIT  sim=0.9104  false_hit=False Is a landlord allowed to increase rent in the middle of a fixed-term lease? <- Can a landlord raise the rent during a fixed-term lease?
+  p08 HIT  sim=0.9142  false_hit=False What things are covered by renters insurance? <- What does renters insurance cover?
+  p09 HIT  sim=0.8638  false_hit=False How far in advance must a tenant give notice before moving out? <- How much notice should a tenant give before moving out?
+  p10 HIT  sim=0.8972  false_hit=False What should I look at before I sign a lease? <- What should I check before signing a lease?
+  m01 HIT  sim=0.968   false_hit=True  What is the monthly rent at 110 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  m02 HIT  sim=0.9659  false_hit=True  What type of property is 102 Research Avenue? <- What type of property is 101 Research Avenue?
+  m03 HIT  sim=0.8781  false_hit=True  How much does it cost per month to rent 130 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  m04 HIT  sim=0.9354  false_hit=True  Is 105 Research Avenue an apartment or a house? <- Is 104 Research Avenue an apartment or a house?
+  m05 HIT  sim=0.8973  false_hit=True  What documents do tenants usually ask landlords for before renting? <- What documents do landlords usually ask for on a rental application?
+  m06 HIT  sim=0.8293  false_hit=True  How much pet deposit do landlords usually charge? <- How much security deposit do landlords usually charge?
+  m07 HIT  sim=0.8856  false_hit=True  Can a landlord raise the rent during a month-to-month lease? <- Can a landlord raise the rent during a fixed-term lease?
+  m08 HIT  sim=0.8922  false_hit=True  What does landlord insurance cover? <- What does renters insurance cover?
+  m09 HIT  sim=0.806   false_hit=True  How much notice should a landlord give before entering a rental unit? <- How much notice should a tenant give before moving out?
+  m10 HIT  sim=0.9087  false_hit=True  What should I check before ending a lease? <- What should I check before signing a lease?
+  u01 miss sim=0.0236  false_hit=False Who won the 2018 FIFA World Cup?
+  u02 miss sim=0.1129  false_hit=False What is the boiling point of water at sea level?
+  u03 miss sim=0.137   false_hit=False How do I bake sourdough bread?
+  u04 miss sim=0.2775  false_hit=False What is the capital of Australia?
+  u05 miss sim=0.2715  false_hit=False How do I change a flat bicycle tire?
+  u06 miss sim=0.1486  false_hit=False What is the difference between a list and a tuple in Python?
+  u07 miss sim=0.2374  false_hit=False How many planets are in the solar system?
+  u08 miss sim=0.1745  false_hit=False What is a good stretching routine before running?
+  u09 miss sim=0.1793  false_hit=False How do vaccines work?
+  u10 miss sim=0.2224  false_hit=False What is the speed of light?
+
+threshold 0.85: {"threshold": 0.85, "queries": 40, "hits": 28, "misses": 12, "false_hits": 10, "hit_rate": 0.7, "false_hit_rate": 0.25, "mean_latency_ms": 18526.89, "missed_should_hit": 0}
+  e01 HIT  sim=1.0     false_hit=False What is the monthly rent at 100 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  e02 HIT  sim=1.0     false_hit=False What type of property is 101 Research Avenue? <- What type of property is 101 Research Avenue?
+  e03 HIT  sim=0.8735  false_hit=True  How much does it cost per month to rent 103 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  e04 HIT  sim=1.0     false_hit=False Is 104 Research Avenue an apartment or a house? <- Is 104 Research Avenue an apartment or a house?
+  e05 HIT  sim=1.0     false_hit=False What documents do landlords usually ask for on a rental application? <- What documents do landlords usually ask for on a rental application?
+  e06 HIT  sim=1.0     false_hit=False How much security deposit do landlords usually charge? <- How much security deposit do landlords usually charge?
+  e07 HIT  sim=1.0     false_hit=False Can a landlord raise the rent during a fixed-term lease? <- Can a landlord raise the rent during a fixed-term lease?
+  e08 HIT  sim=1.0     false_hit=False What does renters insurance cover? <- What does renters insurance cover?
+  e09 HIT  sim=1.0     false_hit=False How much notice should a tenant give before moving out? <- How much notice should a tenant give before moving out?
+  e10 HIT  sim=1.0     false_hit=False What should I check before signing a lease? <- What should I check before signing a lease?
+  p01 HIT  sim=0.96    false_hit=False How much is the rent per month for 100 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  p02 HIT  sim=0.9748  false_hit=False What kind of property is listed at 101 Research Avenue? <- What type of property is 101 Research Avenue?
+  p03 HIT  sim=0.8914  false_hit=True  What's the monthly price for renting 103 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  p04 HIT  sim=0.9479  false_hit=False Is the property at 104 Research Avenue a house or an apartment? <- Is 104 Research Avenue an apartment or a house?
+  p05 HIT  sim=0.9568  false_hit=False Which documents do landlords normally require on a rental application? <- What documents do landlords usually ask for on a rental application?
+  p06 HIT  sim=0.947   false_hit=False What is the typical security deposit a landlord charges? <- How much security deposit do landlords usually charge?
+  p07 HIT  sim=0.9104  false_hit=False Is a landlord allowed to increase rent in the middle of a fixed-term lease? <- Can a landlord raise the rent during a fixed-term lease?
+  p08 HIT  sim=0.9142  false_hit=False What things are covered by renters insurance? <- What does renters insurance cover?
+  p09 HIT  sim=0.8638  false_hit=False How far in advance must a tenant give notice before moving out? <- How much notice should a tenant give before moving out?
+  p10 HIT  sim=0.8972  false_hit=False What should I look at before I sign a lease? <- What should I check before signing a lease?
+  m01 HIT  sim=0.968   false_hit=True  What is the monthly rent at 110 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  m02 HIT  sim=0.9659  false_hit=True  What type of property is 102 Research Avenue? <- What type of property is 101 Research Avenue?
+  m03 HIT  sim=0.8781  false_hit=True  How much does it cost per month to rent 130 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  m04 HIT  sim=0.9354  false_hit=True  Is 105 Research Avenue an apartment or a house? <- Is 104 Research Avenue an apartment or a house?
+  m05 HIT  sim=0.8973  false_hit=True  What documents do tenants usually ask landlords for before renting? <- What documents do landlords usually ask for on a rental application?
+  m06 miss sim=0.8293  false_hit=False How much pet deposit do landlords usually charge?
+  m07 HIT  sim=0.8856  false_hit=True  Can a landlord raise the rent during a month-to-month lease? <- Can a landlord raise the rent during a fixed-term lease?
+  m08 HIT  sim=0.8922  false_hit=True  What does landlord insurance cover? <- What does renters insurance cover?
+  m09 miss sim=0.806   false_hit=False How much notice should a landlord give before entering a rental unit?
+  m10 HIT  sim=0.9087  false_hit=True  What should I check before ending a lease? <- What should I check before signing a lease?
+  u01 miss sim=0.0236  false_hit=False Who won the 2018 FIFA World Cup?
+  u02 miss sim=0.1129  false_hit=False What is the boiling point of water at sea level?
+  u03 miss sim=0.137   false_hit=False How do I bake sourdough bread?
+  u04 miss sim=0.2775  false_hit=False What is the capital of Australia?
+  u05 miss sim=0.2715  false_hit=False How do I change a flat bicycle tire?
+  u06 miss sim=0.1486  false_hit=False What is the difference between a list and a tuple in Python?
+  u07 miss sim=0.2374  false_hit=False How many planets are in the solar system?
+  u08 miss sim=0.1745  false_hit=False What is a good stretching routine before running?
+  u09 miss sim=0.1793  false_hit=False How do vaccines work?
+  u10 miss sim=0.2224  false_hit=False What is the speed of light?
+
+threshold 0.9: {"threshold": 0.9, "queries": 40, "hits": 21, "misses": 19, "false_hits": 5, "hit_rate": 0.525, "false_hit_rate": 0.125, "mean_latency_ms": 26725.232500000002, "missed_should_hit": 4}
+  e01 HIT  sim=1.0     false_hit=False What is the monthly rent at 100 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  e02 HIT  sim=1.0     false_hit=False What type of property is 101 Research Avenue? <- What type of property is 101 Research Avenue?
+  e03 miss sim=0.8735  false_hit=False How much does it cost per month to rent 103 Research Avenue?
+  e04 HIT  sim=1.0     false_hit=False Is 104 Research Avenue an apartment or a house? <- Is 104 Research Avenue an apartment or a house?
+  e05 HIT  sim=1.0     false_hit=False What documents do landlords usually ask for on a rental application? <- What documents do landlords usually ask for on a rental application?
+  e06 HIT  sim=1.0     false_hit=False How much security deposit do landlords usually charge? <- How much security deposit do landlords usually charge?
+  e07 HIT  sim=1.0     false_hit=False Can a landlord raise the rent during a fixed-term lease? <- Can a landlord raise the rent during a fixed-term lease?
+  e08 HIT  sim=1.0     false_hit=False What does renters insurance cover? <- What does renters insurance cover?
+  e09 HIT  sim=1.0     false_hit=False How much notice should a tenant give before moving out? <- How much notice should a tenant give before moving out?
+  e10 HIT  sim=1.0     false_hit=False What should I check before signing a lease? <- What should I check before signing a lease?
+  p01 HIT  sim=0.96    false_hit=False How much is the rent per month for 100 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  p02 HIT  sim=0.9748  false_hit=False What kind of property is listed at 101 Research Avenue? <- What type of property is 101 Research Avenue?
+  p03 miss sim=0.8914  false_hit=False What's the monthly price for renting 103 Research Avenue?
+  p04 HIT  sim=0.9479  false_hit=False Is the property at 104 Research Avenue a house or an apartment? <- Is 104 Research Avenue an apartment or a house?
+  p05 HIT  sim=0.9568  false_hit=False Which documents do landlords normally require on a rental application? <- What documents do landlords usually ask for on a rental application?
+  p06 HIT  sim=0.947   false_hit=False What is the typical security deposit a landlord charges? <- How much security deposit do landlords usually charge?
+  p07 HIT  sim=0.9104  false_hit=False Is a landlord allowed to increase rent in the middle of a fixed-term lease? <- Can a landlord raise the rent during a fixed-term lease?
+  p08 HIT  sim=0.9142  false_hit=False What things are covered by renters insurance? <- What does renters insurance cover?
+  p09 miss sim=0.8638  false_hit=False How far in advance must a tenant give notice before moving out?
+  p10 miss sim=0.8972  false_hit=False What should I look at before I sign a lease?
+  m01 HIT  sim=0.968   false_hit=True  What is the monthly rent at 110 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  m02 HIT  sim=0.9659  false_hit=True  What type of property is 102 Research Avenue? <- What type of property is 101 Research Avenue?
+  m03 HIT  sim=0.9236  false_hit=True  How much does it cost per month to rent 130 Research Avenue? <- What's the monthly price for renting 103 Research Avenue?
+  m04 HIT  sim=0.9354  false_hit=True  Is 105 Research Avenue an apartment or a house? <- Is 104 Research Avenue an apartment or a house?
+  m05 miss sim=0.8973  false_hit=False What documents do tenants usually ask landlords for before renting?
+  m06 miss sim=0.8293  false_hit=False How much pet deposit do landlords usually charge?
+  m07 miss sim=0.8856  false_hit=False Can a landlord raise the rent during a month-to-month lease?
+  m08 miss sim=0.8922  false_hit=False What does landlord insurance cover?
+  m09 miss sim=0.806   false_hit=False How much notice should a landlord give before entering a rental unit?
+  m10 HIT  sim=0.9087  false_hit=True  What should I check before ending a lease? <- What should I check before signing a lease?
+  u01 miss sim=0.0236  false_hit=False Who won the 2018 FIFA World Cup?
+  u02 miss sim=0.1199  false_hit=False What is the boiling point of water at sea level?
+  u03 miss sim=0.137   false_hit=False How do I bake sourdough bread?
+  u04 miss sim=0.2775  false_hit=False What is the capital of Australia?
+  u05 miss sim=0.2715  false_hit=False How do I change a flat bicycle tire?
+  u06 miss sim=0.1486  false_hit=False What is the difference between a list and a tuple in Python?
+  u07 miss sim=0.2374  false_hit=False How many planets are in the solar system?
+  u08 miss sim=0.1745  false_hit=False What is a good stretching routine before running?
+  u09 miss sim=0.1793  false_hit=False How do vaccines work?
+  u10 miss sim=0.2224  false_hit=False What is the speed of light?
+
+threshold 0.95: {"threshold": 0.95, "queries": 40, "hits": 14, "misses": 26, "false_hits": 2, "hit_rate": 0.35, "false_hit_rate": 0.05, "mean_latency_ms": 34889.822499999995, "missed_should_hit": 8}
+  e01 HIT  sim=1.0     false_hit=False What is the monthly rent at 100 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  e02 HIT  sim=1.0     false_hit=False What type of property is 101 Research Avenue? <- What type of property is 101 Research Avenue?
+  e03 miss sim=0.8735  false_hit=False How much does it cost per month to rent 103 Research Avenue?
+  e04 HIT  sim=1.0     false_hit=False Is 104 Research Avenue an apartment or a house? <- Is 104 Research Avenue an apartment or a house?
+  e05 HIT  sim=1.0     false_hit=False What documents do landlords usually ask for on a rental application? <- What documents do landlords usually ask for on a rental application?
+  e06 HIT  sim=1.0     false_hit=False How much security deposit do landlords usually charge? <- How much security deposit do landlords usually charge?
+  e07 HIT  sim=1.0     false_hit=False Can a landlord raise the rent during a fixed-term lease? <- Can a landlord raise the rent during a fixed-term lease?
+  e08 HIT  sim=1.0     false_hit=False What does renters insurance cover? <- What does renters insurance cover?
+  e09 HIT  sim=1.0     false_hit=False How much notice should a tenant give before moving out? <- How much notice should a tenant give before moving out?
+  e10 HIT  sim=1.0     false_hit=False What should I check before signing a lease? <- What should I check before signing a lease?
+  p01 HIT  sim=0.96    false_hit=False How much is the rent per month for 100 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  p02 HIT  sim=0.9748  false_hit=False What kind of property is listed at 101 Research Avenue? <- What type of property is 101 Research Avenue?
+  p03 miss sim=0.8914  false_hit=False What's the monthly price for renting 103 Research Avenue?
+  p04 miss sim=0.9479  false_hit=False Is the property at 104 Research Avenue a house or an apartment?
+  p05 HIT  sim=0.9568  false_hit=False Which documents do landlords normally require on a rental application? <- What documents do landlords usually ask for on a rental application?
+  p06 miss sim=0.947   false_hit=False What is the typical security deposit a landlord charges?
+  p07 miss sim=0.9104  false_hit=False Is a landlord allowed to increase rent in the middle of a fixed-term lease?
+  p08 miss sim=0.9142  false_hit=False What things are covered by renters insurance?
+  p09 miss sim=0.8638  false_hit=False How far in advance must a tenant give notice before moving out?
+  p10 miss sim=0.8972  false_hit=False What should I look at before I sign a lease?
+  m01 HIT  sim=0.968   false_hit=True  What is the monthly rent at 110 Research Avenue? <- What is the monthly rent at 100 Research Avenue?
+  m02 HIT  sim=0.9659  false_hit=True  What type of property is 102 Research Avenue? <- What type of property is 101 Research Avenue?
+  m03 miss sim=0.9236  false_hit=False How much does it cost per month to rent 130 Research Avenue?
+  m04 miss sim=0.9354  false_hit=False Is 105 Research Avenue an apartment or a house?
+  m05 miss sim=0.8973  false_hit=False What documents do tenants usually ask landlords for before renting?
+  m06 miss sim=0.8293  false_hit=False How much pet deposit do landlords usually charge?
+  m07 miss sim=0.8856  false_hit=False Can a landlord raise the rent during a month-to-month lease?
+  m08 miss sim=0.8922  false_hit=False What does landlord insurance cover?
+  m09 miss sim=0.806   false_hit=False How much notice should a landlord give before entering a rental unit?
+  m10 miss sim=0.9087  false_hit=False What should I check before ending a lease?
+  u01 miss sim=0.0236  false_hit=False Who won the 2018 FIFA World Cup?
+  u02 miss sim=0.1393  false_hit=False What is the boiling point of water at sea level?
+  u03 miss sim=0.137   false_hit=False How do I bake sourdough bread?
+  u04 miss sim=0.2775  false_hit=False What is the capital of Australia?
+  u05 miss sim=0.2715  false_hit=False How do I change a flat bicycle tire?
+  u06 miss sim=0.1486  false_hit=False What is the difference between a list and a tuple in Python?
+  u07 miss sim=0.2374  false_hit=False How many planets are in the solar system?
+  u08 miss sim=0.1745  false_hit=False What is a good stretching routine before running?
+  u09 miss sim=0.1793  false_hit=False How do vaccines work?
+  u10 miss sim=0.2224  false_hit=False What is the speed of light?
+
+====================================================================================================
+Part 3 - stale answer test
+====================================================================================================
+{
+  "question": "What is the monthly rent at 100 Research Avenue?",
+  "listing_id": 4,
+  "original_rent": "$1800/month",
+  "new_rent": "$1999/month",
+  "cold": {
+    "question": "What is the monthly rent at 100 Research Avenue?",
+    "answer": "To confirm the monthly rent at 100 Research Avenue, I checked the property's listing. The 'Rent' section clearly states that the monthly rent is $1800. This information is up-to-date and accurate, as it is listed on the current rental housing listings.",
+    "is_cached": false,
+    "similarity": 0.0,
+    "latency_ms": 42172.3,
+    "search_ms": 286.7,
+    "cached_query": null,
+    "cached_key": null,
+    "status": "approved",
+    "stale_dropped": false
+  },
+  "stale_hit": {
+    "question": "What is the monthly rent at 100 Research Avenue?",
+    "answer": "To confirm the monthly rent at 100 Research Avenue, I checked the property's listing. The 'Rent' section clearly states that the monthly rent is $1800. This information is up-to-date and accurate, as it is listed on the current rental housing listings.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "latency_ms": 45.3,
+    "search_ms": 45.3,
+    "cached_query": "What is the monthly rent at 100 Research Avenue?",
+    "cached_key": "rent@100",
+    "status": "cached",
+    "stale_dropped": false
+  },
+  "after_invalidation": {
+    "question": "What is the monthly rent at 100 Research Avenue?",
+    "answer": "To confirm the monthly rent at 100 Research Avenue, I checked the property's listing. The 'Rent' section clearly states that the monthly rent is $1999. This information is up-to-date and accurate, as it is the current rent amount listed for the property.",
+    "is_cached": false,
+    "similarity": 1.0,
+    "latency_ms": 38059.2,
+    "search_ms": 54.9,
+    "cached_query": null,
+    "cached_key": null,
+    "status": "approved",
+    "stale_dropped": true
+  },
+  "repeat": {
+    "question": "What is the monthly rent at 100 Research Avenue?",
+    "answer": "To confirm the monthly rent at 100 Research Avenue, I checked the property's listing. The 'Rent' section clearly states that the monthly rent is $1999. This information is up-to-date and accurate, as it is the current rent amount listed for the property.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "latency_ms": 63.9,
+    "search_ms": 63.9,
+    "cached_query": "What is the monthly rent at 100 Research Avenue?",
+    "cached_key": "rent@100",
+    "status": "cached",
+    "stale_dropped": false
+  },
+  "stale_answer_has_old_rent": true,
+  "fresh_answer_has_new_rent": true
+}
+
+====================================================================================================
+Part 4 - controlled revision
+====================================================================================================
+Question: Give both the monthly rent and the property type for 102 Research Avenue.
+Lessons loaded: none
+Attempt 1: The rent there is fairly reasonable for the area.
+  REVISE - Missing or wrong: monthly rent $1950; property type Apartment.
+Attempt 2: The monthly rent for 102 Research Avenue is $1950, and the property type is an Apartment.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 2 attempt(s)
+
+
+====================================================================================================
+Part 4 - lesson created and reused
+====================================================================================================
+Question: What is the monthly rent at 100 Research Avenue?
+Lessons loaded: none
+Attempt 1: The monthly rent at 100 Research Avenue is $1800. This is a studio apartment, and there is only one available unit.
+  REVISE - The answer says 'studio', which is not in the listing record.
+Final: REVISE after 1 attempt(s)
+
+{
+  "lesson_id": "lesson_001",
+  "failure_pattern": "The answer adds property details that the listing record does not list.",
+  "correction": "Answer the question in a full sentence using the values in the record. Do not add property descriptions the record does not list, such as studio, single-family, bedrooms or spacious.",
+  "created_at": "2026-11-04",
+  "use_count": 1,
+  "pattern_key": "added_detail",
+  "keywords": [
+    "rent",
+    "type",
+    "kind",
+    "house",
+    "apartment",
+    "units",
+    "property"
+  ],
+  "avoid": [
+    "cheaper",
+    "cheapest",
+    "lower",
+    "less",
+    "more",
+    "total",
+    "combined",
+    "split",
+    "months",
+    "allowed",
+    "included",
+    "include",
+    "have"
+  ]
+}
+
+Question: What type of property is 101 Research Avenue?
+Lessons loaded: ['lesson_001']
+Attempt 1: The property at 101 Research Avenue is a house.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+
+====================================================================================================
+Part 4 - training
+====================================================================================================
+{"added_detail": 2}
+Question: What is the monthly rent at 100 Research Avenue?
+Lessons loaded: none
+Attempt 1: The monthly rent at 100 Research Avenue is $1800. This is a studio apartment, as indicated by the property type. There is only one available unit.
+  REVISE - The answer says 'studio', which is not in the listing record.
+Attempt 2: The monthly rent at 100 Research Avenue is $1800. There is only one available unit.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 2 attempt(s)
+
+Question: What type of property is 101 Research Avenue?
+Lessons loaded: none
+Attempt 1: The property at 101 Research Avenue is a House. It is a single-family residence with one available unit.
+  REVISE - The answer says 'single-family', which is not in the listing record.
+Attempt 2: The property at 101 Research Avenue is a House.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 2 attempt(s)
+
+Question: Give both the monthly rent and the property type for 102 Research Avenue.
+Lessons loaded: none
+Attempt 1: The monthly rent for 102 Research Avenue is $1950. The property type is an Apartment.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: How much rent would I pay in total for 12 months at 103 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the total rent for 12 months, multiply the monthly rent by 12. The monthly rent at 103 Research Avenue is $2025. Therefore, the total rent for 12 months would be $2025 x 12 = $24,300.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the total rent for 6 months at 104 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the total rent for 6 months, we multiply the monthly rent by 6. The monthly rent at 104 Research Avenue is $2100. Therefore, the total rent for 6 months is $2100 x 6 = $12,600.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Which is cheaper, 105 Research Avenue or 106 Research Avenue, and by how much per month?
+Lessons loaded: none
+Attempt 1: 105 Research Avenue is cheaper by $75 per month compared to 106 Research Avenue. The monthly rent for 105 Research Avenue is $2175, while for 106 Research Avenue it is $2250. Therefore, 105 Research Avenue is $75 cheaper per month.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Are pets allowed at 107 Research Avenue?
+Lessons loaded: none
+Attempt 1: I couldn't find any information on pet policies for 107 Research Avenue. However, I can tell you that the property type is a house, which may or may not be pet-friendly. You may want to contact the landlord or property manager directly to confirm their pet policy.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Does 108 Research Avenue include free parking?
+Lessons loaded: none
+Attempt 1: I couldn't find any information about free parking at 108 Research Avenue. The listing records only mention the monthly rent and property type, but do not specify parking details.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Is there a gym at 109 Research Avenue?
+Lessons loaded: none
+Attempt 1: I couldn't find any information about a gym at 109 Research Avenue. The listing records only provide details about the property type (House) and rent, but do not mention any amenities such as a gym.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the capital of France?
+Lessons loaded: none
+Attempt 1: I'm not able to provide information on the capital of France as the provided listing records do not contain relevant information. The listing records are specifically for rental housing listings, and do not include geographical or cultural data. If you need information on the capital of France, I can try to provide it.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Over 12 months, how much more would 106 Research Avenue cost than 105 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the difference, we need to multiply the monthly rent by 12. For 106 Research Avenue, the annual cost would be $2250 * 12 = $27,000. For 105 Research Avenue, the annual cost would be $2175 * 12 = $26,100. The difference would be $27,000 - $26,100 = $900.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the combined monthly rent of 100 Research Avenue and 101 Research Avenue?
+Lessons loaded: none
+Attempt 1: The combined monthly rent of 100 Research Avenue and 101 Research Avenue is $1800 + $1875 = $3675.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: If 3 roommates split the rent at 100 Research Avenue equally, how much does each pay per month?
+Lessons loaded: none
+Attempt 1: To find out how much each roommate pays, we need to divide the monthly rent by the number of available units. Since there is only 1 unit available, we will divide the monthly rent by 3 roommates. $1800 ÷ 3 = $600.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Which is the cheapest of 104 Research Avenue, 102 Research Avenue and 103 Research Avenue?
+Lessons loaded: none
+Attempt 1: 102 Research Avenue is the cheapest option, with a monthly rent of $1950. It is an apartment with 1 available unit.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the rent at 101 Research Avenue, and are pets allowed there?
+Lessons loaded: none
+Attempt 1: The rent at 101 Research Avenue is $1875 per month. Unfortunately, I don't have information on pet policies for this listing. However, I can tell you that it is a house with available units.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What type of property is 103 Research Avenue, and does it have a balcony?
+Lessons loaded: none
+Attempt 1: The property at 103 Research Avenue is a house. Unfortunately, the listing records do not mention the presence of a balcony.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+
+====================================================================================================
+Part 4 - validation
+====================================================================================================
+[
+  {
+    "lesson_id": "lesson_001",
+    "pattern": "added_detail",
+    "passes_before": 15,
+    "passes_after": 16,
+    "fixed": [
+      "val_01"
+    ],
+    "regressions": [],
+    "unsupported_after": [],
+    "kept": true,
+    "before": {
+      "val_01": "The monthly rent at 110 Research Avenue is $2550. This is a studio apartment, and there is only one available unit.",
+      "val_02": "The property at 111 Research Avenue is a House. It has 1 available unit.",
+      "val_03": "The rent for 112 Research Avenue is $2700. The property type is an Apartment.",
+      "val_04": "To calculate the total rent for 12 months, multiply the monthly rent by 12. The monthly rent at 113 Research Avenue is $2775. The total rent for 12 months would be $2775 x 12 = $33,300.",
+      "val_05": "To calculate the total cost of 3 months of rent, we multiply the monthly rent by 3. The monthly rent at 114 Research Avenue is $2850. Therefore, 3 months of rent would cost $2850 x 3 = $8550.",
+      "val_06": "115 Research Avenue costs $2925 per month, while 116 Research Avenue costs $3000 per month. The difference is $75 per month. Therefore, 115 Research Avenue costs less per month.",
+      "val_07": "I couldn't find any information on laundry being included at 117 Research Avenue. The listing records only mention the monthly rent and property type.",
+      "val_08": "According to the listing records, utilities are not explicitly mentioned as being included in the rent. The rent is $3150 per month, but it does not specify whether utilities are included or not.",
+      "val_09": "I couldn't find any information on whether 119 Research Avenue allows smoking. However, I can suggest contacting the property manager or landlord directly to inquire about their smoking policy. They will be able to provide the most up-to-date and accurate information.",
+      "val_10": "I'm not aware of any information about a rental housing listing. I'm a rental housing listings assistant, and I don't have information about books or literature.",
+      "val_11": "To calculate the difference, we need to know the monthly rent for 6 months. For 116 Research Avenue, the monthly rent is $3000, so for 6 months it would be $3000 * 6 = $18000. For 115 Research Avenue, the monthly rent is $2925, so for 6 months it would be $2925 * 6 = $17550. The difference is $18000 - $17550 = $450.",
+      "val_12": "The combined monthly rent of 110 Research Avenue and 111 Research Avenue is $2550 + $2625 = $5175.",
+      "val_13": "To find out how much each roommate pays, we need to divide the monthly rent by 2. Monthly rent is $2700, so each roommate pays $2700 / 2 = $1350.",
+      "val_14": "112 Research Avenue is the cheapest, with a monthly rent of $2700. It is an apartment with 1 available unit.",
+      "val_15": "The rent at 111 Research Avenue is $2625 per month. Unfortunately, the listing records do not specify whether parking is included in the rent.",
+      "val_16": "113 Research Avenue is a house. Unfortunately, I don't have information on whether it has a dishwasher. However, I can tell you that it has a monthly rent of $2775 and is available for rent."
+    },
+    "after": {
+      "val_01": "The monthly rent at 110 Research Avenue is $2550.",
+      "val_02": "The property at 111 Research Avenue is a house.",
+      "val_03": "The rent for 112 Research Avenue is $2700 per month, and it is an apartment.",
+      "val_04": "To calculate the total rent for 12 months, multiply the monthly rent by 12. The monthly rent at 113 Research Avenue is $2775. The total rent for 12 months would be $2775 x 12 = $33,300.",
+      "val_05": "To calculate the total cost of 3 months of rent, we multiply the monthly rent by 3. The monthly rent at 114 Research Avenue is $2850. Therefore, 3 months of rent would cost $2850 x 3 = $8550.",
+      "val_06": "115 Research Avenue costs $2925 per month, while 116 Research Avenue costs $3000 per month. The difference is $75 per month. Therefore, 115 Research Avenue costs less per month.",
+      "val_07": "I couldn't find any information on laundry being included at 117 Research Avenue. The listing records only mention the monthly rent and property type.",
+      "val_08": "According to the listing records, utilities are not explicitly mentioned as being included in the rent. The rent is $3150 per month, but it does not specify whether utilities are included or not.",
+      "val_09": "I couldn't find any information on whether 119 Research Avenue allows smoking. However, I can suggest contacting the property manager or landlord directly to inquire about their smoking policy. They will be able to provide the most up-to-date and accurate information.",
+      "val_10": "I'm not aware of any information about a rental housing listing. I'm a rental housing listings assistant, and I don't have information about books or literature.",
+      "val_11": "To calculate the difference, we need to know the monthly rent for 6 months. For 116 Research Avenue, the monthly rent is $3000, so for 6 months it would be $3000 * 6 = $18000. For 115 Research Avenue, the monthly rent is $2925, so for 6 months it would be $2925 * 6 = $17550. The difference is $18000 - $17550 = $450.",
+      "val_12": "The combined monthly rent of 110 Research Avenue and 111 Research Avenue is $2550 + $2625 = $5175.",
+      "val_13": "To find out how much each roommate pays, we need to divide the monthly rent by 2. Monthly rent is $2700, so each roommate pays $2700 / 2 = $1350.",
+      "val_14": "112 Research Avenue is the cheapest, with a monthly rent of $2700. It is an apartment with 1 available unit.",
+      "val_15": "The rent at 111 Research Avenue is $2625 per month. Unfortunately, the listing records do not specify whether parking is included in the rent.",
+      "val_16": "113 Research Avenue is a house. Unfortunately, I don't have information on whether it has a dishwasher. However, I can tell you that it has a monthly rent of $2775 and is available for rent."
+    }
+  }
+]
+
+====================================================================================================
+Part 4 - test
+====================================================================================================
+
+--- Baseline: {"variant": "Baseline", "correct": 17, "incorrect": 1, "average_attempts": 1.0, "average_latency_ms": 4561.6}
+Question: What is the monthly rent at 120 Research Avenue?
+Lessons loaded: none
+Attempt 1: The monthly rent at 120 Research Avenue is $3300. This is a single unit apartment available for rent.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Is 121 Research Avenue a house or an apartment?
+Lessons loaded: none
+Attempt 1: According to the listing records, 121 Research Avenue is a house. It is listed as a property type House.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Tell me the rent and the property type for 122 Research Avenue.
+Lessons loaded: none
+Attempt 1: The rent for 122 Research Avenue is $3450 per month. The property type is an Apartment.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: How many units are available at 123 Research Avenue?
+Lessons loaded: none
+Attempt 1: There is 1 available unit at 123 Research Avenue.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the total rent for 12 months at 124 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the total rent for 12 months, multiply the monthly rent by 12. The monthly rent at 124 Research Avenue is $3600. The total rent for 12 months would be $3600 x 12 = $43,200.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: How much would 9 months of rent cost in total at 126 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the total cost of 9 months of rent, multiply the monthly rent by 9. The monthly rent at 126 Research Avenue is $1875. The total cost would be $1875 x 9 = $16,875.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Which is cheaper, 127 Research Avenue or 128 Research Avenue, and by how much each month?
+Lessons loaded: none
+Attempt 1: 127 Research Avenue is cheaper by $75 per month compared to 128 Research Avenue. The monthly rent for 127 Research Avenue is $1950, while the monthly rent for 128 Research Avenue is $2025. Therefore, 127 Research Avenue is $75 cheaper per month.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Between 129 Research Avenue and 131 Research Avenue, which has the lower rent and by how much?
+Lessons loaded: none
+Attempt 1: The lower rent is at 129 Research Avenue, with a monthly rent of $2100. The difference in rent is $150 ($2250 - $2100).
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Is there a swimming pool at 132 Research Avenue?
+Lessons loaded: none
+Attempt 1: I couldn't find any information about a swimming pool at 132 Research Avenue. The listing records only mention the property type as an apartment, but do not specify any amenities such as a pool.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Are dogs allowed at 133 Research Avenue?
+Lessons loaded: none
+Attempt 1: I couldn't find any information on pet policies for 133 Research Avenue. However, I can tell you that the property type is a house, which may imply that pets are not allowed. If you'd like to confirm, I recommend contacting the property manager directly.
+  REVISE - The reference data has no such fact, so a yes or no here is unsupported.
+Final: REVISE after 1 attempt(s)
+
+Question: Does 134 Research Avenue include air conditioning?
+Lessons loaded: none
+Attempt 1: I couldn't find any information on air conditioning in the listing records. However, I can tell you that the property is an apartment, which may have some amenities, but I couldn't confirm if air conditioning is included.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the tallest mountain in the world?
+Lessons loaded: none
+Attempt 1: I'm not able to provide information on mountains, as the provided listing records don't contain any relevant data. I'm a rental housing listings assistant, and my expertise is in providing information about rental properties.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Over 9 months, how much more would 128 Research Avenue cost than 127 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the difference, first, find the total cost of each property over 9 months. For 128 Research Avenue, the monthly rent is $2025, so over 9 months it would be $2025 * 9 = $18225. For 127 Research Avenue, the monthly rent is $1950, so over 9 months it would be $1950 * 9 = $17550. The difference is $18225 - $17550 = $675.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the combined monthly rent of 120 Research Avenue and 121 Research Avenue?
+Lessons loaded: none
+Attempt 1: The combined monthly rent of 120 Research Avenue and 121 Research Avenue is $3300 + $3375 = $6675.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: If 3 roommates split the rent at 122 Research Avenue equally, how much does each pay per month?
+Lessons loaded: none
+Attempt 1: To find out how much each roommate pays, we need to divide the monthly rent by the number of available units. Since there is only 1 unit available, we will divide the monthly rent by 3 roommates. $3450 ÷ 3 = $1150.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Which is the cheapest of 133 Research Avenue, 131 Research Avenue and 132 Research Avenue?
+Lessons loaded: none
+Attempt 1: The cheapest option is 131 Research Avenue, with a monthly rent of $2250. It is a house with 1 available unit.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the rent at 121 Research Avenue, and is a washer included?
+Lessons loaded: none
+Attempt 1: The rent at 121 Research Avenue is $3375 per month. Unfortunately, I don't have information on whether a washer is included in the rent. However, I can tell you that the property type is a house and there is only one available unit.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What type of property is 123 Research Avenue, and does it have a garden?
+Lessons loaded: none
+Attempt 1: The property at 123 Research Avenue is a house. Unfortunately, the listing records do not mention the presence of a garden.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+
+--- Evaluator Repair: {"variant": "Evaluator Repair", "correct": 18, "incorrect": 0, "average_attempts": 1.06, "average_latency_ms": 4777.4}
+Question: What is the monthly rent at 120 Research Avenue?
+Lessons loaded: none
+Attempt 1: The monthly rent at 120 Research Avenue is $3300. This is a single unit apartment available for rent.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Is 121 Research Avenue a house or an apartment?
+Lessons loaded: none
+Attempt 1: According to the listing records, 121 Research Avenue is a house. It is listed as a property type House.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Tell me the rent and the property type for 122 Research Avenue.
+Lessons loaded: none
+Attempt 1: The rent for 122 Research Avenue is $3450 per month. The property type is an Apartment.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: How many units are available at 123 Research Avenue?
+Lessons loaded: none
+Attempt 1: There is 1 available unit at 123 Research Avenue.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the total rent for 12 months at 124 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the total rent for 12 months, multiply the monthly rent by 12. The monthly rent at 124 Research Avenue is $3600. The total rent for 12 months would be $3600 x 12 = $43,200.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: How much would 9 months of rent cost in total at 126 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the total cost of 9 months of rent, multiply the monthly rent by 9. The monthly rent at 126 Research Avenue is $1875. The total cost would be $1875 x 9 = $16,875.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Which is cheaper, 127 Research Avenue or 128 Research Avenue, and by how much each month?
+Lessons loaded: none
+Attempt 1: 127 Research Avenue is cheaper by $75 per month compared to 128 Research Avenue. The monthly rent for 127 Research Avenue is $1950, while the monthly rent for 128 Research Avenue is $2025. Therefore, 127 Research Avenue is $75 cheaper per month.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Between 129 Research Avenue and 131 Research Avenue, which has the lower rent and by how much?
+Lessons loaded: none
+Attempt 1: The lower rent is at 129 Research Avenue, with a monthly rent of $2100. The difference in rent is $150 ($2250 - $2100).
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Is there a swimming pool at 132 Research Avenue?
+Lessons loaded: none
+Attempt 1: I couldn't find any information about a swimming pool at 132 Research Avenue. The listing records only mention the property type as an apartment, but do not specify any amenities such as a pool.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Are dogs allowed at 133 Research Avenue?
+Lessons loaded: none
+Attempt 1: I couldn't find any information on pet policies for 133 Research Avenue. However, I can tell you that the property type is a house, which may imply that pets are not allowed. If you'd like to confirm, I recommend contacting the property manager directly.
+  REVISE - The reference data has no such fact, so a yes or no here is unsupported.
+Attempt 2: Dogs are not available in the records to confirm pet policy for 133 Research Avenue. The listing records do not contain information on pet policies. I recommend contacting the property manager directly for confirmation.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 2 attempt(s)
+
+Question: Does 134 Research Avenue include air conditioning?
+Lessons loaded: none
+Attempt 1: I couldn't find any information on air conditioning in the listing records. However, I can tell you that the property is an apartment, which may have some amenities, but I couldn't confirm if air conditioning is included.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the tallest mountain in the world?
+Lessons loaded: none
+Attempt 1: I'm not able to provide information on mountains, as the provided listing records don't contain any relevant data. I'm a rental housing listings assistant, and my expertise is in providing information about rental properties.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Over 9 months, how much more would 128 Research Avenue cost than 127 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the difference, first, find the total cost of each property over 9 months. For 128 Research Avenue, the monthly rent is $2025, so over 9 months it would be $2025 * 9 = $18225. For 127 Research Avenue, the monthly rent is $1950, so over 9 months it would be $1950 * 9 = $17550. The difference is $18225 - $17550 = $675.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the combined monthly rent of 120 Research Avenue and 121 Research Avenue?
+Lessons loaded: none
+Attempt 1: The combined monthly rent of 120 Research Avenue and 121 Research Avenue is $3300 + $3375 = $6675.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: If 3 roommates split the rent at 122 Research Avenue equally, how much does each pay per month?
+Lessons loaded: none
+Attempt 1: To find out how much each roommate pays, we need to divide the monthly rent by the number of available units. Since there is only 1 unit available, we will divide the monthly rent by 3 roommates. $3450 ÷ 3 = $1150.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Which is the cheapest of 133 Research Avenue, 131 Research Avenue and 132 Research Avenue?
+Lessons loaded: none
+Attempt 1: The cheapest option is 131 Research Avenue, with a monthly rent of $2250. It is a house with 1 available unit.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the rent at 121 Research Avenue, and is a washer included?
+Lessons loaded: none
+Attempt 1: The rent at 121 Research Avenue is $3375 per month. Unfortunately, I don't have information on whether a washer is included in the rent. However, I can tell you that the property type is a house and there is only one available unit.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What type of property is 123 Research Avenue, and does it have a garden?
+Lessons loaded: none
+Attempt 1: The property at 123 Research Avenue is a house. Unfortunately, the listing records do not mention the presence of a garden.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+
+--- Lesson Memory: {"variant": "Lesson Memory", "correct": 17, "incorrect": 1, "average_attempts": 1.11, "average_latency_ms": 4964.9}
+Question: What is the monthly rent at 120 Research Avenue?
+Lessons loaded: ['lesson_001']
+Attempt 1: $3300.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Is 121 Research Avenue a house or an apartment?
+Lessons loaded: ['lesson_001']
+Attempt 1: According to the listing record, 121 Research Avenue is a House.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Tell me the rent and the property type for 122 Research Avenue.
+Lessons loaded: ['lesson_001']
+Attempt 1: The monthly rent for 122 Research Avenue is $3450. The property type is an Apartment.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: How many units are available at 123 Research Avenue?
+Lessons loaded: ['lesson_001']
+Attempt 1: There is 1 available unit at 123 Research Avenue.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the total rent for 12 months at 124 Research Avenue?
+Lessons loaded: ['lesson_001']
+Attempt 1: To calculate the total rent for 12 months, multiply the monthly rent by 12. $3600 * 12 = $43,200.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: How much would 9 months of rent cost in total at 126 Research Avenue?
+Lessons loaded: ['lesson_001']
+Attempt 1: To calculate the total cost of 9 months of rent, multiply the monthly rent by 9: $1875 * 9 = $16,875.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Which is cheaper, 127 Research Avenue or 128 Research Avenue, and by how much each month?
+Lessons loaded: none
+Attempt 1: 127 Research Avenue is cheaper by $75 per month compared to 128 Research Avenue. The monthly rent for 127 Research Avenue is $1950, while the monthly rent for 128 Research Avenue is $2025. Therefore, 127 Research Avenue is $75 cheaper per month.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Between 129 Research Avenue and 131 Research Avenue, which has the lower rent and by how much?
+Lessons loaded: ['lesson_001']
+Attempt 1: 131 Research Avenue has a lower rent, $2250 compared to $2100. The difference is $150.
+  REVISE - Missing or wrong: cheaper listing is 129 Research Avenue; cheaper listing is 129 Research Avenue.
+Attempt 2: 131 Research Avenue has a lower rent, $2250 compared to $2100. The difference is $150.
+  REVISE - Missing or wrong: cheaper listing is 129 Research Avenue; cheaper listing is 129 Research Avenue.
+Final: REVISE after 2 attempt(s)
+
+Question: Is there a swimming pool at 132 Research Avenue?
+Lessons loaded: none
+Attempt 1: I couldn't find any information about a swimming pool at 132 Research Avenue. The listing records only mention the property type as an apartment, but do not specify any amenities such as a pool.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Are dogs allowed at 133 Research Avenue?
+Lessons loaded: none
+Attempt 1: I couldn't find any information on pet policies for 133 Research Avenue. However, I can tell you that the property type is a house, which may imply that pets are not allowed. If you'd like to confirm, I recommend contacting the property manager directly.
+  REVISE - The reference data has no such fact, so a yes or no here is unsupported.
+Attempt 2: Dogs are not available in the records to confirm pet policy for 133 Research Avenue. The listing records do not contain information on pet policies. I recommend contacting the property manager directly for confirmation.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 2 attempt(s)
+
+Question: Does 134 Research Avenue include air conditioning?
+Lessons loaded: none
+Attempt 1: I couldn't find any information on air conditioning in the listing records. However, I can tell you that the property is an apartment, which may have some amenities, but I couldn't confirm if air conditioning is included.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the tallest mountain in the world?
+Lessons loaded: none
+Attempt 1: I'm not able to provide information on mountains, as the provided listing records don't contain any relevant data. I'm a rental housing listings assistant, and my expertise is in providing information about rental properties.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Over 9 months, how much more would 128 Research Avenue cost than 127 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the difference, first, find the total cost of each property over 9 months. For 128 Research Avenue, the monthly rent is $2025, so over 9 months it would be $2025 * 9 = $18225. For 127 Research Avenue, the monthly rent is $1950, so over 9 months it would be $1950 * 9 = $17550. The difference is $18225 - $17550 = $675.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the combined monthly rent of 120 Research Avenue and 121 Research Avenue?
+Lessons loaded: ['lesson_001']
+Attempt 1: $3300 + $3375 = $6675.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: If 3 roommates split the rent at 122 Research Avenue equally, how much does each pay per month?
+Lessons loaded: ['lesson_001']
+Attempt 1: To find the amount each roommate pays, divide the monthly rent by the number of available units. 
+
+$3450 ÷ 1 = $3450
+$3450 ÷ 3 = $1150
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Which is the cheapest of 133 Research Avenue, 131 Research Avenue and 132 Research Avenue?
+Lessons loaded: none
+Attempt 1: The cheapest option is 131 Research Avenue, with a monthly rent of $2250. It is a house with 1 available unit.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the rent at 121 Research Avenue, and is a washer included?
+Lessons loaded: ['lesson_001']
+Attempt 1: I don't have information on washer inclusion. The monthly rent at 121 Research Avenue is $3375.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What type of property is 123 Research Avenue, and does it have a garden?
+Lessons loaded: ['lesson_001']
+Attempt 1: The property type is House. There is no information about a garden.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+
+--- Validated Improvement: {"variant": "Validated Improvement", "correct": 18, "incorrect": 0, "average_attempts": 1.06, "average_latency_ms": 4464.8}
+Question: What is the monthly rent at 120 Research Avenue?
+Lessons loaded: ['lesson_001']
+Attempt 1: The monthly rent at 120 Research Avenue is $3300.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Is 121 Research Avenue a house or an apartment?
+Lessons loaded: ['lesson_001']
+Attempt 1: According to the listing records, 121 Research Avenue is a house.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Tell me the rent and the property type for 122 Research Avenue.
+Lessons loaded: ['lesson_001']
+Attempt 1: The rent for 122 Research Avenue is $3450 per month, and it is an apartment.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: How many units are available at 123 Research Avenue?
+Lessons loaded: ['lesson_001']
+Attempt 1: There is only one unit available at 123 Research Avenue.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the total rent for 12 months at 124 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the total rent for 12 months, multiply the monthly rent by 12. The monthly rent at 124 Research Avenue is $3600. The total rent for 12 months would be $3600 x 12 = $43,200.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: How much would 9 months of rent cost in total at 126 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the total cost of 9 months of rent, multiply the monthly rent by 9. The monthly rent at 126 Research Avenue is $1875. The total cost would be $1875 x 9 = $16,875.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Which is cheaper, 127 Research Avenue or 128 Research Avenue, and by how much each month?
+Lessons loaded: none
+Attempt 1: 127 Research Avenue is cheaper by $75 per month compared to 128 Research Avenue. The monthly rent for 127 Research Avenue is $1950, while the monthly rent for 128 Research Avenue is $2025. Therefore, 127 Research Avenue is $75 cheaper per month.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Between 129 Research Avenue and 131 Research Avenue, which has the lower rent and by how much?
+Lessons loaded: none
+Attempt 1: The lower rent is at 129 Research Avenue, with a monthly rent of $2100. The difference in rent is $150 ($2250 - $2100).
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Is there a swimming pool at 132 Research Avenue?
+Lessons loaded: none
+Attempt 1: I couldn't find any information about a swimming pool at 132 Research Avenue. The listing records only mention the property type as an apartment, but do not specify any amenities such as a pool.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Are dogs allowed at 133 Research Avenue?
+Lessons loaded: none
+Attempt 1: I couldn't find any information on pet policies for 133 Research Avenue. However, I can tell you that the property type is a house, which may imply that pets are not allowed. If you'd like to confirm, I recommend contacting the property manager directly.
+  REVISE - The reference data has no such fact, so a yes or no here is unsupported.
+Attempt 2: Dogs are not available in the records to confirm pet policy for 133 Research Avenue. The listing records do not contain information on pet policies. I recommend contacting the property manager directly for confirmation.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 2 attempt(s)
+
+Question: Does 134 Research Avenue include air conditioning?
+Lessons loaded: none
+Attempt 1: I couldn't find any information on air conditioning in the listing records. However, I can tell you that the property is an apartment, which may have some amenities, but I couldn't confirm if air conditioning is included.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the tallest mountain in the world?
+Lessons loaded: none
+Attempt 1: I'm not able to provide information on mountains, as the provided listing records don't contain any relevant data. I'm a rental housing listings assistant, and my expertise is in providing information about rental properties.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Over 9 months, how much more would 128 Research Avenue cost than 127 Research Avenue?
+Lessons loaded: none
+Attempt 1: To calculate the difference, first, find the total cost of each property over 9 months. For 128 Research Avenue, the monthly rent is $2025, so over 9 months it would be $2025 * 9 = $18225. For 127 Research Avenue, the monthly rent is $1950, so over 9 months it would be $1950 * 9 = $17550. The difference is $18225 - $17550 = $675.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the combined monthly rent of 120 Research Avenue and 121 Research Avenue?
+Lessons loaded: none
+Attempt 1: The combined monthly rent of 120 Research Avenue and 121 Research Avenue is $3300 + $3375 = $6675.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: If 3 roommates split the rent at 122 Research Avenue equally, how much does each pay per month?
+Lessons loaded: none
+Attempt 1: To find out how much each roommate pays, we need to divide the monthly rent by the number of available units. Since there is only 1 unit available, we will divide the monthly rent by 3 roommates. $3450 ÷ 3 = $1150.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: Which is the cheapest of 133 Research Avenue, 131 Research Avenue and 132 Research Avenue?
+Lessons loaded: none
+Attempt 1: The cheapest option is 131 Research Avenue, with a monthly rent of $2250. It is a house with 1 available unit.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What is the rent at 121 Research Avenue, and is a washer included?
+Lessons loaded: none
+Attempt 1: The rent at 121 Research Avenue is $3375 per month. Unfortunately, I don't have information on whether a washer is included in the rent. However, I can tell you that the property type is a house and there is only one available unit.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+
+Question: What type of property is 123 Research Avenue, and does it have a garden?
+Lessons loaded: none
+Attempt 1: The property at 123 Research Avenue is a house. Unfortunately, the listing records do not mention a garden.
+  PASS - The answer matches the reference data and adds nothing unsupported.
+Final: PASS after 1 attempt(s)
+

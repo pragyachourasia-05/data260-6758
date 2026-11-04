@@ -1,0 +1,255 @@
+2026-11-04T04:56:32.294Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="after processing" dead_letter=true mock=false
+2026-11-04T04:56:32.343Z [WRITER] partitions assigned partitions=[0, 1]
+2026-11-04T04:58:30.546Z [WRITER] received from s6758_tasks correlation_id="b9af744c-0929-4ecb-b129-9da80022640b" partition=1 offset=2
+2026-11-04T04:58:48.936Z [WRITER] draft ready correlation_id="b9af744c-0929-4ecb-b129-9da80022640b" words=41
+2026-11-04T04:58:48.951Z [WRITER] sent to s6758_drafts correlation_id="b9af744c-0929-4ecb-b129-9da80022640b" partition=0 offset=5
+2026-11-04T04:58:48.983Z [WRITER] offset committed partition=1 committed_offset=3
+2026-11-04T04:59:19.470Z [WRITER] received from s6758_tasks correlation_id="902e6085-3d0c-4374-a9ab-ff0382780f24" partition=0 offset=3
+2026-11-04T04:59:36.458Z [WRITER] draft ready correlation_id="902e6085-3d0c-4374-a9ab-ff0382780f24" words=72
+2026-11-04T04:59:36.467Z [WRITER] sent to s6758_drafts correlation_id="902e6085-3d0c-4374-a9ab-ff0382780f24" partition=0 offset=6
+2026-11-04T04:59:36.476Z [WRITER] offset committed partition=0 committed_offset=4
+2026-11-04T04:59:55.460Z [WRITER] received from s6758_tasks correlation_id="4c303ccb-5d95-49fa-9660-dd65b6d09bcc" partition=0 offset=4
+2026-11-04T05:00:11.141Z [WRITER] draft ready correlation_id="4c303ccb-5d95-49fa-9660-dd65b6d09bcc" words=88
+2026-11-04T05:00:11.148Z [WRITER] sent to s6758_drafts correlation_id="4c303ccb-5d95-49fa-9660-dd65b6d09bcc" partition=0 offset=7
+2026-11-04T05:00:11.161Z [WRITER] offset committed partition=0 committed_offset=5
+2026-11-04T05:00:37.153Z [WRITER] received from s6758_tasks correlation_id="2fe489f2-cc06-4e67-9020-1218211b3e60" partition=0 offset=5
+2026-11-04T05:00:53.418Z [WRITER] draft ready correlation_id="2fe489f2-cc06-4e67-9020-1218211b3e60" words=83
+2026-11-04T05:00:53.425Z [WRITER] sent to s6758_drafts correlation_id="2fe489f2-cc06-4e67-9020-1218211b3e60" partition=0 offset=8
+2026-11-04T05:00:53.439Z [WRITER] offset committed partition=0 committed_offset=6
+2026-11-04T05:01:15.016Z [WRITER] received from s6758_tasks correlation_id="e1a88a0d-b316-499c-80a9-9f09ed6a1ae7" partition=0 offset=6
+2026-11-04T05:01:23.666Z [WRITER] draft ready correlation_id="e1a88a0d-b316-499c-80a9-9f09ed6a1ae7" words=23
+2026-11-04T05:01:23.673Z [WRITER] sent to s6758_drafts correlation_id="e1a88a0d-b316-499c-80a9-9f09ed6a1ae7" partition=0 offset=9
+2026-11-04T05:01:23.688Z [WRITER] offset committed partition=0 committed_offset=7
+2026-11-04T05:02:15.607Z [WRITER] received from s6758_tasks correlation_id="15304dd3-cb89-4ba3-9776-fa32e1444728" partition=0 offset=7
+2026-11-04T05:02:25.564Z [WRITER] draft ready correlation_id="15304dd3-cb89-4ba3-9776-fa32e1444728" words=28
+2026-11-04T05:02:25.571Z [WRITER] sent to s6758_drafts correlation_id="15304dd3-cb89-4ba3-9776-fa32e1444728" partition=0 offset=10
+2026-11-04T05:02:25.584Z [WRITER] offset committed partition=0 committed_offset=8
+2026-11-04T05:02:45.110Z [WRITER] received from s6758_tasks correlation_id="586ec231-73ab-4a3c-862a-d8807fdf6456" partition=1 offset=3
+2026-11-04T05:02:57.024Z [WRITER] draft ready correlation_id="586ec231-73ab-4a3c-862a-d8807fdf6456" words=39
+2026-11-04T05:02:57.032Z [WRITER] sent to s6758_drafts correlation_id="586ec231-73ab-4a3c-862a-d8807fdf6456" partition=0 offset=11
+2026-11-04T05:02:57.046Z [WRITER] offset committed partition=1 committed_offset=4
+2026-11-04T05:03:18.394Z [WRITER] received from s6758_tasks correlation_id="4f1c7fde-c115-4e44-baad-829a15ecbed5" partition=0 offset=8
+2026-11-04T05:03:30.390Z [WRITER] draft ready correlation_id="4f1c7fde-c115-4e44-baad-829a15ecbed5" words=46
+2026-11-04T05:03:30.398Z [WRITER] sent to s6758_drafts correlation_id="4f1c7fde-c115-4e44-baad-829a15ecbed5" partition=0 offset=12
+2026-11-04T05:03:30.411Z [WRITER] offset committed partition=0 committed_offset=9
+2026-11-04T05:03:52.724Z [WRITER] received from s6758_tasks correlation_id="a0c06c41-0358-4450-a98d-727704e40cc3" partition=0 offset=9
+2026-11-04T05:04:08.838Z [WRITER] draft ready correlation_id="a0c06c41-0358-4450-a98d-727704e40cc3" words=69
+2026-11-04T05:04:08.846Z [WRITER] sent to s6758_drafts correlation_id="a0c06c41-0358-4450-a98d-727704e40cc3" partition=0 offset=13
+2026-11-04T05:04:08.859Z [WRITER] offset committed partition=0 committed_offset=10
+2026-11-04T05:04:33.062Z [WRITER] received from s6758_tasks correlation_id="e7908627-30bb-47d0-87d2-e420d34c33f8" partition=0 offset=10
+2026-11-04T05:04:51.828Z [WRITER] draft ready correlation_id="e7908627-30bb-47d0-87d2-e420d34c33f8" words=82
+2026-11-04T05:04:51.834Z [WRITER] sent to s6758_drafts correlation_id="e7908627-30bb-47d0-87d2-e420d34c33f8" partition=0 offset=14
+2026-11-04T05:04:51.847Z [WRITER] offset committed partition=0 committed_offset=11
+2026-11-04T05:05:15.154Z [WRITER] received from s6758_tasks correlation_id="f8ecc415-e200-4dd8-80a8-506029d40fac" partition=1 offset=4
+2026-11-04T05:05:34.038Z [WRITER] draft ready correlation_id="f8ecc415-e200-4dd8-80a8-506029d40fac" words=99
+2026-11-04T05:05:34.045Z [WRITER] sent to s6758_drafts correlation_id="f8ecc415-e200-4dd8-80a8-506029d40fac" partition=0 offset=15
+2026-11-04T05:05:34.065Z [WRITER] offset committed partition=1 committed_offset=5
+2026-11-04T05:05:59.339Z [WRITER] received from s6758_tasks correlation_id="a93b438f-7ffb-456a-a449-c9e2bbf5ead3" partition=1 offset=5
+2026-11-04T05:06:19.256Z [WRITER] draft ready correlation_id="a93b438f-7ffb-456a-a449-c9e2bbf5ead3" words=123
+2026-11-04T05:06:19.263Z [WRITER] sent to s6758_drafts correlation_id="a93b438f-7ffb-456a-a449-c9e2bbf5ead3" partition=0 offset=16
+2026-11-04T05:06:19.275Z [WRITER] offset committed partition=1 committed_offset=6
+2026-11-04T05:06:46.536Z [WRITER] received from s6758_tasks correlation_id="7e7839ae-6cec-4b76-af90-4497761b4728" partition=1 offset=6
+2026-11-04T05:07:11.293Z [WRITER] draft ready correlation_id="7e7839ae-6cec-4b76-af90-4497761b4728" words=150
+2026-11-04T05:07:11.299Z [WRITER] sent to s6758_drafts correlation_id="7e7839ae-6cec-4b76-af90-4497761b4728" partition=0 offset=17
+2026-11-04T05:07:11.311Z [WRITER] offset committed partition=1 committed_offset=7
+2026-11-04T05:07:41.218Z [WRITER] received from s6758_tasks correlation_id="8705e993-adf4-4a72-b356-f57c241d6949" partition=1 offset=7
+Failed fetch messages from 1: [Error 7] RequestTimedOutError
+Failed fetch messages from 1: [Error 7] RequestTimedOutError
+Error sending HeartbeatRequest_v1 to node 1 [[Error 7] RequestTimedOutError] -- marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat send request failed: [Error 7] RequestTimedOutError. Will retry.
+Heartbeat session expired - marking coordinator dead
+LeaveGroup request failed: [Error 15] GroupCoordinatorNotAvailableError
+2026-11-04T05:28:19.558Z [WRITER] draft ready correlation_id="8705e993-adf4-4a72-b356-f57c241d6949" words=64
+2026-11-04T05:28:19.567Z [WRITER] sent to s6758_drafts correlation_id="8705e993-adf4-4a72-b356-f57c241d6949" partition=0 offset=18
+OffsetCommit failed for group s6758-writer due to group error ([Error 25] UnknownMemberIdError: s6758-writer), will rejoin
+OffsetCommit failed for group s6758-writer due to group error ([Error 25] UnknownMemberIdError: s6758-writer), will rejoin
+Traceback (most recent call last):
+  File "C:\SJSU Assignments\Agentic AI\Assignment_1\venv\Lib\site-packages\aiokafka\consumer\group_coordinator.py", line 1013, in commit_offsets
+    await asyncio.shield(self._do_commit_offsets(assignment, offsets))
+  File "C:\SJSU Assignments\Agentic AI\Assignment_1\venv\Lib\site-packages\aiokafka\consumer\group_coordinator.py", line 1148, in _do_commit_offsets
+    raise first_error
+aiokafka.errors.UnknownMemberIdError: [Error 25] UnknownMemberIdError: s6758-writer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\SJSU Assignments\Agentic AI\Assignment_1\kafka_agents\writer.py", line 37, in <module>
+    asyncio.run(run_agent("WRITER", TASKS, DRAFTS, handle))
+  File "C:\Users\pragy\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\pragy\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pragy\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\SJSU Assignments\Agentic AI\Assignment_1\kafka_agents\common.py", line 182, in run_agent
+    await commit(consumer, name, msg)
+  File "C:\SJSU Assignments\Agentic AI\Assignment_1\kafka_agents\common.py", line 191, in commit
+    await consumer.commit()
+  File "C:\SJSU Assignments\Agentic AI\Assignment_1\venv\Lib\site-packages\aiokafka\consumer\consumer.py", line 596, in commit
+    await self._coordinator.commit_offsets(assignment, offsets)
+  File "C:\SJSU Assignments\Agentic AI\Assignment_1\venv\Lib\site-packages\aiokafka\consumer\group_coordinator.py", line 1019, in commit_offsets
+    raise Errors.CommitFailedError(
+aiokafka.errors.CommitFailedError: CommitFailedError: ('Commit cannot be completed since the group has already\n            rebalanced and assigned the partitions to another member.\n            This means that the time between subsequent calls to poll()\n            was longer than the configured max_poll_interval_ms, which\n            typically implies that the poll loop is spending too much\n            time message processing. You can address this either by\n            increasing the rebalance timeout with max_poll_interval_ms,\n            or by reducing the maximum size of batches returned in poll()\n            with max_poll_records.\n            ', 'Commit cannot be completed since the group has already rebalanced and may have assigned the partitions to another member')
+2026-11-04T18:21:07.171Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="after processing" dead_letter=true mock=false
+2026-11-04T18:21:07.235Z [WRITER] partitions assigned partitions=[0, 1]
+2026-11-04T18:21:07.250Z [WRITER] received from s6758_tasks correlation_id="8705e993-adf4-4a72-b356-f57c241d6949" partition=1 offset=7
+2026-11-04T18:21:07.251Z [WRITER] duplicate correlation_id, already processed - skipped correlation_id="8705e993-adf4-4a72-b356-f57c241d6949"
+2026-11-04T18:21:07.259Z [WRITER] offset committed partition=1 committed_offset=8
+2026-11-04T18:21:07.261Z [WRITER] received from s6758_tasks correlation_id="070d2431-67f6-4e5b-b3a5-3b8274dc93d0" partition=1 offset=8
+2026-11-04T18:21:47.396Z [WRITER] draft ready correlation_id="070d2431-67f6-4e5b-b3a5-3b8274dc93d0" words=47
+2026-11-04T18:21:47.442Z [WRITER] sent to s6758_drafts correlation_id="070d2431-67f6-4e5b-b3a5-3b8274dc93d0" partition=0 offset=19
+2026-11-04T18:21:47.488Z [WRITER] offset committed partition=1 committed_offset=9
+2026-11-04T18:21:47.489Z [WRITER] received from s6758_tasks correlation_id="600c3a9a-8920-4301-8911-13aed4d3a11d" partition=0 offset=11
+2026-11-04T18:22:14.192Z [WRITER] draft ready correlation_id="600c3a9a-8920-4301-8911-13aed4d3a11d" words=128
+2026-11-04T18:22:14.201Z [WRITER] sent to s6758_drafts correlation_id="600c3a9a-8920-4301-8911-13aed4d3a11d" partition=0 offset=20
+2026-11-04T18:22:14.212Z [WRITER] offset committed partition=0 committed_offset=12
+2026-11-04T18:22:14.215Z [WRITER] received from s6758_tasks correlation_id="03eb927b-2bca-4679-badf-ec5946379ea7" partition=0 offset=12
+2026-11-04T18:22:34.076Z [WRITER] draft ready correlation_id="03eb927b-2bca-4679-badf-ec5946379ea7" words=56
+2026-11-04T18:22:34.083Z [WRITER] sent to s6758_drafts correlation_id="03eb927b-2bca-4679-badf-ec5946379ea7" partition=0 offset=21
+2026-11-04T18:22:34.098Z [WRITER] offset committed partition=0 committed_offset=13
+2026-11-04T18:23:15.508Z [WRITER] received from s6758_tasks correlation_id="ed8913ce-179a-468f-b2de-df18bce1e2ee" partition=0 offset=13
+2026-11-04T18:23:29.819Z [WRITER] draft ready correlation_id="ed8913ce-179a-468f-b2de-df18bce1e2ee" words=64
+2026-11-04T18:23:29.825Z [WRITER] sent to s6758_drafts correlation_id="ed8913ce-179a-468f-b2de-df18bce1e2ee" partition=0 offset=22
+2026-11-04T18:23:29.834Z [WRITER] offset committed partition=0 committed_offset=14
+2026-11-04T18:23:51.306Z [WRITER] received from s6758_tasks correlation_id="3321ec55-d14f-4cb1-85cc-5d56b2893ecd" partition=1 offset=9
+2026-11-04T18:24:12.563Z [WRITER] draft ready correlation_id="3321ec55-d14f-4cb1-85cc-5d56b2893ecd" words=134
+2026-11-04T18:24:12.571Z [WRITER] sent to s6758_drafts correlation_id="3321ec55-d14f-4cb1-85cc-5d56b2893ecd" partition=0 offset=23
+2026-11-04T18:24:12.597Z [WRITER] offset committed partition=1 committed_offset=10
+2026-11-04T18:24:30.973Z [WRITER] received from s6758_tasks correlation_id="f3918020-d652-4c9d-a5f2-4cec0054afdb" partition=0 offset=14
+2026-11-04T18:24:45.375Z [WRITER] draft ready correlation_id="f3918020-d652-4c9d-a5f2-4cec0054afdb" words=69
+2026-11-04T18:24:45.380Z [WRITER] sent to s6758_drafts correlation_id="f3918020-d652-4c9d-a5f2-4cec0054afdb" partition=0 offset=24
+2026-11-04T18:24:45.394Z [WRITER] offset committed partition=0 committed_offset=15
+2026-11-04T18:25:07.418Z [WRITER] received from s6758_tasks correlation_id="7681014c-520c-459b-b219-1a3d96c93966" partition=0 offset=15
+2026-11-04T18:25:20.379Z [WRITER] draft ready correlation_id="7681014c-520c-459b-b219-1a3d96c93966" words=56
+2026-11-04T18:25:20.386Z [WRITER] sent to s6758_drafts correlation_id="7681014c-520c-459b-b219-1a3d96c93966" partition=0 offset=25
+2026-11-04T18:25:20.397Z [WRITER] offset committed partition=0 committed_offset=16
+2026-11-04T18:25:40.688Z [WRITER] received from s6758_tasks correlation_id="fa075f2b-3ad9-4c39-a9dd-cb788d3d7915" partition=0 offset=16
+2026-11-04T18:25:52.001Z [WRITER] draft ready correlation_id="fa075f2b-3ad9-4c39-a9dd-cb788d3d7915" words=35
+2026-11-04T18:25:52.009Z [WRITER] sent to s6758_drafts correlation_id="fa075f2b-3ad9-4c39-a9dd-cb788d3d7915" partition=0 offset=26
+2026-11-04T18:25:52.023Z [WRITER] offset committed partition=0 committed_offset=17
+2026-11-04T18:26:13.601Z [WRITER] received from s6758_tasks correlation_id="4c0295e1-2737-4b29-82ba-8458375435f0" partition=1 offset=10
+2026-11-04T18:26:25.256Z [WRITER] draft ready correlation_id="4c0295e1-2737-4b29-82ba-8458375435f0" words=39
+2026-11-04T18:26:25.264Z [WRITER] sent to s6758_drafts correlation_id="4c0295e1-2737-4b29-82ba-8458375435f0" partition=0 offset=27
+2026-11-04T18:26:25.278Z [WRITER] offset committed partition=1 committed_offset=11
+2026-11-04T18:26:46.885Z [WRITER] received from s6758_tasks correlation_id="c15a6265-416c-49f3-b890-3aa6f24c111b" partition=0 offset=17
+2026-11-04T18:27:07.487Z [WRITER] draft ready correlation_id="c15a6265-416c-49f3-b890-3aa6f24c111b" words=116
+2026-11-04T18:27:07.495Z [WRITER] sent to s6758_drafts correlation_id="c15a6265-416c-49f3-b890-3aa6f24c111b" partition=0 offset=28
+2026-11-04T18:27:07.507Z [WRITER] offset committed partition=0 committed_offset=18
+2026-11-04T18:27:30.948Z [WRITER] received from s6758_tasks correlation_id="fb95f769-1c77-4ee1-a7b6-379dd9ccdaee" partition=0 offset=18
+2026-11-04T18:27:54.707Z [WRITER] draft ready correlation_id="fb95f769-1c77-4ee1-a7b6-379dd9ccdaee" words=130
+2026-11-04T18:27:54.714Z [WRITER] sent to s6758_drafts correlation_id="fb95f769-1c77-4ee1-a7b6-379dd9ccdaee" partition=0 offset=29
+2026-11-04T18:27:54.727Z [WRITER] offset committed partition=0 committed_offset=19
+2026-11-04T18:28:24.137Z [WRITER] received from s6758_tasks correlation_id="024fbb77-ec23-43a9-9db4-3a6ce2330bac" partition=0 offset=19
+2026-11-04T18:28:49.020Z [WRITER] draft ready correlation_id="024fbb77-ec23-43a9-9db4-3a6ce2330bac" words=150
+2026-11-04T18:28:49.030Z [WRITER] sent to s6758_drafts correlation_id="024fbb77-ec23-43a9-9db4-3a6ce2330bac" partition=0 offset=30
+2026-11-04T18:28:49.042Z [WRITER] offset committed partition=0 committed_offset=20
+2026-11-04T18:29:16.221Z [WRITER] received from s6758_tasks correlation_id="e1740443-a74e-4d4e-bf8d-c8138b1060dd" partition=1 offset=11
+2026-11-04T18:29:40.088Z [WRITER] draft ready correlation_id="e1740443-a74e-4d4e-bf8d-c8138b1060dd" words=133
+2026-11-04T18:29:40.095Z [WRITER] sent to s6758_drafts correlation_id="e1740443-a74e-4d4e-bf8d-c8138b1060dd" partition=0 offset=31
+2026-11-04T18:29:40.106Z [WRITER] offset committed partition=1 committed_offset=12
+2026-11-04T18:30:04.324Z [WRITER] received from s6758_tasks correlation_id="f29ded69-3e4d-4c66-a715-1f888512dfb0" partition=1 offset=12
+2026-11-04T18:30:23.652Z [WRITER] draft ready correlation_id="f29ded69-3e4d-4c66-a715-1f888512dfb0" words=114
+2026-11-04T18:30:23.660Z [WRITER] sent to s6758_drafts correlation_id="f29ded69-3e4d-4c66-a715-1f888512dfb0" partition=0 offset=32
+2026-11-04T18:30:23.672Z [WRITER] offset committed partition=1 committed_offset=13
+2026-11-04T18:30:47.331Z [WRITER] received from s6758_tasks correlation_id="222234d9-10be-4232-9bcc-3d557712f853" partition=0 offset=20
+2026-11-04T18:31:06.773Z [WRITER] draft ready correlation_id="222234d9-10be-4232-9bcc-3d557712f853" words=113
+2026-11-04T18:31:06.778Z [WRITER] sent to s6758_drafts correlation_id="222234d9-10be-4232-9bcc-3d557712f853" partition=0 offset=33
+2026-11-04T18:31:06.800Z [WRITER] offset committed partition=0 committed_offset=21
+2026-11-04T18:31:33.543Z [WRITER] received from s6758_tasks correlation_id="49be127e-63b2-43d9-97ae-cccced1d494a" partition=1 offset=13
+2026-11-04T18:31:55.983Z [WRITER] draft ready correlation_id="49be127e-63b2-43d9-97ae-cccced1d494a" words=63
+2026-11-04T18:31:55.989Z [WRITER] sent to s6758_drafts correlation_id="49be127e-63b2-43d9-97ae-cccced1d494a" partition=0 offset=34
+2026-11-04T18:31:56.005Z [WRITER] offset committed partition=1 committed_offset=14
+2026-11-04T18:32:31.739Z [WRITER] received from s6758_tasks correlation_id="bcc0c67e-707b-4b94-be95-e5febf4d7c06" partition=0 offset=21
+2026-11-04T18:32:48.965Z [WRITER] draft ready correlation_id="bcc0c67e-707b-4b94-be95-e5febf4d7c06" words=49
+2026-11-04T18:32:48.971Z [WRITER] sent to s6758_drafts correlation_id="bcc0c67e-707b-4b94-be95-e5febf4d7c06" partition=0 offset=35
+2026-11-04T18:32:48.998Z [WRITER] offset committed partition=0 committed_offset=22
+2026-11-04T18:33:18.389Z [WRITER] received from s6758_tasks correlation_id="5c5fd6da-2f0b-4286-9130-3c6ba42eebec" partition=0 offset=22
+2026-11-04T18:33:34.552Z [WRITER] draft ready correlation_id="5c5fd6da-2f0b-4286-9130-3c6ba42eebec" words=52
+2026-11-04T18:33:34.559Z [WRITER] sent to s6758_drafts correlation_id="5c5fd6da-2f0b-4286-9130-3c6ba42eebec" partition=0 offset=36
+2026-11-04T18:33:34.571Z [WRITER] offset committed partition=0 committed_offset=23
+2026-11-04T18:34:02.027Z [WRITER] received from s6758_tasks correlation_id="260bd7a9-c699-451d-a11f-2e5d0f5a37d9" partition=0 offset=23
+2026-11-04T18:34:23.278Z [WRITER] draft ready correlation_id="260bd7a9-c699-451d-a11f-2e5d0f5a37d9" words=74
+2026-11-04T18:34:23.286Z [WRITER] sent to s6758_drafts correlation_id="260bd7a9-c699-451d-a11f-2e5d0f5a37d9" partition=0 offset=37
+2026-11-04T18:34:23.303Z [WRITER] offset committed partition=0 committed_offset=24
+2026-11-04T18:34:51.445Z [WRITER] received from s6758_tasks correlation_id="e517fc8b-5de0-44db-8ac0-37c2ccee0696" partition=1 offset=14
+2026-11-04T18:35:20.724Z [WRITER] draft ready correlation_id="e517fc8b-5de0-44db-8ac0-37c2ccee0696" words=127
+2026-11-04T18:35:20.733Z [WRITER] sent to s6758_drafts correlation_id="e517fc8b-5de0-44db-8ac0-37c2ccee0696" partition=0 offset=38
+2026-11-04T18:35:20.744Z [WRITER] offset committed partition=1 committed_offset=15
+2026-11-04T18:35:56.951Z [WRITER] received from s6758_tasks correlation_id="bfecde9c-63cd-4c95-9253-d83742f2ebf6" partition=0 offset=24
+2026-11-04T18:36:22.837Z [WRITER] draft ready correlation_id="bfecde9c-63cd-4c95-9253-d83742f2ebf6" words=111
+2026-11-04T18:36:22.846Z [WRITER] sent to s6758_drafts correlation_id="bfecde9c-63cd-4c95-9253-d83742f2ebf6" partition=0 offset=39
+2026-11-04T18:36:22.868Z [WRITER] offset committed partition=0 committed_offset=25
+2026-11-04T18:36:54.295Z [WRITER] received from s6758_tasks correlation_id="b9eeb4f0-d85b-4417-bc7b-f31580a90e3a" partition=1 offset=15
+2026-11-04T18:37:20.791Z [WRITER] draft ready correlation_id="b9eeb4f0-d85b-4417-bc7b-f31580a90e3a" words=122
+2026-11-04T18:37:20.803Z [WRITER] sent to s6758_drafts correlation_id="b9eeb4f0-d85b-4417-bc7b-f31580a90e3a" partition=0 offset=40
+2026-11-04T18:37:20.824Z [WRITER] offset committed partition=1 committed_offset=16
+2026-11-04T18:37:56.159Z [WRITER] received from s6758_tasks correlation_id="e07c6f39-b963-47c6-ad8e-6c0885ee8c27" partition=1 offset=16
+2026-11-04T18:38:16.591Z [WRITER] draft ready correlation_id="e07c6f39-b963-47c6-ad8e-6c0885ee8c27" words=61
+2026-11-04T18:38:16.600Z [WRITER] sent to s6758_drafts correlation_id="e07c6f39-b963-47c6-ad8e-6c0885ee8c27" partition=0 offset=41
+2026-11-04T18:38:16.608Z [WRITER] offset committed partition=1 committed_offset=17
+2026-11-04T18:38:47.779Z [WRITER] received from s6758_tasks correlation_id="5733b5c2-01c3-4bf3-bac4-84ff22ac4532" partition=0 offset=25
+2026-11-04T18:39:07.537Z [WRITER] draft ready correlation_id="5733b5c2-01c3-4bf3-bac4-84ff22ac4532" words=102
+2026-11-04T18:39:07.543Z [WRITER] sent to s6758_drafts correlation_id="5733b5c2-01c3-4bf3-bac4-84ff22ac4532" partition=0 offset=42
+2026-11-04T18:39:07.553Z [WRITER] offset committed partition=0 committed_offset=26
+2026-11-04T18:39:34.652Z [WRITER] received from s6758_tasks correlation_id="2725b101-8514-40d0-b5c7-b1322e4d6987" partition=1 offset=17
+2026-11-04T18:39:55.244Z [WRITER] draft ready correlation_id="2725b101-8514-40d0-b5c7-b1322e4d6987" words=113
+2026-11-04T18:39:55.253Z [WRITER] sent to s6758_drafts correlation_id="2725b101-8514-40d0-b5c7-b1322e4d6987" partition=0 offset=43
+2026-11-04T18:39:55.273Z [WRITER] offset committed partition=1 committed_offset=18
+2026-11-04T18:40:22.327Z [WRITER] received from s6758_tasks correlation_id="d7ba307e-dd34-474c-ae50-d5059fe32856" partition=0 offset=26
+2026-11-04T18:40:37.330Z [WRITER] draft ready correlation_id="d7ba307e-dd34-474c-ae50-d5059fe32856" words=53
+2026-11-04T18:40:37.336Z [WRITER] sent to s6758_drafts correlation_id="d7ba307e-dd34-474c-ae50-d5059fe32856" partition=0 offset=44
+2026-11-04T18:40:37.348Z [WRITER] offset committed partition=0 committed_offset=27
+2026-11-04T18:41:04.191Z [WRITER] received from s6758_tasks correlation_id="d508ed3b-d539-48d6-80bf-21746a39c008" partition=0 offset=27
+2026-11-04T18:41:16.989Z [WRITER] draft ready correlation_id="d508ed3b-d539-48d6-80bf-21746a39c008" words=18
+2026-11-04T18:41:16.995Z [WRITER] sent to s6758_drafts correlation_id="d508ed3b-d539-48d6-80bf-21746a39c008" partition=0 offset=45
+2026-11-04T18:41:17.006Z [WRITER] offset committed partition=0 committed_offset=28
+2026-11-04T18:42:10.778Z [WRITER] received from s6758_tasks correlation_id="d522204e-daee-4a50-ad7b-68802b333c6e" partition=1 offset=18
+2026-11-04T18:43:06.155Z [WRITER] draft ready correlation_id="d522204e-daee-4a50-ad7b-68802b333c6e" words=174
+2026-11-04T18:43:06.165Z [WRITER] sent to s6758_drafts correlation_id="d522204e-daee-4a50-ad7b-68802b333c6e" partition=0 offset=46
+2026-11-04T18:43:06.180Z [WRITER] offset committed partition=1 committed_offset=19
+2026-11-04T18:43:51.608Z [WRITER] received from s6758_tasks correlation_id="35a3cfaf-49b5-4a0b-a06a-429c798cacc1" partition=1 offset=19
+2026-11-04T18:44:12.230Z [WRITER] draft ready correlation_id="35a3cfaf-49b5-4a0b-a06a-429c798cacc1" words=58
+2026-11-04T18:44:12.237Z [WRITER] sent to s6758_drafts correlation_id="35a3cfaf-49b5-4a0b-a06a-429c798cacc1" partition=0 offset=47
+2026-11-04T18:44:12.252Z [WRITER] offset committed partition=1 committed_offset=20
+2026-11-04T18:44:41.853Z [WRITER] received from s6758_tasks correlation_id="9c3a3cea-14fc-4faa-9ead-f4d18fe2e9ef" partition=1 offset=20
+2026-11-04T18:45:11.845Z [WRITER] draft ready correlation_id="9c3a3cea-14fc-4faa-9ead-f4d18fe2e9ef" words=130
+2026-11-04T18:45:11.851Z [WRITER] sent to s6758_drafts correlation_id="9c3a3cea-14fc-4faa-9ead-f4d18fe2e9ef" partition=0 offset=48
+2026-11-04T18:45:11.876Z [WRITER] offset committed partition=1 committed_offset=21
+2026-11-04T18:45:54.710Z [WRITER] received from s6758_tasks correlation_id="3895b1fd-e4f1-430e-aa73-69ccbcfd98fe" partition=0 offset=28
+2026-11-04T18:46:29.559Z [WRITER] draft ready correlation_id="3895b1fd-e4f1-430e-aa73-69ccbcfd98fe" words=134
+2026-11-04T18:46:29.566Z [WRITER] sent to s6758_drafts correlation_id="3895b1fd-e4f1-430e-aa73-69ccbcfd98fe" partition=0 offset=49
+2026-11-04T18:46:29.580Z [WRITER] offset committed partition=0 committed_offset=29
+2026-11-04T18:47:03.667Z [WRITER] received from s6758_tasks correlation_id="62dd2a26-29e4-49a7-a9a5-a5214f32d83e" partition=1 offset=21
+2026-11-04T18:47:24.803Z [WRITER] draft ready correlation_id="62dd2a26-29e4-49a7-a9a5-a5214f32d83e" words=79
+2026-11-04T18:47:24.809Z [WRITER] sent to s6758_drafts correlation_id="62dd2a26-29e4-49a7-a9a5-a5214f32d83e" partition=0 offset=50
+2026-11-04T18:47:24.825Z [WRITER] offset committed partition=1 committed_offset=22
+2026-11-04T18:47:57.508Z [WRITER] received from s6758_tasks correlation_id="6e59653e-e6aa-43f8-b026-3c4f57e49eec" partition=1 offset=22
+2026-11-04T18:48:31.807Z [WRITER] draft ready correlation_id="6e59653e-e6aa-43f8-b026-3c4f57e49eec" words=173
+2026-11-04T18:48:31.814Z [WRITER] sent to s6758_drafts correlation_id="6e59653e-e6aa-43f8-b026-3c4f57e49eec" partition=0 offset=51
+2026-11-04T18:48:31.821Z [WRITER] offset committed partition=1 committed_offset=23
+2026-11-04T18:49:09.018Z [WRITER] received from s6758_tasks correlation_id="23adaa55-5a19-4af4-8869-0b8b12474956" partition=1 offset=23
+2026-11-04T18:49:38.271Z [WRITER] draft ready correlation_id="23adaa55-5a19-4af4-8869-0b8b12474956" words=119
+2026-11-04T18:49:38.282Z [WRITER] sent to s6758_drafts correlation_id="23adaa55-5a19-4af4-8869-0b8b12474956" partition=0 offset=52
+2026-11-04T18:49:38.304Z [WRITER] offset committed partition=1 committed_offset=24
+2026-11-04T18:50:10.712Z [WRITER] received from s6758_tasks correlation_id="d7c8bccf-e7f9-4848-b283-2ff0667077ab" partition=0 offset=29
+2026-11-04T18:50:24.017Z [WRITER] draft ready correlation_id="d7c8bccf-e7f9-4848-b283-2ff0667077ab" words=10
+2026-11-04T18:50:24.039Z [WRITER] sent to s6758_drafts correlation_id="d7c8bccf-e7f9-4848-b283-2ff0667077ab" partition=0 offset=53
+2026-11-04T18:50:24.057Z [WRITER] offset committed partition=0 committed_offset=30
+2026-11-04T18:54:46.178Z [WRITER] received from s6758_tasks correlation_id="11795f6e-4037-47a6-a690-d993a9d4ae46" partition=0 offset=30
+2026-11-04T18:55:01.292Z [WRITER] draft ready correlation_id="11795f6e-4037-47a6-a690-d993a9d4ae46" words=41
+2026-11-04T18:55:01.299Z [WRITER] sent to s6758_drafts correlation_id="11795f6e-4037-47a6-a690-d993a9d4ae46" partition=0 offset=54
+2026-11-04T18:55:01.311Z [WRITER] offset committed partition=0 committed_offset=31
+2026-11-04T18:55:26.288Z [WRITER] received from s6758_tasks correlation_id="cb69fcef-66f9-404e-aa4e-723fc55da292" partition=0 offset=31
+2026-11-04T18:55:41.212Z [WRITER] draft ready correlation_id="cb69fcef-66f9-404e-aa4e-723fc55da292" words=42
+2026-11-04T18:55:41.219Z [WRITER] sent to s6758_drafts correlation_id="cb69fcef-66f9-404e-aa4e-723fc55da292" partition=0 offset=55
+2026-11-04T18:55:41.233Z [WRITER] offset committed partition=0 committed_offset=32
+Failed fetch messages from 1: [Error 7] RequestTimedOutError
+Error sending HeartbeatRequest_v1 to node 1 [[Error 7] RequestTimedOutError] -- marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat send request failed: [Error 7] RequestTimedOutError. Will retry.
+Heartbeat session expired - marking coordinator dead
+Failed fetch messages from 1: [Error 7] RequestTimedOutError

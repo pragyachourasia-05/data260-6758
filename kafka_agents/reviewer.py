@@ -16,7 +16,8 @@ SYSTEM = (
 
 
 def review(message: dict) -> tuple[bool, str]:
-    prompt = (f"Question: {message['question']}\nPlan: {json.dumps(message['plan'])}\n\nDraft:\n{message['draft']}")
+    facts = f"\nListing facts: {message['context']}" if message.get("context") else ""
+    prompt = (f"Question: {message['question']}\nPlan: {json.dumps(message['plan'])}{facts}\n\nDraft:\n{message['draft']}")
     try:
         verdict = json.loads(llm(SYSTEM, prompt, as_json=True))
         return bool(verdict.get("approved")), str(verdict.get("notes", "")).strip()

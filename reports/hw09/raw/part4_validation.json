@@ -1,0 +1,50 @@
+[
+  {
+    "lesson_id": "lesson_001",
+    "pattern": "added_detail",
+    "passes_before": 15,
+    "passes_after": 16,
+    "fixed": [
+      "val_01"
+    ],
+    "regressions": [],
+    "unsupported_after": [],
+    "kept": true,
+    "before": {
+      "val_01": "The monthly rent at 110 Research Avenue is $2550. This is a studio apartment, and there is only one available unit.",
+      "val_02": "The property at 111 Research Avenue is a House. It has 1 available unit.",
+      "val_03": "The rent for 112 Research Avenue is $2700. The property type is an Apartment.",
+      "val_04": "To calculate the total rent for 12 months, multiply the monthly rent by 12. The monthly rent at 113 Research Avenue is $2775. The total rent for 12 months would be $2775 x 12 = $33,300.",
+      "val_05": "To calculate the total cost of 3 months of rent, we multiply the monthly rent by 3. The monthly rent at 114 Research Avenue is $2850. Therefore, 3 months of rent would cost $2850 x 3 = $8550.",
+      "val_06": "115 Research Avenue costs $2925 per month, while 116 Research Avenue costs $3000 per month. The difference is $75 per month. Therefore, 115 Research Avenue costs less per month.",
+      "val_07": "I couldn't find any information on laundry being included at 117 Research Avenue. The listing records only mention the monthly rent and property type.",
+      "val_08": "According to the listing records, utilities are not explicitly mentioned as being included in the rent. The rent is $3150 per month, but it does not specify whether utilities are included or not.",
+      "val_09": "I couldn't find any information on whether 119 Research Avenue allows smoking. However, I can suggest contacting the property manager or landlord directly to inquire about their smoking policy. They will be able to provide the most up-to-date and accurate information.",
+      "val_10": "I'm not aware of any information about a rental housing listing. I'm a rental housing listings assistant, and I don't have information about books or literature.",
+      "val_11": "To calculate the difference, we need to know the monthly rent for 6 months. For 116 Research Avenue, the monthly rent is $3000, so for 6 months it would be $3000 * 6 = $18000. For 115 Research Avenue, the monthly rent is $2925, so for 6 months it would be $2925 * 6 = $17550. The difference is $18000 - $17550 = $450.",
+      "val_12": "The combined monthly rent of 110 Research Avenue and 111 Research Avenue is $2550 + $2625 = $5175.",
+      "val_13": "To find out how much each roommate pays, we need to divide the monthly rent by 2. Monthly rent is $2700, so each roommate pays $2700 / 2 = $1350.",
+      "val_14": "112 Research Avenue is the cheapest, with a monthly rent of $2700. It is an apartment with 1 available unit.",
+      "val_15": "The rent at 111 Research Avenue is $2625 per month. Unfortunately, the listing records do not specify whether parking is included in the rent.",
+      "val_16": "113 Research Avenue is a house. Unfortunately, I don't have information on whether it has a dishwasher. However, I can tell you that it has a monthly rent of $2775 and is available for rent."
+    },
+    "after": {
+      "val_01": "The monthly rent at 110 Research Avenue is $2550.",
+      "val_02": "The property at 111 Research Avenue is a house.",
+      "val_03": "The rent for 112 Research Avenue is $2700 per month, and it is an apartment.",
+      "val_04": "To calculate the total rent for 12 months, multiply the monthly rent by 12. The monthly rent at 113 Research Avenue is $2775. The total rent for 12 months would be $2775 x 12 = $33,300.",
+      "val_05": "To calculate the total cost of 3 months of rent, we multiply the monthly rent by 3. The monthly rent at 114 Research Avenue is $2850. Therefore, 3 months of rent would cost $2850 x 3 = $8550.",
+      "val_06": "115 Research Avenue costs $2925 per month, while 116 Research Avenue costs $3000 per month. The difference is $75 per month. Therefore, 115 Research Avenue costs less per month.",
+      "val_07": "I couldn't find any information on laundry being included at 117 Research Avenue. The listing records only mention the monthly rent and property type.",
+      "val_08": "According to the listing records, utilities are not explicitly mentioned as being included in the rent. The rent is $3150 per month, but it does not specify whether utilities are included or not.",
+      "val_09": "I couldn't find any information on whether 119 Research Avenue allows smoking. However, I can suggest contacting the property manager or landlord directly to inquire about their smoking policy. They will be able to provide the most up-to-date and accurate information.",
+      "val_10": "I'm not aware of any information about a rental housing listing. I'm a rental housing listings assistant, and I don't have information about books or literature.",
+      "val_11": "To calculate the difference, we need to know the monthly rent for 6 months. For 116 Research Avenue, the monthly rent is $3000, so for 6 months it would be $3000 * 6 = $18000. For 115 Research Avenue, the monthly rent is $2925, so for 6 months it would be $2925 * 6 = $17550. The difference is $18000 - $17550 = $450.",
+      "val_12": "The combined monthly rent of 110 Research Avenue and 111 Research Avenue is $2550 + $2625 = $5175.",
+      "val_13": "To find out how much each roommate pays, we need to divide the monthly rent by 2. Monthly rent is $2700, so each roommate pays $2700 / 2 = $1350.",
+      "val_14": "112 Research Avenue is the cheapest, with a monthly rent of $2700. It is an apartment with 1 available unit.",
+      "val_15": "The rent at 111 Research Avenue is $2625 per month. Unfortunately, the listing records do not specify whether parking is included in the rent.",
+      "val_16": "113 Research Avenue is a house. Unfortunately, I don't have information on whether it has a dishwasher. However, I can tell you that it has a monthly rent of $2775 and is available for rent."
+    }
+  }
+]

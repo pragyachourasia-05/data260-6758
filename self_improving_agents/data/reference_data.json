@@ -1,0 +1,957 @@
+{
+  "source": "s6758_rel.listings",
+  "listings": {
+    "100": {
+      "listing_id": 4,
+      "address": "100 Research Avenue, San Jose, CA",
+      "monthly_rent": 1800,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "101": {
+      "listing_id": 5,
+      "address": "101 Research Avenue, San Jose, CA",
+      "monthly_rent": 1875,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "102": {
+      "listing_id": 6,
+      "address": "102 Research Avenue, San Jose, CA",
+      "monthly_rent": 1950,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "103": {
+      "listing_id": 7,
+      "address": "103 Research Avenue, San Jose, CA",
+      "monthly_rent": 2025,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "104": {
+      "listing_id": 8,
+      "address": "104 Research Avenue, San Jose, CA",
+      "monthly_rent": 2100,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "105": {
+      "listing_id": 9,
+      "address": "105 Research Avenue, San Jose, CA",
+      "monthly_rent": 2175,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "106": {
+      "listing_id": 10,
+      "address": "106 Research Avenue, San Jose, CA",
+      "monthly_rent": 2250,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "107": {
+      "listing_id": 11,
+      "address": "107 Research Avenue, San Jose, CA",
+      "monthly_rent": 2325,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "108": {
+      "listing_id": 12,
+      "address": "108 Research Avenue, San Jose, CA",
+      "monthly_rent": 2400,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "109": {
+      "listing_id": 13,
+      "address": "109 Research Avenue, San Jose, CA",
+      "monthly_rent": 2475,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "110": {
+      "listing_id": 14,
+      "address": "110 Research Avenue, San Jose, CA",
+      "monthly_rent": 2550,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "111": {
+      "listing_id": 15,
+      "address": "111 Research Avenue, San Jose, CA",
+      "monthly_rent": 2625,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "112": {
+      "listing_id": 16,
+      "address": "112 Research Avenue, San Jose, CA",
+      "monthly_rent": 2700,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "113": {
+      "listing_id": 17,
+      "address": "113 Research Avenue, San Jose, CA",
+      "monthly_rent": 2775,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "114": {
+      "listing_id": 18,
+      "address": "114 Research Avenue, San Jose, CA",
+      "monthly_rent": 2850,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "115": {
+      "listing_id": 19,
+      "address": "115 Research Avenue, San Jose, CA",
+      "monthly_rent": 2925,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "116": {
+      "listing_id": 20,
+      "address": "116 Research Avenue, San Jose, CA",
+      "monthly_rent": 3000,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "117": {
+      "listing_id": 21,
+      "address": "117 Research Avenue, San Jose, CA",
+      "monthly_rent": 3075,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "118": {
+      "listing_id": 22,
+      "address": "118 Research Avenue, San Jose, CA",
+      "monthly_rent": 3150,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "119": {
+      "listing_id": 23,
+      "address": "119 Research Avenue, San Jose, CA",
+      "monthly_rent": 3225,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "120": {
+      "listing_id": 24,
+      "address": "120 Research Avenue, San Jose, CA",
+      "monthly_rent": 3300,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "121": {
+      "listing_id": 25,
+      "address": "121 Research Avenue, San Jose, CA",
+      "monthly_rent": 3375,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "122": {
+      "listing_id": 26,
+      "address": "122 Research Avenue, San Jose, CA",
+      "monthly_rent": 3450,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "123": {
+      "listing_id": 27,
+      "address": "123 Research Avenue, San Jose, CA",
+      "monthly_rent": 3525,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "124": {
+      "listing_id": 28,
+      "address": "124 Research Avenue, San Jose, CA",
+      "monthly_rent": 3600,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "126": {
+      "listing_id": 30,
+      "address": "126 Research Avenue, San Jose, CA",
+      "monthly_rent": 1875,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "127": {
+      "listing_id": 31,
+      "address": "127 Research Avenue, San Jose, CA",
+      "monthly_rent": 1950,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "128": {
+      "listing_id": 32,
+      "address": "128 Research Avenue, San Jose, CA",
+      "monthly_rent": 2025,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "129": {
+      "listing_id": 33,
+      "address": "129 Research Avenue, San Jose, CA",
+      "monthly_rent": 2100,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "131": {
+      "listing_id": 35,
+      "address": "131 Research Avenue, San Jose, CA",
+      "monthly_rent": 2250,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "132": {
+      "listing_id": 36,
+      "address": "132 Research Avenue, San Jose, CA",
+      "monthly_rent": 2325,
+      "property_type": "Apartment",
+      "available_units": 1
+    },
+    "133": {
+      "listing_id": 37,
+      "address": "133 Research Avenue, San Jose, CA",
+      "monthly_rent": 2400,
+      "property_type": "House",
+      "available_units": 1
+    },
+    "134": {
+      "listing_id": 38,
+      "address": "134 Research Avenue, San Jose, CA",
+      "monthly_rent": 2475,
+      "property_type": "Apartment",
+      "available_units": 1
+    }
+  },
+  "checks": {
+    "tra_01": {
+      "kind": "fact",
+      "required_any_of": [
+        [
+          "$1800",
+          "1800",
+          "1,800",
+          "$1,800"
+        ]
+      ],
+      "facts": [
+        "monthly rent $1800"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_02": {
+      "kind": "fact",
+      "required_any_of": [
+        [
+          "House"
+        ]
+      ],
+      "facts": [
+        "property type House"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_03": {
+      "kind": "fact",
+      "required_any_of": [
+        [
+          "$1950",
+          "1950",
+          "1,950",
+          "$1,950"
+        ],
+        [
+          "Apartment"
+        ]
+      ],
+      "facts": [
+        "monthly rent $1950",
+        "property type Apartment"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_04": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$24300",
+          "24300",
+          "24,300",
+          "$24,300"
+        ]
+      ],
+      "facts": [
+        "total 12 x $2025 = $24300"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_05": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$12600",
+          "12600",
+          "12,600",
+          "$12,600"
+        ]
+      ],
+      "facts": [
+        "total 6 x $2100 = $12600"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_06": {
+      "kind": "compare",
+      "required_any_of": [
+        [
+          "105"
+        ],
+        [
+          "$75",
+          "75",
+          "75",
+          "$75"
+        ]
+      ],
+      "facts": [
+        "cheaper listing is 105 Research Avenue",
+        "difference $75 per month"
+      ],
+      "forbid": "\\b106 Research Avenue[^.]{0,40}\\b(is|costs?|has)\\b[^.]{0,25}\\b(cheaper|less|lower)\\b",
+      "has_listing": true
+    },
+    "tra_07": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_08": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_09": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_10": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": false
+    },
+    "tra_11": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$900",
+          "900",
+          "900",
+          "$900"
+        ]
+      ],
+      "facts": [
+        "12 x monthly difference = $900"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_12": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$3675",
+          "3675",
+          "3,675",
+          "$3,675"
+        ]
+      ],
+      "facts": [
+        "sum of the two rents = $3675"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_13": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$600",
+          "600",
+          "600",
+          "$600"
+        ]
+      ],
+      "facts": [
+        "rent / 3 = $600"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_14": {
+      "kind": "compare",
+      "required_any_of": [
+        [
+          "102"
+        ],
+        [
+          "$1950",
+          "1950",
+          "1,950",
+          "$1,950"
+        ]
+      ],
+      "facts": [
+        "cheapest listing is 102 Research Avenue",
+        "its rent is $1950"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tra_15": {
+      "kind": "mixed",
+      "required_any_of": [
+        [
+          "$1875",
+          "1875",
+          "1,875",
+          "$1,875"
+        ]
+      ],
+      "facts": [
+        "monthly rent $1875"
+      ],
+      "forbid": "",
+      "unsupported": "the records say nothing about pets",
+      "has_listing": true
+    },
+    "tra_16": {
+      "kind": "mixed",
+      "required_any_of": [
+        [
+          "House"
+        ]
+      ],
+      "facts": [
+        "property type House"
+      ],
+      "forbid": "",
+      "unsupported": "the records say nothing about a balcony",
+      "has_listing": true
+    },
+    "val_01": {
+      "kind": "fact",
+      "required_any_of": [
+        [
+          "$2550",
+          "2550",
+          "2,550",
+          "$2,550"
+        ]
+      ],
+      "facts": [
+        "monthly rent $2550"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_02": {
+      "kind": "fact",
+      "required_any_of": [
+        [
+          "House"
+        ]
+      ],
+      "facts": [
+        "property type House"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_03": {
+      "kind": "fact",
+      "required_any_of": [
+        [
+          "$2700",
+          "2700",
+          "2,700",
+          "$2,700"
+        ],
+        [
+          "Apartment"
+        ]
+      ],
+      "facts": [
+        "monthly rent $2700",
+        "property type Apartment"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_04": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$33300",
+          "33300",
+          "33,300",
+          "$33,300"
+        ]
+      ],
+      "facts": [
+        "total 12 x $2775 = $33300"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_05": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$8550",
+          "8550",
+          "8,550",
+          "$8,550"
+        ]
+      ],
+      "facts": [
+        "total 3 x $2850 = $8550"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_06": {
+      "kind": "compare",
+      "required_any_of": [
+        [
+          "115"
+        ],
+        [
+          "$75",
+          "75",
+          "75",
+          "$75"
+        ]
+      ],
+      "facts": [
+        "cheaper listing is 115 Research Avenue",
+        "difference $75 per month"
+      ],
+      "forbid": "\\b116 Research Avenue[^.]{0,40}\\b(is|costs?|has)\\b[^.]{0,25}\\b(cheaper|less|lower)\\b",
+      "has_listing": true
+    },
+    "val_07": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_08": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_09": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_10": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": false
+    },
+    "val_11": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$450",
+          "450",
+          "450",
+          "$450"
+        ]
+      ],
+      "facts": [
+        "6 x monthly difference = $450"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_12": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$5175",
+          "5175",
+          "5,175",
+          "$5,175"
+        ]
+      ],
+      "facts": [
+        "sum of the two rents = $5175"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_13": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$1350",
+          "1350",
+          "1,350",
+          "$1,350"
+        ]
+      ],
+      "facts": [
+        "rent / 2 = $1350"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_14": {
+      "kind": "compare",
+      "required_any_of": [
+        [
+          "112"
+        ],
+        [
+          "$2700",
+          "2700",
+          "2,700",
+          "$2,700"
+        ]
+      ],
+      "facts": [
+        "cheapest listing is 112 Research Avenue",
+        "its rent is $2700"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "val_15": {
+      "kind": "mixed",
+      "required_any_of": [
+        [
+          "$2625",
+          "2625",
+          "2,625",
+          "$2,625"
+        ]
+      ],
+      "facts": [
+        "monthly rent $2625"
+      ],
+      "forbid": "",
+      "unsupported": "the records say nothing about parking",
+      "has_listing": true
+    },
+    "val_16": {
+      "kind": "mixed",
+      "required_any_of": [
+        [
+          "House"
+        ]
+      ],
+      "facts": [
+        "property type House"
+      ],
+      "forbid": "",
+      "unsupported": "the records say nothing about a dishwasher",
+      "has_listing": true
+    },
+    "tes_01": {
+      "kind": "fact",
+      "required_any_of": [
+        [
+          "$3300",
+          "3300",
+          "3,300",
+          "$3,300"
+        ]
+      ],
+      "facts": [
+        "monthly rent $3300"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_02": {
+      "kind": "fact",
+      "required_any_of": [
+        [
+          "House"
+        ]
+      ],
+      "facts": [
+        "property type House"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_03": {
+      "kind": "fact",
+      "required_any_of": [
+        [
+          "$3450",
+          "3450",
+          "3,450",
+          "$3,450"
+        ],
+        [
+          "Apartment"
+        ]
+      ],
+      "facts": [
+        "monthly rent $3450",
+        "property type Apartment"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_04": {
+      "kind": "fact",
+      "required_any_of": [
+        [
+          "1",
+          "one"
+        ]
+      ],
+      "facts": [
+        "1 available unit(s)"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_05": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$43200",
+          "43200",
+          "43,200",
+          "$43,200"
+        ]
+      ],
+      "facts": [
+        "total 12 x $3600 = $43200"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_06": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$16875",
+          "16875",
+          "16,875",
+          "$16,875"
+        ]
+      ],
+      "facts": [
+        "total 9 x $1875 = $16875"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_07": {
+      "kind": "compare",
+      "required_any_of": [
+        [
+          "127"
+        ],
+        [
+          "$75",
+          "75",
+          "75",
+          "$75"
+        ]
+      ],
+      "facts": [
+        "cheaper listing is 127 Research Avenue",
+        "difference $75 per month"
+      ],
+      "forbid": "\\b128 Research Avenue[^.]{0,40}\\b(is|costs?|has)\\b[^.]{0,25}\\b(cheaper|less|lower)\\b",
+      "has_listing": true
+    },
+    "tes_08": {
+      "kind": "compare",
+      "required_any_of": [
+        [
+          "129"
+        ],
+        [
+          "$150",
+          "150",
+          "150",
+          "$150"
+        ]
+      ],
+      "facts": [
+        "cheaper listing is 129 Research Avenue",
+        "difference $150 per month"
+      ],
+      "forbid": "\\b131 Research Avenue[^.]{0,40}\\b(is|costs?|has)\\b[^.]{0,25}\\b(cheaper|less|lower)\\b",
+      "has_listing": true
+    },
+    "tes_09": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_10": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_11": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_12": {
+      "kind": "unsupported",
+      "required_any_of": [],
+      "facts": [],
+      "forbid": "",
+      "has_listing": false
+    },
+    "tes_13": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$675",
+          "675",
+          "675",
+          "$675"
+        ]
+      ],
+      "facts": [
+        "9 x monthly difference = $675"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_14": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$6675",
+          "6675",
+          "6,675",
+          "$6,675"
+        ]
+      ],
+      "facts": [
+        "sum of the two rents = $6675"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_15": {
+      "kind": "calc",
+      "required_any_of": [
+        [
+          "$1150",
+          "1150",
+          "1,150",
+          "$1,150"
+        ]
+      ],
+      "facts": [
+        "rent / 3 = $1150"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_16": {
+      "kind": "compare",
+      "required_any_of": [
+        [
+          "131"
+        ],
+        [
+          "$2250",
+          "2250",
+          "2,250",
+          "$2,250"
+        ]
+      ],
+      "facts": [
+        "cheapest listing is 131 Research Avenue",
+        "its rent is $2250"
+      ],
+      "forbid": "",
+      "has_listing": true
+    },
+    "tes_17": {
+      "kind": "mixed",
+      "required_any_of": [
+        [
+          "$3375",
+          "3375",
+          "3,375",
+          "$3,375"
+        ]
+      ],
+      "facts": [
+        "monthly rent $3375"
+      ],
+      "forbid": "",
+      "unsupported": "the records say nothing about a washer",
+      "has_listing": true
+    },
+    "tes_18": {
+      "kind": "mixed",
+      "required_any_of": [
+        [
+          "House"
+        ]
+      ],
+      "facts": [
+        "property type House"
+      ],
+      "forbid": "",
+      "unsupported": "the records say nothing about a garden",
+      "has_listing": true
+    }
+  },
+  "note": "kind=unsupported means the listing records do not contain the answer, so the correct answer says so."
+}

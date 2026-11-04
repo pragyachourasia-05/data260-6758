@@ -1,0 +1,66 @@
+[
+  {
+    "id": "tra_01",
+    "question": "What is the monthly rent at 100 Research Avenue?"
+  },
+  {
+    "id": "tra_02",
+    "question": "What type of property is 101 Research Avenue?"
+  },
+  {
+    "id": "tra_03",
+    "question": "Give both the monthly rent and the property type for 102 Research Avenue."
+  },
+  {
+    "id": "tra_04",
+    "question": "How much rent would I pay in total for 12 months at 103 Research Avenue?"
+  },
+  {
+    "id": "tra_05",
+    "question": "What is the total rent for 6 months at 104 Research Avenue?"
+  },
+  {
+    "id": "tra_06",
+    "question": "Which is cheaper, 105 Research Avenue or 106 Research Avenue, and by how much per month?"
+  },
+  {
+    "id": "tra_07",
+    "question": "Are pets allowed at 107 Research Avenue?"
+  },
+  {
+    "id": "tra_08",
+    "question": "Does 108 Research Avenue include free parking?"
+  },
+  {
+    "id": "tra_09",
+    "question": "Is there a gym at 109 Research Avenue?"
+  },
+  {
+    "id": "tra_10",
+    "question": "What is the capital of France?"
+  },
+  {
+    "id": "tra_11",
+    "question": "Over 12 months, how much more would 106 Research Avenue cost than 105 Research Avenue?"
+  },
+  {
+    "id": "tra_12",
+    "question": "What is the combined monthly rent of 100 Research Avenue and 101 Research Avenue?"
+  },
+  {
+    "id": "tra_13",
+    "question": "If 3 roommates split the rent at 100 Research Avenue equally, how much does each pay per month?"
+  },
+  {
+    "id": "tra_14",
+    "question": "Which is the cheapest of 104 Research Avenue, 102 Research Avenue and 103 Research Avenue?"
+  },
+  {
+    "id": "tra_15",
+    "question": "What is the rent at 101 Research Avenue, and are pets allowed there?"
+  },
+  {
+    "id": "tra_16",
+    "question": "What type of property is 103 Research Avenue, and does it have a balcony?"
+  }
+]

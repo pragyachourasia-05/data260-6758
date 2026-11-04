@@ -1,0 +1,327 @@
+{
+  "rows": [
+    {
+      "id": "tra_01",
+      "question": "What is the monthly rent at 100 Research Avenue?",
+      "lessons_loaded": [],
+      "attempts": 2,
+      "final_answer": "The monthly rent at 100 Research Avenue is $1800. There is only one available unit.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "The monthly rent at 100 Research Avenue is $1800. This is a studio apartment, as indicated by the property type. There is only one available unit.",
+          "result": "REVISE",
+          "explanation": "The answer says 'studio', which is not in the listing record.",
+          "feedback": "Remove 'studio'. State only the values in the listing record.",
+          "pattern": "added_detail"
+        },
+        {
+          "attempt": 2,
+          "answer": "The monthly rent at 100 Research Avenue is $1800. There is only one available unit.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 10460.7
+    },
+    {
+      "id": "tra_02",
+      "question": "What type of property is 101 Research Avenue?",
+      "lessons_loaded": [],
+      "attempts": 2,
+      "final_answer": "The property at 101 Research Avenue is a House.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "The property at 101 Research Avenue is a House. It is a single-family residence with one available unit.",
+          "result": "REVISE",
+          "explanation": "The answer says 'single-family', which is not in the listing record.",
+          "feedback": "Remove 'single-family'. State only the values in the listing record.",
+          "pattern": "added_detail"
+        },
+        {
+          "attempt": 2,
+          "answer": "The property at 101 Research Avenue is a House.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 5008.6
+    },
+    {
+      "id": "tra_03",
+      "question": "Give both the monthly rent and the property type for 102 Research Avenue.",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "The monthly rent for 102 Research Avenue is $1950. The property type is an Apartment.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "The monthly rent for 102 Research Avenue is $1950. The property type is an Apartment.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 2060.3
+    },
+    {
+      "id": "tra_04",
+      "question": "How much rent would I pay in total for 12 months at 103 Research Avenue?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "To calculate the total rent for 12 months, multiply the monthly rent by 12. The monthly rent at 103 Research Avenue is $2025. Therefore, the total rent for 12 months would be $2025 x 12 = $24,300.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "To calculate the total rent for 12 months, multiply the monthly rent by 12. The monthly rent at 103 Research Avenue is $2025. Therefore, the total rent for 12 months would be $2025 x 12 = $24,300.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 5674.7
+    },
+    {
+      "id": "tra_05",
+      "question": "What is the total rent for 6 months at 104 Research Avenue?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "To calculate the total rent for 6 months, we multiply the monthly rent by 6. The monthly rent at 104 Research Avenue is $2100. Therefore, the total rent for 6 months is $2100 x 6 = $12,600.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "To calculate the total rent for 6 months, we multiply the monthly rent by 6. The monthly rent at 104 Research Avenue is $2100. Therefore, the total rent for 6 months is $2100 x 6 = $12,600.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 6111.3
+    },
+    {
+      "id": "tra_06",
+      "question": "Which is cheaper, 105 Research Avenue or 106 Research Avenue, and by how much per month?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "105 Research Avenue is cheaper by $75 per month compared to 106 Research Avenue. The monthly rent for 105 Research Avenue is $2175, while for 106 Research Avenue it is $2250. Therefore, 105 Research Avenue is $75 cheaper per month.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "105 Research Avenue is cheaper by $75 per month compared to 106 Research Avenue. The monthly rent for 105 Research Avenue is $2175, while for 106 Research Avenue it is $2250. Therefore, 105 Research Avenue is $75 cheaper per month.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 6497.1
+    },
+    {
+      "id": "tra_07",
+      "question": "Are pets allowed at 107 Research Avenue?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "I couldn't find any information on pet policies for 107 Research Avenue. However, I can tell you that the property type is a house, which may or may not be pet-friendly. You may want to contact the landlord or property manager directly to confirm their pet policy.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "I couldn't find any information on pet policies for 107 Research Avenue. However, I can tell you that the property type is a house, which may or may not be pet-friendly. You may want to contact the landlord or property manager directly to confirm their pet policy.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 6523.2
+    },
+    {
+      "id": "tra_08",
+      "question": "Does 108 Research Avenue include free parking?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "I couldn't find any information about free parking at 108 Research Avenue. The listing records only mention the monthly rent and property type, but do not specify parking details.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "I couldn't find any information about free parking at 108 Research Avenue. The listing records only mention the monthly rent and property type, but do not specify parking details.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 4113.0
+    },
+    {
+      "id": "tra_09",
+      "question": "Is there a gym at 109 Research Avenue?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "I couldn't find any information about a gym at 109 Research Avenue. The listing records only provide details about the property type (House) and rent, but do not mention any amenities such as a gym.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "I couldn't find any information about a gym at 109 Research Avenue. The listing records only provide details about the property type (House) and rent, but do not mention any amenities such as a gym.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 269446.4
+    },
+    {
+      "id": "tra_10",
+      "question": "What is the capital of France?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "I'm not able to provide information on the capital of France as the provided listing records do not contain relevant information. The listing records are specifically for rental housing listings, and do not include geographical or cultural data. If you need information on the capital of France, I can try to provide it.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "I'm not able to provide information on the capital of France as the provided listing records do not contain relevant information. The listing records are specifically for rental housing listings, and do not include geographical or cultural data. If you need information on the capital of France, I can try to provide it.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 7251.8
+    },
+    {
+      "id": "tra_11",
+      "question": "Over 12 months, how much more would 106 Research Avenue cost than 105 Research Avenue?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "To calculate the difference, we need to multiply the monthly rent by 12. For 106 Research Avenue, the annual cost would be $2250 * 12 = $27,000. For 105 Research Avenue, the annual cost would be $2175 * 12 = $26,100. The difference would be $27,000 - $26,100 = $900.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "To calculate the difference, we need to multiply the monthly rent by 12. For 106 Research Avenue, the annual cost would be $2250 * 12 = $27,000. For 105 Research Avenue, the annual cost would be $2175 * 12 = $26,100. The difference would be $27,000 - $26,100 = $900.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 10167.3
+    },
+    {
+      "id": "tra_12",
+      "question": "What is the combined monthly rent of 100 Research Avenue and 101 Research Avenue?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "The combined monthly rent of 100 Research Avenue and 101 Research Avenue is $1800 + $1875 = $3675.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "The combined monthly rent of 100 Research Avenue and 101 Research Avenue is $1800 + $1875 = $3675.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 5062.7
+    },
+    {
+      "id": "tra_13",
+      "question": "If 3 roommates split the rent at 100 Research Avenue equally, how much does each pay per month?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "To find out how much each roommate pays, we need to divide the monthly rent by the number of available units. Since there is only 1 unit available, we will divide the monthly rent by 3 roommates. $1800 \u00f7 3 = $600.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "To find out how much each roommate pays, we need to divide the monthly rent by the number of available units. Since there is only 1 unit available, we will divide the monthly rent by 3 roommates. $1800 \u00f7 3 = $600.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 7797.5
+    },
+    {
+      "id": "tra_14",
+      "question": "Which is the cheapest of 104 Research Avenue, 102 Research Avenue and 103 Research Avenue?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "102 Research Avenue is the cheapest option, with a monthly rent of $1950. It is an apartment with 1 available unit.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "102 Research Avenue is the cheapest option, with a monthly rent of $1950. It is an apartment with 1 available unit.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 5716.8
+    },
+    {
+      "id": "tra_15",
+      "question": "What is the rent at 101 Research Avenue, and are pets allowed there?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "The rent at 101 Research Avenue is $1875 per month. Unfortunately, I don't have information on pet policies for this listing. However, I can tell you that it is a house with available units.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "The rent at 101 Research Avenue is $1875 per month. Unfortunately, I don't have information on pet policies for this listing. However, I can tell you that it is a house with available units.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 6221.2
+    },
+    {
+      "id": "tra_16",
+      "question": "What type of property is 103 Research Avenue, and does it have a balcony?",
+      "lessons_loaded": [],
+      "attempts": 1,
+      "final_answer": "The property at 103 Research Avenue is a house. Unfortunately, the listing records do not mention the presence of a balcony.",
+      "final_result": "PASS",
+      "trail": [
+        {
+          "attempt": 1,
+          "answer": "The property at 103 Research Avenue is a house. Unfortunately, the listing records do not mention the presence of a balcony.",
+          "result": "PASS",
+          "explanation": "The answer matches the reference data and adds nothing unsupported.",
+          "feedback": "",
+          "pattern": null
+        }
+      ],
+      "latency_ms": 3399.8
+    }
+  ],
+  "patterns": {
+    "added_detail": 2
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "question": "What is the monthly rent at 100 Research Avenue?",
+  "listing_id": 4,
+  "original_rent": "$1800/month",
+  "new_rent": "$1999/month",
+  "cold": {
+    "question": "What is the monthly rent at 100 Research Avenue?",
+    "answer": "To confirm the monthly rent at 100 Research Avenue, I checked the property's listing. The 'Rent' section clearly states that the monthly rent is $1800. This information is up-to-date and accurate, as it is listed on the current rental housing listings.",
+    "is_cached": false,
+    "similarity": 0.0,
+    "latency_ms": 42172.3,
+    "search_ms": 286.7,
+    "cached_query": null,
+    "cached_key": null,
+    "status": "approved",
+    "stale_dropped": false
+  },
+  "stale_hit": {
+    "question": "What is the monthly rent at 100 Research Avenue?",
+    "answer": "To confirm the monthly rent at 100 Research Avenue, I checked the property's listing. The 'Rent' section clearly states that the monthly rent is $1800. This information is up-to-date and accurate, as it is listed on the current rental housing listings.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "latency_ms": 45.3,
+    "search_ms": 45.3,
+    "cached_query": "What is the monthly rent at 100 Research Avenue?",
+    "cached_key": "rent@100",
+    "status": "cached",
+    "stale_dropped": false
+  },
+  "after_invalidation": {
+    "question": "What is the monthly rent at 100 Research Avenue?",
+    "answer": "To confirm the monthly rent at 100 Research Avenue, I checked the property's listing. The 'Rent' section clearly states that the monthly rent is $1999. This information is up-to-date and accurate, as it is the current rent amount listed for the property.",
+    "is_cached": false,
+    "similarity": 1.0,
+    "latency_ms": 38059.2,
+    "search_ms": 54.9,
+    "cached_query": null,
+    "cached_key": null,
+    "status": "approved",
+    "stale_dropped": true
+  },
+  "repeat": {
+    "question": "What is the monthly rent at 100 Research Avenue?",
+    "answer": "To confirm the monthly rent at 100 Research Avenue, I checked the property's listing. The 'Rent' section clearly states that the monthly rent is $1999. This information is up-to-date and accurate, as it is the current rent amount listed for the property.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "latency_ms": 63.9,
+    "search_ms": 63.9,
+    "cached_query": "What is the monthly rent at 100 Research Avenue?",
+    "cached_key": "rent@100",
+    "status": "cached",
+    "stale_dropped": false
+  },
+  "stale_answer_has_old_rent": true,
+  "fresh_answer_has_new_rent": true
+}

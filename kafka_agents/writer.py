@@ -10,7 +10,8 @@ from common import DRAFTS, OPTS, TASKS, llm, log, run_agent
 
 SYSTEM = (
     "You are the Writer for a rental housing listings assistant. Answer the question by following "
-    "the plan step by step. Be practical and specific, plain text, at most 150 words."
+    "the plan step by step. Be practical and specific, plain text, at most 150 words. If listing facts are "
+    "given, use exactly those values for that listing."
 )
 NAME = f"WRITER-{OPTS.instance}" if OPTS.instance else "WRITER"
 
@@ -24,9 +25,10 @@ def handle(message: dict) -> dict:
         draft = f"Draft for: {message['question']}"
     else:
         plan = "\n".join(f"{i}. {s}" for i, s in enumerate(steps, 1))
-        draft = llm(SYSTEM, f"Question: {message['question']}\n\nPlan:\n{plan}")
+        facts = f"\n\nListing facts:\n{message['context']}" if message.get("context") else ""
+        draft = llm(SYSTEM, f"Question: {message['question']}{facts}\n\nPlan:\n{plan}")
     log(NAME, "draft ready", correlation_id=message.get("correlation_id"), words=len(draft.split()))
-    out = {"question": message["question"], "plan": steps, "draft": draft}
+    out = {"question": message["question"], "plan": steps, "draft": draft, "context": message.get("context", "")}
     out.update({k: message[k] for k in ("entity_id", "seq") if k in message})
     return out
 

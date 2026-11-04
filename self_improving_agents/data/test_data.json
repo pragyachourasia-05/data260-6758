@@ -1,0 +1,74 @@
+[
+  {
+    "id": "tes_01",
+    "question": "What is the monthly rent at 120 Research Avenue?"
+  },
+  {
+    "id": "tes_02",
+    "question": "Is 121 Research Avenue a house or an apartment?"
+  },
+  {
+    "id": "tes_03",
+    "question": "Tell me the rent and the property type for 122 Research Avenue."
+  },
+  {
+    "id": "tes_04",
+    "question": "How many units are available at 123 Research Avenue?"
+  },
+  {
+    "id": "tes_05",
+    "question": "What is the total rent for 12 months at 124 Research Avenue?"
+  },
+  {
+    "id": "tes_06",
+    "question": "How much would 9 months of rent cost in total at 126 Research Avenue?"
+  },
+  {
+    "id": "tes_07",
+    "question": "Which is cheaper, 127 Research Avenue or 128 Research Avenue, and by how much each month?"
+  },
+  {
+    "id": "tes_08",
+    "question": "Between 129 Research Avenue and 131 Research Avenue, which has the lower rent and by how much?"
+  },
+  {
+    "id": "tes_09",
+    "question": "Is there a swimming pool at 132 Research Avenue?"
+  },
+  {
+    "id": "tes_10",
+    "question": "Are dogs allowed at 133 Research Avenue?"
+  },
+  {
+    "id": "tes_11",
+    "question": "Does 134 Research Avenue include air conditioning?"
+  },
+  {
+    "id": "tes_12",
+    "question": "What is the tallest mountain in the world?"
+  },
+  {
+    "id": "tes_13",
+    "question": "Over 9 months, how much more would 128 Research Avenue cost than 127 Research Avenue?"
+  },
+  {
+    "id": "tes_14",
+    "question": "What is the combined monthly rent of 120 Research Avenue and 121 Research Avenue?"
+  },
+  {
+    "id": "tes_15",
+    "question": "If 3 roommates split the rent at 122 Research Avenue equally, how much does each pay per month?"
+  },
+  {
+    "id": "tes_16",
+    "question": "Which is the cheapest of 133 Research Avenue, 131 Research Avenue and 132 Research Avenue?"
+  },
+  {
+    "id": "tes_17",
+    "question": "What is the rent at 121 Research Avenue, and is a washer included?"
+  },
+  {
+    "id": "tes_18",
+    "question": "What type of property is 123 Research Avenue, and does it have a garden?"
+  }
+]

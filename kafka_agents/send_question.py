@@ -15,7 +15,8 @@ QUESTION = "What should I check before signing a lease for an apartment listing 
 TIMEOUT_SECONDS = 900
 
 
-async def main(question: str):
+async def ask(question: str, context: str = "") -> dict | None:
+    """Send one question through the agents and return its final message (None on timeout)."""
     producer = await start(AIOKafkaProducer(bootstrap_servers=BOOTSTRAP), "SENDER")
     consumer = await start(AIOKafkaConsumer(bootstrap_servers=BOOTSTRAP, enable_auto_commit=False), "SENDER")
     parts = consumer.partitions_for_topic(FINAL) or {0}
@@ -23,7 +24,8 @@ async def main(question: str):
     await consumer.seek_to_end()  # only results that arrive after this question
 
     cid = str(uuid.uuid4())
-    message = {"correlation_id": cid, "question": question, "sent_at": now(), "trace": [{"agent": "SENDER", "at": now()}]}
+    message = {"correlation_id": cid, "question": question, "context": context, "sent_at": now(),
+               "trace": [{"agent": "SENDER", "at": now()}]}
     meta = await producer.send_and_wait(INBOX, encode(message), key=cid.encode())
     log("SENDER", f"sent question to {INBOX}", correlation_id=cid, partition=meta.partition, offset=meta.offset,
         question=question)
@@ -36,16 +38,23 @@ async def main(question: str):
                     continue
                 log("SENDER", f"received result from {FINAL}", correlation_id=cid, partition=msg.partition,
                     offset=msg.offset, status=result.get("status"))
-                print("\nFinal message:")
-                print(json.dumps(result, indent=2))
-                JOURNEY_LOG.with_name("part2_final.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
-                return 0
+                return result
     except TimeoutError:
         log("SENDER", "no result before timeout", correlation_id=cid)
-        return 1
+        return None
     finally:
         await consumer.stop()
         await producer.stop()
+
+
+async def main(question: str) -> int:
+    result = await ask(question)
+    if result is None:
+        return 1
+    print("\nFinal message:")
+    print(json.dumps(result, indent=2))
+    JOURNEY_LOG.with_name("part2_final.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+    return 0
 
 
 if __name__ == "__main__":

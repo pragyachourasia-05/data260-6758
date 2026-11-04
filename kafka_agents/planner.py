@@ -36,7 +36,7 @@ def handle(message: dict) -> dict:
     else:
         steps = make_plan(question)
     log("PLANNER", "plan ready", correlation_id=message.get("correlation_id"), steps=steps)
-    return {"question": question, "plan": steps}
+    return {"question": question, "plan": steps, "context": message.get("context", "")}
 
 
 if __name__ == "__main__":
