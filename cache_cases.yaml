@@ -1,0 +1,58 @@
+# HW9 Part 3 labeled cache test set. Committed before any threshold sweep; do not relabel after seeing results.
+# seeds are cached first and are not scored. A hit is correct only when the cached entry has the same answer_key.
+seeds:
+  - {id: s01, answer_key: rent@100, query: "What is the monthly rent at 100 Research Avenue?"}
+  - {id: s02, answer_key: type@101, query: "What type of property is 101 Research Avenue?"}
+  - {id: s03, answer_key: rent@103, query: "How much does it cost per month to rent 103 Research Avenue?"}
+  - {id: s04, answer_key: type@104, query: "Is 104 Research Avenue an apartment or a house?"}
+  - {id: s05, answer_key: docs, query: "What documents do landlords usually ask for on a rental application?"}
+  - {id: s06, answer_key: deposit, query: "How much security deposit do landlords usually charge?"}
+  - {id: s07, answer_key: raise_fixed, query: "Can a landlord raise the rent during a fixed-term lease?"}
+  - {id: s08, answer_key: renters_insurance, query: "What does renters insurance cover?"}
+  - {id: s09, answer_key: notice_moveout, query: "How much notice should a tenant give before moving out?"}
+  - {id: s10, answer_key: lease_check, query: "What should I check before signing a lease?"}
+cases:
+  # 10 exact duplicates (should hit)
+  - {id: e01, group: exact, expected: hit, answer_key: rent@100, query: "What is the monthly rent at 100 Research Avenue?"}
+  - {id: e02, group: exact, expected: hit, answer_key: type@101, query: "What type of property is 101 Research Avenue?"}
+  - {id: e03, group: exact, expected: hit, answer_key: rent@103, query: "How much does it cost per month to rent 103 Research Avenue?"}
+  - {id: e04, group: exact, expected: hit, answer_key: type@104, query: "Is 104 Research Avenue an apartment or a house?"}
+  - {id: e05, group: exact, expected: hit, answer_key: docs, query: "What documents do landlords usually ask for on a rental application?"}
+  - {id: e06, group: exact, expected: hit, answer_key: deposit, query: "How much security deposit do landlords usually charge?"}
+  - {id: e07, group: exact, expected: hit, answer_key: raise_fixed, query: "Can a landlord raise the rent during a fixed-term lease?"}
+  - {id: e08, group: exact, expected: hit, answer_key: renters_insurance, query: "What does renters insurance cover?"}
+  - {id: e09, group: exact, expected: hit, answer_key: notice_moveout, query: "How much notice should a tenant give before moving out?"}
+  - {id: e10, group: exact, expected: hit, answer_key: lease_check, query: "What should I check before signing a lease?"}
+  # 10 paraphrases (should hit)
+  - {id: p01, group: paraphrase, expected: hit, answer_key: rent@100, query: "How much is the rent per month for 100 Research Avenue?"}
+  - {id: p02, group: paraphrase, expected: hit, answer_key: type@101, query: "What kind of property is listed at 101 Research Avenue?"}
+  - {id: p03, group: paraphrase, expected: hit, answer_key: rent@103, query: "What's the monthly price for renting 103 Research Avenue?"}
+  - {id: p04, group: paraphrase, expected: hit, answer_key: type@104, query: "Is the property at 104 Research Avenue a house or an apartment?"}
+  - {id: p05, group: paraphrase, expected: hit, answer_key: docs, query: "Which documents do landlords normally require on a rental application?"}
+  - {id: p06, group: paraphrase, expected: hit, answer_key: deposit, query: "What is the typical security deposit a landlord charges?"}
+  - {id: p07, group: paraphrase, expected: hit, answer_key: raise_fixed, query: "Is a landlord allowed to increase rent in the middle of a fixed-term lease?"}
+  - {id: p08, group: paraphrase, expected: hit, answer_key: renters_insurance, query: "What things are covered by renters insurance?"}
+  - {id: p09, group: paraphrase, expected: hit, answer_key: notice_moveout, query: "How far in advance must a tenant give notice before moving out?"}
+  - {id: p10, group: paraphrase, expected: hit, answer_key: lease_check, query: "What should I look at before I sign a lease?"}
+  # 10 superficially similar questions with different correct answers (should miss)
+  - {id: m01, group: similar, expected: miss, answer_key: rent@110, query: "What is the monthly rent at 110 Research Avenue?"}
+  - {id: m02, group: similar, expected: miss, answer_key: type@102, query: "What type of property is 102 Research Avenue?"}
+  - {id: m03, group: similar, expected: miss, answer_key: rent@130, query: "How much does it cost per month to rent 130 Research Avenue?"}
+  - {id: m04, group: similar, expected: miss, answer_key: type@105, query: "Is 105 Research Avenue an apartment or a house?"}
+  - {id: m05, group: similar, expected: miss, answer_key: docs_tenant, query: "What documents do tenants usually ask landlords for before renting?"}
+  - {id: m06, group: similar, expected: miss, answer_key: pet_deposit, query: "How much pet deposit do landlords usually charge?"}
+  - {id: m07, group: similar, expected: miss, answer_key: raise_monthly, query: "Can a landlord raise the rent during a month-to-month lease?"}
+  - {id: m08, group: similar, expected: miss, answer_key: landlord_insurance, query: "What does landlord insurance cover?"}
+  - {id: m09, group: similar, expected: miss, answer_key: notice_entry, query: "How much notice should a landlord give before entering a rental unit?"}
+  - {id: m10, group: similar, expected: miss, answer_key: lease_end, query: "What should I check before ending a lease?"}
+  # 10 unrelated questions (should miss)
+  - {id: u01, group: unrelated, expected: miss, answer_key: u01, query: "Who won the 2018 FIFA World Cup?"}
+  - {id: u02, group: unrelated, expected: miss, answer_key: u02, query: "What is the boiling point of water at sea level?"}
+  - {id: u03, group: unrelated, expected: miss, answer_key: u03, query: "How do I bake sourdough bread?"}
+  - {id: u04, group: unrelated, expected: miss, answer_key: u04, query: "What is the capital of Australia?"}
+  - {id: u05, group: unrelated, expected: miss, answer_key: u05, query: "How do I change a flat bicycle tire?"}
+  - {id: u06, group: unrelated, expected: miss, answer_key: u06, query: "What is the difference between a list and a tuple in Python?"}
+  - {id: u07, group: unrelated, expected: miss, answer_key: u07, query: "How many planets are in the solar system?"}
+  - {id: u08, group: unrelated, expected: miss, answer_key: u08, query: "What is a good stretching routine before running?"}
+  - {id: u09, group: unrelated, expected: miss, answer_key: u09, query: "How do vaccines work?"}
+  - {id: u10, group: unrelated, expected: miss, answer_key: u10, query: "What is the speed of light?"}
