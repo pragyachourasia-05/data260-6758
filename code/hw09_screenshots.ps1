@@ -1,4 +1,6 @@
-﻿# HW9 screenshots: opens terminal windows titled with my name, runs the commands and saves each window.
+﻿# Retake only some: -Only "1.2_counter,5.1_verify"
+param([string]$Only = "")
+# HW9 screenshots: opens terminal windows titled with my name, runs the commands and saves each window.
 #     powershell -File code\hw09_screenshots.ps1
 $ErrorActionPreference = "Continue"
 $Root = "C:\SJSU Assignments\Agentic AI\Assignment_1"
@@ -73,47 +75,38 @@ function Save-Shot([string]$Label, [string]$Id) {
 
 function Close-Windows { foreach ($p in $script:Opened) { taskkill /PID $p.Id /T /F 2>&1 | Out-Null }; $script:Opened = @() }
 
-Open-Window "Docker" $Root @('docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"')
-Start-Sleep 6; Save-Shot "Docker" "1.1_containers"; Close-Windows
+function Shot([string]$Label, [string]$Id, [string[]]$Commands, [int]$Wait) {
+    if ($Only -and ($Only -split "," ) -notcontains $Id) { return }
+    Open-Window $Label $Root $Commands
+    Start-Sleep $Wait; Save-Shot $Label $Id; Close-Windows
+}
 
-Open-Window "Counter" $Root @('python backend/run_hw09_counter.py')
-Start-Sleep 14; Save-Shot "Counter" "1.2_counter"; Close-Windows
+Shot "Docker" "1.1_containers" @('docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"') 6
 
-Open-Window "Redis keys" $Root @('docker exec s6758_redis redis-cli GET s6758:views:listing:4', 'docker exec s6758_redis redis-cli --scan --pattern ''s6758*''', 'docker exec s6758_redis redis-cli FT.INFO s6758:idx:semantic | Select-String -Pattern ''index_name|s6758:idx|COSINE|VECTOR'' ')
-Start-Sleep 8; Save-Shot "Redis keys" "1.3_redis"; Close-Windows
+Shot "Counter" "1.2_counter" @('python backend/run_hw09_counter.py') 25
 
-Open-Window "Semantic cache" $Root @('python code/hw09_show.py part2')
-Start-Sleep 5; Save-Shot "Semantic cache" "2.1_semantic"; Close-Windows
+Shot "Redis keys" "1.3_redis" @('docker exec s6758_redis redis-cli GET s6758:views:listing:4', 'docker exec s6758_redis redis-cli --scan --pattern ''s6758*''', 'docker exec s6758_redis redis-cli FT.INFO s6758:idx:semantic | Select-String COSINE,VECTOR') 8
+Shot "Semantic cache" "2.1_semantic" @('python code/hw09_show.py part2') 5
 
-Open-Window "Cache log" $Root @('python code/hw09_show.py log')
-Start-Sleep 5; Save-Shot "Cache log" "2.2_cache_log"; Close-Windows
+Shot "Cache log" "2.2_cache_log" @('python code/hw09_show.py log') 5
 
-Open-Window "Sweep" $Root @('python code/hw09_show.py sweep')
-Start-Sleep 5; Save-Shot "Sweep" "3.1_sweep"; Close-Windows
+Shot "Sweep" "3.1_sweep" @('python code/hw09_show.py sweep') 5
 
-Open-Window "False hit" $Root @('python code/hw09_show.py falsehit')
-Start-Sleep 5; Save-Shot "False hit" "3.2_false_hit"; Close-Windows
+Shot "False hit" "3.2_false_hit" @('python code/hw09_show.py falsehit') 5
 
-Open-Window "Stale test" $Root @('python code/hw09_show.py stale')
-Start-Sleep 5; Save-Shot "Stale test" "3.3_stale"; Close-Windows
+Shot "Stale test" "3.3_stale" @('python code/hw09_show.py stale') 5
 
-Open-Window "Revision" $Root @('python code/hw09_show.py revision')
-Start-Sleep 5; Save-Shot "Revision" "4.1_revision"; Close-Windows
+Shot "Revision" "4.1_revision" @('python code/hw09_show.py revision') 5
 
-Open-Window "Lesson reuse" $Root @('python code/hw09_show.py lesson')
-Start-Sleep 5; Save-Shot "Lesson reuse" "4.2_lesson"; Close-Windows
+Shot "Lesson reuse" "4.2_lesson" @('python code/hw09_show.py lesson') 5
 
-Open-Window "Training" $Root @('python code/hw09_show.py training')
-Start-Sleep 5; Save-Shot "Training" "4.3_training"; Close-Windows
+Shot "Training" "4.3_training" @('python code/hw09_show.py training') 5
 
-Open-Window "Validation" $Root @('python code/hw09_show.py validation')
-Start-Sleep 5; Save-Shot "Validation" "4.4_validation"; Close-Windows
+Shot "Validation" "4.4_validation" @('python code/hw09_show.py validation') 5
 
-Open-Window "Test results" $Root @('python code/hw09_show.py test')
-Start-Sleep 5; Save-Shot "Test results" "4.5_test"; Close-Windows
+Shot "Test results" "4.5_test" @('python code/hw09_show.py test') 5
 
-Open-Window "Lessons" $Root @('python code/hw09_show.py lessons')
-Start-Sleep 5; Save-Shot "Lessons" "4.6_lessons"; Close-Windows
+Shot "Lessons" "4.6_lessons" @('python code/hw09_show.py lessons') 5
 
-Open-Window "Verify" $Root @('python verify_hw09.py')
-Start-Sleep 28; Save-Shot "Verify" "5.1_verify"; Close-Windows
+Shot "Verify" "5.1_verify" @('python verify_hw09.py *> $null', 'python code/hw09_show.py verify') 150
+

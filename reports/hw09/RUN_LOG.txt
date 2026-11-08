@@ -1,11 +1,21 @@
-DATA-260 HW9 RUN_LOG - Pragya Chourasia - SID4 6758 - built 2026-11-04 12:54:04
+DATA-260 HW9 RUN_LOG - Pragya Chourasia - SID4 6758 - built 2026-11-07 21:54:40
 
 ====================================================================================================
 docker ps
 ====================================================================================================
-NAMES         IMAGE                               STATUS
-s6758_redis   redis/redis-stack-server:7.4.0-v3   Up 16 hours (healthy)
-s6758-mysql   mysql:8.4                           Up 16 hours
+NAMES                         IMAGE                               STATUS
+p23-kafka                     apache/kafka:3.9.2                  Up 12 minutes
+s6758_redis                   redis/redis-stack-server:7.4.0-v3   Up 12 minutes (healthy)
+p23-mongo                     mongo:7                             Up 12 minutes
+s6758-mysql                   mysql:8.4                           Up 3 minutes
+lab_2-airflow-1               lab_2-airflow                       Up 10 minutes (healthy)
+lab_2-postgres-1              postgres:13                         Up 12 minutes (healthy)
+airflow-airflow-scheduler-1   airflow-airflow-scheduler           Up 24 seconds
+airflow-airflow-1             airflow-airflow                     Up 7 seconds (health: starting)
+airflow-postgres-1            postgres:13                         Up 12 minutes (healthy)
+hw9-airflow-1                 apache/airflow:2.10.1               Up About a minute (health: starting)
+hw9-mlflow-1                  ghcr.io/mlflow/mlflow:v2.13.0       Up 12 minutes (healthy)
+hw9-postgres-1                postgres:13                         Up 12 minutes (healthy)
 
 ====================================================================================================
 Part 1 - counter

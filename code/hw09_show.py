@@ -1,6 +1,6 @@
 """Print saved HW9 results in the terminal.
 
-    python code/hw09_show.py part2 | log | sweep | falsehit | stale | revision | lesson | training | validation | test | lessons
+    python code/hw09_show.py part2 | log | sweep | falsehit | stale | revision | lesson | training | validation | test | lessons | verify
 """
 import json
 import sys
@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "reports" / "hw09" / "raw"
 DATA = ROOT / "self_improving_agents" / "data"
 MISS_COST, FALSE_HIT_COST = 0.01, 2.00
-WIDTH = 170
+WIDTH = 105
 
 
 def load(name):
@@ -38,8 +38,12 @@ def part2():
 
 def log():
     for line in (RAW / "part2_qa_api.log").read_text(encoding="utf-8").splitlines():
-        if "CACHE" in line:
-            print(line[:WIDTH])
+        if "CACHE" in line:  # time, HIT/MISS, similarity, query
+            stamp, rest = line[11:23], line.split("CACHE ", 1)[1]
+            kind, rest = rest.split(" ", 1)
+            sim = rest.split("similarity=", 1)[1].split()[0]
+            query = rest.split("query=", 1)[1].strip("'")
+            print(f"{stamp}  {kind:5} sim={sim}  {query}")
 
 
 def sweep():
@@ -104,7 +108,8 @@ def lesson():
     d = load("part4_demo.json")
     trail(d["failed"])
     print("Saved lesson:")
-    print(json.dumps({k: d["lesson"][k] for k in ("lesson_id", "failure_pattern", "correction", "created_at")}, indent=2))
+    for k in ("lesson_id", "failure_pattern", "correction", "created_at"):
+        wrap(f'  "{k}": ', json.dumps(d["lesson"][k]))
     print()
     trail(d["later"])
     print(f"use_count after the later question: {d['use_count']}")
@@ -113,15 +118,16 @@ def lesson():
 def training():
     d = load("part4_training.json")
     for r in d["rows"]:
-        print(f"{r['id']} first={r['trail'][0]['result']:7} final={r['final_result']:7} attempts={r['attempts']}  {r['question']}")
+        q = r["question"] if len(r["question"]) <= 70 else r["question"][:67] + "..."
+        print(f"{r['id']} first={r['trail'][0]['result']:7} final={r['final_result']:7} attempts={r['attempts']}  {q}")
     print(f"\nFailure patterns on first attempts: {d['patterns']}")
 
 
 def validation():
     for name, title in (("part4_validation_v1.json", "First lesson"), ("part4_validation.json", "Revised lesson")):
         for r in load(name):
-            print(f"{title} - {r['lesson_id']} {r['pattern']}: first-attempt passes {r['passes_before']} -> {r['passes_after']}, fixed {r['fixed']}, "
-                  f"regressions {r['regressions']}, still unsupported {r['unsupported_after']} -> {'KEEP' if r['kept'] else 'REMOVE'}")
+            print(f"{title} - {r['lesson_id']} {r['pattern']}: first-attempt passes {r['passes_before']} -> {r['passes_after']}")
+            print(f"    fixed {r['fixed']}, regressions {r['regressions']}, still unsupported {r['unsupported_after']} -> {'KEEP' if r['kept'] else 'REMOVE'}\n")
 
 
 def test():
@@ -133,7 +139,20 @@ def test():
 
 
 def lessons():
-    print((DATA / "lessons.json").read_text(encoding="utf-8"))
+    for x in json.loads((DATA / "lessons.json").read_text(encoding="utf-8")):
+        print("{")
+        for k, v in x.items():
+            wrap(f'  "{k}": ', json.dumps(v))
+        print("}")
+
+
+def verify():
+    v = json.loads((ROOT / "reports" / "hw09" / "verification.json").read_text(encoding="utf-8"))
+    print(f"{v['homework']}  SID4 {v['sid4']}  commit {v['commit_hash']}  seed {v['seed']}  verify_seed {v['verify_seed']}\n")
+    for c in v["checks"]:
+        print(f"{'PASS' if c['passed'] else 'FAIL'}  {c['name']}")
+        print(f"      {c['detail']}")
+    print(f"\nOverall: {'PASS' if v['passed'] else 'FAIL'}")
 
 
 if __name__ == "__main__":

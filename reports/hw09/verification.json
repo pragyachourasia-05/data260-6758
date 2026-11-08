@@ -1,0 +1,61 @@
+{
+  "homework": "HW9",
+  "sid4": "6758",
+  "commit_hash": "03235d425d0d42b28861a5a0f57df15fa97926f2",
+  "model_configuration": {
+    "agents": "llama3.2:3b via src/model_client.ModelClient, temperature 0, seed 6758",
+    "embeddings": "sentence-transformers all-MiniLM-L6-v2, CPU, 384 dimensions, cosine",
+    "redis": "redis/redis-stack-server:7.4.0-v3",
+    "this_check": "stub agent, no LLM call"
+  },
+  "seed": 6758,
+  "verify_seed": 266758,
+  "checks": [
+    {
+      "name": "counter_syncs_every_10",
+      "passed": true,
+      "detail": "25 increments, synced at 10 and 20"
+    },
+    {
+      "name": "semantic_cache_hit_miss",
+      "passed": true,
+      "detail": "miss, exact hit, paraphrase hit at 0.947, unrelated miss"
+    },
+    {
+      "name": "redis_keys_prefixed",
+      "passed": true,
+      "detail": "every Redis key starts with s6758"
+    },
+    {
+      "name": "cache_cases_labeled_and_unchanged",
+      "passed": true,
+      "detail": "40 cases, 10 per group, unchanged since commit 4c061f0"
+    },
+    {
+      "name": "threshold_sweep_saved",
+      "passed": true,
+      "detail": "5 thresholds with 40 rows each"
+    },
+    {
+      "name": "stale_answer_invalidation",
+      "passed": true,
+      "detail": "stale hit shown, then dropped and regenerated"
+    },
+    {
+      "name": "datasets_have_no_answers",
+      "passed": true,
+      "detail": "three question files hold no expected answers; reference data present"
+    },
+    {
+      "name": "lessons_json_fields",
+      "passed": true,
+      "detail": "1 validated lesson(s) with the required fields"
+    },
+    {
+      "name": "test_results_and_demos",
+      "passed": true,
+      "detail": "four variants on the test set, at most two attempts, revision and reuse demos saved"
+    }
+  ],
+  "passed": true
+}
