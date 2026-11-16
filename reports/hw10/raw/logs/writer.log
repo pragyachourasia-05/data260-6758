@@ -1,0 +1,474 @@
+2026-11-16T17:45:16.338Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="after processing" dead_letter=true mock=false
+2026-11-16T17:45:16.446Z [WRITER] partitions assigned partitions=[0, 1]
+2026-11-16T17:46:24.557Z [WRITER] received from s6758_tasks correlation_id="31a611af-e140-4d27-9e17-a5c4ef6a2a7c" partition=0 offset=32
+2026-11-16T17:46:36.077Z [WRITER] draft ready correlation_id="31a611af-e140-4d27-9e17-a5c4ef6a2a7c" words=26
+2026-11-16T17:46:36.094Z [WRITER] sent to s6758_drafts correlation_id="31a611af-e140-4d27-9e17-a5c4ef6a2a7c" partition=0 offset=56
+2026-11-16T17:46:36.105Z [WRITER] offset committed partition=0 committed_offset=33
+2026-11-16T17:47:45.935Z [WRITER] received from s6758_tasks correlation_id="04583c30-26ab-4462-a04b-6fe130191366" partition=1 offset=24
+2026-11-16T17:47:59.539Z [WRITER] draft ready correlation_id="04583c30-26ab-4462-a04b-6fe130191366" words=51
+2026-11-16T17:47:59.551Z [WRITER] sent to s6758_drafts correlation_id="04583c30-26ab-4462-a04b-6fe130191366" partition=0 offset=57
+2026-11-16T17:47:59.583Z [WRITER] offset committed partition=1 committed_offset=25
+2026-11-16T17:49:17.404Z [WRITER] listening on s6758_tasks, sending to s6758_drafts idempotency=true commit="after processing" dead_letter=true mock=false
+2026-11-16T17:49:23.950Z [WRITER] partitions assigned partitions=[0, 1]
+2026-11-16T17:50:53.740Z [WRITER] received from s6758_tasks correlation_id="11b0c62f-4d58-49ab-bcf7-055874b9fc60" partition=1 offset=25
+2026-11-16T17:50:53.755Z [WRITER] attempt 1/3 failed correlation_id="11b0c62f-4d58-49ab-bcf7-055874b9fc60" offset=25 error="RuntimeError: injected fault in writer (fail_stage test)"
+2026-11-16T17:50:54.272Z [WRITER] attempt 2/3 failed correlation_id="11b0c62f-4d58-49ab-bcf7-055874b9fc60" offset=25 error="RuntimeError: injected fault in writer (fail_stage test)"
+2026-11-16T17:50:55.258Z [WRITER] attempt 3/3 failed correlation_id="11b0c62f-4d58-49ab-bcf7-055874b9fc60" offset=25 error="RuntimeError: injected fault in writer (fail_stage test)"
+2026-11-16T17:50:56.798Z [WRITER] moved to s6758_dead_letter after 3 attempts correlation_id="11b0c62f-4d58-49ab-bcf7-055874b9fc60" dead_letter_offset=1
+2026-11-16T17:50:56.811Z [WRITER] offset committed partition=1 committed_offset=26
+2026-11-16T18:00:52.904Z [WRITER] received from s6758_tasks correlation_id="d96465bc-e0cb-4e49-a934-88c1e5909ef3" partition=0 offset=33
+2026-11-16T18:01:14.932Z [WRITER] draft ready correlation_id="d96465bc-e0cb-4e49-a934-88c1e5909ef3" words=41
+2026-11-16T18:01:14.945Z [WRITER] sent to s6758_drafts correlation_id="d96465bc-e0cb-4e49-a934-88c1e5909ef3" partition=0 offset=58
+2026-11-16T18:01:14.965Z [WRITER] offset committed partition=0 committed_offset=34
+2026-11-16T18:02:46.809Z [WRITER] received from s6758_tasks correlation_id="a14f4952-8c7a-4fb2-a50e-283801f288e3" partition=1 offset=26
+2026-11-16T18:03:15.313Z [WRITER] draft ready correlation_id="a14f4952-8c7a-4fb2-a50e-283801f288e3" words=60
+2026-11-16T18:03:15.326Z [WRITER] sent to s6758_drafts correlation_id="a14f4952-8c7a-4fb2-a50e-283801f288e3" partition=0 offset=59
+2026-11-16T18:03:15.342Z [WRITER] offset committed partition=1 committed_offset=27
+2026-11-16T18:04:23.414Z [WRITER] received from s6758_tasks correlation_id="bd238d3a-3621-4190-8c5a-4b22c361613c" partition=0 offset=34
+2026-11-16T18:04:34.201Z [WRITER] draft ready correlation_id="bd238d3a-3621-4190-8c5a-4b22c361613c" words=30
+2026-11-16T18:04:34.211Z [WRITER] sent to s6758_drafts correlation_id="bd238d3a-3621-4190-8c5a-4b22c361613c" partition=0 offset=60
+2026-11-16T18:04:34.221Z [WRITER] offset committed partition=0 committed_offset=35
+2026-11-16T18:05:32.155Z [WRITER] received from s6758_tasks correlation_id="cad95f13-fba5-4b9d-aa17-750799cc5f4a" partition=0 offset=35
+2026-11-16T18:05:45.927Z [WRITER] draft ready correlation_id="cad95f13-fba5-4b9d-aa17-750799cc5f4a" words=50
+2026-11-16T18:05:45.935Z [WRITER] sent to s6758_drafts correlation_id="cad95f13-fba5-4b9d-aa17-750799cc5f4a" partition=0 offset=61
+2026-11-16T18:05:45.951Z [WRITER] offset committed partition=0 committed_offset=36
+2026-11-16T18:07:09.066Z [WRITER] received from s6758_tasks correlation_id="20c8be53-45db-47cd-9405-830ccee62106" partition=0 offset=36
+2026-11-16T18:07:23.248Z [WRITER] draft ready correlation_id="20c8be53-45db-47cd-9405-830ccee62106" words=48
+2026-11-16T18:07:23.257Z [WRITER] sent to s6758_drafts correlation_id="20c8be53-45db-47cd-9405-830ccee62106" partition=0 offset=62
+2026-11-16T18:07:23.283Z [WRITER] offset committed partition=0 committed_offset=37
+2026-11-16T18:09:25.654Z [WRITER] received from s6758_tasks correlation_id="90d30319-fee1-40c7-bc03-3bed7b5bea23" partition=0 offset=37
+2026-11-16T18:09:59.494Z [WRITER] draft ready correlation_id="90d30319-fee1-40c7-bc03-3bed7b5bea23" words=82
+2026-11-16T18:09:59.541Z [WRITER] sent to s6758_drafts correlation_id="90d30319-fee1-40c7-bc03-3bed7b5bea23" partition=0 offset=63
+2026-11-16T18:09:59.596Z [WRITER] offset committed partition=0 committed_offset=38
+2026-11-16T18:11:28.827Z [WRITER] received from s6758_tasks correlation_id="46f735d3-3b2b-4206-a725-b65ea150919b" partition=1 offset=27
+2026-11-16T18:12:02.238Z [WRITER] draft ready correlation_id="46f735d3-3b2b-4206-a725-b65ea150919b" words=120
+2026-11-16T18:12:02.256Z [WRITER] sent to s6758_drafts correlation_id="46f735d3-3b2b-4206-a725-b65ea150919b" partition=0 offset=64
+2026-11-16T18:12:02.273Z [WRITER] offset committed partition=1 committed_offset=28
+2026-11-16T18:13:38.192Z [WRITER] received from s6758_tasks correlation_id="5cc14e1a-9781-4765-87b8-e08762eba33a" partition=1 offset=28
+2026-11-16T18:14:02.681Z [WRITER] draft ready correlation_id="5cc14e1a-9781-4765-87b8-e08762eba33a" words=94
+2026-11-16T18:14:02.704Z [WRITER] sent to s6758_drafts correlation_id="5cc14e1a-9781-4765-87b8-e08762eba33a" partition=0 offset=65
+2026-11-16T18:14:02.713Z [WRITER] offset committed partition=1 committed_offset=29
+2026-11-16T18:15:13.601Z [WRITER] received from s6758_tasks correlation_id="0edbd24b-6d2f-4673-9112-ad56c0cb6f76" partition=1 offset=29
+2026-11-16T18:15:30.857Z [WRITER] draft ready correlation_id="0edbd24b-6d2f-4673-9112-ad56c0cb6f76" words=73
+2026-11-16T18:15:30.874Z [WRITER] sent to s6758_drafts correlation_id="0edbd24b-6d2f-4673-9112-ad56c0cb6f76" partition=0 offset=66
+2026-11-16T18:15:30.891Z [WRITER] offset committed partition=1 committed_offset=30
+2026-11-16T18:17:31.886Z [WRITER] received from s6758_tasks correlation_id="ac0286c2-4e00-41e2-b6f8-bc490e7f1086" partition=0 offset=38
+2026-11-16T18:18:02.507Z [WRITER] draft ready correlation_id="ac0286c2-4e00-41e2-b6f8-bc490e7f1086" words=94
+2026-11-16T18:18:02.527Z [WRITER] sent to s6758_drafts correlation_id="ac0286c2-4e00-41e2-b6f8-bc490e7f1086" partition=0 offset=67
+2026-11-16T18:18:02.571Z [WRITER] offset committed partition=0 committed_offset=39
+2026-11-16T18:19:39.108Z [WRITER] received from s6758_tasks correlation_id="fc7e8b20-7a02-49e3-8e44-f9c37caef44a" partition=0 offset=39
+2026-11-16T18:19:57.559Z [WRITER] draft ready correlation_id="fc7e8b20-7a02-49e3-8e44-f9c37caef44a" words=48
+2026-11-16T18:19:57.572Z [WRITER] sent to s6758_drafts correlation_id="fc7e8b20-7a02-49e3-8e44-f9c37caef44a" partition=0 offset=68
+2026-11-16T18:19:57.599Z [WRITER] offset committed partition=0 committed_offset=40
+2026-11-16T18:21:27.383Z [WRITER] received from s6758_tasks correlation_id="90c19ae9-a8b1-42f8-86d0-dd6a95983dd8" partition=1 offset=30
+2026-11-16T18:21:47.784Z [WRITER] draft ready correlation_id="90c19ae9-a8b1-42f8-86d0-dd6a95983dd8" words=109
+2026-11-16T18:21:47.792Z [WRITER] sent to s6758_drafts correlation_id="90c19ae9-a8b1-42f8-86d0-dd6a95983dd8" partition=0 offset=69
+2026-11-16T18:21:47.806Z [WRITER] offset committed partition=1 committed_offset=31
+2026-11-16T18:23:02.475Z [WRITER] received from s6758_tasks correlation_id="86bac3e6-6576-437f-90e7-f8c0afcd1952" partition=1 offset=31
+2026-11-16T18:23:31.223Z [WRITER] draft ready correlation_id="86bac3e6-6576-437f-90e7-f8c0afcd1952" words=123
+2026-11-16T18:23:31.233Z [WRITER] sent to s6758_drafts correlation_id="86bac3e6-6576-437f-90e7-f8c0afcd1952" partition=0 offset=70
+2026-11-16T18:23:31.250Z [WRITER] offset committed partition=1 committed_offset=32
+2026-11-16T18:24:54.124Z [WRITER] received from s6758_tasks correlation_id="92593593-c513-476b-ac51-7975914617ce" partition=0 offset=40
+2026-11-16T18:25:18.169Z [WRITER] draft ready correlation_id="92593593-c513-476b-ac51-7975914617ce" words=117
+2026-11-16T18:25:18.183Z [WRITER] sent to s6758_drafts correlation_id="92593593-c513-476b-ac51-7975914617ce" partition=0 offset=71
+2026-11-16T18:25:18.196Z [WRITER] offset committed partition=0 committed_offset=41
+Heartbeat failed: local member_id was not recognized; resetting and re-joining group
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-writer.
+2026-11-16T18:26:25.615Z [WRITER] partitions assigned partitions=[0, 1]
+Heartbeat failed: local member_id was not recognized; resetting and re-joining group
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-writer.
+Group Coordinator Request failed: [Error 15] GroupCoordinatorNotAvailableError
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+2026-11-16T18:28:06.648Z [WRITER] partitions assigned partitions=[0, 1]
+2026-11-16T18:28:08.875Z [WRITER] received from s6758_tasks correlation_id="7f777a95-24fc-4aaf-872b-0720fc54be1b" partition=0 offset=41
+2026-11-16T18:28:52.015Z [WRITER] draft ready correlation_id="7f777a95-24fc-4aaf-872b-0720fc54be1b" words=88
+2026-11-16T18:28:52.072Z [WRITER] sent to s6758_drafts correlation_id="7f777a95-24fc-4aaf-872b-0720fc54be1b" partition=0 offset=72
+2026-11-16T18:28:52.090Z [WRITER] offset committed partition=0 committed_offset=42
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+2026-11-16T18:30:32.672Z [WRITER] received from s6758_tasks correlation_id="36e379c1-2059-4b6e-90c1-9cbbc473cf26" partition=1 offset=32
+2026-11-16T18:31:59.525Z [WRITER] draft ready correlation_id="36e379c1-2059-4b6e-90c1-9cbbc473cf26" words=140
+2026-11-16T18:32:00.446Z [WRITER] sent to s6758_drafts correlation_id="36e379c1-2059-4b6e-90c1-9cbbc473cf26" partition=0 offset=73
+2026-11-16T18:32:00.877Z [WRITER] offset committed partition=1 committed_offset=33
+2026-11-16T18:34:04.647Z [WRITER] received from s6758_tasks correlation_id="83aec06f-e077-4d7d-ae4b-aee80a704239" partition=1 offset=33
+2026-11-16T18:34:25.013Z [WRITER] draft ready correlation_id="83aec06f-e077-4d7d-ae4b-aee80a704239" words=90
+2026-11-16T18:34:25.027Z [WRITER] sent to s6758_drafts correlation_id="83aec06f-e077-4d7d-ae4b-aee80a704239" partition=0 offset=74
+2026-11-16T18:34:25.042Z [WRITER] offset committed partition=1 committed_offset=34
+2026-11-16T18:36:02.843Z [WRITER] received from s6758_tasks correlation_id="3a005033-4d23-4f23-bd12-b293e3224cfa" partition=0 offset=42
+2026-11-16T18:36:30.783Z [WRITER] draft ready correlation_id="3a005033-4d23-4f23-bd12-b293e3224cfa" words=120
+2026-11-16T18:36:30.831Z [WRITER] sent to s6758_drafts correlation_id="3a005033-4d23-4f23-bd12-b293e3224cfa" partition=0 offset=75
+2026-11-16T18:36:30.862Z [WRITER] offset committed partition=0 committed_offset=43
+2026-11-16T18:37:55.383Z [WRITER] received from s6758_tasks correlation_id="71bb21d0-9162-4652-9e6a-a2d99dce0b10" partition=1 offset=34
+2026-11-16T18:38:14.785Z [WRITER] draft ready correlation_id="71bb21d0-9162-4652-9e6a-a2d99dce0b10" words=99
+2026-11-16T18:38:14.795Z [WRITER] sent to s6758_drafts correlation_id="71bb21d0-9162-4652-9e6a-a2d99dce0b10" partition=0 offset=76
+2026-11-16T18:38:14.808Z [WRITER] offset committed partition=1 committed_offset=35
+2026-11-16T18:39:19.580Z [WRITER] received from s6758_tasks correlation_id="14f0408e-bc62-44d0-a878-f3ce5b33ee78" partition=0 offset=43
+Heartbeat failed: local member_id was not recognized; resetting and re-joining group
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-writer.
+2026-11-16T18:40:07.533Z [WRITER] draft ready correlation_id="14f0408e-bc62-44d0-a878-f3ce5b33ee78" words=163
+2026-11-16T18:40:07.726Z [WRITER] partitions assigned partitions=[0, 1]
+2026-11-16T18:40:07.823Z [WRITER] sent to s6758_drafts correlation_id="14f0408e-bc62-44d0-a878-f3ce5b33ee78" partition=0 offset=77
+2026-11-16T18:40:07.854Z [WRITER] offset committed partition=0 committed_offset=44
+2026-11-16T18:40:08.066Z [WRITER] received from s6758_tasks correlation_id="14f0408e-bc62-44d0-a878-f3ce5b33ee78" partition=0 offset=43
+2026-11-16T18:40:08.071Z [WRITER] duplicate correlation_id, already processed - skipped correlation_id="14f0408e-bc62-44d0-a878-f3ce5b33ee78"
+Marking the coordinator dead (node 1)for group s6758-writer.
+Group Coordinator Request failed: [Error 15] GroupCoordinatorNotAvailableError
+Group Coordinator Request failed: [Error 15] GroupCoordinatorNotAvailableError
+Group Coordinator Request failed: [Error 15] GroupCoordinatorNotAvailableError
+Group Coordinator Request failed: [Error 15] GroupCoordinatorNotAvailableError
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node None) is either not started or not valid
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+Marking the coordinator dead (node 1)for group s6758-writer.
+Heartbeat failed for group s6758-writer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-writer.
+2026-11-16T18:40:15.755Z [WRITER] offset committed partition=0 committed_offset=44
+2026-11-16T18:42:29.819Z [WRITER] received from s6758_tasks correlation_id="00e4cf33-1945-4be8-9717-bb0dbfbcf6b9" partition=0 offset=44
+2026-11-16T18:43:29.339Z [WRITER] draft ready correlation_id="00e4cf33-1945-4be8-9717-bb0dbfbcf6b9" words=161
+2026-11-16T18:43:29.947Z [WRITER] sent to s6758_drafts correlation_id="00e4cf33-1945-4be8-9717-bb0dbfbcf6b9" partition=0 offset=78
+2026-11-16T18:43:29.967Z [WRITER] offset committed partition=0 committed_offset=45
+2026-11-16T18:45:24.900Z [WRITER] received from s6758_tasks correlation_id="38de27da-6306-448c-b6ec-2261357feffa" partition=1 offset=35
+2026-11-16T18:46:13.957Z [WRITER] draft ready correlation_id="38de27da-6306-448c-b6ec-2261357feffa" words=156
+2026-11-16T18:46:14.057Z [WRITER] sent to s6758_drafts correlation_id="38de27da-6306-448c-b6ec-2261357feffa" partition=0 offset=79
+2026-11-16T18:46:14.145Z [WRITER] offset committed partition=1 committed_offset=36
+2026-11-16T18:47:30.461Z [WRITER] received from s6758_tasks correlation_id="0d799990-f85f-4cdd-abc7-ae9abf1fbd0e" partition=0 offset=45
+2026-11-16T18:48:05.248Z [WRITER] draft ready correlation_id="0d799990-f85f-4cdd-abc7-ae9abf1fbd0e" words=151
+2026-11-16T18:48:05.262Z [WRITER] sent to s6758_drafts correlation_id="0d799990-f85f-4cdd-abc7-ae9abf1fbd0e" partition=0 offset=80
+2026-11-16T18:48:05.276Z [WRITER] offset committed partition=0 committed_offset=46
+2026-11-16T18:49:27.323Z [WRITER] received from s6758_tasks correlation_id="2248ee32-2b07-4161-9391-c51572371cfe" partition=1 offset=36
+2026-11-16T18:49:47.710Z [WRITER] draft ready correlation_id="2248ee32-2b07-4161-9391-c51572371cfe" words=96
+2026-11-16T18:49:47.719Z [WRITER] sent to s6758_drafts correlation_id="2248ee32-2b07-4161-9391-c51572371cfe" partition=0 offset=81
+2026-11-16T18:49:47.730Z [WRITER] offset committed partition=1 committed_offset=37
+2026-11-16T18:51:23.787Z [WRITER] received from s6758_tasks correlation_id="2afa02f1-fb20-4ab4-a4a0-65ea9205e2e2" partition=1 offset=37
+2026-11-16T18:51:44.774Z [WRITER] draft ready correlation_id="2afa02f1-fb20-4ab4-a4a0-65ea9205e2e2" words=64
+2026-11-16T18:51:44.785Z [WRITER] sent to s6758_drafts correlation_id="2afa02f1-fb20-4ab4-a4a0-65ea9205e2e2" partition=0 offset=82
+2026-11-16T18:51:44.806Z [WRITER] offset committed partition=1 committed_offset=38
+2026-11-16T18:53:19.716Z [WRITER] received from s6758_tasks correlation_id="58eda6a8-98cc-4424-ab63-5a79881d98a2" partition=1 offset=38
+2026-11-16T18:53:42.892Z [WRITER] draft ready correlation_id="58eda6a8-98cc-4424-ab63-5a79881d98a2" words=97
+2026-11-16T18:53:42.908Z [WRITER] sent to s6758_drafts correlation_id="58eda6a8-98cc-4424-ab63-5a79881d98a2" partition=0 offset=83
+2026-11-16T18:53:42.938Z [WRITER] offset committed partition=1 committed_offset=39
+2026-11-16T18:55:05.908Z [WRITER] received from s6758_tasks correlation_id="9e756c85-0ae7-49b3-bd8d-4a656daf8846" partition=1 offset=39
+2026-11-16T18:55:25.899Z [WRITER] draft ready correlation_id="9e756c85-0ae7-49b3-bd8d-4a656daf8846" words=91
+2026-11-16T18:55:25.908Z [WRITER] sent to s6758_drafts correlation_id="9e756c85-0ae7-49b3-bd8d-4a656daf8846" partition=0 offset=84
+2026-11-16T18:55:25.921Z [WRITER] offset committed partition=1 committed_offset=40
+2026-11-16T18:56:47.731Z [WRITER] received from s6758_tasks correlation_id="f00c4f2f-abac-4d0c-b087-9fe8dc76ddcc" partition=0 offset=46
+2026-11-16T18:57:10.500Z [WRITER] draft ready correlation_id="f00c4f2f-abac-4d0c-b087-9fe8dc76ddcc" words=132
+2026-11-16T18:57:10.534Z [WRITER] sent to s6758_drafts correlation_id="f00c4f2f-abac-4d0c-b087-9fe8dc76ddcc" partition=0 offset=85
+2026-11-16T18:57:10.545Z [WRITER] offset committed partition=0 committed_offset=47
+2026-11-16T18:58:36.296Z [WRITER] received from s6758_tasks correlation_id="ae8ac812-1d87-4552-ac9e-f013827df51b" partition=0 offset=47
+2026-11-16T18:59:06.995Z [WRITER] draft ready correlation_id="ae8ac812-1d87-4552-ac9e-f013827df51b" words=118
+2026-11-16T18:59:07.002Z [WRITER] sent to s6758_drafts correlation_id="ae8ac812-1d87-4552-ac9e-f013827df51b" partition=0 offset=86
+2026-11-16T18:59:07.015Z [WRITER] offset committed partition=0 committed_offset=48
+2026-11-16T19:00:19.278Z [WRITER] received from s6758_tasks correlation_id="e044184b-4c3e-4957-8cde-befd7185bd68" partition=1 offset=40
+2026-11-16T19:00:42.511Z [WRITER] draft ready correlation_id="e044184b-4c3e-4957-8cde-befd7185bd68" words=138
+2026-11-16T19:00:42.519Z [WRITER] sent to s6758_drafts correlation_id="e044184b-4c3e-4957-8cde-befd7185bd68" partition=0 offset=87
+2026-11-16T19:00:42.534Z [WRITER] offset committed partition=1 committed_offset=41
+2026-11-16T19:02:26.436Z [WRITER] received from s6758_tasks correlation_id="ec721c26-57b2-4a4a-a276-c3f96c9d1a20" partition=0 offset=48
+2026-11-16T19:03:00.480Z [WRITER] draft ready correlation_id="ec721c26-57b2-4a4a-a276-c3f96c9d1a20" words=110
+2026-11-16T19:03:00.525Z [WRITER] sent to s6758_drafts correlation_id="ec721c26-57b2-4a4a-a276-c3f96c9d1a20" partition=0 offset=88
+2026-11-16T19:03:00.581Z [WRITER] offset committed partition=0 committed_offset=49
+2026-11-16T19:04:52.055Z [WRITER] received from s6758_tasks correlation_id="91d14151-1cb5-402f-bbba-c481850730a8" partition=1 offset=41
+2026-11-16T19:05:37.656Z [WRITER] draft ready correlation_id="91d14151-1cb5-402f-bbba-c481850730a8" words=136
+2026-11-16T19:05:37.960Z [WRITER] sent to s6758_drafts correlation_id="91d14151-1cb5-402f-bbba-c481850730a8" partition=0 offset=89
+2026-11-16T19:05:37.977Z [WRITER] offset committed partition=1 committed_offset=42
+2026-11-16T19:07:05.742Z [WRITER] received from s6758_tasks correlation_id="f04a4300-563a-4460-9035-607666ce6126" partition=0 offset=49
+2026-11-16T19:07:33.094Z [WRITER] draft ready correlation_id="f04a4300-563a-4460-9035-607666ce6126" words=143
+2026-11-16T19:07:33.120Z [WRITER] sent to s6758_drafts correlation_id="f04a4300-563a-4460-9035-607666ce6126" partition=0 offset=90
+2026-11-16T19:07:33.148Z [WRITER] offset committed partition=0 committed_offset=50
+2026-11-16T19:08:57.693Z [WRITER] received from s6758_tasks correlation_id="54a47be1-8555-4ba2-946c-1a04984f91c5" partition=0 offset=50
+2026-11-16T19:09:22.028Z [WRITER] draft ready correlation_id="54a47be1-8555-4ba2-946c-1a04984f91c5" words=134
+2026-11-16T19:09:22.045Z [WRITER] sent to s6758_drafts correlation_id="54a47be1-8555-4ba2-946c-1a04984f91c5" partition=0 offset=91
+2026-11-16T19:09:22.073Z [WRITER] offset committed partition=0 committed_offset=51
+2026-11-16T19:10:45.078Z [WRITER] received from s6758_tasks correlation_id="15547df4-bc1d-497a-bf06-25080747730e" partition=1 offset=42
+2026-11-16T19:11:03.914Z [WRITER] draft ready correlation_id="15547df4-bc1d-497a-bf06-25080747730e" words=94
+2026-11-16T19:11:03.929Z [WRITER] sent to s6758_drafts correlation_id="15547df4-bc1d-497a-bf06-25080747730e" partition=0 offset=92
+2026-11-16T19:11:03.937Z [WRITER] offset committed partition=1 committed_offset=43
+2026-11-16T19:12:17.640Z [WRITER] received from s6758_tasks correlation_id="2ada55f6-1640-446e-8cce-2f94d0d24514" partition=0 offset=51
+2026-11-16T19:12:46.253Z [WRITER] draft ready correlation_id="2ada55f6-1640-446e-8cce-2f94d0d24514" words=153
+2026-11-16T19:12:46.264Z [WRITER] sent to s6758_drafts correlation_id="2ada55f6-1640-446e-8cce-2f94d0d24514" partition=0 offset=93
+2026-11-16T19:12:46.282Z [WRITER] offset committed partition=0 committed_offset=52
+2026-11-16T19:14:08.054Z [WRITER] received from s6758_tasks correlation_id="73c6b63b-30ea-41bb-9155-8c018fa906de" partition=0 offset=52
+2026-11-16T19:14:32.183Z [WRITER] draft ready correlation_id="73c6b63b-30ea-41bb-9155-8c018fa906de" words=111
+2026-11-16T19:14:32.192Z [WRITER] sent to s6758_drafts correlation_id="73c6b63b-30ea-41bb-9155-8c018fa906de" partition=0 offset=94
+2026-11-16T19:14:32.212Z [WRITER] offset committed partition=0 committed_offset=53
+2026-11-16T19:16:09.817Z [WRITER] received from s6758_tasks correlation_id="1448c3a7-251e-4d32-a8ad-9e53d880af22" partition=1 offset=43
+2026-11-16T19:16:48.666Z [WRITER] draft ready correlation_id="1448c3a7-251e-4d32-a8ad-9e53d880af22" words=99
+2026-11-16T19:16:48.774Z [WRITER] sent to s6758_drafts correlation_id="1448c3a7-251e-4d32-a8ad-9e53d880af22" partition=0 offset=95
+2026-11-16T19:16:48.873Z [WRITER] offset committed partition=1 committed_offset=44
+2026-11-16T19:18:29.670Z [WRITER] received from s6758_tasks correlation_id="62533330-c731-437f-8b36-9934229bba67" partition=0 offset=53
+2026-11-16T19:19:03.578Z [WRITER] draft ready correlation_id="62533330-c731-437f-8b36-9934229bba67" words=126
+2026-11-16T19:19:03.594Z [WRITER] sent to s6758_drafts correlation_id="62533330-c731-437f-8b36-9934229bba67" partition=0 offset=96
+2026-11-16T19:19:03.613Z [WRITER] offset committed partition=0 committed_offset=54
+2026-11-16T19:20:35.671Z [WRITER] received from s6758_tasks correlation_id="a99b9f75-fb99-4524-b3bf-00e77bc40ad3" partition=1 offset=44
+2026-11-16T19:20:55.842Z [WRITER] draft ready correlation_id="a99b9f75-fb99-4524-b3bf-00e77bc40ad3" words=67
+2026-11-16T19:20:55.851Z [WRITER] sent to s6758_drafts correlation_id="a99b9f75-fb99-4524-b3bf-00e77bc40ad3" partition=0 offset=97
+2026-11-16T19:20:55.875Z [WRITER] offset committed partition=1 committed_offset=45
+2026-11-16T19:22:09.578Z [WRITER] received from s6758_tasks correlation_id="23299eb1-ea1c-4ac3-a421-e7ac93b919ba" partition=0 offset=54
+2026-11-16T19:22:27.918Z [WRITER] draft ready correlation_id="23299eb1-ea1c-4ac3-a421-e7ac93b919ba" words=112
+2026-11-16T19:22:27.926Z [WRITER] sent to s6758_drafts correlation_id="23299eb1-ea1c-4ac3-a421-e7ac93b919ba" partition=0 offset=98
+2026-11-16T19:22:27.945Z [WRITER] offset committed partition=0 committed_offset=55
+2026-11-16T19:23:34.511Z [WRITER] received from s6758_tasks correlation_id="4b7e9b32-ecb5-454e-b5a6-95d9c876da40" partition=1 offset=45
+2026-11-16T19:23:53.615Z [WRITER] draft ready correlation_id="4b7e9b32-ecb5-454e-b5a6-95d9c876da40" words=97
+2026-11-16T19:23:53.622Z [WRITER] sent to s6758_drafts correlation_id="4b7e9b32-ecb5-454e-b5a6-95d9c876da40" partition=0 offset=99
+2026-11-16T19:23:53.631Z [WRITER] offset committed partition=1 committed_offset=46
+2026-11-16T19:25:00.137Z [WRITER] received from s6758_tasks correlation_id="7d9acf6d-438a-4be0-8483-7c90d52938e9" partition=1 offset=46
+2026-11-16T19:25:17.480Z [WRITER] draft ready correlation_id="7d9acf6d-438a-4be0-8483-7c90d52938e9" words=106
+2026-11-16T19:25:17.487Z [WRITER] sent to s6758_drafts correlation_id="7d9acf6d-438a-4be0-8483-7c90d52938e9" partition=0 offset=100
+2026-11-16T19:25:17.500Z [WRITER] offset committed partition=1 committed_offset=47
+2026-11-16T19:26:15.660Z [WRITER] received from s6758_tasks correlation_id="794db231-b089-479a-a4e2-74c377d84b3e" partition=1 offset=47
+2026-11-16T19:26:33.839Z [WRITER] draft ready correlation_id="794db231-b089-479a-a4e2-74c377d84b3e" words=114
+2026-11-16T19:26:33.846Z [WRITER] sent to s6758_drafts correlation_id="794db231-b089-479a-a4e2-74c377d84b3e" partition=0 offset=101
+2026-11-16T19:26:33.872Z [WRITER] offset committed partition=1 committed_offset=48
+2026-11-16T19:27:38.481Z [WRITER] received from s6758_tasks correlation_id="c16ef031-e6c1-4047-8b7f-fe137e698bca" partition=1 offset=48
+2026-11-16T19:27:59.280Z [WRITER] draft ready correlation_id="c16ef031-e6c1-4047-8b7f-fe137e698bca" words=110
+2026-11-16T19:27:59.287Z [WRITER] sent to s6758_drafts correlation_id="c16ef031-e6c1-4047-8b7f-fe137e698bca" partition=0 offset=102
+2026-11-16T19:27:59.303Z [WRITER] offset committed partition=1 committed_offset=49
+2026-11-16T19:29:06.192Z [WRITER] received from s6758_tasks correlation_id="7e6580a1-3fd6-4063-87be-a459f7824487" partition=0 offset=55
+2026-11-16T19:29:28.393Z [WRITER] draft ready correlation_id="7e6580a1-3fd6-4063-87be-a459f7824487" words=133
+2026-11-16T19:29:28.401Z [WRITER] sent to s6758_drafts correlation_id="7e6580a1-3fd6-4063-87be-a459f7824487" partition=0 offset=103
+2026-11-16T19:29:28.413Z [WRITER] offset committed partition=0 committed_offset=56
+2026-11-16T19:30:31.861Z [WRITER] received from s6758_tasks correlation_id="409570e1-f339-49e4-a550-80e73275bb34" partition=1 offset=49
+2026-11-16T19:30:52.239Z [WRITER] draft ready correlation_id="409570e1-f339-49e4-a550-80e73275bb34" words=124
+2026-11-16T19:30:52.246Z [WRITER] sent to s6758_drafts correlation_id="409570e1-f339-49e4-a550-80e73275bb34" partition=0 offset=104
+2026-11-16T19:30:52.258Z [WRITER] offset committed partition=1 committed_offset=50
+2026-11-16T19:31:48.671Z [WRITER] received from s6758_tasks correlation_id="32dc00f4-c42b-42a4-bb28-a8cd3b980f4e" partition=1 offset=50
+2026-11-16T19:32:10.840Z [WRITER] draft ready correlation_id="32dc00f4-c42b-42a4-bb28-a8cd3b980f4e" words=149
+2026-11-16T19:32:10.847Z [WRITER] sent to s6758_drafts correlation_id="32dc00f4-c42b-42a4-bb28-a8cd3b980f4e" partition=0 offset=105
+2026-11-16T19:32:10.857Z [WRITER] offset committed partition=1 committed_offset=51
+2026-11-16T19:33:11.113Z [WRITER] received from s6758_tasks correlation_id="0809f441-6238-4267-8e69-6a0bac874675" partition=0 offset=56
+2026-11-16T19:33:29.557Z [WRITER] draft ready correlation_id="0809f441-6238-4267-8e69-6a0bac874675" words=121
+2026-11-16T19:33:29.566Z [WRITER] sent to s6758_drafts correlation_id="0809f441-6238-4267-8e69-6a0bac874675" partition=0 offset=106
+2026-11-16T19:33:29.575Z [WRITER] offset committed partition=0 committed_offset=57
+2026-11-16T19:34:30.661Z [WRITER] received from s6758_tasks correlation_id="1398cc7b-673b-4330-bb0d-d5a5330d3cd3" partition=1 offset=51
+2026-11-16T19:34:51.248Z [WRITER] draft ready correlation_id="1398cc7b-673b-4330-bb0d-d5a5330d3cd3" words=113
+2026-11-16T19:34:51.255Z [WRITER] sent to s6758_drafts correlation_id="1398cc7b-673b-4330-bb0d-d5a5330d3cd3" partition=0 offset=107
+2026-11-16T19:34:51.263Z [WRITER] offset committed partition=1 committed_offset=52

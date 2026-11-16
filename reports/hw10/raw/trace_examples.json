@@ -1,0 +1,35 @@
+[
+  {
+    "label": "cache_miss",
+    "trace_id": "31a611af-e140-4d27-9e17-a5c4ef6a2a7c",
+    "question": "How many units are available at 135 Research Avenue, and what is the rent there?",
+    "is_cached": false,
+    "similarity": 0.0,
+    "status": "approved",
+    "latency_ms": 48671.8,
+    "evaluation_status": "ok",
+    "evaluation_error": null
+  },
+  {
+    "label": "cache_hit",
+    "trace_id": "0eefeba3-9061-4adc-81fa-63dcb28536c0",
+    "question": "How many units are available at 135 Research Avenue, and what is the rent there?",
+    "is_cached": true,
+    "similarity": 1.0,
+    "status": "cached",
+    "latency_ms": 39.6,
+    "evaluation_status": null,
+    "evaluation_error": null
+  },
+  {
+    "label": "failed",
+    "trace_id": "11b0c62f-4d58-49ab-bcf7-055874b9fc60",
+    "question": "Could a student on a part-time income afford 157 Research Avenue?",
+    "is_cached": false,
+    "similarity": 0.4893,
+    "status": "timeout",
+    "latency_ms": 120216.2,
+    "evaluation_status": "error",
+    "evaluation_error": "incomplete after 300s, missing ['draft', 'final']"
+  }
+]

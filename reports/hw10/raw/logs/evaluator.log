@@ -1,0 +1,941 @@
+2026-11-16T17:45:23.927Z [EVALUATOR] listening on s6758_tasks, s6758_drafts, s6758_final judge="llama3.2:3b"
+
+
+
+2026-11-16T17:47:35.836Z [EVALUATOR] evaluated correlation_id="31a611af-e140-4d27-9e17-a5c4ef6a2a7c" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T17:48:45.027Z [EVALUATOR] evaluated correlation_id="04583c30-26ab-4462-a04b-6fe130191366" status="ok" scores=[3, 5, 5]
+2026-11-16T17:49:24.632Z [EVALUATOR] listening on s6758_tasks, s6758_drafts, s6758_final judge="llama3.2:3b"
+2026-11-16T17:55:54.103Z [EVALUATOR] gave up on incomplete request correlation_id="11b0c62f-4d58-49ab-bcf7-055874b9fc60" missing=["draft", "final"]
+
+
+
+2026-11-16T18:02:33.659Z [EVALUATOR] evaluated correlation_id="d96465bc-e0cb-4e49-a934-88c1e5909ef3" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T18:04:10.189Z [EVALUATOR] evaluated correlation_id="a14f4952-8c7a-4fb2-a50e-283801f288e3" status="ok" scores=[3, 5, 5]
+
+
+
+2026-11-16T18:05:23.093Z [EVALUATOR] evaluated correlation_id="bd238d3a-3621-4190-8c5a-4b22c361613c" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T18:06:56.566Z [EVALUATOR] evaluated correlation_id="cad95f13-fba5-4b9d-aa17-750799cc5f4a" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T18:08:44.637Z [EVALUATOR] evaluated correlation_id="20c8be53-45db-47cd-9405-830ccee62106" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T18:11:13.873Z [EVALUATOR] evaluated correlation_id="90d30319-fee1-40c7-bc03-3bed7b5bea23" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T18:13:15.356Z [EVALUATOR] evaluated correlation_id="46f735d3-3b2b-4206-a725-b65ea150919b" status="ok" scores=[1, 3, 3]
+
+
+
+2026-11-16T18:15:04.274Z [EVALUATOR] evaluated correlation_id="5cc14e1a-9781-4765-87b8-e08762eba33a" status="ok" scores=[1, 3, 3]
+
+
+
+2026-11-16T18:17:05.491Z [EVALUATOR] evaluated correlation_id="0edbd24b-6d2f-4673-9112-ad56c0cb6f76" status="ok" scores=[3, 5, 5]
+
+
+
+2026-11-16T18:19:20.725Z [EVALUATOR] evaluated correlation_id="ac0286c2-4e00-41e2-b6f8-bc490e7f1086" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T18:21:07.971Z [EVALUATOR] evaluated correlation_id="fc7e8b20-7a02-49e3-8e44-f9c37caef44a" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T18:22:52.459Z [EVALUATOR] evaluated correlation_id="90c19ae9-a8b1-42f8-86d0-dd6a95983dd8" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T18:24:36.686Z [EVALUATOR] evaluated correlation_id="86bac3e6-6576-437f-90e7-f8c0afcd1952" status="ok" scores=[5, 3, 3]
+
+Heartbeat failed: local member_id was not recognized; resetting and re-joining group
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+OffsetCommit failed for group s6758-evaluator due to group error ([Error 25] UnknownMemberIdError: s6758-evaluator), will rejoin
+OffsetCommit failed for group s6758-evaluator due to group error ([Error 25] UnknownMemberIdError: s6758-evaluator), will rejoin
+OffsetCommit failed for group s6758-evaluator due to group error ([Error 25] UnknownMemberIdError: s6758-evaluator), will rejoin
+OffsetCommit failed for group s6758-evaluator due to group error ([Error 25] UnknownMemberIdError: s6758-evaluator), will rejoin
+Auto offset commit failed: [Error 25] UnknownMemberIdError: s6758-evaluator
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Group Coordinator Request failed: [Error 15] GroupCoordinatorNotAvailableError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+
+2026-11-16T18:27:23.945Z [EVALUATOR] evaluated correlation_id="92593593-c513-476b-ac51-7975914617ce" status="ok" scores=[5, 3, 5]
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat session expired - marking coordinator dead
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+
+
+
+2026-11-16T18:30:16.353Z [EVALUATOR] evaluated correlation_id="7f777a95-24fc-4aaf-872b-0720fc54be1b" status="ok" scores=[5, 5, 5]
+
+
+
+2026-11-16T18:33:40.775Z [EVALUATOR] evaluated correlation_id="36e379c1-2059-4b6e-90c1-9cbbc473cf26" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T18:35:46.005Z [EVALUATOR] evaluated correlation_id="83aec06f-e077-4d7d-ae4b-aee80a704239" status="ok" scores=[5, 5, 5]
+
+
+
+2026-11-16T18:37:42.109Z [EVALUATOR] evaluated correlation_id="3a005033-4d23-4f23-bd12-b293e3224cfa" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T18:39:03.808Z [EVALUATOR] evaluated correlation_id="71bb21d0-9162-4652-9e6a-a2d99dce0b10" status="ok" scores=[3, 3, 3]
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Heartbeat failed for group s6758-evaluator: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Marking the coordinator dead (node 1)for group s6758-evaluator.
+Auto offset commit failed: [Error 16] NotCoordinatorForGroupError
+Heartbeat failed for group s6758-evaluator: coordinator (node None) is either not started or not valid
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+Auto offset commit failed: [Error 14] GroupLoadInProgressError
+
+
+
+2026-11-16T18:41:51.080Z [EVALUATOR] evaluated correlation_id="14f0408e-bc62-44d0-a878-f3ce5b33ee78" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T18:45:09.082Z [EVALUATOR] evaluated correlation_id="00e4cf33-1945-4be8-9717-bb0dbfbcf6b9" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T18:47:12.837Z [EVALUATOR] evaluated correlation_id="38de27da-6306-448c-b6ec-2261357feffa" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T18:49:13.098Z [EVALUATOR] evaluated correlation_id="0d799990-f85f-4cdd-abc7-ae9abf1fbd0e" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T18:50:54.609Z [EVALUATOR] evaluated correlation_id="2248ee32-2b07-4161-9391-c51572371cfe" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T18:52:55.788Z [EVALUATOR] evaluated correlation_id="2afa02f1-fb20-4ab4-a4a0-65ea9205e2e2" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T18:54:52.394Z [EVALUATOR] evaluated correlation_id="58eda6a8-98cc-4424-ab63-5a79881d98a2" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T18:56:33.035Z [EVALUATOR] evaluated correlation_id="9e756c85-0ae7-49b3-bd8d-4a656daf8846" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T18:58:17.344Z [EVALUATOR] evaluated correlation_id="f00c4f2f-abac-4d0c-b087-9fe8dc76ddcc" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T19:00:09.357Z [EVALUATOR] evaluated correlation_id="ae8ac812-1d87-4552-ac9e-f013827df51b" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T19:02:07.708Z [EVALUATOR] evaluated correlation_id="e044184b-4c3e-4957-8cde-befd7185bd68" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:04:25.758Z [EVALUATOR] evaluated correlation_id="ec721c26-57b2-4a4a-a276-c3f96c9d1a20" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:06:43.922Z [EVALUATOR] evaluated correlation_id="91d14151-1cb5-402f-bbba-c481850730a8" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:08:43.322Z [EVALUATOR] evaluated correlation_id="f04a4300-563a-4460-9035-607666ce6126" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:10:27.404Z [EVALUATOR] evaluated correlation_id="54a47be1-8555-4ba2-946c-1a04984f91c5" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:12:00.788Z [EVALUATOR] evaluated correlation_id="15547df4-bc1d-497a-bf06-25080747730e" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:13:51.784Z [EVALUATOR] evaluated correlation_id="2ada55f6-1640-446e-8cce-2f94d0d24514" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T19:15:51.917Z [EVALUATOR] evaluated correlation_id="73c6b63b-30ea-41bb-9155-8c018fa906de" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T19:18:09.110Z [EVALUATOR] evaluated correlation_id="1448c3a7-251e-4d32-a8ad-9e53d880af22" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:20:15.573Z [EVALUATOR] evaluated correlation_id="62533330-c731-437f-8b36-9934229bba67" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T19:21:52.974Z [EVALUATOR] evaluated correlation_id="a99b9f75-fb99-4524-b3bf-00e77bc40ad3" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:23:20.921Z [EVALUATOR] evaluated correlation_id="23299eb1-ea1c-4ac3-a421-e7ac93b919ba" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:24:46.350Z [EVALUATOR] evaluated correlation_id="4b7e9b32-ecb5-454e-b5a6-95d9c876da40" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T19:26:02.558Z [EVALUATOR] evaluated correlation_id="7d9acf6d-438a-4be0-8483-7c90d52938e9" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:27:23.483Z [EVALUATOR] evaluated correlation_id="794db231-b089-479a-a4e2-74c377d84b3e" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T19:28:48.468Z [EVALUATOR] evaluated correlation_id="c16ef031-e6c1-4047-8b7f-fe137e698bca" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:30:17.391Z [EVALUATOR] evaluated correlation_id="7e6580a1-3fd6-4063-87be-a459f7824487" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T19:31:38.479Z [EVALUATOR] evaluated correlation_id="409570e1-f339-49e4-a550-80e73275bb34" status="ok" scores=[5, 3, 3]
+
+
+
+2026-11-16T19:32:58.087Z [EVALUATOR] evaluated correlation_id="32dc00f4-c42b-42a4-bb28-a8cd3b980f4e" status="ok" scores=[5, 5, 3]
+
+
+
+2026-11-16T19:34:15.596Z [EVALUATOR] evaluated correlation_id="0809f441-6238-4267-8e69-6a0bac874675" status="ok" scores=[3, 3, 3]
+
+
+
+2026-11-16T19:35:43.157Z [EVALUATOR] evaluated correlation_id="1398cc7b-673b-4330-bb0d-d5a5330d3cd3" status="ok" scores=[5, 3, 3]

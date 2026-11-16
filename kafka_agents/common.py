@@ -18,6 +18,7 @@ import json
 import os
 import sqlite3
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -25,6 +26,7 @@ from aiokafka import AIOKafkaConsumer, AIOKafkaProducer, ConsumerRebalanceListen
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from observability.tracing import queue_span, write_span  # noqa: E402  HW10 spans
 
 PREFIX = "s6758"
 BOOTSTRAP = os.getenv("KAFKA_BOOTSTRAP", "localhost:9092")
@@ -131,13 +133,15 @@ async def run_agent(agent: str, in_topic: str, out_topic: str, handle) -> None:
         dead_letter=not OPTS.no_dlq, mock=OPTS.mock is not None)
     try:
         async for msg in consumer:
-            cid, extra = None, {}
+            received_ts = time.time()
+            cid, extra, peek = None, {}, {}
             try:
                 peek = json.loads(msg.value.decode())
                 cid = peek.get("correlation_id")
                 extra = {k: peek[k] for k in ("entity_id", "seq") if k in peek}
             except (UnicodeDecodeError, json.JSONDecodeError, AttributeError):
                 pass
+            queue_span(cid, msg.topic, peek.get("sent_ts") if isinstance(peek, dict) else None, received_ts)
             log(name, f"received from {msg.topic}", correlation_id=cid, partition=msg.partition, offset=msg.offset,
                 **extra)
 
@@ -147,9 +151,12 @@ async def run_agent(agent: str, in_topic: str, out_topic: str, handle) -> None:
                 continue
 
             out, error = None, None
+            stage_start = time.time()
             for attempt in range(1, (1 if OPTS.no_dlq else MAX_ATTEMPTS) + 1):
                 try:
                     message = json.loads(msg.value.decode())
+                    if message.get("fail_stage") == agent.lower():  # HW10: fault injection for the failed-trace example
+                        raise RuntimeError(f"injected fault in {agent.lower()} (fail_stage test)")
                     out = await asyncio.to_thread(handle, message)
                     break
                 except Exception as exc:
@@ -162,6 +169,9 @@ async def run_agent(agent: str, in_topic: str, out_topic: str, handle) -> None:
                         error=error)
                     await asyncio.sleep(0.5 * attempt)
 
+            write_span(cid, agent.lower(), stage_start, time.time(), "ok" if out is not None else "error",
+                       None if out is not None else error, agent=name, attempts=attempt, topic_in=in_topic,
+                       topic_out=out_topic if out is not None else DEAD_LETTER)
             if out is None:
                 bad = {"source_topic": msg.topic, "partition": msg.partition, "offset": msg.offset,
                        "correlation_id": cid, "error": error, "attempts": MAX_ATTEMPTS, "failed_at": now(),
@@ -173,7 +183,10 @@ async def run_agent(agent: str, in_topic: str, out_topic: str, handle) -> None:
                 continue
 
             out["correlation_id"] = cid  # unchanged at every stage
+            if message.get("fail_stage"):  # HW10 test flag travels with the request
+                out["fail_stage"] = message["fail_stage"]
             out["trace"] = message.get("trace", []) + [{"agent": name, "at": now()}]
+            out["sent_ts"] = time.time()  # HW10: start of the next queue span
             meta = await producer.send_and_wait(out_topic, encode(out), key=cid.encode() if cid else None)
             log(name, f"sent to {out_topic}", correlation_id=cid, partition=meta.partition, offset=meta.offset,
                 **extra)

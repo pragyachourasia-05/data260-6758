@@ -6,36 +6,47 @@
 import asyncio
 import json
 import sys
+import time
 import uuid
 
 from aiokafka import AIOKafkaConsumer, AIOKafkaProducer, TopicPartition
 from common import BOOTSTRAP, FINAL, INBOX, JOURNEY_LOG, encode, log, now, start
 
+from observability.tracing import queue_span
+
 QUESTION = "What should I check before signing a lease for an apartment listing near SJSU?"
 TIMEOUT_SECONDS = 900
 
 
-async def ask(question: str, context: str = "") -> dict | None:
-    """Send one question through the agents and return its final message (None on timeout)."""
+async def ask(question: str, context: str = "", correlation_id: str | None = None, timeout: float = TIMEOUT_SECONDS,
+              fail_stage: str | None = None) -> dict | None:
+    """Send one question through the agents and return its final message (None on timeout).
+
+    HW10: the caller can pass its trace_id as correlation_id so the cache lookup and Kafka share one id.
+    fail_stage makes that agent raise (used once for the failed-trace example)."""
     producer = await start(AIOKafkaProducer(bootstrap_servers=BOOTSTRAP), "SENDER")
     consumer = await start(AIOKafkaConsumer(bootstrap_servers=BOOTSTRAP, enable_auto_commit=False), "SENDER")
     parts = consumer.partitions_for_topic(FINAL) or {0}
     consumer.assign([TopicPartition(FINAL, p) for p in parts])
     await consumer.seek_to_end()  # only results that arrive after this question
 
-    cid = str(uuid.uuid4())
+    cid = correlation_id or str(uuid.uuid4())
     message = {"correlation_id": cid, "question": question, "context": context, "sent_at": now(),
                "trace": [{"agent": "SENDER", "at": now()}]}
+    if fail_stage:
+        message["fail_stage"] = fail_stage
+    message["sent_ts"] = time.time()
     meta = await producer.send_and_wait(INBOX, encode(message), key=cid.encode())
     log("SENDER", f"sent question to {INBOX}", correlation_id=cid, partition=meta.partition, offset=meta.offset,
         question=question)
     log("SENDER", f"waiting for the result on {FINAL}")
     try:
-        async with asyncio.timeout(TIMEOUT_SECONDS):
+        async with asyncio.timeout(timeout):
             async for msg in consumer:
                 result = json.loads(msg.value.decode())
                 if result.get("correlation_id") != cid:
                     continue
+                queue_span(cid, FINAL, result.get("sent_ts"), time.time())
                 log("SENDER", f"received result from {FINAL}", correlation_id=cid, partition=msg.partition,
                     offset=msg.offset, status=result.get("status"))
                 return result

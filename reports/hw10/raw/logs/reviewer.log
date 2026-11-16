@@ -1,0 +1,591 @@
+2026-11-16T17:45:16.356Z [REVIEWER] listening on s6758_drafts, sending to s6758_final idempotency=true commit="after processing" dead_letter=true mock=false
+2026-11-16T17:45:16.442Z [REVIEWER] partitions assigned partitions=[0]
+2026-11-16T17:46:36.099Z [REVIEWER] received from s6758_drafts correlation_id="31a611af-e140-4d27-9e17-a5c4ef6a2a7c" partition=0 offset=56
+2026-11-16T17:46:47.004Z [REVIEWER] review done correlation_id="31a611af-e140-4d27-9e17-a5c4ef6a2a7c" status="approved" notes="Answer is accurate and follows plan."
+2026-11-16T17:46:47.031Z [REVIEWER] sent to s6758_final correlation_id="31a611af-e140-4d27-9e17-a5c4ef6a2a7c" partition=0 offset=56
+2026-11-16T17:46:47.046Z [REVIEWER] offset committed partition=0 committed_offset=57
+2026-11-16T17:47:59.553Z [REVIEWER] received from s6758_drafts correlation_id="04583c30-26ab-4462-a04b-6fe130191366" partition=0 offset=57
+2026-11-16T17:48:09.348Z [REVIEWER] review done correlation_id="04583c30-26ab-4462-a04b-6fe130191366" status="approved" notes="Answer is accurate and follows plan."
+2026-11-16T17:48:09.358Z [REVIEWER] sent to s6758_final correlation_id="04583c30-26ab-4462-a04b-6fe130191366" partition=0 offset=57
+2026-11-16T17:48:09.369Z [REVIEWER] offset committed partition=0 committed_offset=58
+2026-11-16T17:49:17.400Z [REVIEWER] listening on s6758_drafts, sending to s6758_final idempotency=true commit="after processing" dead_letter=true mock=false
+2026-11-16T17:49:24.297Z [REVIEWER] partitions assigned partitions=[0]
+2026-11-16T18:01:14.957Z [REVIEWER] received from s6758_drafts correlation_id="d96465bc-e0cb-4e49-a934-88c1e5909ef3" partition=0 offset=58
+2026-11-16T18:01:33.047Z [REVIEWER] review done correlation_id="d96465bc-e0cb-4e49-a934-88c1e5909ef3" status="rejected" notes="Listing facts contradict the draft, and verification with the property manager is recommended."
+2026-11-16T18:01:33.058Z [REVIEWER] sent to s6758_final correlation_id="d96465bc-e0cb-4e49-a934-88c1e5909ef3" partition=0 offset=58
+2026-11-16T18:01:33.076Z [REVIEWER] offset committed partition=0 committed_offset=59
+2026-11-16T18:03:15.331Z [REVIEWER] received from s6758_drafts correlation_id="a14f4952-8c7a-4fb2-a50e-283801f288e3" partition=0 offset=59
+2026-11-16T18:03:29.400Z [REVIEWER] review done correlation_id="a14f4952-8c7a-4fb2-a50e-283801f288e3" status="approved" notes="Correct and clear response"
+2026-11-16T18:03:29.411Z [REVIEWER] sent to s6758_final correlation_id="a14f4952-8c7a-4fb2-a50e-283801f288e3" partition=0 offset=59
+2026-11-16T18:03:29.430Z [REVIEWER] offset committed partition=0 committed_offset=60
+2026-11-16T18:04:34.213Z [REVIEWER] received from s6758_drafts correlation_id="bd238d3a-3621-4190-8c5a-4b22c361613c" partition=0 offset=60
+2026-11-16T18:04:45.640Z [REVIEWER] review done correlation_id="bd238d3a-3621-4190-8c5a-4b22c361613c" status="approved" notes="Lacks specific unit count, should have said '1 unit' instead of 'only 1 unit'"
+2026-11-16T18:04:45.649Z [REVIEWER] sent to s6758_final correlation_id="bd238d3a-3621-4190-8c5a-4b22c361613c" partition=0 offset=60
+2026-11-16T18:04:45.658Z [REVIEWER] offset committed partition=0 committed_offset=61
+2026-11-16T18:05:45.939Z [REVIEWER] received from s6758_drafts correlation_id="cad95f13-fba5-4b9d-aa17-750799cc5f4a" partition=0 offset=61
+2026-11-16T18:05:57.223Z [REVIEWER] review done correlation_id="cad95f13-fba5-4b9d-aa17-750799cc5f4a" status="approved" notes="Correct calculation and format"
+2026-11-16T18:05:57.236Z [REVIEWER] sent to s6758_final correlation_id="cad95f13-fba5-4b9d-aa17-750799cc5f4a" partition=0 offset=61
+2026-11-16T18:05:57.252Z [REVIEWER] offset committed partition=0 committed_offset=62
+2026-11-16T18:07:23.259Z [REVIEWER] received from s6758_drafts correlation_id="20c8be53-45db-47cd-9405-830ccee62106" partition=0 offset=62
+2026-11-16T18:07:36.944Z [REVIEWER] review done correlation_id="20c8be53-45db-47cd-9405-830ccee62106" status="approved" notes="Lacks specific online sources for verification"
+2026-11-16T18:07:37.042Z [REVIEWER] sent to s6758_final correlation_id="20c8be53-45db-47cd-9405-830ccee62106" partition=0 offset=62
+2026-11-16T18:07:37.140Z [REVIEWER] offset committed partition=0 committed_offset=63
+2026-11-16T18:09:59.576Z [REVIEWER] received from s6758_drafts correlation_id="90d30319-fee1-40c7-bc03-3bed7b5bea23" partition=0 offset=63
+2026-11-16T18:10:16.323Z [REVIEWER] review done correlation_id="90d30319-fee1-40c7-bc03-3bed7b5bea23" status="approved" notes="Answer is concise and covers key facts, but lacks specific details about the apartment itself."
+2026-11-16T18:10:16.409Z [REVIEWER] sent to s6758_final correlation_id="90d30319-fee1-40c7-bc03-3bed7b5bea23" partition=0 offset=63
+2026-11-16T18:10:16.471Z [REVIEWER] offset committed partition=0 committed_offset=64
+2026-11-16T18:12:02.316Z [REVIEWER] received from s6758_drafts correlation_id="46f735d3-3b2b-4206-a725-b65ea150919b" partition=0 offset=64
+2026-11-16T18:12:19.084Z [REVIEWER] review done correlation_id="46f735d3-3b2b-4206-a725-b65ea150919b" status="approved" notes="Provides a clear analysis of the property's suitability for a family"
+2026-11-16T18:12:19.095Z [REVIEWER] sent to s6758_final correlation_id="46f735d3-3b2b-4206-a725-b65ea150919b" partition=0 offset=64
+2026-11-16T18:12:19.115Z [REVIEWER] offset committed partition=0 committed_offset=65
+2026-11-16T18:14:02.708Z [REVIEWER] received from s6758_drafts correlation_id="5cc14e1a-9781-4765-87b8-e08762eba33a" partition=0 offset=65
+2026-11-16T18:14:19.364Z [REVIEWER] review done correlation_id="5cc14e1a-9781-4765-87b8-e08762eba33a" status="approved" notes="Provides accurate information and suggests next steps for accurate pricing, but could be more direct in its recommendation to contact the property manager."
+2026-11-16T18:14:19.390Z [REVIEWER] sent to s6758_final correlation_id="5cc14e1a-9781-4765-87b8-e08762eba33a" partition=0 offset=65
+2026-11-16T18:14:19.422Z [REVIEWER] offset committed partition=0 committed_offset=66
+2026-11-16T18:15:30.891Z [REVIEWER] received from s6758_drafts correlation_id="0edbd24b-6d2f-4673-9112-ad56c0cb6f76" partition=0 offset=66
+2026-11-16T18:15:48.896Z [REVIEWER] review done correlation_id="0edbd24b-6d2f-4673-9112-ad56c0cb6f76" status="approved" notes="Answer is accurate and follows the plan"
+2026-11-16T18:15:48.930Z [REVIEWER] sent to s6758_final correlation_id="0edbd24b-6d2f-4673-9112-ad56c0cb6f76" partition=0 offset=66
+2026-11-16T18:15:48.988Z [REVIEWER] offset committed partition=0 committed_offset=67
+2026-11-16T18:18:02.536Z [REVIEWER] received from s6758_drafts correlation_id="ac0286c2-4e00-41e2-b6f8-bc490e7f1086" partition=0 offset=67
+2026-11-16T18:18:21.077Z [REVIEWER] review done correlation_id="ac0286c2-4e00-41e2-b6f8-bc490e7f1086" status="rejected" notes="Lacks information about 150 Research Avenue, cannot provide a comparison."
+2026-11-16T18:18:21.141Z [REVIEWER] sent to s6758_final correlation_id="ac0286c2-4e00-41e2-b6f8-bc490e7f1086" partition=0 offset=67
+2026-11-16T18:18:21.321Z [REVIEWER] offset committed partition=0 committed_offset=68
+2026-11-16T18:19:57.578Z [REVIEWER] received from s6758_drafts correlation_id="fc7e8b20-7a02-49e3-8e44-f9c37caef44a" partition=0 offset=68
+2026-11-16T18:20:11.286Z [REVIEWER] review done correlation_id="fc7e8b20-7a02-49e3-8e44-f9c37caef44a" status="approved" notes="Minor rephrasing for clarity and grammar"
+2026-11-16T18:20:11.296Z [REVIEWER] sent to s6758_final correlation_id="fc7e8b20-7a02-49e3-8e44-f9c37caef44a" partition=0 offset=68
+2026-11-16T18:20:11.317Z [REVIEWER] offset committed partition=0 committed_offset=69
+2026-11-16T18:21:47.798Z [REVIEWER] received from s6758_drafts correlation_id="90c19ae9-a8b1-42f8-86d0-dd6a95983dd8" partition=0 offset=69
+2026-11-16T18:22:04.685Z [REVIEWER] review done correlation_id="90c19ae9-a8b1-42f8-86d0-dd6a95983dd8" status="approved" notes="Clear and concise instructions provided"
+2026-11-16T18:22:04.695Z [REVIEWER] sent to s6758_final correlation_id="90c19ae9-a8b1-42f8-86d0-dd6a95983dd8" partition=0 offset=69
+2026-11-16T18:22:04.711Z [REVIEWER] offset committed partition=0 committed_offset=70
+2026-11-16T18:23:31.236Z [REVIEWER] received from s6758_drafts correlation_id="86bac3e6-6576-437f-90e7-f8c0afcd1952" partition=0 offset=70
+2026-11-16T18:23:47.203Z [REVIEWER] review done correlation_id="86bac3e6-6576-437f-90e7-f8c0afcd1952" status="approved" notes="Comprehensive and thorough, but consider adding photos of appliances and furniture as well"
+2026-11-16T18:23:47.211Z [REVIEWER] sent to s6758_final correlation_id="86bac3e6-6576-437f-90e7-f8c0afcd1952" partition=0 offset=70
+2026-11-16T18:23:47.235Z [REVIEWER] offset committed partition=0 committed_offset=71
+2026-11-16T18:25:18.187Z [REVIEWER] received from s6758_drafts correlation_id="92593593-c513-476b-ac51-7975914617ce" partition=0 offset=71
+2026-11-16T18:25:37.122Z [REVIEWER] review done correlation_id="92593593-c513-476b-ac51-7975914617ce" status="approved" notes="Answer provides a balanced view of the pros and cons of paying rent with a credit card."
+2026-11-16T18:25:37.218Z [REVIEWER] sent to s6758_final correlation_id="92593593-c513-476b-ac51-7975914617ce" partition=0 offset=71
+2026-11-16T18:25:37.324Z [REVIEWER] offset committed partition=0 committed_offset=72
+Heartbeat failed: local member_id was not recognized; resetting and re-joining group
+Heartbeat session expired - marking coordinator dead
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+2026-11-16T18:26:25.533Z [REVIEWER] partitions assigned partitions=[0]
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat session expired - marking coordinator dead
+2026-11-16T18:28:52.082Z [REVIEWER] received from s6758_drafts correlation_id="7f777a95-24fc-4aaf-872b-0720fc54be1b" partition=0 offset=72
+2026-11-16T18:29:18.288Z [REVIEWER] review done correlation_id="7f777a95-24fc-4aaf-872b-0720fc54be1b" status="approved" notes="clear and concise explanation"
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Got error produce response on topic-partition TopicPartition(topic='s6758_final', partition=0), retrying. Error: <class 'aiokafka.errors.NotLeaderForPartitionError'>
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+2026-11-16T18:29:23.050Z [REVIEWER] sent to s6758_final correlation_id="7f777a95-24fc-4aaf-872b-0720fc54be1b" partition=0 offset=72
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node None) is either not started or not valid
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node None) is either not started or not valid
+2026-11-16T18:29:23.936Z [REVIEWER] offset committed partition=0 committed_offset=73
+2026-11-16T18:32:00.600Z [REVIEWER] received from s6758_drafts correlation_id="36e379c1-2059-4b6e-90c1-9cbbc473cf26" partition=0 offset=73
+2026-11-16T18:32:25.202Z [REVIEWER] review done correlation_id="36e379c1-2059-4b6e-90c1-9cbbc473cf26" status="approved" notes="missing step 3 in the plan, and the draft does not explicitly state the consequences of not obtaining permission from the landlord"
+2026-11-16T18:32:25.496Z [REVIEWER] sent to s6758_final correlation_id="36e379c1-2059-4b6e-90c1-9cbbc473cf26" partition=0 offset=73
+2026-11-16T18:32:25.572Z [REVIEWER] offset committed partition=0 committed_offset=74
+2026-11-16T18:34:25.031Z [REVIEWER] received from s6758_drafts correlation_id="83aec06f-e077-4d7d-ae4b-aee80a704239" partition=0 offset=74
+2026-11-16T18:34:42.368Z [REVIEWER] review done correlation_id="83aec06f-e077-4d7d-ae4b-aee80a704239" status="approved" notes="Answer is accurate and follows plan, but could be more concise."
+2026-11-16T18:34:42.379Z [REVIEWER] sent to s6758_final correlation_id="83aec06f-e077-4d7d-ae4b-aee80a704239" partition=0 offset=74
+2026-11-16T18:34:42.397Z [REVIEWER] offset committed partition=0 committed_offset=75
+2026-11-16T18:36:30.834Z [REVIEWER] received from s6758_drafts correlation_id="3a005033-4d23-4f23-bd12-b293e3224cfa" partition=0 offset=75
+2026-11-16T18:36:52.790Z [REVIEWER] review done correlation_id="3a005033-4d23-4f23-bd12-b293e3224cfa" status="approved" notes="Questions cover essential lease terms and property conditions, with additional suggestions for further inquiry"
+2026-11-16T18:36:52.803Z [REVIEWER] sent to s6758_final correlation_id="3a005033-4d23-4f23-bd12-b293e3224cfa" partition=0 offset=75
+2026-11-16T18:36:52.826Z [REVIEWER] offset committed partition=0 committed_offset=76
+2026-11-16T18:38:14.798Z [REVIEWER] received from s6758_drafts correlation_id="71bb21d0-9162-4652-9e6a-a2d99dce0b10" partition=0 offset=76
+2026-11-16T18:38:27.089Z [REVIEWER] review done correlation_id="71bb21d0-9162-4652-9e6a-a2d99dce0b10" status="approved" notes="Clear and concise steps to identify potential scams, with a focus on research and verification"
+2026-11-16T18:38:27.116Z [REVIEWER] sent to s6758_final correlation_id="71bb21d0-9162-4652-9e6a-a2d99dce0b10" partition=0 offset=76
+2026-11-16T18:38:27.168Z [REVIEWER] offset committed partition=0 committed_offset=77
+2026-11-16T18:40:07.885Z [REVIEWER] received from s6758_drafts correlation_id="14f0408e-bc62-44d0-a878-f3ce5b33ee78" partition=0 offset=77
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+Heartbeat failed for group s6758-reviewer: coordinator (node 1) is either not started or not valid
+Marking the coordinator dead (node 1)for group s6758-reviewer.
+2026-11-16T18:40:36.090Z [REVIEWER] review done correlation_id="14f0408e-bc62-44d0-a878-f3ce5b33ee78" status="approved" notes="Answer is generally accurate but could be more specific about local laws and regulations"
+2026-11-16T18:40:36.252Z [REVIEWER] sent to s6758_final correlation_id="14f0408e-bc62-44d0-a878-f3ce5b33ee78" partition=0 offset=77
+2026-11-16T18:40:36.311Z [REVIEWER] offset committed partition=0 committed_offset=78
+2026-11-16T18:43:29.963Z [REVIEWER] received from s6758_drafts correlation_id="00e4cf33-1945-4be8-9717-bb0dbfbcf6b9" partition=0 offset=78
+2026-11-16T18:44:02.246Z [REVIEWER] review done correlation_id="00e4cf33-1945-4be8-9717-bb0dbfbcf6b9" status="approved" notes="Clear and concise explanation of pro-rated first month of rent, but the calculation example is oversimplified and doesn't account for varying lease lengths and move-in dates."
+2026-11-16T18:44:02.630Z [REVIEWER] sent to s6758_final correlation_id="00e4cf33-1945-4be8-9717-bb0dbfbcf6b9" partition=0 offset=78
+2026-11-16T18:44:02.686Z [REVIEWER] offset committed partition=0 committed_offset=79
+2026-11-16T18:46:14.070Z [REVIEWER] received from s6758_drafts correlation_id="38de27da-6306-448c-b6ec-2261357feffa" partition=0 offset=79
+2026-11-16T18:46:29.334Z [REVIEWER] review done correlation_id="38de27da-6306-448c-b6ec-2261357feffa" status="approved" notes="clear and helpful advice, good plan followed"
+2026-11-16T18:46:29.347Z [REVIEWER] sent to s6758_final correlation_id="38de27da-6306-448c-b6ec-2261357feffa" partition=0 offset=79
+2026-11-16T18:46:29.362Z [REVIEWER] offset committed partition=0 committed_offset=80
+2026-11-16T18:48:05.267Z [REVIEWER] received from s6758_drafts correlation_id="0d799990-f85f-4cdd-abc7-ae9abf1fbd0e" partition=0 offset=80
+2026-11-16T18:48:23.118Z [REVIEWER] review done correlation_id="0d799990-f85f-4cdd-abc7-ae9abf1fbd0e" status="approved" notes="Clear and concise summary of the main differences between a lease and a rental agreement."
+2026-11-16T18:48:23.133Z [REVIEWER] sent to s6758_final correlation_id="0d799990-f85f-4cdd-abc7-ae9abf1fbd0e" partition=0 offset=80
+2026-11-16T18:48:23.147Z [REVIEWER] offset committed partition=0 committed_offset=81
+2026-11-16T18:49:47.722Z [REVIEWER] received from s6758_drafts correlation_id="2248ee32-2b07-4161-9391-c51572371cfe" partition=0 offset=81
+2026-11-16T18:50:05.256Z [REVIEWER] review done correlation_id="2248ee32-2b07-4161-9391-c51572371cfe" status="approved" notes="Draft provides a clear and structured approach to breaking a lease early, but lacks specific examples or guidance on how to navigate the notice period and potential penalties."
+2026-11-16T18:50:05.268Z [REVIEWER] sent to s6758_final correlation_id="2248ee32-2b07-4161-9391-c51572371cfe" partition=0 offset=81
+2026-11-16T18:50:05.281Z [REVIEWER] offset committed partition=0 committed_offset=82
+2026-11-16T18:51:44.789Z [REVIEWER] received from s6758_drafts correlation_id="2afa02f1-fb20-4ab4-a4a0-65ea9205e2e2" partition=0 offset=82
+2026-11-16T18:52:02.349Z [REVIEWER] review done correlation_id="2afa02f1-fb20-4ab4-a4a0-65ea9205e2e2" status="approved" notes="Answer is clear and accurate, but could be more concise"
+2026-11-16T18:52:02.363Z [REVIEWER] sent to s6758_final correlation_id="2afa02f1-fb20-4ab4-a4a0-65ea9205e2e2" partition=0 offset=82
+2026-11-16T18:52:02.380Z [REVIEWER] offset committed partition=0 committed_offset=83
+2026-11-16T18:53:42.913Z [REVIEWER] received from s6758_drafts correlation_id="58eda6a8-98cc-4424-ab63-5a79881d98a2" partition=0 offset=83
+2026-11-16T18:54:00.227Z [REVIEWER] review done correlation_id="58eda6a8-98cc-4424-ab63-5a79881d98a2" status="approved" notes="Answer is accurate and follows the plan, but could be more concise."
+2026-11-16T18:54:00.240Z [REVIEWER] sent to s6758_final correlation_id="58eda6a8-98cc-4424-ab63-5a79881d98a2" partition=0 offset=83
+2026-11-16T18:54:00.254Z [REVIEWER] offset committed partition=0 committed_offset=84
+2026-11-16T18:55:25.912Z [REVIEWER] received from s6758_drafts correlation_id="9e756c85-0ae7-49b3-bd8d-4a656daf8846" partition=0 offset=84
+2026-11-16T18:55:42.963Z [REVIEWER] review done correlation_id="9e756c85-0ae7-49b3-bd8d-4a656daf8846" status="approved" notes="Provides clear and accurate information on non-refundability of application fees, with some nuance on potential exceptions."
+2026-11-16T18:55:42.975Z [REVIEWER] sent to s6758_final correlation_id="9e756c85-0ae7-49b3-bd8d-4a656daf8846" partition=0 offset=84
+2026-11-16T18:55:42.992Z [REVIEWER] offset committed partition=0 committed_offset=85
+2026-11-16T18:57:10.538Z [REVIEWER] received from s6758_drafts correlation_id="f00c4f2f-abac-4d0c-b087-9fe8dc76ddcc" partition=0 offset=85
+2026-11-16T18:57:25.616Z [REVIEWER] review done correlation_id="f00c4f2f-abac-4d0c-b087-9fe8dc76ddcc" status="approved" notes="Answer provides accurate information on typical utilities renters pay themselves, but could be more specific about local regulations and landlord policies."
+2026-11-16T18:57:25.624Z [REVIEWER] sent to s6758_final correlation_id="f00c4f2f-abac-4d0c-b087-9fe8dc76ddcc" partition=0 offset=85
+2026-11-16T18:57:25.649Z [REVIEWER] offset committed partition=0 committed_offset=86
+2026-11-16T18:59:07.004Z [REVIEWER] received from s6758_drafts correlation_id="ae8ac812-1d87-4552-ac9e-f013827df51b" partition=0 offset=86
+2026-11-16T18:59:23.597Z [REVIEWER] review done correlation_id="ae8ac812-1d87-4552-ac9e-f013827df51b" status="approved" notes="Clear and concise steps, but lacks specific percentage-based method and usage considerations"
+2026-11-16T18:59:23.606Z [REVIEWER] sent to s6758_final correlation_id="ae8ac812-1d87-4552-ac9e-f013827df51b" partition=0 offset=86
+2026-11-16T18:59:23.616Z [REVIEWER] offset committed partition=0 committed_offset=87
+2026-11-16T19:00:42.524Z [REVIEWER] received from s6758_drafts correlation_id="e044184b-4c3e-4957-8cde-befd7185bd68" partition=0 offset=87
+2026-11-16T19:00:56.990Z [REVIEWER] review done correlation_id="e044184b-4c3e-4957-8cde-befd7185bd68" status="approved" notes="Clear and comprehensive plan, but could benefit from more specific examples and templates for the agreement itself"
+2026-11-16T19:00:56.998Z [REVIEWER] sent to s6758_final correlation_id="e044184b-4c3e-4957-8cde-befd7185bd68" partition=0 offset=87
+2026-11-16T19:00:57.011Z [REVIEWER] offset committed partition=0 committed_offset=88
+2026-11-16T19:03:00.552Z [REVIEWER] received from s6758_drafts correlation_id="ec721c26-57b2-4a4a-a276-c3f96c9d1a20" partition=0 offset=88
+2026-11-16T19:03:19.114Z [REVIEWER] review done correlation_id="ec721c26-57b2-4a4a-a276-c3f96c9d1a20" status="approved" notes="Clear and concise steps provided for reporting mold in an apartment"
+2026-11-16T19:03:19.319Z [REVIEWER] sent to s6758_final correlation_id="ec721c26-57b2-4a4a-a276-c3f96c9d1a20" partition=0 offset=88
+2026-11-16T19:03:19.352Z [REVIEWER] offset committed partition=0 committed_offset=89
+2026-11-16T19:05:37.968Z [REVIEWER] received from s6758_drafts correlation_id="91d14151-1cb5-402f-bbba-c481850730a8" partition=0 offset=89
+2026-11-16T19:05:57.251Z [REVIEWER] review done correlation_id="91d14151-1cb5-402f-bbba-c481850730a8" status="approved" notes="Clear and concise explanation of normal wear and tear, with good documentation and comparison guidelines."
+2026-11-16T19:05:57.264Z [REVIEWER] sent to s6758_final correlation_id="91d14151-1cb5-402f-bbba-c481850730a8" partition=0 offset=89
+2026-11-16T19:05:57.302Z [REVIEWER] offset committed partition=0 committed_offset=90
+2026-11-16T19:07:33.125Z [REVIEWER] received from s6758_drafts correlation_id="f04a4300-563a-4460-9035-607666ce6126" partition=0 offset=90
+2026-11-16T19:07:50.833Z [REVIEWER] review done correlation_id="f04a4300-563a-4460-9035-607666ce6126" status="rejected" notes="Lacks specific guidance on lease agreement review and standard cleaning requirements"
+2026-11-16T19:07:50.847Z [REVIEWER] sent to s6758_final correlation_id="f04a4300-563a-4460-9035-607666ce6126" partition=0 offset=90
+2026-11-16T19:07:50.869Z [REVIEWER] offset committed partition=0 committed_offset=91
+2026-11-16T19:09:22.050Z [REVIEWER] received from s6758_drafts correlation_id="54a47be1-8555-4ba2-946c-1a04984f91c5" partition=0 offset=91
+2026-11-16T19:09:39.341Z [REVIEWER] review done correlation_id="54a47be1-8555-4ba2-946c-1a04984f91c5" status="approved" notes="Answer provides specific examples and evidence from property managers, online listings, and lease agreements, making it a reliable source of information."
+2026-11-16T19:09:39.353Z [REVIEWER] sent to s6758_final correlation_id="54a47be1-8555-4ba2-946c-1a04984f91c5" partition=0 offset=91
+2026-11-16T19:09:39.376Z [REVIEWER] offset committed partition=0 committed_offset=92
+2026-11-16T19:11:03.933Z [REVIEWER] received from s6758_drafts correlation_id="15547df4-bc1d-497a-bf06-25080747730e" partition=0 offset=92
+2026-11-16T19:11:17.053Z [REVIEWER] review done correlation_id="15547df4-bc1d-497a-bf06-25080747730e" status="approved" notes="Missing the grace period and late fee details in the draft."
+2026-11-16T19:11:17.066Z [REVIEWER] sent to s6758_final correlation_id="15547df4-bc1d-497a-bf06-25080747730e" partition=0 offset=92
+2026-11-16T19:11:17.080Z [REVIEWER] offset committed partition=0 committed_offset=93
+2026-11-16T19:12:46.268Z [REVIEWER] received from s6758_drafts correlation_id="2ada55f6-1640-446e-8cce-2f94d0d24514" partition=0 offset=93
+2026-11-16T19:13:03.316Z [REVIEWER] review done correlation_id="2ada55f6-1640-446e-8cce-2f94d0d24514" status="approved" notes="Follows the plan and provides a clear and concise request for repair."
+2026-11-16T19:13:03.325Z [REVIEWER] sent to s6758_final correlation_id="2ada55f6-1640-446e-8cce-2f94d0d24514" partition=0 offset=93
+2026-11-16T19:13:03.346Z [REVIEWER] offset committed partition=0 committed_offset=94
+2026-11-16T19:14:32.196Z [REVIEWER] received from s6758_drafts correlation_id="73c6b63b-30ea-41bb-9155-8c018fa906de" partition=0 offset=94
+2026-11-16T19:14:54.368Z [REVIEWER] review done correlation_id="73c6b63b-30ea-41bb-9155-8c018fa906de" status="approved" notes="Provides accurate information on notice periods for month-to-month tenancies in various jurisdictions, but could benefit from more specific guidance on local laws and regulations."
+2026-11-16T19:14:54.376Z [REVIEWER] sent to s6758_final correlation_id="73c6b63b-30ea-41bb-9155-8c018fa906de" partition=0 offset=94
+2026-11-16T19:14:54.390Z [REVIEWER] offset committed partition=0 committed_offset=95
+2026-11-16T19:16:48.869Z [REVIEWER] received from s6758_drafts correlation_id="1448c3a7-251e-4d32-a8ad-9e53d880af22" partition=0 offset=95
+2026-11-16T19:17:06.721Z [REVIEWER] review done correlation_id="1448c3a7-251e-4d32-a8ad-9e53d880af22" status="approved" notes="Clear and concise options provided, but could benefit from more specific examples and potential drawbacks."
+2026-11-16T19:17:06.729Z [REVIEWER] sent to s6758_final correlation_id="1448c3a7-251e-4d32-a8ad-9e53d880af22" partition=0 offset=95
+2026-11-16T19:17:06.748Z [REVIEWER] offset committed partition=0 committed_offset=96
+2026-11-16T19:19:03.601Z [REVIEWER] received from s6758_drafts correlation_id="62533330-c731-437f-8b36-9934229bba67" partition=0 offset=96
+2026-11-16T19:19:24.671Z [REVIEWER] review done correlation_id="62533330-c731-437f-8b36-9934229bba67" status="approved" notes="Provides a clear and concise list of pros and cons, but could benefit from more specific examples and details."
+2026-11-16T19:19:24.681Z [REVIEWER] sent to s6758_final correlation_id="62533330-c731-437f-8b36-9934229bba67" partition=0 offset=96
+2026-11-16T19:19:24.698Z [REVIEWER] offset committed partition=0 committed_offset=97
+2026-11-16T19:20:55.853Z [REVIEWER] received from s6758_drafts correlation_id="a99b9f75-fb99-4524-b3bf-00e77bc40ad3" partition=0 offset=97
+2026-11-16T19:21:10.014Z [REVIEWER] review done correlation_id="a99b9f75-fb99-4524-b3bf-00e77bc40ad3" status="approved" notes="Answer is concise and provides relevant guidance, but lacks specific details and personalization."
+2026-11-16T19:21:10.022Z [REVIEWER] sent to s6758_final correlation_id="a99b9f75-fb99-4524-b3bf-00e77bc40ad3" partition=0 offset=97
+2026-11-16T19:21:10.034Z [REVIEWER] offset committed partition=0 committed_offset=98
+2026-11-16T19:22:27.928Z [REVIEWER] received from s6758_drafts correlation_id="23299eb1-ea1c-4ac3-a421-e7ac93b919ba" partition=0 offset=98
+2026-11-16T19:22:41.211Z [REVIEWER] review done correlation_id="23299eb1-ea1c-4ac3-a421-e7ac93b919ba" status="approved" notes="Missing step on how to negotiate the lower rent amount itself"
+2026-11-16T19:22:41.326Z [REVIEWER] sent to s6758_final correlation_id="23299eb1-ea1c-4ac3-a421-e7ac93b919ba" partition=0 offset=98
+2026-11-16T19:22:41.346Z [REVIEWER] offset committed partition=0 committed_offset=99
+2026-11-16T19:23:53.625Z [REVIEWER] received from s6758_drafts correlation_id="4b7e9b32-ecb5-454e-b5a6-95d9c876da40" partition=0 offset=99
+2026-11-16T19:24:06.794Z [REVIEWER] review done correlation_id="4b7e9b32-ecb5-454e-b5a6-95d9c876da40" status="approved" notes="Accurate and clear explanation of 'utilities included'"
+2026-11-16T19:24:06.804Z [REVIEWER] sent to s6758_final correlation_id="4b7e9b32-ecb5-454e-b5a6-95d9c876da40" partition=0 offset=99
+2026-11-16T19:24:06.816Z [REVIEWER] offset committed partition=0 committed_offset=100
+2026-11-16T19:25:17.489Z [REVIEWER] received from s6758_drafts correlation_id="7d9acf6d-438a-4be0-8483-7c90d52938e9" partition=0 offset=100
+2026-11-16T19:25:29.441Z [REVIEWER] review done correlation_id="7d9acf6d-438a-4be0-8483-7c90d52938e9" status="approved" notes="missing plan implementation details and potential for over-notice period"
+2026-11-16T19:25:29.452Z [REVIEWER] sent to s6758_final correlation_id="7d9acf6d-438a-4be0-8483-7c90d52938e9" partition=0 offset=100
+2026-11-16T19:25:29.463Z [REVIEWER] offset committed partition=0 committed_offset=101
+2026-11-16T19:26:33.848Z [REVIEWER] received from s6758_drafts correlation_id="794db231-b089-479a-a4e2-74c377d84b3e" partition=0 offset=101
+2026-11-16T19:26:47.070Z [REVIEWER] review done correlation_id="794db231-b089-479a-a4e2-74c377d84b3e" status="approved" notes="Clear and concise steps provided, but could benefit from a more direct call-to-action, such as contacting a local tenant advocacy group immediately."
+2026-11-16T19:26:47.078Z [REVIEWER] sent to s6758_final correlation_id="794db231-b089-479a-a4e2-74c377d84b3e" partition=0 offset=101
+2026-11-16T19:26:47.093Z [REVIEWER] offset committed partition=0 committed_offset=102
+2026-11-16T19:27:59.288Z [REVIEWER] received from s6758_drafts correlation_id="c16ef031-e6c1-4047-8b7f-fe137e698bca" partition=0 offset=102
+2026-11-16T19:28:12.391Z [REVIEWER] review done correlation_id="c16ef031-e6c1-4047-8b7f-fe137e698bca" status="approved" notes="Provides a general guideline and reasonable criteria for deciding when to hire a moving company."
+2026-11-16T19:28:12.400Z [REVIEWER] sent to s6758_final correlation_id="c16ef031-e6c1-4047-8b7f-fe137e698bca" partition=0 offset=102
+2026-11-16T19:28:12.410Z [REVIEWER] offset committed partition=0 committed_offset=103
+2026-11-16T19:29:28.403Z [REVIEWER] received from s6758_drafts correlation_id="7e6580a1-3fd6-4063-87be-a459f7824487" partition=0 offset=103
+2026-11-16T19:29:42.706Z [REVIEWER] review done correlation_id="7e6580a1-3fd6-4063-87be-a459f7824487" status="approved" notes="clear and concise explanation of the difference between co-signer and guarantor"
+2026-11-16T19:29:42.716Z [REVIEWER] sent to s6758_final correlation_id="7e6580a1-3fd6-4063-87be-a459f7824487" partition=0 offset=103
+2026-11-16T19:29:42.730Z [REVIEWER] offset committed partition=0 committed_offset=104
+2026-11-16T19:30:52.247Z [REVIEWER] received from s6758_drafts correlation_id="409570e1-f339-49e4-a550-80e73275bb34" partition=0 offset=104
+2026-11-16T19:31:04.010Z [REVIEWER] review done correlation_id="409570e1-f339-49e4-a550-80e73275bb34" status="approved" notes="clear and concise steps to check landlord reviews"
+2026-11-16T19:31:04.016Z [REVIEWER] sent to s6758_final correlation_id="409570e1-f339-49e4-a550-80e73275bb34" partition=0 offset=104
+2026-11-16T19:31:04.027Z [REVIEWER] offset committed partition=0 committed_offset=105
+2026-11-16T19:32:10.850Z [REVIEWER] received from s6758_drafts correlation_id="32dc00f4-c42b-42a4-bb28-a8cd3b980f4e" partition=0 offset=105
+2026-11-16T19:32:22.993Z [REVIEWER] review done correlation_id="32dc00f4-c42b-42a4-bb28-a8cd3b980f4e" status="approved" notes="Provides a clear and comprehensive list of common fees besides rent, backed by research and landlord confirmation"
+2026-11-16T19:32:23.000Z [REVIEWER] sent to s6758_final correlation_id="32dc00f4-c42b-42a4-bb28-a8cd3b980f4e" partition=0 offset=105
+2026-11-16T19:32:23.010Z [REVIEWER] offset committed partition=0 committed_offset=106
+2026-11-16T19:33:29.570Z [REVIEWER] received from s6758_drafts correlation_id="0809f441-6238-4267-8e69-6a0bac874675" partition=0 offset=106
+2026-11-16T19:33:41.407Z [REVIEWER] review done correlation_id="0809f441-6238-4267-8e69-6a0bac874675" status="approved" notes="Answer aligns with plan and provides clear guidance on emergency access for landlords."
+2026-11-16T19:33:41.417Z [REVIEWER] sent to s6758_final correlation_id="0809f441-6238-4267-8e69-6a0bac874675" partition=0 offset=106
+2026-11-16T19:33:41.431Z [REVIEWER] offset committed partition=0 committed_offset=107
+2026-11-16T19:34:51.257Z [REVIEWER] received from s6758_drafts correlation_id="1398cc7b-673b-4330-bb0d-d5a5330d3cd3" partition=0 offset=107
+2026-11-16T19:35:05.057Z [REVIEWER] review done correlation_id="1398cc7b-673b-4330-bb0d-d5a5330d3cd3" status="approved" notes="The draft provides a clear and structured approach to ending a lease on good terms, but could benefit from more specific examples and potential pitfalls to avoid."
+2026-11-16T19:35:05.066Z [REVIEWER] sent to s6758_final correlation_id="1398cc7b-673b-4330-bb0d-d5a5330d3cd3" partition=0 offset=107
+2026-11-16T19:35:05.080Z [REVIEWER] offset committed partition=0 committed_offset=108

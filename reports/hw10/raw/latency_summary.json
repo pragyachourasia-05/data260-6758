@@ -1,0 +1,48 @@
+{
+  "requests": 50,
+  "confirmed_misses": 50,
+  "served_from_cache": 0,
+  "excluded": [],
+  "e2e_p50_ms": 109269.5,
+  "e2e_p95_ms": 169244.3,
+  "table": [
+    {
+      "stage": "Cache lookup",
+      "p50_ms": 128.1,
+      "p95_ms": 1334.9,
+      "pct_of_e2e": 0.3
+    },
+    {
+      "stage": "Planner",
+      "p50_ms": 15100.3,
+      "p95_ms": 30341.4,
+      "pct_of_e2e": 14.6
+    },
+    {
+      "stage": "Writer",
+      "p50_ms": 22986.6,
+      "p95_ms": 48560.5,
+      "pct_of_e2e": 24.1
+    },
+    {
+      "stage": "Reviewer",
+      "p50_ms": 16758.6,
+      "p95_ms": 25440.7,
+      "pct_of_e2e": 14.8
+    },
+    {
+      "stage": "Queue wait (total)",
+      "p50_ms": 53.2,
+      "p95_ms": 1229.1,
+      "pct_of_e2e": 1.1
+    },
+    {
+      "stage": "Evaluation",
+      "p50_ms": 49714.8,
+      "p95_ms": 75078.5,
+      "pct_of_e2e": 45.6
+    }
+  ],
+  "e2e_definition": "cache_lookup start -> evaluation end, per trace",
+  "pct_definition": "sum of the stage over all traces / sum of end-to-end over all traces"
+}

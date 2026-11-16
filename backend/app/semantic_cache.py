@@ -9,8 +9,10 @@ import hashlib
 import logging
 import os
 import re
+import sys
 import time
 import uuid
+from pathlib import Path
 
 import numpy as np
 import redis
@@ -20,6 +22,9 @@ from redis.commands.search.query import Query
 from sqlalchemy import text
 
 from app.database import engine
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from observability.tracing import write_span  # noqa: E402  HW10 spans
 
 logger = logging.getLogger("semantic_cache")
 PREFIX = "s6758"
@@ -125,22 +130,33 @@ class SemanticCache:
             self.redis_client.delete(*keys)
 
 
-def answer_question(cache: SemanticCache, question: str, agent, answer_key: str = "") -> dict:
-    """Ingress: serve from the cache, or run the agent pipeline and store its final answer."""
+def answer_question(cache: SemanticCache, question: str, agent, answer_key: str = "", trace_id: str | None = None) -> dict:
+    """Ingress: serve from the cache, or run the agent pipeline and store its final answer.
+
+    HW10: trace_id is the HW8 correlation_id. It is made here, written on the cache_lookup span and passed
+    to the agents, so a hit and a miss can be told apart and followed with one id."""
+    trace_id = trace_id or str(uuid.uuid4())
+    lookup_start = time.time()
     start = time.perf_counter()
-    found = cache.lookup(question)
+    try:
+        found = cache.lookup(question)
+    except Exception as exc:
+        write_span(trace_id, "cache_lookup", lookup_start, time.time(), "error", f"{type(exc).__name__}: {exc}")
+        raise
     search_ms = (time.perf_counter() - start) * 1000
+    write_span(trace_id, "cache_lookup", lookup_start, time.time(), "ok", None, cache="hit" if found["hit"] else "miss",
+               similarity=round(found["similarity"], 4), stale_dropped=found["stale"], question=question)
     if found["hit"]:
         latency = (time.perf_counter() - start) * 1000
         logger.info("CACHE HIT similarity=%.4f latency_ms=%.1f query=%r", found["similarity"], latency, question)
         entry = found["entry"]
-        return {"question": question, "answer": entry["answer"], "is_cached": True,
+        return {"trace_id": trace_id, "question": question, "answer": entry["answer"], "is_cached": True,
                 "similarity": round(found["similarity"], 4), "latency_ms": round(latency, 1), "search_ms": round(search_ms, 1),
                 "cached_query": entry["query"], "cached_key": entry["answer_key"], "status": "cached", "stale_dropped": False}
 
     logger.info("CACHE MISS best_similarity=%.4f query=%r", found["similarity"], question)
     row = find_listing(question)
-    final = agent(question, listing_context(row))
+    final = agent(question, listing_context(row), trace_id=trace_id)
     latency = (time.perf_counter() - start) * 1000
     answer = final.get("answer", "") if final else ""
     status = final.get("status", "timeout") if final else "timeout"
@@ -149,6 +165,6 @@ def answer_question(cache: SemanticCache, question: str, agent, answer_key: str 
     agent_ms = final.get("agent_ms") if final else None
     if agent_ms is not None:  # replayed agent answer: its recorded time stands in for the agent call
         latency = search_ms + agent_ms
-    return {"question": question, "answer": answer, "is_cached": False, "similarity": round(found["similarity"], 4),
+    return {"trace_id": trace_id, "question": question, "answer": answer, "is_cached": False, "similarity": round(found["similarity"], 4),
             "latency_ms": round(latency, 1), "search_ms": round(search_ms, 1), "cached_query": None, "cached_key": None,
             "status": status, "stale_dropped": found["stale"]}

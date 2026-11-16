@@ -35,8 +35,8 @@ STALE_QUESTION = "What is the monthly rent at 100 Research Avenue?"
 STALE_ADDRESS_ID = 4
 
 
-def real_agent(question: str, context: str) -> dict | None:
-    return asyncio.run(ask(question, context))
+def real_agent(question: str, context: str, trace_id: str | None = None) -> dict | None:
+    return asyncio.run(ask(question, context, correlation_id=trace_id))
 
 
 def build_memo():
@@ -58,7 +58,7 @@ def build_memo():
 def run_sweep():
     memo = json.loads(MEMO.read_text(encoding="utf-8"))
     cache = SemanticCache()
-    replay = lambda q, _context: memo[q]  # noqa: E731
+    replay = lambda q, _context, **_: memo[q]  # noqa: E731
     all_results = {}
     for threshold in THRESHOLDS:
         cache.threshold = threshold

@@ -1,0 +1,159 @@
+{"ts": "2026-11-16T17:45:58.726Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "31a611af-e140-4d27-9e17-a5c4ef6a2a7c", "partition": 0, "offset": 60, "question": "How many units are available at 135 Research Avenue, and what is the rent there?"}
+{"ts": "2026-11-16T17:45:58.728Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T17:46:47.039Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "31a611af-e140-4d27-9e17-a5c4ef6a2a7c", "partition": 0, "offset": 56, "status": "approved"}
+{"ts": "2026-11-16T17:47:37.290Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "04583c30-26ab-4462-a04b-6fe130191366", "partition": 0, "offset": 61, "question": "What is the monthly rent at 139 Research Avenue, and is it a house?"}
+{"ts": "2026-11-16T17:47:37.291Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T17:48:09.362Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "04583c30-26ab-4462-a04b-6fe130191366", "partition": 0, "offset": 57, "status": "approved"}
+{"ts": "2026-11-16T17:50:36.194Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "11b0c62f-4d58-49ab-bcf7-055874b9fc60", "partition": 0, "offset": 62, "question": "Could a student on a part-time income afford 157 Research Avenue?"}
+{"ts": "2026-11-16T17:50:36.197Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T17:52:36.184Z", "agent": "SENDER", "event": "no result before timeout", "correlation_id": "11b0c62f-4d58-49ab-bcf7-055874b9fc60"}
+{"ts": "2026-11-16T18:00:23.542Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "d96465bc-e0cb-4e49-a934-88c1e5909ef3", "partition": 0, "offset": 63, "question": "What is the monthly rent at 140 Research Avenue?"}
+{"ts": "2026-11-16T18:00:23.542Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:01:33.066Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "d96465bc-e0cb-4e49-a934-88c1e5909ef3", "partition": 0, "offset": 58, "status": "rejected"}
+{"ts": "2026-11-16T18:02:36.318Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "a14f4952-8c7a-4fb2-a50e-283801f288e3", "partition": 0, "offset": 64, "question": "Is 141 Research Avenue a house or an apartment?"}
+{"ts": "2026-11-16T18:02:36.320Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:03:29.416Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "a14f4952-8c7a-4fb2-a50e-283801f288e3", "partition": 0, "offset": 59, "status": "approved"}
+{"ts": "2026-11-16T18:04:11.776Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "bd238d3a-3621-4190-8c5a-4b22c361613c", "partition": 0, "offset": 65, "question": "How many units can I rent at 142 Research Avenue right now?"}
+{"ts": "2026-11-16T18:04:11.777Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:04:45.652Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "bd238d3a-3621-4190-8c5a-4b22c361613c", "partition": 0, "offset": 60, "status": "approved"}
+{"ts": "2026-11-16T18:05:23.877Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "cad95f13-fba5-4b9d-aa17-750799cc5f4a", "partition": 0, "offset": 66, "question": "If I rent 143 Research Avenue for a year, what is the total cost?"}
+{"ts": "2026-11-16T18:05:23.879Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:05:57.242Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "cad95f13-fba5-4b9d-aa17-750799cc5f4a", "partition": 0, "offset": 61, "status": "approved"}
+{"ts": "2026-11-16T18:06:58.331Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "20c8be53-45db-47cd-9405-830ccee62106", "partition": 0, "offset": 67, "question": "Which is cheaper per month, 144 Research Avenue or 145 Research Avenue?"}
+{"ts": "2026-11-16T18:06:58.333Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:07:37.048Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "20c8be53-45db-47cd-9405-830ccee62106", "partition": 0, "offset": 62, "status": "approved"}
+{"ts": "2026-11-16T18:08:48.763Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "90d30319-fee1-40c7-bc03-3bed7b5bea23", "partition": 0, "offset": 68, "question": "Tell me everything the listing says about 146 Research Avenue."}
+{"ts": "2026-11-16T18:08:48.765Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:10:16.433Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "90d30319-fee1-40c7-bc03-3bed7b5bea23", "partition": 0, "offset": 63, "status": "approved"}
+{"ts": "2026-11-16T18:11:15.691Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "46f735d3-3b2b-4206-a725-b65ea150919b", "partition": 0, "offset": 69, "question": "Would 147 Research Avenue suit a family that wants a house?"}
+{"ts": "2026-11-16T18:11:15.694Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:12:19.104Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "46f735d3-3b2b-4206-a725-b65ea150919b", "partition": 0, "offset": 64, "status": "approved"}
+{"ts": "2026-11-16T18:13:17.186Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "5cc14e1a-9781-4765-87b8-e08762eba33a", "partition": 0, "offset": 70, "question": "How much would two roommates each pay at 148 Research Avenue?"}
+{"ts": "2026-11-16T18:13:17.204Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:14:19.394Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "5cc14e1a-9781-4765-87b8-e08762eba33a", "partition": 0, "offset": 65, "status": "approved"}
+{"ts": "2026-11-16T18:15:05.735Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "0edbd24b-6d2f-4673-9112-ad56c0cb6f76", "partition": 0, "offset": 71, "question": "Is there any vacancy at 149 Research Avenue?"}
+{"ts": "2026-11-16T18:15:05.737Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:15:48.955Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "0edbd24b-6d2f-4673-9112-ad56c0cb6f76", "partition": 0, "offset": 66, "status": "approved"}
+{"ts": "2026-11-16T18:17:06.650Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "ac0286c2-4e00-41e2-b6f8-bc490e7f1086", "partition": 0, "offset": 72, "question": "Can you compare the property types of 150 and 151 Research Avenue?"}
+{"ts": "2026-11-16T18:17:06.655Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:18:21.365Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "ac0286c2-4e00-41e2-b6f8-bc490e7f1086", "partition": 0, "offset": 67, "status": "rejected"}
+{"ts": "2026-11-16T18:19:22.868Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "fc7e8b20-7a02-49e3-8e44-f9c37caef44a", "partition": 0, "offset": 73, "question": "What credit score do landlords usually look for?"}
+{"ts": "2026-11-16T18:19:22.872Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:20:11.301Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "fc7e8b20-7a02-49e3-8e44-f9c37caef44a", "partition": 0, "offset": 68, "status": "approved"}
+{"ts": "2026-11-16T18:21:09.912Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "90c19ae9-a8b1-42f8-86d0-dd6a95983dd8", "partition": 0, "offset": 74, "question": "How do I get my security deposit back when I move out?"}
+{"ts": "2026-11-16T18:21:09.915Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:22:04.695Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "90c19ae9-a8b1-42f8-86d0-dd6a95983dd8", "partition": 0, "offset": 69, "status": "approved"}
+{"ts": "2026-11-16T18:22:53.856Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "86bac3e6-6576-437f-90e7-f8c0afcd1952", "partition": 0, "offset": 75, "question": "What should I photograph during a move-in inspection?"}
+{"ts": "2026-11-16T18:22:53.861Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:23:47.219Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "86bac3e6-6576-437f-90e7-f8c0afcd1952", "partition": 0, "offset": 70, "status": "approved"}
+{"ts": "2026-11-16T18:24:38.978Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "92593593-c513-476b-ac51-7975914617ce", "partition": 0, "offset": 76, "question": "Is it a good idea to pay rent with a credit card?"}
+{"ts": "2026-11-16T18:24:38.980Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:25:37.302Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "92593593-c513-476b-ac51-7975914617ce", "partition": 0, "offset": 71, "status": "approved"}
+{"ts": "2026-11-16T18:27:37.300Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "7f777a95-24fc-4aaf-872b-0720fc54be1b", "partition": 0, "offset": 77, "question": "What is a guarantor on a lease?"}
+{"ts": "2026-11-16T18:27:37.304Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:29:23.143Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "7f777a95-24fc-4aaf-872b-0720fc54be1b", "partition": 0, "offset": 72, "status": "approved"}
+{"ts": "2026-11-16T18:30:17.462Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "36e379c1-2059-4b6e-90c1-9cbbc473cf26", "partition": 0, "offset": 78, "question": "How does subletting an apartment work?"}
+{"ts": "2026-11-16T18:30:17.464Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:32:25.465Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "36e379c1-2059-4b6e-90c1-9cbbc473cf26", "partition": 0, "offset": 73, "status": "approved"}
+{"ts": "2026-11-16T18:33:41.629Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "83aec06f-e077-4d7d-ae4b-aee80a704239", "partition": 0, "offset": 79, "question": "Who pays for repairs when the heater breaks in a rental?"}
+{"ts": "2026-11-16T18:33:41.631Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:34:42.387Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "83aec06f-e077-4d7d-ae4b-aee80a704239", "partition": 0, "offset": 74, "status": "approved"}
+{"ts": "2026-11-16T18:35:48.739Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "3a005033-4d23-4f23-bd12-b293e3224cfa", "partition": 0, "offset": 80, "question": "What questions should I ask a landlord on a viewing?"}
+{"ts": "2026-11-16T18:35:48.741Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:36:52.809Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "3a005033-4d23-4f23-bd12-b293e3224cfa", "partition": 0, "offset": 75, "status": "approved"}
+{"ts": "2026-11-16T18:37:43.310Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "71bb21d0-9162-4652-9e6a-a2d99dce0b10", "partition": 0, "offset": 81, "question": "How can I spot a rental listing scam?"}
+{"ts": "2026-11-16T18:37:43.311Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:38:27.120Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "71bb21d0-9162-4652-9e6a-a2d99dce0b10", "partition": 0, "offset": 76, "status": "approved"}
+{"ts": "2026-11-16T18:39:05.457Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "14f0408e-bc62-44d0-a878-f3ce5b33ee78", "partition": 0, "offset": 82, "question": "Can a landlord refuse to rent to someone with a pet?"}
+{"ts": "2026-11-16T18:39:05.457Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:40:36.306Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "14f0408e-bc62-44d0-a878-f3ce5b33ee78", "partition": 0, "offset": 77, "status": "approved"}
+{"ts": "2026-11-16T18:41:56.409Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "00e4cf33-1945-4be8-9717-bb0dbfbcf6b9", "partition": 0, "offset": 83, "question": "What does a pro-rated first month of rent mean?"}
+{"ts": "2026-11-16T18:41:56.412Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:44:02.653Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "00e4cf33-1945-4be8-9717-bb0dbfbcf6b9", "partition": 0, "offset": 78, "status": "approved"}
+{"ts": "2026-11-16T18:45:10.373Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "38de27da-6306-448c-b6ec-2261357feffa", "partition": 0, "offset": 84, "question": "How early should I start searching for an apartment near SJSU?"}
+{"ts": "2026-11-16T18:45:10.376Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:46:29.353Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "38de27da-6306-448c-b6ec-2261357feffa", "partition": 0, "offset": 79, "status": "approved"}
+{"ts": "2026-11-16T18:47:14.050Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "0d799990-f85f-4cdd-abc7-ae9abf1fbd0e", "partition": 0, "offset": 85, "question": "What is the difference between a lease and a rental agreement?"}
+{"ts": "2026-11-16T18:47:14.066Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:48:23.138Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "0d799990-f85f-4cdd-abc7-ae9abf1fbd0e", "partition": 0, "offset": 80, "status": "approved"}
+{"ts": "2026-11-16T18:49:13.984Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "2248ee32-2b07-4161-9391-c51572371cfe", "partition": 0, "offset": 86, "question": "Can I break my lease early if I get a job in another city?"}
+{"ts": "2026-11-16T18:49:13.993Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:50:05.274Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "2248ee32-2b07-4161-9391-c51572371cfe", "partition": 0, "offset": 81, "status": "approved"}
+{"ts": "2026-11-16T18:50:56.312Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "2afa02f1-fb20-4ab4-a4a0-65ea9205e2e2", "partition": 0, "offset": 87, "question": "How much income do I need to qualify for a $2,500 apartment?"}
+{"ts": "2026-11-16T18:50:56.328Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:52:02.371Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "2afa02f1-fb20-4ab4-a4a0-65ea9205e2e2", "partition": 0, "offset": 82, "status": "approved"}
+{"ts": "2026-11-16T18:52:57.102Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "58eda6a8-98cc-4424-ab63-5a79881d98a2", "partition": 0, "offset": 88, "question": "What is a holding deposit and is it refundable?"}
+{"ts": "2026-11-16T18:52:57.111Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:54:00.245Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "58eda6a8-98cc-4424-ab63-5a79881d98a2", "partition": 0, "offset": 83, "status": "approved"}
+{"ts": "2026-11-16T18:54:52.767Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "9e756c85-0ae7-49b3-bd8d-4a656daf8846", "partition": 0, "offset": 89, "question": "Are application fees refundable if I am not approved?"}
+{"ts": "2026-11-16T18:54:52.770Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:55:42.981Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "9e756c85-0ae7-49b3-bd8d-4a656daf8846", "partition": 0, "offset": 84, "status": "approved"}
+{"ts": "2026-11-16T18:56:33.491Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "f00c4f2f-abac-4d0c-b087-9fe8dc76ddcc", "partition": 0, "offset": 90, "question": "What utilities do renters usually pay themselves?"}
+{"ts": "2026-11-16T18:56:33.499Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:57:25.632Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "f00c4f2f-abac-4d0c-b087-9fe8dc76ddcc", "partition": 0, "offset": 85, "status": "approved"}
+{"ts": "2026-11-16T18:58:18.128Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "ae8ac812-1d87-4552-ac9e-f013827df51b", "partition": 0, "offset": 91, "question": "How do I split utility bills fairly with roommates?"}
+{"ts": "2026-11-16T18:58:18.130Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T18:59:23.612Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "ae8ac812-1d87-4552-ac9e-f013827df51b", "partition": 0, "offset": 86, "status": "approved"}
+{"ts": "2026-11-16T19:00:10.238Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "e044184b-4c3e-4957-8cde-befd7185bd68", "partition": 0, "offset": 92, "question": "What should a roommate agreement include?"}
+{"ts": "2026-11-16T19:00:10.241Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:00:57.003Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "e044184b-4c3e-4957-8cde-befd7185bd68", "partition": 0, "offset": 87, "status": "approved"}
+{"ts": "2026-11-16T19:02:09.905Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "ec721c26-57b2-4a4a-a276-c3f96c9d1a20", "partition": 0, "offset": 93, "question": "How do I report mold in my apartment?"}
+{"ts": "2026-11-16T19:02:09.907Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:03:19.360Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "ec721c26-57b2-4a4a-a276-c3f96c9d1a20", "partition": 0, "offset": 88, "status": "approved"}
+{"ts": "2026-11-16T19:04:27.134Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "91d14151-1cb5-402f-bbba-c481850730a8", "partition": 0, "offset": 94, "question": "What is normal wear and tear when moving out?"}
+{"ts": "2026-11-16T19:04:27.144Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:05:57.273Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "91d14151-1cb5-402f-bbba-c481850730a8", "partition": 0, "offset": 89, "status": "approved"}
+{"ts": "2026-11-16T19:06:46.338Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "f04a4300-563a-4460-9035-607666ce6126", "partition": 0, "offset": 95, "question": "Can my landlord keep my deposit for carpet cleaning?"}
+{"ts": "2026-11-16T19:06:46.341Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:07:50.853Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "f04a4300-563a-4460-9035-607666ce6126", "partition": 0, "offset": 90, "status": "rejected"}
+{"ts": "2026-11-16T19:08:43.595Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "54a47be1-8555-4ba2-946c-1a04984f91c5", "partition": 0, "offset": 96, "question": "Is parking usually included in apartment rent in San Jose?"}
+{"ts": "2026-11-16T19:08:43.599Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:09:39.363Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "54a47be1-8555-4ba2-946c-1a04984f91c5", "partition": 0, "offset": 91, "status": "approved"}
+{"ts": "2026-11-16T19:10:28.896Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "15547df4-bc1d-497a-bf06-25080747730e", "partition": 0, "offset": 97, "question": "What happens if I pay rent a few days late?"}
+{"ts": "2026-11-16T19:10:28.913Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:11:17.072Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "15547df4-bc1d-497a-bf06-25080747730e", "partition": 0, "offset": 92, "status": "approved"}
+{"ts": "2026-11-16T19:12:01.610Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "2ada55f6-1640-446e-8cce-2f94d0d24514", "partition": 0, "offset": 98, "question": "How do I write a request for a repair to my landlord?"}
+{"ts": "2026-11-16T19:12:01.617Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:13:03.332Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "2ada55f6-1640-446e-8cce-2f94d0d24514", "partition": 0, "offset": 93, "status": "approved"}
+{"ts": "2026-11-16T19:13:51.988Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "73c6b63b-30ea-41bb-9155-8c018fa906de", "partition": 0, "offset": 99, "question": "What does a month-to-month tenancy mean for notice periods?"}
+{"ts": "2026-11-16T19:13:51.991Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:14:54.382Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "73c6b63b-30ea-41bb-9155-8c018fa906de", "partition": 0, "offset": 94, "status": "approved"}
+{"ts": "2026-11-16T19:15:53.210Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "1448c3a7-251e-4d32-a8ad-9e53d880af22", "partition": 0, "offset": 100, "question": "How can international students rent without a US credit history?"}
+{"ts": "2026-11-16T19:15:53.220Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:17:06.729Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "1448c3a7-251e-4d32-a8ad-9e53d880af22", "partition": 0, "offset": 95, "status": "approved"}
+{"ts": "2026-11-16T19:18:09.924Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "62533330-c731-437f-8b36-9934229bba67", "partition": 0, "offset": 101, "question": "What are the pros and cons of renting a furnished unit?"}
+{"ts": "2026-11-16T19:18:09.927Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:19:24.685Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "62533330-c731-437f-8b36-9934229bba67", "partition": 0, "offset": 96, "status": "approved"}
+{"ts": "2026-11-16T19:20:17.195Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "a99b9f75-fb99-4524-b3bf-00e77bc40ad3", "partition": 0, "offset": 102, "question": "Should I get renters insurance if my roommate already has it?"}
+{"ts": "2026-11-16T19:20:17.202Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:21:10.026Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "a99b9f75-fb99-4524-b3bf-00e77bc40ad3", "partition": 0, "offset": 97, "status": "approved"}
+{"ts": "2026-11-16T19:21:54.432Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "23299eb1-ea1c-4ac3-a421-e7ac93b919ba", "partition": 0, "offset": 103, "question": "How do I negotiate a lower rent with a landlord?"}
+{"ts": "2026-11-16T19:21:54.434Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:22:41.332Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "23299eb1-ea1c-4ac3-a421-e7ac93b919ba", "partition": 0, "offset": 98, "status": "approved"}
+{"ts": "2026-11-16T19:23:21.656Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "4b7e9b32-ecb5-454e-b5a6-95d9c876da40", "partition": 0, "offset": 104, "question": "What does it mean when a listing says utilities included?"}
+{"ts": "2026-11-16T19:23:21.656Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:24:06.808Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "4b7e9b32-ecb5-454e-b5a6-95d9c876da40", "partition": 0, "offset": 99, "status": "approved"}
+{"ts": "2026-11-16T19:24:47.081Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "7d9acf6d-438a-4be0-8483-7c90d52938e9", "partition": 0, "offset": 105, "question": "How often can a landlord do inspections?"}
+{"ts": "2026-11-16T19:24:47.083Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:25:29.455Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "7d9acf6d-438a-4be0-8483-7c90d52938e9", "partition": 0, "offset": 100, "status": "approved"}
+{"ts": "2026-11-16T19:26:03.777Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "794db231-b089-479a-a4e2-74c377d84b3e", "partition": 0, "offset": 106, "question": "What can I do if my landlord will not return my calls?"}
+{"ts": "2026-11-16T19:26:03.779Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:26:47.081Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "794db231-b089-479a-a4e2-74c377d84b3e", "partition": 0, "offset": 101, "status": "approved"}
+{"ts": "2026-11-16T19:27:25.331Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "c16ef031-e6c1-4047-8b7f-fe137e698bca", "partition": 0, "offset": 107, "question": "Is it worth paying for a moving company for a one-bedroom?"}
+{"ts": "2026-11-16T19:27:25.331Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:28:12.403Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "c16ef031-e6c1-4047-8b7f-fe137e698bca", "partition": 0, "offset": 102, "status": "approved"}
+{"ts": "2026-11-16T19:28:48.657Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "7e6580a1-3fd6-4063-87be-a459f7824487", "partition": 0, "offset": 108, "question": "What is a co-signer and how is it different from a guarantor?"}
+{"ts": "2026-11-16T19:28:48.660Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:29:42.721Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "7e6580a1-3fd6-4063-87be-a459f7824487", "partition": 0, "offset": 103, "status": "approved"}
+{"ts": "2026-11-16T19:30:19.014Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "409570e1-f339-49e4-a550-80e73275bb34", "partition": 0, "offset": 109, "question": "How do I check a landlord's reviews before signing?"}
+{"ts": "2026-11-16T19:30:19.014Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:31:04.019Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "409570e1-f339-49e4-a550-80e73275bb34", "partition": 0, "offset": 104, "status": "approved"}
+{"ts": "2026-11-16T19:31:40.289Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "32dc00f4-c42b-42a4-bb28-a8cd3b980f4e", "partition": 0, "offset": 110, "question": "What fees are common besides rent when moving in?"}
+{"ts": "2026-11-16T19:31:40.290Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:32:23.003Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "32dc00f4-c42b-42a4-bb28-a8cd3b980f4e", "partition": 0, "offset": 105, "status": "approved"}
+{"ts": "2026-11-16T19:32:59.235Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "0809f441-6238-4267-8e69-6a0bac874675", "partition": 0, "offset": 111, "question": "Can a landlord enter without notice in an emergency?"}
+{"ts": "2026-11-16T19:32:59.235Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:33:41.419Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "0809f441-6238-4267-8e69-6a0bac874675", "partition": 0, "offset": 106, "status": "approved"}
+{"ts": "2026-11-16T19:34:17.672Z", "agent": "SENDER", "event": "sent question to s6758_inbox", "correlation_id": "1398cc7b-673b-4330-bb0d-d5a5330d3cd3", "partition": 0, "offset": 112, "question": "How do I end a lease on good terms with my landlord?"}
+{"ts": "2026-11-16T19:34:17.675Z", "agent": "SENDER", "event": "waiting for the result on s6758_final"}
+{"ts": "2026-11-16T19:35:05.071Z", "agent": "SENDER", "event": "received result from s6758_final", "correlation_id": "1398cc7b-673b-4330-bb0d-d5a5330d3cd3", "partition": 0, "offset": 107, "status": "approved"}

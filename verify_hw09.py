@@ -64,7 +64,7 @@ def semantic_check():
     cache.clear()
     calls = []
 
-    def agent(question, _context):
+    def agent(question, _context, **_):
         calls.append(question)
         return {"answer": f"stub answer {VERIFY_SEED}", "status": "approved"}
 

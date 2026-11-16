@@ -39,8 +39,8 @@ async def lifespan(_app: FastAPI):
 app = FastAPI(title="s6758 listing Q&A", lifespan=lifespan)
 
 
-def run_agents(question: str, context: str) -> dict | None:
-    return asyncio.run(ask(question, context))
+def run_agents(question: str, context: str, trace_id: str | None = None) -> dict | None:
+    return asyncio.run(ask(question, context, correlation_id=trace_id))
 
 
 @app.get("/health")
