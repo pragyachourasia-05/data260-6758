@@ -89,13 +89,15 @@ Add-Type @"
 using System; using System.Runtime.InteropServices;
 public class EdgeWin {
   [DllImport("user32.dll")] public static extern uint GetWindowThreadProcessId(IntPtr h, out uint pid);
+  [DllImport("user32.dll")] public static extern bool MoveWindow(IntPtr h, int x, int y, int w, int ht, bool r);
+  [DllImport("user32.dll")] public static extern bool PrintWindow(IntPtr h, IntPtr hdc, uint flags);
 }
 "@
-function Dash([string]$Id, [string]$Query, [int]$Wait = 14) {
+function Dash([string]$Id, [string]$Query, [int]$Wait = 14, [int]$Width = 1400, [int]$Height = 2100) {
     if ($Only -and ($Only -split ",") -notcontains $Id) { return }
     Remove-Item $EdgeProfile -Recurse -Force -ErrorAction SilentlyContinue  # fresh profile: no restore bubble, no first-run pages
     $p = Start-Process -FilePath $Edge -ArgumentList "--user-data-dir=`"$EdgeProfile`"", "--no-first-run", "--no-default-browser-check",
-        "--disable-extensions", "--disable-sync", "--hide-crash-restore-bubble", "--app=http://localhost:8459/?$Query" -PassThru
+        "--disable-extensions", "--disable-sync", "--hide-crash-restore-bubble", "--force-device-scale-factor=0.8", "--app=http://localhost:8459/?$Query" -PassThru
     $h = [IntPtr]::Zero
     for ($i = 0; $i -lt 40 -and $h -eq [IntPtr]::Zero; $i++) {
         Start-Sleep -Milliseconds 500

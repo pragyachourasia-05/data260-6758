@@ -1,0 +1,56 @@
+{
+  "homework": "HW10",
+  "sid4": "6758",
+  "commit_hash": "dc249b0b2b75a54158a0a0df053e012f89ec5ee1",
+  "model_configuration": {
+    "agents": "llama3.2:3b via Ollama, temperature 0, seed 6758",
+    "judge": "DeepEval GEval with OllamaModel llama3.2:3b, temperature 0, seed 6758, rubric 1-5",
+    "cache": "Redis vector index, all-MiniLM-L6-v2, cosine, threshold 0.95",
+    "this_check": "no LLM call (the judge check points at a closed port)"
+  },
+  "seed": 6758,
+  "verify_seed": 266758,
+  "checks": [
+    {
+      "name": "trace_examples_hit_miss_failed",
+      "passed": true,
+      "detail": "miss: 9 stages on one trace_id; hit: cache only; failed at writer"
+    },
+    {
+      "name": "evaluator_four_criteria",
+      "passed": true,
+      "detail": "52 evaluation(s); example scores plan/draft/final = [3, 3, 3]"
+    },
+    {
+      "name": "eval_cases_and_labels_frozen",
+      "passed": true,
+      "detail": "20 cases and labels committed 2026-11-16 20:28 UTC, before the judge runs"
+    },
+    {
+      "name": "judge_validation_saved",
+      "passed": true,
+      "detail": "rho 0.404, MAD 1.0, 0/20 cases changed across runs"
+    },
+    {
+      "name": "latency_50_confirmed_misses",
+      "passed": true,
+      "detail": "50 confirmed misses; e2e p50 109.3s, p95 169.2s"
+    },
+    {
+      "name": "judge_timeout_bounded",
+      "passed": true,
+      "detail": "unavailable judge returns an error in 2.4s instead of hanging"
+    },
+    {
+      "name": "dashboard_pages_render",
+      "passed": true,
+      "detail": "Summary, Evaluation and Trace lookup pages render without errors"
+    },
+    {
+      "name": "redis_keys_prefixed",
+      "passed": true,
+      "detail": "every Redis key starts with s6758"
+    }
+  ],
+  "passed": true
+}
