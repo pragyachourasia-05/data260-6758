@@ -1,0 +1,45 @@
+{
+  "homework": "HW11",
+  "sid4": "6758",
+  "commit_hash": "81da875b55504563f286dd4554bc1a648889404b",
+  "model_configuration": {
+    "agent": "Meta Muse (free tier) with my standing instructions",
+    "tool": "stock-watch/watch.py (course kit, extended)",
+    "this_check": "no network, no model"
+  },
+  "seed": 6758,
+  "verify_seed": 266758,
+  "checks": [
+    {
+      "name": "watchlist_ciks_and_contact",
+      "passed": true,
+      "detail": "5 tickers with CIKs (AAPL, MSFT, NVDA, TSLA, JPM), contact email set"
+    },
+    {
+      "name": "policy_decisions",
+      "passed": true,
+      "detail": "four decisions, per-ticker notify lines and the no-advice rule are in policy.md"
+    },
+    {
+      "name": "golden_labeled_before_run",
+      "passed": true,
+      "detail": "12 cases, 2 per category, committed 2026-11-24T20:51:18-08:00 before the first Muse message"
+    },
+    {
+      "name": "fixtures_replay",
+      "passed": true,
+      "detail": "day 1 replays: interrupted at 6, resumed to 11 candidates, 1 duplicate merged, A1 flagged, A2 not, link blocked"
+    },
+    {
+      "name": "muse_results",
+      "passed": true,
+      "detail": "Muse: 12/12 correct, 0 duplicate alerts, recovery 1.0; live alert c7bb039bc0c8"
+    },
+    {
+      "name": "muse_screenshots",
+      "passed": true,
+      "detail": "20 Muse screenshots saved"
+    }
+  ],
+  "passed": true
+}
