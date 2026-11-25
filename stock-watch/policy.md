@@ -45,6 +45,12 @@ price candidate at or above the digest line (`threshold_pct_by_ticker` in source
 - **Quiet (+0.10):** 8.01 conference or meeting dates, 9.01 exhibits only, 8-K/A that corrects a
   date or a number without new facts.
 
+## Old items (first run and catch-up)
+
+The SEC feed always lists each company's last 10 8-Ks. A filing whose date (`published`) is more than
+3 trading days before the run is history, not a change: decide `quiet` with reason "baseline: older
+than 3 trading days". This stops the first live run from alerting on months-old earnings.
+
 ## Scoring guide (add up, cap at 1.0)
 
 - Price: at or above the notify line +0.85 · between digest and notify +0.55

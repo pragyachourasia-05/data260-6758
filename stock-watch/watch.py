@@ -223,6 +223,9 @@ def price_events(ticker, csv_text, threshold, page_url, lookback=3):
     `lookback` trading days, whose close moved >= threshold % from the previous close.
     Looking back several days means a missed scheduled run is caught up on the next run;
     the effect ID (ticker + date) makes sure each move is reported only once."""
+    # HW11: a bot-check or error page must count as a failed source, not as "no big moves"
+    if not csv_text.strip().lower().startswith("date,"):
+        raise ValueError(f"{ticker}: price source did not return CSV (got: {csv_text.strip()[:60]!r})")
     rows = [r.split(",") for r in csv_text.strip().splitlines()[1:] if r.strip()]
     rows = [r for r in rows if len(r) >= 5 and r[4] not in ("", "N/D")]
     out_ = []
