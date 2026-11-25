@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- HW11 FIXTURE (Pragya Chourasia). Fictional companies; these filings do not exist. Day 2 still lists the day-1 acquisition 8-K, as a real EDGAR feed would. -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>EDGAR 8-K filings (HW11 fixture, day 2)</title>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999913-26-000318</id>
+    <updated>2026-11-25T08:00:00-05:00</updated>
+    <title>HRBL: 8-K/A - Current report, amendment</title>
+    <summary>(HW11 fixture, fictional company.) Harborline Bancorp. Amendment No. 1 to the 8-K of November 24, filed to correct the number of affected customers from about 1.2 million to about 1.15 million. No other changes.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999913/000999991326000318/0009999913-26-000318-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999913-26-000311</id>
+    <updated>2026-11-24T08:30:00-05:00</updated>
+    <title>HRBL: 8-K - Current report</title>
+    <summary>(HW11 fixture, fictional company.) Harborline Bancorp. Item 2.01 Completion of Acquisition or Disposition of Assets: Harborline completed its acquisition of Pinecrest Savings Bank for $410M in cash and stock.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999913/000999991326000311/0009999913-26-000311-index.htm" rel="alternate"/>
+  </entry>
+</feed>

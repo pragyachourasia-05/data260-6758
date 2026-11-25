@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- HW11 FIXTURE (Pragya Chourasia). "Example Newswire" and all companies named are fictional. -->
+<rss version="2.0"><channel>
+  <title>Example Newswire: markets (HW11 fixture, day 2)</title>
+  <link>https://example-newswire.example/markets</link>
+  <item>
+    <title>Harborline closes Pinecrest deal, becoming the region's third-largest lender</title>
+    <link>https://example-newswire.example/markets/harborline-pinecrest</link>
+    <pubDate>Wed, 25 Nov 2026 14:00:00 GMT</pubDate>
+    <description>(HW11 fixture, fictional.) Harborline Bancorp completed the Pinecrest Savings acquisition. Filing: https://www.sec.gov/Archives/edgar/data/9999913/000999991326000311/0009999913-26-000311-index.htm</description>
+  </item>
+  <item>
+    <title>Market wrap: energy names steady as indexes drift</title>
+    <link>https://example-newswire.example/markets/wrap-1125</link>
+    <pubDate>Wed, 25 Nov 2026 21:10:00 GMT</pubDate>
+    <description>(HW11 fixture, fictional.) Major indexes moved less than 0.2% on light pre-holiday volume.</description>
+  </item>
+</channel></rss>

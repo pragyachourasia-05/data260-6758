@@ -1,0 +1,51 @@
+{
+  "topic": "Material changes for my watchlist (AAPL, MSFT, NVDA, TSLA, JPM): large daily price moves and new SEC 8-K filings",
+  "user_agent": "DATA260-stock-watch/1.0 pragya.chourasia@sjsu.edu",
+  "note": "Approved-source allowlist. watch.py refuses any URL whose host is not listed here. threshold_pct_by_ticker is the move that makes a price candidate (my digest line); the notify line per ticker is in policy.md.",
+  "sources": [
+    {
+      "id": "prices_live",
+      "type": "stooq",
+      "modes": ["live"],
+      "url": "https://stooq.com/q/d/l/",
+      "tickers": ["aapl.us", "msft.us", "nvda.us", "tsla.us", "jpm.us"],
+      "threshold_pct": 2.0,
+      "threshold_pct_by_ticker": {"AAPL": 2.0, "MSFT": 2.0, "NVDA": 3.5, "TSLA": 4.0, "JPM": 1.5},
+      "lookback_days": 3
+    },
+    {
+      "id": "edgar_live",
+      "type": "edgar",
+      "modes": ["live"],
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "form": "8-K",
+      "per_company": 5,
+      "ciks": {"AAPL": "0000320193", "MSFT": "0000789019", "NVDA": "0001045810", "TSLA": "0001318605", "JPM": "0000019617"}
+    },
+    {
+      "id": "prices_demo",
+      "type": "stooq",
+      "modes": ["fixtures"],
+      "url": "https://stooq.com/q/d/l/",
+      "tickers": ["nbrx.us", "cbds.us", "lksp.us", "tsro.us", "qfld.us", "hrbl.us", "mrdn.us"],
+      "threshold_pct": 2.0,
+      "threshold_pct_by_ticker": {"TSRO": 2.5, "QFLD": 4.0, "HRBL": 1.5, "MRDN": 1.5},
+      "lookback_days": 3
+    },
+    {
+      "id": "edgar_demo",
+      "type": "edgar",
+      "modes": ["fixtures"],
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "fixture": "edgar_8k.xml",
+      "ciks": {}
+    },
+    {
+      "id": "newswire_demo",
+      "type": "rss",
+      "modes": ["fixtures"],
+      "url": "https://example-newswire.example/markets/feed.xml",
+      "fixture": "newswire.xml"
+    }
+  ]
+}

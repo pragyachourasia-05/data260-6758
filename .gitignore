@@ -15,3 +15,5 @@ node_modules/
 backend/uploads/
 kafka_agents/.state/
 reports/hw08/raw/part3/*.sqlite
+stock-watch/state/
+stock-watch/digests/

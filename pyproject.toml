@@ -1,7 +1,7 @@
 [tool.ruff]
 line-length = 120
 target-version = "py312"
-extend-exclude = ["venv", "frontend", "reports", "AI", "code/web_application"]
+extend-exclude = ["venv", "frontend", "reports", "AI", "code/web_application", "stock-watch/watch.py"]  # watch.py is the course starter kit
 
 [tool.ruff.lint]
 # pycodestyle errors, pyflakes, import sorting, and a few bug-prone patterns
